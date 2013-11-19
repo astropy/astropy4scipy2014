@@ -28,23 +28,23 @@ class BuildNotes(Command):
         for arg in range(len(sys.argv[1:])):
             sys.argv.pop(-1)
 
-        # Convert the solutions to HTML notebooks.
+        # Convert the notebooks to HTML notebooks.
 
         app = NbConvertApp()
         app.initialize()
         app.export_format = 'html'
-        for notebook in (glob.glob('solutions/*.ipynb')):
+        for notebook in (glob.glob('notebooks/*.ipynb')):
             app.notebooks = [notebook]
             app.output_base = notebook.replace('.ipynb', '')
             app.start()
 
         # Make an index of all notes
-        f = open('solutions.html', 'w')
+        f = open('notebooks.html', 'w')
         f.write("<html>\n  <body>\n")
 
         f.write("    <h1>Solutions:</h1>\n")
         f.write("    <ul>\n")
-        for page in glob.glob('solutions/*.html'):
+        for page in glob.glob('notebooks/*.html'):
             f.write('      <li><a href="{0}">{1}</a></li>\n'.format(page, os.path.basename(page).replace('.html', '')))
         f.write('    </ul>\n')
 
@@ -76,8 +76,8 @@ class DeployNotes(Command):
 
         ftp.cwd('/public_html/PY4SCI_WS_2013_14')
 
-        for slides in ProgressBar.iterate(glob.glob('solutions/data/*')
-                                          + glob.glob('solutions/*.html')):
+        for slides in ProgressBar.iterate(glob.glob('notebooks/data/*')
+                                          + glob.glob('notebooks/*.html')):
             try:
                 remote_size = ftp.size(slides)
             except:
@@ -86,7 +86,7 @@ class DeployNotes(Command):
             if local_size != remote_size:
                 ftp.storbinary('STOR ' + slides, open(slides, 'rb'))
 
-        ftp.storbinary('STOR solutions.html', open('solutions.html', 'rb'))
+        ftp.storbinary('STOR notebooks.html', open('notebooks.html', 'rb'))
 
         ftp.quit()
 
@@ -110,7 +110,7 @@ class RunNotes(Command):
 
         start_dir = os.path.abspath('.')
 
-        for notebook in (glob.glob('solutions/*.ipynb')):
+        for notebook in (glob.glob('notebooks/*.ipynb')):
             os.chdir(os.path.dirname(notebook))
             r = NotebookRunner(os.path.basename(notebook), pylab=True)
             r.run_notebook(skip_exceptions=True)
@@ -118,4 +118,4 @@ class RunNotes(Command):
             os.chdir(start_dir)
 
 
-setup(name='py4sci_solutions', cmdclass={'run':RunNotes, 'build': BuildNotes, 'deploy':DeployNotes})
+setup(name='astropy4herts', cmdclass={'run':RunNotes, 'build': BuildNotes, 'deploy':DeployNotes})

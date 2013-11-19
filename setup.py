@@ -74,7 +74,7 @@ class DeployNotes(Command):
         ftp = FTP(SERVER)
         ftp.login(user=USER, passwd=getpass.getpass())
 
-        ftp.cwd('/public_html/PY4SCI_WS_2013_14')
+        ftp.cwd('/public_html/astropy4herts')
 
         for slides in ProgressBar.iterate(glob.glob('notebooks/data/*')
                                           + glob.glob('notebooks/*.html')):

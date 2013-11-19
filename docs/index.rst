@@ -24,3 +24,12 @@ Notebooks
 * `Celestial Coordinates <http://mpia.de/~robitaille/astropy4herts/notebooks/Celestial%20Coordinates.html>`_ [`Problem solutions <http://mpia.de/~robitaille/astropy4herts/notebooks/Celestial%20Coordinates%20-%20Solutions.html>`_]
 
 .. TODO: Astroquery
+
+Getting help
+------------
+
+* `astropy mailing list <http://mail.scipy.org/mailman/listinfo/astropy>`_ (not just Astropy-related question, any astronomy & python questions)
+* `stackoverflow <http://stackoverflow.com>`_ - use tag #astropy
+* `IRC <http://webchat.freenode.net/?channels=astropy>`_
+* `Twitter <https://twitter.com/astropy>`_
+* `Private feedback <mailto:astropy-feedback@googlegroups.com>`_

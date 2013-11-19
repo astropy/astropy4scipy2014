@@ -4,7 +4,10 @@ University of Hertfordshire Astropy Workshop
 .. note:: Please bring your laptop to the workshop!
 
 The purpose of this workshop is to give you an overview of functionality in
-Astropy, and get you started with some simple problems.
+Astropy, and get you started with some simple problems. There is a *lot* of
+functionality that we cannot cover in this workshop, so I encourage you to
+browse the Astropy ` Documentation <http://docs.astropy.org>`_ to get a sense
+of what it can be used for!
 
 Useful links
 ------------

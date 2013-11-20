@@ -14,6 +14,7 @@ Useful links
 
 * `Astropy <http://www.astropy.org>`_
 * :doc:`emergency_install`
+* :doc:`running`
 * More about the `IPython notebook <http://ipython.org/notebook.html>`_
 
 Notebooks

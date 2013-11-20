@@ -13,6 +13,7 @@ Useful links
 ------------
 
 * `Astropy <http://www.astropy.org>`_
+* :doc:`emergency_install`
 
 Notebooks
 ---------

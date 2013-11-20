@@ -22,6 +22,7 @@ Notebooks
 
 .. TODO: FITS
 
+* `Handling FITS files <http://mpia.de/~robitaille/astropy4herts/notebooks/Handling%20FITS%20files.html>`_ [`Problem solutions <http://mpia.de/~robitaille/astropy4herts/notebooks/Handling%20FITS%20files%20-%20Solutions.html>`_]
 * `Units and Quantities <http://mpia.de/~robitaille/astropy4herts/notebooks/Unit%20Conversion.html>`_ [`Problem solutions <http://mpia.de/~robitaille/astropy4herts/notebooks/Unit%20Conversion%20-%20Solutions.html>`_]
 * `Tables <http://mpia.de/~robitaille/astropy4herts/notebooks/Tables.html>`_ [`Problem solutions <http://mpia.de/~robitaille/astropy4herts/notebooks/Tables%20-%20Solutions.html>`_]
 * `Celestial Coordinates <http://mpia.de/~robitaille/astropy4herts/notebooks/Celestial%20Coordinates.html>`_ [`Problem solutions <http://mpia.de/~robitaille/astropy4herts/notebooks/Celestial%20Coordinates%20-%20Solutions.html>`_]

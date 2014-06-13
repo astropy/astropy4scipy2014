@@ -1,5 +1,5 @@
-University of Hertfordshire Astropy Workshop
-============================================
+SciPy 2014 Astropy Workshop
+===========================
 
 .. note:: Please bring your laptop to the workshop!
 

@@ -240,3 +240,12 @@ texinfo_documents = [
 
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
 #texinfo_show_urls = 'footnote'
+
+# If available, use configuration from astropy_helpers (including the astropy
+# theme)
+try:
+    from astropy_helpers.sphinx.conf import *
+
+    html_theme_options = {'logotext3': ':tutorials'}
+except ImportError:
+    pass

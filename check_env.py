@@ -1,17 +1,42 @@
-from distutils import version
+"""
+Check for required and optional dependencies for the Astropy tutorial for SciPy2014:
 
+- astropy: 0.3.2 or later required, 0.4 optimal
+- numpy: required (version depends on astropy version)
+- scipy: required
+- matplotlib: required
+- bs4 (BeautifulSoup): optional
+
+Usage::
+
+  % python check_env.py
+
+"""
 
 warnings = False
 errors = False
 
 try:
-    import numpy
+    import astropy
 except ImportError as err:
     print('Error: Failed import: {0}'.format(err))
     errors = True
+else:
+    # Astropy version 0.3.2 or later, and 0.4.0 for coordinates
+    astropy_version = astropy.__version__
+    if astropy_version < '0.3.2':
+        print('Error: astropy version 0.3.2 or later is required, you have {0}'
+              .format(astropy.__version__))
+        errors = True
+
+    elif astropy_version < '0.4.0':
+        print('Warning: astropy version 0.4.0 is later is needed for the '
+              'coordinates part of the tutorial, you have {0}.  Consider installing 0.4 '
+              'if you want to do the coordinates exercises.'.format(astropy.__version__))
+        warnings = True
 
 try:
-    import matplotlib
+    import numpy
 except ImportError as err:
     print('Error: Failed import: {0}'.format(err))
     errors = True
@@ -23,24 +48,10 @@ except ImportError as err:
     errors = True
 
 try:
-    import astropy
+    import matplotlib
 except ImportError as err:
     print('Error: Failed import: {0}'.format(err))
     errors = True
-else:
-    # Astropy version 0.3.2 or later, and 0.4.0 for coordinates
-    astropy_version = version.LooseVersion(astropy.__version__)
-
-    if astropy_version < version.LooseVersion('0.3.2'):
-        print('Error: astropy version 0.3.2 or later is required, you have {0}'
-              .format(astropy.__version__))
-        errors = True
-
-    elif astropy_version < version.LooseVersion('0.4.0'):
-        print('Warning: astropy version 0.4.0 is later is needed for the '
-              'coordinates part of the tutorial, you have {0}.  Consider installing 0.4 '
-              'if you want to do the coordinates exercises.'.format(astropy.__version__))
-        warnings = True
 
 # BeautifulSoup4 for one bit of the ASCII tables section.
 try:

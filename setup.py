@@ -107,14 +107,22 @@ class RunNotes(Command):
         # HTML notebooks.
 
         from runipy.notebook_runner import NotebookRunner
+        from IPython.nbformat.current import read, write
 
         start_dir = os.path.abspath('.')
 
-        for notebook in (glob.glob('notebooks/*.ipynb')):
-            os.chdir(os.path.dirname(notebook))
-            r = NotebookRunner(os.path.basename(notebook), pylab=True)
+        for filename in (glob.glob('notebooks/*.ipynb')):
+            os.chdir(os.path.dirname(filename))
+            basename = os.path.basename(filename)
+
+            notebook = read(open(basename), 'json')
+
+            r = NotebookRunner(notebook, pylab=True)
             r.run_notebook(skip_exceptions=True)
-            r.save_notebook(os.path.basename(notebook))
+
+            with open(basename, 'w') as f:
+                write(r.nb, f, 'json')
+
             os.chdir(start_dir)
 
 

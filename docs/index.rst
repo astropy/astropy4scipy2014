@@ -20,14 +20,12 @@ Useful links
 Notebooks
 ---------
 
-.. TODO: FITS
-
-* `Handling FITS files <http://mpia.de/~robitaille/astropy4herts/notebooks/Handling%20FITS%20files.html>`_ [`Problem solutions <http://mpia.de/~robitaille/astropy4herts/notebooks/Handling%20FITS%20files%20-%20Solutions.html>`_]
-* `Units and Quantities <http://mpia.de/~robitaille/astropy4herts/notebooks/Unit%20Conversion.html>`_ [`Problem solutions <http://mpia.de/~robitaille/astropy4herts/notebooks/Unit%20Conversion%20-%20Solutions.html>`_]
-* `Tables <http://mpia.de/~robitaille/astropy4herts/notebooks/Tables.html>`_ [`Problem solutions <http://mpia.de/~robitaille/astropy4herts/notebooks/Tables%20-%20Solutions.html>`_]
-* `Celestial Coordinates <http://mpia.de/~robitaille/astropy4herts/notebooks/Celestial%20Coordinates.html>`_ [`Problem solutions <http://mpia.de/~robitaille/astropy4herts/notebooks/Celestial%20Coordinates%20-%20Solutions.html>`_]
-* `Affiliated Package: Astroquery <http://mpia.de/~robitaille/astropy4herts/notebooks/Affiliated%20Package%20-%20Astroquery.html>`_
-* `Affiliated Package: APLpy <http://mpia.de/~robitaille/astropy4herts/notebooks/Affiliated%20Package%20-%20APLpy.html>`_
+* `Handling FITS Files <_static/notebooks/Handling_FITS_Files.html>`_ [`Problem solutions <_static/notebooks/Handling_FITS_Files_solutions.html>`_]
+* `Units and Quantities <_static/notebooks/Unit_Conversion.html>`_ [`Problem solutions <_static/notebooks/Unit_Conversion_solutions.html>`_]
+* `Tables <_static/notebooks/Tables.html>`_ [`Problem solutions <_static/notebooks/Tables_solutions.html>`_]
+* `Celestial Coordinates <_static/notebooks/Celestial_Coordinates.html>`_ [`Problem solutions <_static/notebooks/Celestial_Coordinates_solutions.html>`_]
+* `Affiliated Package: Astroquery <_static/notebooks/Affiliated_Package_Astroquery.html>`_
+* `Affiliated Package: APLpy <_static/notebooks/Affiliated_Package_APLpy.html>`_
 
 Getting help
 ------------

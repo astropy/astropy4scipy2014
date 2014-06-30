@@ -1,14 +1,6 @@
 Optional: Emergency Installation
 ================================
 
-If you already have a Scientific Python distribution, but not Astropy and APLpy, just do::
-
-    pip install astropy
-    pip install aplpy
-
-If you have *not* previously installed a Scientific Python distribution, use the
-following instructions for an EMERGENCY scientific Python install :-)
-
 1. Go to the Anaconda `Downloads <http://continuum.io/anacondace.html>`_ page.
 
 2. Download the file for your platform
@@ -33,8 +25,3 @@ following instructions for an EMERGENCY scientific Python install :-)
   with ``AnacondaCE`` in the first line.
 
   On Windows, double click the .exe file to install.
-
-4. Install Astropy with::
-
-      conda install astropy
-      pip install aplpy

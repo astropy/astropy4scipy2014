@@ -24,8 +24,6 @@ Notebooks
 * `Units and Quantities <_static/notebooks/Unit_Conversion.html>`_ [`Problem solutions <_static/notebooks/Unit_Conversion_solutions.html>`_]
 * `Tables <_static/notebooks/Tables.html>`_ [`Problem solutions <_static/notebooks/Tables_solutions.html>`_]
 * `Celestial Coordinates <_static/notebooks/Celestial_Coordinates.html>`_ [`Problem solutions <_static/notebooks/Celestial_Coordinates_solutions.html>`_]
-* `Affiliated Package: Astroquery <_static/notebooks/Affiliated_Package_Astroquery.html>`_
-* `Affiliated Package: APLpy <_static/notebooks/Affiliated_Package_APLpy.html>`_
 
 Getting help
 ------------

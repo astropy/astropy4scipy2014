@@ -77,17 +77,17 @@ qthelp:
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/astropy4herts.qhcp"
+	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/astropy4scipy2014.qhcp"
 	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/astropy4herts.qhc"
+	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/astropy4scipy2014.qhc"
 
 devhelp:
 	$(SPHINXBUILD) -b devhelp $(ALLSPHINXOPTS) $(BUILDDIR)/devhelp
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/astropy4herts"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/astropy4herts"
+	@echo "# mkdir -p $$HOME/.local/share/devhelp/astropy4scipy2014"
+	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/astropy4scipy2014"
 	@echo "# devhelp"
 
 epub:

@@ -17,11 +17,11 @@ Optional: Emergency Installation
   Follow these instructions, rehash or open a new terminal, and then test that
   if you type ``python``, you get a prompt similar to::
 
-      Python 2.7.3 |AnacondaCE 1.3.1 (x86_64)| (default, Jan 10 2013, 12:10:41) 
-      [GCC 4.0.1 (Apple Inc. build 5493)] on darwin
+      Python 2.7.3 |AnacondaCE 1.9.1 (64-bit)| (default, Jan 17 2014, 10:13:17)
+      [GCC 4.1.2 20080704 (Red Hat 4.1.2-54)] on linux2
       Type "help", "copyright", "credits" or "license" for more information.
       >>>
       
-  with ``AnacondaCE`` in the first line.
+  with ``Anaconda`` in the first line.
 
   On Windows, double click the .exe file to install.

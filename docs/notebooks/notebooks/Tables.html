@@ -1277,7 +1277,6 @@ a .icon-rotate-90:before,a .icon-rotate-180:before,a .icon-rotate-270:before,a .
 .icon-weibo:before{content:"\f18a"}
 .icon-renren:before{content:"\f18b"}
 code{color:#000}
-pre{font-size:inherit;line-height:inherit}
 .border-box-sizing{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
 .corner-all{border-radius:4px}
 .hbox{display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
@@ -1341,8 +1340,6 @@ input.nbname_input,input.engine_num_input{padding-top:3px;padding-bottom:3px;hei
 input.engine_num_input{width:60px}
 .highlight_text{color:#00f}
 #project_name>.breadcrumb{padding:0;margin-bottom:0;background-color:transparent;font-weight:bold}
-.folder_icon:before{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;*margin-right:.3em;content:"\f114"}
-.notebook_icon:before{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;*margin-right:.3em;content:"\f02d"}
 .ansibold{font-weight:bold}
 .ansiblack{color:#000}
 .ansired{color:#8b0000}
@@ -1365,15 +1362,15 @@ div.cell.edit_mode{border-radius:4px;border:thin #008000 solid}
 div.cell{width:100%;padding:5px 5px 5px 0;margin:0;outline:none}
 div.prompt{min-width:11ex;padding:.4em;margin:0;font-family:monospace;text-align:right;line-height:1.21429em}
 @media (max-width:480px){div.prompt{text-align:left}}div.inner_cell{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
-div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7;line-height:1.21429em}
+div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7}
 div.prompt:empty{padding-top:0;padding-bottom:0}
 div.input{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
 @media (max-width:480px){div.input{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.input_prompt{color:#000080;border-top:1px solid transparent}
 div.input_area>div.highlight{margin:.4em;border:none;padding:0;background-color:transparent}
-div.input_area>div.highlight>pre{margin:0;border:none;padding:0;background-color:transparent}
+div.input_area>div.highlight>pre{margin:0;border:0;padding:0;background-color:transparent;font-size:14px;line-height:1.21429em}
 .CodeMirror{line-height:1.21429em;height:auto;background:none;}
 .CodeMirror-scroll{overflow-y:hidden;overflow-x:auto}
-.CodeMirror-lines{padding:.4em}
+@-moz-document url-prefix(){.CodeMirror-scroll{overflow-x:hidden}}.CodeMirror-lines{padding:.4em}
 .CodeMirror-linenumber{padding:0 8px 0 4px}
 .CodeMirror-gutters{border-bottom-left-radius:4px;border-top-left-radius:4px}
 .CodeMirror pre{padding:0;border:0;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
@@ -1408,7 +1405,7 @@ div.output_area{padding:0;page-break-inside:avoid;display:-webkit-box;-webkit-bo
 div.output_area .rendered_html table{margin-left:0;margin-right:0}
 div.output_area .rendered_html img{margin-left:0;margin-right:0}
 .output{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}
-@media (max-width:480px){div.output_area{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;vertical-align:baseline;color:#000;background-color:transparent;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
+@media (max-width:480px){div.output_area{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;color:#000;background-color:transparent;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;line-height:inherit}
 div.output_subarea{padding:.4em .4em 0 .4em;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
 div.output_text{text-align:left;color:#000;line-height:1.21429em}
 div.output_stderr{background:#fdd;}
@@ -1529,7 +1526,7 @@ ul#help_menu li a{overflow:hidden;padding-right:2.2em}ul#help_menu li a i{margin
 .notification_widget{color:#777;padding:1px 12px;margin:2px 4px;z-index:10;border:1px solid #ccc;border-radius:4px;background:rgba(240,240,240,0.5)}.notification_widget.span{padding-right:2px}
 div#pager_splitter{height:8px}
 #pager-container{position:relative;padding:15px 0}
-div#pager{font-size:14px;line-height:20px;overflow:auto;display:none}div#pager pre{line-height:1.21429em;color:#000;background-color:#f7f7f7;padding:.4em}
+div#pager{font-size:14px;line-height:20px;overflow:auto;display:none}div#pager pre{font-size:13px;line-height:1.21429em;color:#000;background-color:#f7f7f7;padding:.4em}
 .quickhelp{display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
 .shortcut_key{display:inline-block;width:20ex;text-align:right;font-family:monospace}
 .shortcut_descr{display:inline-block;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
@@ -1694,12 +1691,11 @@ div#notebook {
 <li>Integration with Astropy <a href="http://astropy.readthedocs.org/en/stable/units/index.html">Units and Quantities</a></li>
 </ul>
 <h2 id="why-not-pandas">Why not Pandas</h2>
-<p>The <a href="http://pandas.pydata.org/pandas-docs/stable/">Pandas</a> package provides a powerful, high-performance table object via the <a href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html#pandas.DataFrame">DataFrame</a> class.  Unfortunately there are a few issues that prevent use as a generalize table object in astronomy.  The most crucial is lack of support for multidimensional table columns.  This is commonly used in standard FITS data products, for instance the Chandra energy response matrix used to analyze spectral data.</p>
+<p>The <a href="http://pandas.pydata.org/pandas-docs/stable/">Pandas</a> package provides a powerful, high-performance table object via the <a href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html#pandas.DataFrame">DataFrame</a> class. Unfortunately there are a few issues that prevent use as a generalize table object in astronomy. The most crucial is lack of support for multidimensional table columns. This is commonly used in standard FITS data products, for instance the Chandra energy response matrix used to analyze spectral data.</p>
 <h2 id="documentation">Documentation</h2>
-<p>For more information about the features presented below, you can read the
-<a href="http://docs.astropy.org/en/stable/table/index.html">astropy.table</a> docs.</p>
-<hr>
-<hr>
+<p>For more information about the features presented below, you can read the <a href="http://docs.astropy.org/en/stable/table/index.html">astropy.table</a> docs.</p>
+<hr />
+<hr />
 <h1 id="tutorial">Tutorial</h1>
 </div>
 </div>
@@ -1732,15 +1728,12 @@ In&nbsp;[1]:
 <li>Read an existing table from a file or web URL</li>
 <li>Add columns of data one by one</li>
 <li>Add rows of data one by one</li>
-<li><p>From an existing data structure in memory:</p>
-<ul>
+<li><p>From an existing data structure in memory:</p></li>
 <li>List of data columns</li>
 <li>Dict of data columns</li>
 <li>List of row dicts</li>
 <li>Numpy homgeneous array or structured array</li>
-<li>List of row records (new in 0.4)</li>
-</ul>
-</li>
+<li><p>List of row records (new in 0.4)</p></li>
 </ul>
 <p>See the documentation section on <a href="http://astropy.readthedocs.org/en/stable/table/construct_table.html">Constructing a table</a> for the gory details and plenty of examples.</p>
 </div>
@@ -1795,7 +1788,7 @@ In&nbsp;[3]:
     Out[3]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table58267536"><thead><tr><th>name</th><th>flux</th></tr></thead><tr><td>source 1</td><td>1.2</td></tr><tr><td>source 2</td><td>2.2</td></tr><tr><td>source 3</td><td>3.1</td></tr><tr><td>source 4</td><td>4.3</td></tr></table>
+<table id="table4431800464"><thead><tr><th>name</th><th>flux</th></tr></thead><tr><td>source 1</td><td>1.2</td></tr><tr><td>source 2</td><td>2.2</td></tr><tr><td>source 3</td><td>3.1</td></tr><tr><td>source 4</td><td>4.3</td></tr></table>
 </div>
 
 </div>
@@ -1809,13 +1802,13 @@ In&nbsp;[3]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>If you did the same in a terminal session you get a different view that isn&#39;t as pretty but does give a bit more information about the table:</p>
+<p>If you did the same in a terminal session you get a different view that isn't as pretty but does give a bit more information about the table:</p>
 <pre><code>&gt;&gt;&gt; t
 &lt;Table rows=4 names=(&#39;name&#39;,&#39;flux&#39;)&gt;
 array([(&#39;source 1&#39;, 1.2), (&#39;source 2&#39;, 2.2), (&#39;source 3&#39;, 3.1),
        (&#39;source 4&#39;, 4.3)], 
-      dtype=[(&#39;name&#39;, &#39;S8&#39;), (&#39;flux&#39;, &#39;&lt;f8&#39;)])
-</code></pre><p>To get a plain view which is the same in notebook and terminal use <code>print()</code>:</p>
+      dtype=[(&#39;name&#39;, &#39;S8&#39;), (&#39;flux&#39;, &#39;&lt;f8&#39;)])</code></pre>
+<p>To get a plain view which is the same in notebook and terminal use <code>print()</code>:</p>
 </div>
 </div>
 </div>
@@ -1938,7 +1931,7 @@ dtype([(&apos;name&apos;, &apos;S8&apos;), (&apos;flux&apos;, &apos;&lt;f8&apos;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="accessing-parts-of-the-table">Accessing parts of the table</h3>
-<p>We can access the columns and rows as for numpy structured arrays.  Notice that the outputs are <code>Column</code>, <code>Row</code> or <code>Table</code> objects depending on the context.</p>
+<p>We can access the columns and rows as for numpy structured arrays. Notice that the outputs are <code>Column</code>, <code>Row</code> or <code>Table</code> objects depending on the context.</p>
 </div>
 </div>
 </div>
@@ -2103,7 +2096,7 @@ In&nbsp;[11]:
     Out[11]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table45900496"><thead><tr><th>name</th><th>flux</th></tr></thead><tr><td>source 2</td><td>2.2</td></tr><tr><td>source 3</td><td>3.1</td></tr></table>
+<table id="table4431800144"><thead><tr><th>name</th><th>flux</th></tr></thead><tr><td>source 2</td><td>2.2</td></tr><tr><td>source 3</td><td>3.1</td></tr></table>
 </div>
 
 </div>
@@ -2134,7 +2127,7 @@ In&nbsp;[12]:
     Out[12]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table58267792"><thead><tr><th>name</th><th>flux</th></tr></thead><tr><td>source 2</td><td>2.2</td></tr><tr><td>source 4</td><td>4.3</td></tr></table>
+<table id="table4431800080"><thead><tr><th>name</th><th>flux</th></tr></thead><tr><td>source 2</td><td>2.2</td></tr><tr><td>source 4</td><td>4.3</td></tr></table>
 </div>
 
 </div>
@@ -2175,7 +2168,7 @@ In&nbsp;[13]:
     Out[13]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table58266896"><thead><tr><th>name</th><th>flux</th></tr></thead><tr><td>source 3</td><td>3.1</td></tr><tr><td>source 4</td><td>4.3</td></tr></table>
+<table id="table4431801360"><thead><tr><th>name</th><th>flux</th></tr></thead><tr><td>source 3</td><td>3.1</td></tr><tr><td>source 4</td><td>4.3</td></tr></table>
 </div>
 
 </div>
@@ -2190,7 +2183,7 @@ In&nbsp;[13]:
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="modifying-the-table">Modifying the table</h3>
-<p>Once the table exists with defined columns there are a number of ways to modify the table in place.  These are fully documented in the section <a href="http://astropy.readthedocs.org/en/stable/table/modify_table.html#modifying-a-table">Modifying a Table</a>.</p>
+<p>Once the table exists with defined columns there are a number of ways to modify the table in place. These are fully documented in the section <a href="http://astropy.readthedocs.org/en/stable/table/modify_table.html#modifying-a-table">Modifying a Table</a>.</p>
 <p>To give a couple of simple examples, you can add rows with the <a href="http://astropy.readthedocs.org/en/stable/api/astropy.table.table.Table.html#astropy.table.table.Table.add_row">add_row()</a> method or add new columns using dict-style assignment:</p>
 </div>
 </div>
@@ -2219,7 +2212,7 @@ In&nbsp;[14]:
     Out[14]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table58267536"><thead><tr><th>name</th><th>flux</th><th>logflux</th></tr></thead><tr><td>source 1</td><td>1.2</td><td>0.0791812460476</td></tr><tr><td>source 2</td><td>2.2</td><td>0.342422680822</td></tr><tr><td>source 3</td><td>3.1</td><td>0.491361693834</td></tr><tr><td>source 4</td><td>4.3</td><td>0.63346845558</td></tr><tr><td>source 5</td><td>10.1</td><td>1.00432137378</td></tr></table>
+<table id="table4431800464"><thead><tr><th>name</th><th>flux</th><th>logflux</th></tr></thead><tr><td>source 1</td><td>1.2</td><td>0.0791812460476</td></tr><tr><td>source 2</td><td>2.2</td><td>0.342422680822</td></tr><tr><td>source 3</td><td>3.1</td><td>0.491361693834</td></tr><tr><td>source 4</td><td>4.3</td><td>0.63346845558</td></tr><tr><td>source 5</td><td>10.1</td><td>1.00432137378</td></tr></table>
 </div>
 
 </div>
@@ -2233,7 +2226,7 @@ In&nbsp;[14]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Notice that the <code>logflux</code> column really has too many output digits given the precision of the input values.  We can fix this by setting the format using normal Python formatting syntax:</p>
+<p>Notice that the <code>logflux</code> column really has too many output digits given the precision of the input values. We can fix this by setting the format using normal Python formatting syntax:</p>
 </div>
 </div>
 </div>
@@ -2261,7 +2254,7 @@ In&nbsp;[15]:
     Out[15]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table58267536"><thead><tr><th>name</th><th>flux</th><th>logflux</th></tr></thead><tr><td>source 1</td><td>1.20</td><td>0.08</td></tr><tr><td>source 2</td><td>2.20</td><td>0.34</td></tr><tr><td>source 3</td><td>3.10</td><td>0.49</td></tr><tr><td>source 4</td><td>4.30</td><td>0.63</td></tr><tr><td>source 5</td><td>10.10</td><td>1.00</td></tr></table>
+<table id="table4431800464"><thead><tr><th>name</th><th>flux</th><th>logflux</th></tr></thead><tr><td>source 1</td><td>1.20</td><td>0.08</td></tr><tr><td>source 2</td><td>2.20</td><td>0.34</td></tr><tr><td>source 3</td><td>3.10</td><td>0.49</td></tr><tr><td>source 4</td><td>4.30</td><td>0.63</td></tr><tr><td>source 5</td><td>10.10</td><td>1.00</td></tr></table>
 </div>
 
 </div>
@@ -2276,8 +2269,8 @@ In&nbsp;[15]:
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="converting-the-table-to-numpy">Converting the table to numpy</h3>
-<p>Sometimes you may not want or be able to use a <code>Table</code> object and prefer to work with a plain numpy array.  This is easily done by passing the table to the <code>np.array()</code> constructor.  </p>
-<p><em>This makes a copy of the data</em>.  If you have a huge table and don&#39;t want to waste memory, supply <code>copy=False</code> to the constructor, but be warned that changing the output numpy array will change the original table.</p>
+<p>Sometimes you may not want or be able to use a <code>Table</code> object and prefer to work with a plain numpy array. This is easily done by passing the table to the <code>np.array()</code> constructor.</p>
+<p><em>This makes a copy of the data</em>. If you have a huge table and don't want to waste memory, supply <code>copy=False</code> to the constructor, but be warned that changing the output numpy array will change the original table.</p>
 </div>
 </div>
 </div>
@@ -2355,7 +2348,7 @@ In&nbsp;[17]:
     Out[17]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table58268752"><thead><tr><th>name</th><th>value</th></tr></thead><tr><td>x</td><td>1.1</td></tr><tr><td>y</td><td>2.2</td></tr><tr><td>z</td><td>3.3</td></tr></table>
+<table id="table4431802192"><thead><tr><th>name</th><th>value</th></tr></thead><tr><td>x</td><td>1.1</td></tr><tr><td>y</td><td>2.2</td></tr><tr><td>z</td><td>3.3</td></tr></table>
 </div>
 
 </div>
@@ -2456,34 +2449,34 @@ name value
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="high-level-table-operations">High-level table operations</h2>
-<p>So far we&#39;ve just worked with one table at a time and viewed that table as a monolithic entity.  Astropy also supports high-level <a href="http://astropy.readthedocs.org/en/stable/table/operations.html">Table operations</a> that manipulate multiple tables or view one table as a collection of sub-tables (groups).</p>
+<p>So far we've just worked with one table at a time and viewed that table as a monolithic entity. Astropy also supports high-level <a href="http://astropy.readthedocs.org/en/stable/table/operations.html">Table operations</a> that manipulate multiple tables or view one table as a collection of sub-tables (groups).</p>
 <table>
 <thead>
-<tr>
-<th>Documentation</th>
-<th>Description</th>
+<tr class="header">
+<th align="left">Documentation</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><a href="http://astropy.readthedocs.org/en/stable/table/operations.html#id2">Grouped operations</a></td>
-<td>Group tables and columns by keys</td>
+<tr class="odd">
+<td align="left"><a href="http://astropy.readthedocs.org/en/stable/table/operations.html#id2">Grouped operations</a></td>
+<td align="left">Group tables and columns by keys</td>
 </tr>
-<tr>
-<td><a href="http://astropy.readthedocs.org/en/stable/table/operations.html#id3">Stack vertically</a></td>
-<td>Concatenate input tables along rows</td>
+<tr class="even">
+<td align="left"><a href="http://astropy.readthedocs.org/en/stable/table/operations.html#id3">Stack vertically</a></td>
+<td align="left">Concatenate input tables along rows</td>
 </tr>
-<tr>
-<td><a href="http://astropy.readthedocs.org/en/stable/table/operations.html#id4">Stack horizontally</a></td>
-<td>Concatenate input tables along columns</td>
+<tr class="odd">
+<td align="left"><a href="http://astropy.readthedocs.org/en/stable/table/operations.html#id4">Stack horizontally</a></td>
+<td align="left">Concatenate input tables along columns</td>
 </tr>
-<tr>
-<td><a href="http://astropy.readthedocs.org/en/stable/table/operations.html#join">Join</a></td>
-<td>Database-style join of two tables</td>
+<tr class="even">
+<td align="left"><a href="http://astropy.readthedocs.org/en/stable/table/operations.html#join">Join</a></td>
+<td align="left">Database-style join of two tables</td>
 </tr>
 </tbody>
 </table>
-<p>Here we&#39;ll just introduce the join operation but go into more detail on the others in the exercises.</p>
+<p>Here we'll just introduce the join operation but go into more detail on the others in the exercises.</p>
 </div>
 </div>
 </div>
@@ -2533,7 +2526,7 @@ In&nbsp;[22]:
     Out[22]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table58267536"><thead><tr><th>name</th><th>flux</th><th>logflux</th></tr></thead><tr><td>source 1</td><td>1.20</td><td>0.08</td></tr><tr><td>source 2</td><td>2.20</td><td>0.34</td></tr><tr><td>source 3</td><td>3.10</td><td>0.49</td></tr><tr><td>source 4</td><td>4.30</td><td>0.63</td></tr><tr><td>source 5</td><td>10.10</td><td>1.00</td></tr></table>
+<table id="table4431800464"><thead><tr><th>name</th><th>flux</th><th>logflux</th></tr></thead><tr><td>source 1</td><td>1.20</td><td>0.08</td></tr><tr><td>source 2</td><td>2.20</td><td>0.34</td></tr><tr><td>source 3</td><td>3.10</td><td>0.49</td></tr><tr><td>source 4</td><td>4.30</td><td>0.63</td></tr><tr><td>source 5</td><td>10.10</td><td>1.00</td></tr></table>
 </div>
 
 </div>
@@ -2573,7 +2566,7 @@ In&nbsp;[23]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now we can get a master table of flux measurements which are joined matching the values the <code>name</code> column.  This includes every row from each of the two tables, which is known as an <strong><code>outer</code></strong> join.</p>
+<p>Now we can get a master table of flux measurements which are joined matching the values the <code>name</code> column. This includes every row from each of the two tables, which is known as an <strong><code>outer</code></strong> join.</p>
 </div>
 </div>
 </div>
@@ -2615,7 +2608,7 @@ source 8   nan     nan   8.6
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-/home/iguananaut/.virtualenvs/astropy4scipy/lib/python2.7/site-packages/numpy/ma/core.py:3847: UserWarning: Warning: converting a masked element to nan.
+/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/ma/core.py:3847: UserWarning: Warning: converting a masked element to nan.
   warnings.warn(&quot;Warning: converting a masked element to nan.&quot;)
 
 </pre>
@@ -2691,7 +2684,7 @@ In&nbsp;[26]:
     Out[26]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table58268240"><thead><tr><th>name</th><th>flux</th><th>logflux</th><th>flux2</th></tr></thead><tr><td>source 1</td><td>1.20</td><td>0.08</td><td>1.4</td></tr><tr><td>source 3</td><td>3.10</td><td>0.49</td><td>3.5</td></tr></table>
+<table id="table4408600784"><thead><tr><th>name</th><th>flux</th><th>logflux</th><th>flux2</th></tr></thead><tr><td>source 1</td><td>1.20</td><td>0.08</td><td>1.4</td></tr><tr><td>source 3</td><td>3.10</td><td>0.49</td><td>3.5</td></tr></table>
 </div>
 
 </div>
@@ -2772,7 +2765,7 @@ In&nbsp;[29]:
     Out[29]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table59185232"><thead><tr><th>name</th><th>flux</th><th>logflux</th><th>flux2</th></tr></thead><tr><td>source 1</td><td>1.2</td><td>0.0791812460476</td><td>1.4</td></tr><tr><td>source 2</td><td>2.2</td><td>0.342422680822</td><td>nan</td></tr><tr><td>source 3</td><td>3.1</td><td>0.491361693834</td><td>3.5</td></tr><tr><td>source 4</td><td>4.3</td><td>0.63346845558</td><td>nan</td></tr><tr><td>source 5</td><td>10.1</td><td>1.00432137378</td><td>nan</td></tr><tr><td>source 8</td><td>nan</td><td>nan</td><td>8.6</td></tr></table>
+<table id="table4428598224"><thead><tr><th>name</th><th>flux</th><th>logflux</th><th>flux2</th></tr></thead><tr><td>source 1</td><td>1.2</td><td>0.0791812460476</td><td>1.4</td></tr><tr><td>source 2</td><td>2.2</td><td>0.342422680822</td><td>nan</td></tr><tr><td>source 3</td><td>3.1</td><td>0.491361693834</td><td>3.5</td></tr><tr><td>source 4</td><td>4.3</td><td>0.63346845558</td><td>nan</td></tr><tr><td>source 5</td><td>10.1</td><td>1.00432137378</td><td>nan</td></tr><tr><td>source 8</td><td>nan</td><td>nan</td><td>8.6</td></tr></table>
 </div>
 
 </div>
@@ -2796,8 +2789,8 @@ In&nbsp;[29]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In these exercises you will work with data from the <a href="http://cxc.harvard.edu/csc/">Chandra Source Catalog</a>.  In particular we will analyze the properties of sources from a series of 21 <a href="http://cxc.harvard.edu/cdo/cdfs.html">Chandra Deep Field South</a> observations taken during 2000 and 2007.</p>
-<p>The data sets used in these exercises were generated using the code in the <strong><code>supplemental/chandra_deep_field_south</code></strong> notebook to query the CSC via the web API.  You can try this yourself (but maybe not all at once!) if you have the <a href="http://docs.python-requests.org/en/latest/">requests</a> module installed.   More information on querying the CSC can be found in the <a href="http://cxc.harvard.edu/csc/cli/index.html">command line interface</a> documentation.</p>
+<p>In these exercises you will work with data from the <a href="http://cxc.harvard.edu/csc/">Chandra Source Catalog</a>. In particular we will analyze the properties of sources from a series of 21 <a href="http://cxc.harvard.edu/cdo/cdfs.html">Chandra Deep Field South</a> observations taken during 2000 and 2007.</p>
+<p>The data sets used in these exercises were generated using the code in the <strong><code>supplemental/chandra_deep_field_south</code></strong> notebook to query the CSC via the web API. You can try this yourself (but maybe not all at once!) if you have the <a href="http://docs.python-requests.org/en/latest/">requests</a> module installed. More information on querying the CSC can be found in the <a href="http://cxc.harvard.edu/csc/cli/index.html">command line interface</a> documentation.</p>
 </div>
 </div>
 </div>
@@ -2816,96 +2809,96 @@ In&nbsp;[29]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To start with, read in the two data files representing the master source list and observations source list.  The fields for the two tables are respectively documented in:</p>
+<p>To start with, read in the two data files representing the master source list and observations source list. The fields for the two tables are respectively documented in:</p>
 <ul>
 <li><a href="http://cxc.harvard.edu/csc/columns/master.html">master_sources</a></li>
 <li><a href="http://cxc.harvard.edu/csc/columns/persrc.html">obs_sources</a></li>
 </ul>
 <p><strong><code>master_sources</code></strong></p>
-<p>Each distinct X-ray source identified on the sky is represented in the catalog by a single &quot;master source&quot; entry and one or more &quot;source observation&quot; entries, one for each observation in which the source has been detected. The master source entry records the best estimates of the properties of a source, based on the data extracted from the set of observations in which the source has been detected.  The subset of fields in our exercise table file are:</p>
+<p>Each distinct X-ray source identified on the sky is represented in the catalog by a single &quot;master source&quot; entry and one or more &quot;source observation&quot; entries, one for each observation in which the source has been detected. The master source entry records the best estimates of the properties of a source, based on the data extracted from the set of observations in which the source has been detected. The subset of fields in our exercise table file are:</p>
 <table>
 <thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>msid</td>
-<td>Master source ID</td>
+<tr class="odd">
+<td align="left">msid</td>
+<td align="left">Master source ID</td>
 </tr>
-<tr>
-<td>name</td>
-<td>Source name in the Chandra catalog</td>
+<tr class="even">
+<td align="left">name</td>
+<td align="left">Source name in the Chandra catalog</td>
 </tr>
-<tr>
-<td>ra</td>
-<td>Source RA (deg)</td>
+<tr class="odd">
+<td align="left">ra</td>
+<td align="left">Source RA (deg)</td>
 </tr>
-<tr>
-<td>dec</td>
-<td>Source Dec (deg)</td>
+<tr class="even">
+<td align="left">dec</td>
+<td align="left">Source Dec (deg)</td>
 </tr>
 </tbody>
 </table>
 <p><strong><code>obs_sources</code></strong></p>
-<p>The individual source entries record all of the properties about a detection extracted from a single observation, as well as associated file-based data products, which are observation-specific.  The subset of fields in our exercise table file are:</p>
+<p>The individual source entries record all of the properties about a detection extracted from a single observation, as well as associated file-based data products, which are observation-specific. The subset of fields in our exercise table file are:</p>
 <table>
 <thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>obsid</td>
-<td>Observation ID</td>
+<tr class="odd">
+<td align="left">obsid</td>
+<td align="left">Observation ID</td>
 </tr>
-<tr>
-<td>obi</td>
-<td>Observation interval</td>
+<tr class="even">
+<td align="left">obi</td>
+<td align="left">Observation interval</td>
 </tr>
-<tr>
-<td>targname</td>
-<td>Target name</td>
+<tr class="odd">
+<td align="left">targname</td>
+<td align="left">Target name</td>
 </tr>
-<tr>
-<td>gti_obs</td>
-<td>Observation date</td>
+<tr class="even">
+<td align="left">gti_obs</td>
+<td align="left">Observation date</td>
 </tr>
-<tr>
-<td>flux_aper_b</td>
-<td>Broad band (0.5 - 7 keV) flux (erg/cm2/sec)</td>
+<tr class="odd">
+<td align="left">flux_aper_b</td>
+<td align="left">Broad band (0.5 - 7 keV) flux (erg/cm2/sec)</td>
 </tr>
-<tr>
-<td>src_cnts_aper_b</td>
-<td>Broad band source counts</td>
+<tr class="even">
+<td align="left">src_cnts_aper_b</td>
+<td align="left">Broad band source counts</td>
 </tr>
-<tr>
-<td>ra_b</td>
-<td>Source RA (deg)</td>
+<tr class="odd">
+<td align="left">ra_b</td>
+<td align="left">Source RA (deg)</td>
 </tr>
-<tr>
-<td>dec_b</td>
-<td>Source Dec (deg)</td>
+<tr class="even">
+<td align="left">dec_b</td>
+<td align="left">Source Dec (deg)</td>
 </tr>
-<tr>
-<td>livetime</td>
-<td>Observation duration (sec)</td>
+<tr class="odd">
+<td align="left">livetime</td>
+<td align="left">Observation duration (sec)</td>
 </tr>
-<tr>
-<td>posid</td>
-<td>Position ID</td>
+<tr class="even">
+<td align="left">posid</td>
+<td align="left">Position ID</td>
 </tr>
-<tr>
-<td>theta</td>
-<td>Off-axis angle (arcmin)</td>
+<tr class="odd">
+<td align="left">theta</td>
+<td align="left">Off-axis angle (arcmin)</td>
 </tr>
-<tr>
-<td>msid</td>
-<td>Master source ID</td>
+<tr class="even">
+<td align="left">msid</td>
+<td align="left">Master source ID</td>
 </tr>
 </tbody>
 </table>
@@ -2946,11 +2939,11 @@ In&nbsp;[30]:
 <p>Do the following to explore the two tables:</p>
 <ul>
 <li>Display the data for each table in IPython notebook using the normal way of showing the value of a variable.</li>
-<li>Get a list of the column names for each table.  <em>Hint</em>: use <code>&lt;TAB&gt;</code> completion to easily discover all the attributes and methods, e.g. type <code>master_sources.</code> and then hit the <code>&lt;TAB&gt;</code> key.</li>
+<li>Get a list of the column names for each table. <em>Hint</em>: use <code>&lt;TAB&gt;</code> completion to easily discover all the attributes and methods, e.g. type <code>master_sources.</code> and then hit the <code>&lt;TAB&gt;</code> key.</li>
 <li>Find the length of each table.</li>
 <li>Find the column datatypes for each table.</li>
 </ul>
-<p>Normally one displays a table in IPython notebook by entering the variable name in a cell and pressing <code>shift-Enter</code>.  In a terminal session the default method is using something like <code>print(my_table)</code>.  In both cases the <code>Table</code> object prefers to display only a screenful of data to prevent having a zillion lines of output if the table is huge.  If you really want to see all the data you can use the <a href="http://astropy.readthedocs.org/en/stable/api/astropy.table.table.Table.html#astropy.table.table.Table.pprint">Table.pprint</a> method.</p>
+<p>Normally one displays a table in IPython notebook by entering the variable name in a cell and pressing <code>shift-Enter</code>. In a terminal session the default method is using something like <code>print(my_table)</code>. In both cases the <code>Table</code> object prefers to display only a screenful of data to prevent having a zillion lines of output if the table is huge. If you really want to see all the data you can use the <a href="http://astropy.readthedocs.org/en/stable/api/astropy.table.table.Table.html#astropy.table.table.Table.pprint">Table.pprint</a> method.</p>
 <ul>
 <li>Display all the rows of the <code>master_sources</code> table using its <code>pprint()</code> method.</li>
 <li>If you are working in a regular terminal window (not IPython notebook), try the <code>more()</code> method as well.</li>
@@ -2973,7 +2966,7 @@ In&nbsp;[30]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For our analysis we don&#39;t actually need the <code>obi</code> (observation interval) column in the <code>obs_sources</code> table.</p>
+<p>For our analysis we don't actually need the <code>obi</code> (observation interval) column in the <code>obs_sources</code> table.</p>
 <ul>
 <li>Remove the <code>obi</code> column from the <code>obs_sources</code> table.</li>
 </ul>
@@ -3004,16 +2997,15 @@ In&nbsp;[30]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For each source detected in an individual observation (in the <code>obs_sources</code> table), let&#39;s look at the source flux values.</p>
+<p>For each source detected in an individual observation (in the <code>obs_sources</code> table), let's look at the source flux values.</p>
 <ul>
-<li>Use the matplotlib <a href="http://matplotlib.org/api/pyplot_api.html?highlight=pyplot.hist#matplotlib.pyplot.hist"><code>hist()</code></a> function to make a histogram of the source fluxes.  Since the fluxes vary by orders of magnitude,
-use the <code>numpy.log10</code> to put the fluxes in log space.</li>
+<li>Use the matplotlib <a href="http://matplotlib.org/api/pyplot_api.html?highlight=pyplot.hist#matplotlib.pyplot.hist"><code>hist()</code></a> function to make a histogram of the source fluxes. Since the fluxes vary by orders of magnitude, use the <code>numpy.log10</code> to put the fluxes in log space.</li>
 </ul>
 <p><em>HINT</em>: if you did not start notebook with <code>--pylab=inline</code> then try:</p>
 <pre><code>import matplotlib.pyplot as plt
-%matplotlib inline
-</code></pre><ul>
-<li>Now make the same plot but using only sources within 4 arcmin of the center.  <em>HINT</em>: use a boolean mask to select values of <code>theta</code> that are less than 4.0.</li>
+%matplotlib inline</code></pre>
+<ul>
+<li>Now make the same plot but using only sources within 4 arcmin of the center. <em>HINT</em>: use a boolean mask to select values of <code>theta</code> that are less than 4.0.</li>
 </ul>
 </div>
 </div>
@@ -3037,12 +3029,10 @@ use the <code>numpy.log10</code> to put the fluxes in log space.</li>
 <ul>
 <li>Use the <a href="http://astropy.readthedocs.org/en/stable/table/operations.html#join">table.join()</a> function to make a single table called <code>sources</code> that has the master RA, Dec, and name included for each observation source.</li>
 </ul>
-<p><em>HINT</em>: the defaults for <code>keys</code> and <code>join_type=&#39;inner&#39;</code>  are correct in this case, so the simplest possible call to <code>join()</code> will work!</p>
+<p><em>HINT</em>: the defaults for <code>keys</code> and <code>join_type='inner'</code> are correct in this case, so the simplest possible call to <code>join()</code> will work!</p>
 <ul>
-<li><p><em>Intermediate</em>: Is the length of the new <code>sources</code> the same as <code>obs_sources</code>?  What happened?</p>
-</li>
-<li><p><em>Advanced</em>: Make a scatter plot of the RA (x-axis) and Dec (y-axis) difference between the master source position and the observation source position.  You&#39;ll need to use <code>coordinates</code>!</p>
-</li>
+<li><p><em>Intermediate</em>: Is the length of the new <code>sources</code> the same as <code>obs_sources</code>? What happened?</p></li>
+<li><p><em>Advanced</em>: Make a scatter plot of the RA (x-axis) and Dec (y-axis) difference between the master source position and the observation source position. You'll need to use <code>coordinates</code>!</p></li>
 </ul>
 </div>
 </div>
@@ -3062,16 +3052,16 @@ use the <code>numpy.log10</code> to put the fluxes in log space.</li>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Finally, we can look at the variability properties of sources in the CDFS using the <a href="http://astropy.readthedocs.org/en/stable/table/operations.html#id2"><code>group_by()</code></a> functionality.  </p>
+<p>Finally, we can look at the variability properties of sources in the CDFS using the <a href="http://astropy.readthedocs.org/en/stable/table/operations.html#id2"><code>group_by()</code></a> functionality.</p>
 <p>This method makes a new table in which all the sources with identical master ID are next to each other.</p>
 <ul>
 <li>Make a new table <code>g_sources</code> which is the <code>sources</code> table grouped by the <code>msid</code> key using the <code>group_by()</code> method.</li>
 </ul>
-<p>The <code>g_sources</code> table is just a regular table with all the <code>sources</code> in a particular order.  The attribute <code>g_sources.groups</code> is an object that provides access to the <code>msid</code> sub-groups.  You can access the $i^{th}$ group with <code>g_sources.groups[i]</code>.</p>
+<p>The <code>g_sources</code> table is just a regular table with all the <code>sources</code> in a particular order. The attribute <code>g_sources.groups</code> is an object that provides access to the <code>msid</code> sub-groups. You can access the <span class="math">\(i^{th}\)</span> group with <code>g_sources.groups[i]</code>.</p>
 <p>In addition the <code>g_sources.groups.indices</code> attribute is an array with the indicies of the group boundaries.</p>
 <ul>
-<li>Using <code>np.diff()</code> find the number of repeat observations of each master sources.  <em>HINT</em>: use the indices, Luke.</li>
-<li>Print the 50th group and note which columns are the same for all group members and which are different.  Does this make sense?  In these few observations how many different target names were provided by observers?</li>
+<li>Using <code>np.diff()</code> find the number of repeat observations of each master sources. <em>HINT</em>: use the indices, Luke.</li>
+<li>Print the 50th group and note which columns are the same for all group members and which are different. Does this make sense? In these few observations how many different target names were provided by observers?</li>
 </ul>
 </div>
 </div>
@@ -3091,11 +3081,11 @@ use the <code>numpy.log10</code> to put the fluxes in log space.</li>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The real power of grouping comes in the ability to create aggregate values for each of the groups, for instance the mean flux for each unique source.  This is done with the <a href="http://astropy.readthedocs.org/en/stable/table/operations.html#aggregation"><code>aggregate()</code></a> method, which takes a function reference as its input.  This function must take as input an array of values and return a single value.</p>
+<p>The real power of grouping comes in the ability to create aggregate values for each of the groups, for instance the mean flux for each unique source. This is done with the <a href="http://astropy.readthedocs.org/en/stable/table/operations.html#aggregation"><code>aggregate()</code></a> method, which takes a function reference as its input. This function must take as input an array of values and return a single value.</p>
 <p>Aggregate returns a new table that has a length equal to the number of groups.</p>
 <ul>
-<li>Compute the mean of all columns for each unique source (i.e. each group) using <code>aggregate</code> and the <code>np.mean</code> function.  Call this table <code>g_sources_mean</code>.</li>
-<li>Notice that aggregation cannot form a mean for certain columns and these are dropped from the output.  Use the <code>join()</code> function to restore the <code>master_sources</code> information to <code>g_sources_mean</code>.</li>
+<li>Compute the mean of all columns for each unique source (i.e. each group) using <code>aggregate</code> and the <code>np.mean</code> function. Call this table <code>g_sources_mean</code>.</li>
+<li>Notice that aggregation cannot form a mean for certain columns and these are dropped from the output. Use the <code>join()</code> function to restore the <code>master_sources</code> information to <code>g_sources_mean</code>.</li>
 </ul>
 </div>
 </div>

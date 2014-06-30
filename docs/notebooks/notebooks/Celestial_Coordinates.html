@@ -1277,7 +1277,6 @@ a .icon-rotate-90:before,a .icon-rotate-180:before,a .icon-rotate-270:before,a .
 .icon-weibo:before{content:"\f18a"}
 .icon-renren:before{content:"\f18b"}
 code{color:#000}
-pre{font-size:inherit;line-height:inherit}
 .border-box-sizing{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
 .corner-all{border-radius:4px}
 .hbox{display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
@@ -1341,8 +1340,6 @@ input.nbname_input,input.engine_num_input{padding-top:3px;padding-bottom:3px;hei
 input.engine_num_input{width:60px}
 .highlight_text{color:#00f}
 #project_name>.breadcrumb{padding:0;margin-bottom:0;background-color:transparent;font-weight:bold}
-.folder_icon:before{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;*margin-right:.3em;content:"\f114"}
-.notebook_icon:before{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;*margin-right:.3em;content:"\f02d"}
 .ansibold{font-weight:bold}
 .ansiblack{color:#000}
 .ansired{color:#8b0000}
@@ -1365,15 +1362,15 @@ div.cell.edit_mode{border-radius:4px;border:thin #008000 solid}
 div.cell{width:100%;padding:5px 5px 5px 0;margin:0;outline:none}
 div.prompt{min-width:11ex;padding:.4em;margin:0;font-family:monospace;text-align:right;line-height:1.21429em}
 @media (max-width:480px){div.prompt{text-align:left}}div.inner_cell{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
-div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7;line-height:1.21429em}
+div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7}
 div.prompt:empty{padding-top:0;padding-bottom:0}
 div.input{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
 @media (max-width:480px){div.input{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.input_prompt{color:#000080;border-top:1px solid transparent}
 div.input_area>div.highlight{margin:.4em;border:none;padding:0;background-color:transparent}
-div.input_area>div.highlight>pre{margin:0;border:none;padding:0;background-color:transparent}
+div.input_area>div.highlight>pre{margin:0;border:0;padding:0;background-color:transparent;font-size:14px;line-height:1.21429em}
 .CodeMirror{line-height:1.21429em;height:auto;background:none;}
 .CodeMirror-scroll{overflow-y:hidden;overflow-x:auto}
-.CodeMirror-lines{padding:.4em}
+@-moz-document url-prefix(){.CodeMirror-scroll{overflow-x:hidden}}.CodeMirror-lines{padding:.4em}
 .CodeMirror-linenumber{padding:0 8px 0 4px}
 .CodeMirror-gutters{border-bottom-left-radius:4px;border-top-left-radius:4px}
 .CodeMirror pre{padding:0;border:0;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
@@ -1408,7 +1405,7 @@ div.output_area{padding:0;page-break-inside:avoid;display:-webkit-box;-webkit-bo
 div.output_area .rendered_html table{margin-left:0;margin-right:0}
 div.output_area .rendered_html img{margin-left:0;margin-right:0}
 .output{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}
-@media (max-width:480px){div.output_area{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;vertical-align:baseline;color:#000;background-color:transparent;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
+@media (max-width:480px){div.output_area{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;color:#000;background-color:transparent;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;line-height:inherit}
 div.output_subarea{padding:.4em .4em 0 .4em;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
 div.output_text{text-align:left;color:#000;line-height:1.21429em}
 div.output_stderr{background:#fdd;}
@@ -1529,7 +1526,7 @@ ul#help_menu li a{overflow:hidden;padding-right:2.2em}ul#help_menu li a i{margin
 .notification_widget{color:#777;padding:1px 12px;margin:2px 4px;z-index:10;border:1px solid #ccc;border-radius:4px;background:rgba(240,240,240,0.5)}.notification_widget.span{padding-right:2px}
 div#pager_splitter{height:8px}
 #pager-container{position:relative;padding:15px 0}
-div#pager{font-size:14px;line-height:20px;overflow:auto;display:none}div#pager pre{line-height:1.21429em;color:#000;background-color:#f7f7f7;padding:.4em}
+div#pager{font-size:14px;line-height:20px;overflow:auto;display:none}div#pager pre{font-size:13px;line-height:1.21429em;color:#000;background-color:#f7f7f7;padding:.4em}
 .quickhelp{display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
 .shortcut_key{display:inline-block;width:20ex;text-align:right;font-family:monospace}
 .shortcut_descr{display:inline-block;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
@@ -1700,8 +1697,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For more information about the features presented below, you can read the
-<a href="http://docs.astropy.org/en/stable/coordinates/index.html">astropy.coordinates</a> docs.</p>
+<p>For more information about the features presented below, you can read the <a href="http://docs.astropy.org/en/stable/coordinates/index.html">astropy.coordinates</a> docs.</p>
 </div>
 </div>
 </div>
@@ -1720,10 +1716,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Astropy includes a framework to represent celestial coordinates and transform
-between them. Astropy 0.4 only includes a few common coordinate systems (ICRS,
-FK4, FK5, and Galactic), but future versions will include more built-in
-coordinate systems, and users can already define their own systems.</p>
+<p>Astropy includes a framework to represent celestial coordinates and transform between them. Astropy 0.4 only includes a few common coordinate systems (ICRS, FK4, FK5, and Galactic), but future versions will include more built-in coordinate systems, and users can already define their own systems.</p>
 </div>
 </div>
 </div>
@@ -1801,7 +1794,7 @@ In&nbsp;[2]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In addition to passing angular Quantity objects, the SkyCoord class can parse coordinate strings: </p>
+<p>In addition to passing angular Quantity objects, the SkyCoord class can parse coordinate strings:</p>
 </div>
 </div>
 </div>
@@ -1854,8 +1847,7 @@ In&nbsp;[3]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The individual components of a coordinate are <code>Angle</code> objects, and their
-values are accessed using special attributes:</p>
+<p>The individual components of a coordinate are <code>Angle</code> objects, and their values are accessed using special attributes:</p>
 </div>
 </div>
 </div>
@@ -2055,8 +2047,7 @@ In&nbsp;[9]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To convert to some other coordinate system (or &#39;frame&#39; in Astropy terminology), the easiest method is to use
-attribute-style access with short names for the built-in systems:</p>
+<p>To convert to some other coordinate system (or 'frame' in Astropy terminology), the easiest method is to use attribute-style access with short names for the built-in systems:</p>
 </div>
 </div>
 </div>
@@ -2259,10 +2250,7 @@ In&nbsp;[15]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The <code>astropy.coordinates</code> subpackage also provides a quick way to get coordinates for
-named objects (with an internet connection). All coordinate classes have a
-special class method, <code>from_name()</code>, that accepts a string and queries <a href="http://cds.u-strasbg.fr/cgi-bin/Sesame">Sesame</a> to retrieve coordinates for that
-object:</p>
+<p>The <code>astropy.coordinates</code> subpackage also provides a quick way to get coordinates for named objects (with an internet connection). All coordinate classes have a special class method, <code>from_name()</code>, that accepts a string and queries <a href="http://cds.u-strasbg.fr/cgi-bin/Sesame">Sesame</a> to retrieve coordinates for that object:</p>
 </div>
 </div>
 </div>
@@ -2371,7 +2359,7 @@ In&nbsp;[19]:
     Out[19]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table82570896"><thead><tr><th>ra</th><th>dec</th><th>clon</th><th>clat</th><th>err_maj</th><th>err_min</th><th>err_ang</th><th>designation</th><th>j_m</th><th>j_cmsig</th><th>j_msigcom</th><th>j_snr</th><th>h_m</th><th>h_cmsig</th><th>h_msigcom</th><th>h_snr</th><th>k_m</th><th>k_cmsig</th><th>k_msigcom</th><th>k_snr</th><th>ph_qual</th><th>rd_flg</th><th>bl_flg</th><th>cc_flg</th><th>ndet</th><th>gal_contam</th><th>mp_flg</th><th>dist</th><th>angle</th><th>j_h</th><th>h_k</th><th>j_k</th></tr></thead><thead><tr><th>deg</th><th>deg</th><th></th><th></th><th>arcsec</th><th>arcsec</th><th>deg</th><th></th><th>mag</th><th>mag</th><th>mag</th><th></th><th>mag</th><th>mag</th><th>mag</th><th></th><th>mag</th><th>mag</th><th>mag</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tr><td>274.429506</td><td>-13.870547</td><td>18h17m43.08s</td><td>-13d52m13.97s</td><td>0.08</td><td>0.08</td><td>45</td><td>18174308-1352139</td><td>16.305</td><td>0.142</td><td>0.143</td><td>6.7</td><td>14.048</td><td>0.107</td><td>0.108</td><td>13.6</td><td>13.257</td><td>0.066</td><td>0.066</td><td>16.5</td><td>CAA</td><td>222</td><td>111</td><td>0ss</td><td>066655</td><td>0</td><td>0</td><td>975.080151</td><td>256.448</td><td>2.257</td><td>0.791</td><td>3.048</td></tr><tr><td>274.423821</td><td>-13.86974</td><td>18h17m41.72s</td><td>-13d52m11.06s</td><td>0.06</td><td>0.06</td><td>90</td><td>18174171-1352110</td><td>14.802</td><td>0.058</td><td>0.059</td><td>26.7</td><td>12.635</td><td>0.059</td><td>0.06</td><td>50.1</td><td>11.768</td><td>0.045</td><td>0.046</td><td>65.2</td><td>AAA</td><td>222</td><td>111</td><td>0ss</td><td>666666</td><td>0</td><td>0</td><td>993.752042</td><td>256.878</td><td>2.167</td><td>0.867</td><td>3.034</td></tr><tr><td>274.424587</td><td>-13.739629</td><td>18h17m41.90s</td><td>-13d44m22.66s</td><td>0.08</td><td>0.08</td><td>45</td><td>18174190-1344226</td><td>16.328</td><td>--</td><td>--</td><td>--</td><td>14.345</td><td>0.059</td><td>0.06</td><td>10.4</td><td>13.405</td><td>0.046</td><td>0.047</td><td>14.4</td><td>UAA</td><td>022</td><td>011</td><td>0cc</td><td>003666</td><td>0</td><td>0</td><td>995.726698</td><td>284.113</td><td>--</td><td>0.94</td><td>--</td></tr><tr><td>274.433933</td><td>-13.769502</td><td>18h17m44.14s</td><td>-13d46m10.21s</td><td>0.08</td><td>0.08</td><td>45</td><td>18174414-1346102</td><td>16.281</td><td>0.098</td><td>0.099</td><td>6.8</td><td>14.057</td><td>0.035</td><td>0.036</td><td>13.5</td><td>12.956</td><td>0.032</td><td>0.033</td><td>21.8</td><td>CAA</td><td>222</td><td>111</td><td>000</td><td>065566</td><td>0</td><td>0</td><td>942.627418</td><td>278.252</td><td>2.224</td><td>1.101</td><td>3.325</td></tr><tr><td>274.437013</td><td>-13.885698</td><td>18h17m44.88s</td><td>-13d53m08.51s</td><td>0.09</td><td>0.09</td><td>45</td><td>18174488-1353085</td><td>15.171</td><td>--</td><td>--</td><td>--</td><td>14.412</td><td>0.152</td><td>0.152</td><td>9.8</td><td>13.742</td><td>0.095</td><td>0.095</td><td>10.6</td><td>UBA</td><td>622</td><td>022</td><td>0cc</td><td>005566</td><td>0</td><td>0</td><td>964.105389</td><td>252.93</td><td>--</td><td>0.67</td><td>--</td></tr><tr><td>274.433996</td><td>-13.752446</td><td>18h17m44.16s</td><td>-13d45m08.81s</td><td>0.08</td><td>0.08</td><td>90</td><td>18174415-1345088</td><td>16.54</td><td>--</td><td>--</td><td>--</td><td>14.519</td><td>0.083</td><td>0.083</td><td>8.8</td><td>13.604</td><td>0.043</td><td>0.044</td><td>12.0</td><td>UBA</td><td>022</td><td>011</td><td>0cc</td><td>005666</td><td>0</td><td>0</td><td>953.230532</td><td>281.908</td><td>--</td><td>0.915</td><td>--</td></tr><tr><td>274.418138</td><td>-13.77215</td><td>18h17m40.35s</td><td>-13d46m19.74s</td><td>0.08</td><td>0.08</td><td>90</td><td>18174035-1346197</td><td>17.98</td><td>--</td><td>--</td><td>--</td><td>14.61</td><td>0.043</td><td>0.044</td><td>8.1</td><td>13.456</td><td>0.056</td><td>0.057</td><td>13.8</td><td>UBA</td><td>022</td><td>011</td><td>000</td><td>001645</td><td>0</td><td>0</td><td>996.047248</td><td>277.25</td><td>--</td><td>1.154</td><td>--</td></tr><tr><td>274.433695</td><td>-13.899049</td><td>18h17m44.09s</td><td>-13d53m56.58s</td><td>0.06</td><td>0.06</td><td>90</td><td>18174408-1353565</td><td>13.011</td><td>0.021</td><td>0.024</td><td>139.0</td><td>10.917</td><td>0.02</td><td>0.021</td><td>243.8</td><td>10.013</td><td>0.017</td><td>0.019</td><td>328.3</td><td>AAA</td><td>222</td><td>111</td><td>000</td><td>666666</td><td>0</td><td>0</td><td>990.166399</td><td>250.466</td><td>2.094</td><td>0.904</td><td>2.998</td></tr><tr><td>274.425482</td><td>-13.77149</td><td>18h17m42.12s</td><td>-13d46m17.36s</td><td>0.08</td><td>0.08</td><td>135</td><td>18174211-1346173</td><td>16.086</td><td>--</td><td>--</td><td>--</td><td>13.709</td><td>0.065</td><td>0.066</td><td>18.6</td><td>12.503</td><td>0.044</td><td>0.045</td><td>33.1</td><td>UAA</td><td>622</td><td>012</td><td>00c</td><td>005555</td><td>0</td><td>0</td><td>970.896919</td><td>277.582</td><td>--</td><td>1.206</td><td>--</td></tr><tr><td>274.433057</td><td>-13.784866</td><td>18h17m43.93s</td><td>-13d47m05.52s</td><td>0.11</td><td>0.11</td><td>45</td><td>18174393-1347055</td><td>18.027</td><td>--</td><td>--</td><td>--</td><td>15.332</td><td>--</td><td>--</td><td>--</td><td>14.122</td><td>0.07</td><td>0.071</td><td>7.5</td><td>UUB</td><td>002</td><td>001</td><td>000</td><td>000006</td><td>0</td><td>0</td><td>939.279823</td><td>274.885</td><td>--</td><td>--</td><td>--</td></tr><tr><td>274.435762</td><td>-13.801015</td><td>18h17m44.58s</td><td>-13d48m03.65s</td><td>0.11</td><td>0.11</td><td>45</td><td>18174458-1348036</td><td>17.148</td><td>--</td><td>--</td><td>--</td><td>14.585</td><td>--</td><td>--</td><td>--</td><td>13.81</td><td>0.06</td><td>0.061</td><td>9.9</td><td>UUB</td><td>002</td><td>001</td><td>000</td><td>000066</td><td>0</td><td>0</td><td>926.604021</td><td>271.351</td><td>--</td><td>--</td><td>--</td></tr><tr><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr><tr><td>274.81801</td><td>-14.001245</td><td>18h19m16.32s</td><td>-14d00m04.48s</td><td>0.18</td><td>0.16</td><td>1</td><td>18191632-1400044</td><td>16.24</td><td>0.113</td><td>0.113</td><td>5.6</td><td>15.531</td><td>0.164</td><td>0.164</td><td>2.5</td><td>15.252</td><td>--</td><td>--</td><td>--</td><td>CDU</td><td>220</td><td>110</td><td>000</td><td>060600</td><td>0</td><td>0</td><td>809.817146</td><td>149.61</td><td>0.709</td><td>--</td><td>--</td></tr><tr><td>274.822709</td><td>-14.037254</td><td>18h19m17.45s</td><td>-14d02m14.11s</td><td>0.07</td><td>0.07</td><td>45</td><td>18191745-1402141</td><td>15.999</td><td>0.097</td><td>0.098</td><td>7.0</td><td>14.009</td><td>0.032</td><td>0.033</td><td>10.0</td><td>13.077</td><td>0.035</td><td>0.036</td><td>16.4</td><td>CAA</td><td>222</td><td>111</td><td>000</td><td>062656</td><td>0</td><td>0</td><td>931.339773</td><td>152.779</td><td>1.99</td><td>0.932</td><td>2.922</td></tr><tr><td>274.880758</td><td>-13.99956</td><td>18h19m31.38s</td><td>-13d59m58.42s</td><td>0.06</td><td>0.06</td><td>90</td><td>18193138-1359584</td><td>14.163</td><td>0.035</td><td>0.037</td><td>37.8</td><td>11.179</td><td>0.02</td><td>0.021</td><td>135.6</td><td>9.765</td><td>0.017</td><td>0.019</td><td>347.1</td><td>AAA</td><td>222</td><td>111</td><td>000</td><td>556666</td><td>0</td><td>0</td><td>935.512452</td><td>137.762</td><td>2.984</td><td>1.414</td><td>4.398</td></tr><tr><td>274.652526</td><td>-14.055106</td><td>18h18m36.61s</td><td>-14d03m18.38s</td><td>0.06</td><td>0.06</td><td>90</td><td>18183660-1403183</td><td>15.035</td><td>0.052</td><td>0.054</td><td>19.4</td><td>13.099</td><td>0.04</td><td>0.041</td><td>27.5</td><td>12.254</td><td>0.041</td><td>0.041</td><td>41.7</td><td>AAA</td><td>222</td><td>111</td><td>c00</td><td>566666</td><td>0</td><td>0</td><td>908.109808</td><td>190.682</td><td>1.936</td><td>0.845</td><td>2.781</td></tr><tr><td>274.760586</td><td>-13.999927</td><td>18h19m02.54s</td><td>-13d59m59.74s</td><td>0.08</td><td>0.08</td><td>90</td><td>18190254-1359597</td><td>16.329</td><td>0.122</td><td>0.123</td><td>5.5</td><td>14.488</td><td>0.067</td><td>0.067</td><td>6.4</td><td>13.617</td><td>0.051</td><td>0.052</td><td>11.1</td><td>CCA</td><td>222</td><td>111</td><td>000</td><td>060616</td><td>0</td><td>0</td><td>724.557553</td><td>163.227</td><td>1.841</td><td>0.871</td><td>2.712</td></tr><tr><td>274.831132</td><td>-14.020027</td><td>18h19m19.47s</td><td>-14d01m12.10s</td><td>0.08</td><td>0.08</td><td>45</td><td>18191947-1401120</td><td>16.203</td><td>--</td><td>--</td><td>--</td><td>13.238</td><td>0.02</td><td>0.021</td><td>20.4</td><td>12.016</td><td>0.023</td><td>0.024</td><td>43.6</td><td>UAA</td><td>022</td><td>011</td><td>000</td><td>006666</td><td>0</td><td>0</td><td>891.347132</td><td>149.27</td><td>--</td><td>1.222</td><td>--</td></tr><tr><td>274.972435</td><td>-13.760374</td><td>18h19m53.38s</td><td>-13d45m37.35s</td><td>0.12</td><td>0.11</td><td>10</td><td>18195338-1345373</td><td>17.472</td><td>--</td><td>--</td><td>--</td><td>16.755</td><td>--</td><td>--</td><td>--</td><td>14.413</td><td>0.084</td><td>0.084</td><td>4.8</td><td>UUD</td><td>002</td><td>001</td><td>000</td><td>000006</td><td>0</td><td>0</td><td>964.828933</td><td>79.963</td><td>--</td><td>--</td><td>--</td></tr><tr><td>274.870009</td><td>-13.817775</td><td>18h19m28.80s</td><td>-13d49m03.99s</td><td>0.08</td><td>0.08</td><td>45</td><td>18192880-1349039</td><td>16.933</td><td>--</td><td>--</td><td>--</td><td>14.514</td><td>0.064</td><td>0.065</td><td>6.3</td><td>12.957</td><td>0.041</td><td>0.041</td><td>18.4</td><td>UCA</td><td>022</td><td>011</td><td>000</td><td>002666</td><td>0</td><td>0</td><td>592.998058</td><td>93.69</td><td>--</td><td>1.557</td><td>--</td></tr><tr><td>274.735323</td><td>-13.941575</td><td>18h18m56.48s</td><td>-13d56m29.67s</td><td>0.14</td><td>0.14</td><td>45</td><td>18185647-1356296</td><td>16.643</td><td>--</td><td>--</td><td>--</td><td>14.88</td><td>--</td><td>--</td><td>--</td><td>14.291</td><td>0.116</td><td>0.117</td><td>6.0</td><td>UUC</td><td>002</td><td>001</td><td>000</td><td>000004</td><td>0</td><td>0</td><td>498.524438</td><td>165.968</td><td>--</td><td>--</td><td>--</td></tr><tr><td>274.866294</td><td>-13.841778</td><td>18h19m27.91s</td><td>-13d50m30.40s</td><td>0.08</td><td>0.08</td><td>45</td><td>18192791-1350304</td><td>15.615</td><td>--</td><td>--</td><td>--</td><td>13.911</td><td>0.075</td><td>0.075</td><td>10.9</td><td>12.765</td><td>0.134</td><td>0.134</td><td>21.9</td><td>UAE</td><td>022</td><td>011</td><td>0cc</td><td>005545</td><td>0</td><td>0</td><td>591.97725</td><td>102.147</td><td>--</td><td>1.146</td><td>--</td></tr></table>
+<table id="table4458577872"><thead><tr><th>ra</th><th>dec</th><th>clon</th><th>clat</th><th>...</th><th>angle</th><th>j_h</th><th>h_k</th><th>j_k</th></tr></thead><thead><tr><th>deg</th><th>deg</th><th></th><th></th><th>...</th><th></th><th></th><th></th><th></th></tr></thead><tr><td>274.429506</td><td>-13.870547</td><td>18h17m43.08s</td><td>-13d52m13.97s</td><td>...</td><td>256.448</td><td>2.257</td><td>0.791</td><td>3.048</td></tr><tr><td>274.423821</td><td>-13.86974</td><td>18h17m41.72s</td><td>-13d52m11.06s</td><td>...</td><td>256.878</td><td>2.167</td><td>0.867</td><td>3.034</td></tr><tr><td>274.424587</td><td>-13.739629</td><td>18h17m41.90s</td><td>-13d44m22.66s</td><td>...</td><td>284.113</td><td>--</td><td>0.94</td><td>--</td></tr><tr><td>274.433933</td><td>-13.769502</td><td>18h17m44.14s</td><td>-13d46m10.21s</td><td>...</td><td>278.252</td><td>2.224</td><td>1.101</td><td>3.325</td></tr><tr><td>274.437013</td><td>-13.885698</td><td>18h17m44.88s</td><td>-13d53m08.51s</td><td>...</td><td>252.93</td><td>--</td><td>0.67</td><td>--</td></tr><tr><td>274.433996</td><td>-13.752446</td><td>18h17m44.16s</td><td>-13d45m08.81s</td><td>...</td><td>281.908</td><td>--</td><td>0.915</td><td>--</td></tr><tr><td>274.418138</td><td>-13.77215</td><td>18h17m40.35s</td><td>-13d46m19.74s</td><td>...</td><td>277.25</td><td>--</td><td>1.154</td><td>--</td></tr><tr><td>274.433695</td><td>-13.899049</td><td>18h17m44.09s</td><td>-13d53m56.58s</td><td>...</td><td>250.466</td><td>2.094</td><td>0.904</td><td>2.998</td></tr><tr><td>274.425482</td><td>-13.77149</td><td>18h17m42.12s</td><td>-13d46m17.36s</td><td>...</td><td>277.582</td><td>--</td><td>1.206</td><td>--</td></tr><tr><td>274.433057</td><td>-13.784866</td><td>18h17m43.93s</td><td>-13d47m05.52s</td><td>...</td><td>274.885</td><td>--</td><td>--</td><td>--</td></tr><tr><td>274.435762</td><td>-13.801015</td><td>18h17m44.58s</td><td>-13d48m03.65s</td><td>...</td><td>271.351</td><td>--</td><td>--</td><td>--</td></tr><tr><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr><tr><td>274.81801</td><td>-14.001245</td><td>18h19m16.32s</td><td>-14d00m04.48s</td><td>...</td><td>149.61</td><td>0.709</td><td>--</td><td>--</td></tr><tr><td>274.822709</td><td>-14.037254</td><td>18h19m17.45s</td><td>-14d02m14.11s</td><td>...</td><td>152.779</td><td>1.99</td><td>0.932</td><td>2.922</td></tr><tr><td>274.880758</td><td>-13.99956</td><td>18h19m31.38s</td><td>-13d59m58.42s</td><td>...</td><td>137.762</td><td>2.984</td><td>1.414</td><td>4.398</td></tr><tr><td>274.652526</td><td>-14.055106</td><td>18h18m36.61s</td><td>-14d03m18.38s</td><td>...</td><td>190.682</td><td>1.936</td><td>0.845</td><td>2.781</td></tr><tr><td>274.760586</td><td>-13.999927</td><td>18h19m02.54s</td><td>-13d59m59.74s</td><td>...</td><td>163.227</td><td>1.841</td><td>0.871</td><td>2.712</td></tr><tr><td>274.831132</td><td>-14.020027</td><td>18h19m19.47s</td><td>-14d01m12.10s</td><td>...</td><td>149.27</td><td>--</td><td>1.222</td><td>--</td></tr><tr><td>274.972435</td><td>-13.760374</td><td>18h19m53.38s</td><td>-13d45m37.35s</td><td>...</td><td>79.963</td><td>--</td><td>--</td><td>--</td></tr><tr><td>274.870009</td><td>-13.817775</td><td>18h19m28.80s</td><td>-13d49m03.99s</td><td>...</td><td>93.69</td><td>--</td><td>1.557</td><td>--</td></tr><tr><td>274.735323</td><td>-13.941575</td><td>18h18m56.48s</td><td>-13d56m29.67s</td><td>...</td><td>165.968</td><td>--</td><td>--</td><td>--</td></tr><tr><td>274.866294</td><td>-13.841778</td><td>18h19m27.91s</td><td>-13d50m30.40s</td><td>...</td><td>102.147</td><td>--</td><td>1.146</td><td>--</td></tr></table>
 </div>
 
 </div>

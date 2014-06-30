@@ -1277,7 +1277,6 @@ a .icon-rotate-90:before,a .icon-rotate-180:before,a .icon-rotate-270:before,a .
 .icon-weibo:before{content:"\f18a"}
 .icon-renren:before{content:"\f18b"}
 code{color:#000}
-pre{font-size:inherit;line-height:inherit}
 .border-box-sizing{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
 .corner-all{border-radius:4px}
 .hbox{display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
@@ -1341,8 +1340,6 @@ input.nbname_input,input.engine_num_input{padding-top:3px;padding-bottom:3px;hei
 input.engine_num_input{width:60px}
 .highlight_text{color:#00f}
 #project_name>.breadcrumb{padding:0;margin-bottom:0;background-color:transparent;font-weight:bold}
-.folder_icon:before{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;*margin-right:.3em;content:"\f114"}
-.notebook_icon:before{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;*margin-right:.3em;content:"\f02d"}
 .ansibold{font-weight:bold}
 .ansiblack{color:#000}
 .ansired{color:#8b0000}
@@ -1365,15 +1362,15 @@ div.cell.edit_mode{border-radius:4px;border:thin #008000 solid}
 div.cell{width:100%;padding:5px 5px 5px 0;margin:0;outline:none}
 div.prompt{min-width:11ex;padding:.4em;margin:0;font-family:monospace;text-align:right;line-height:1.21429em}
 @media (max-width:480px){div.prompt{text-align:left}}div.inner_cell{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
-div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7;line-height:1.21429em}
+div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7}
 div.prompt:empty{padding-top:0;padding-bottom:0}
 div.input{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
 @media (max-width:480px){div.input{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.input_prompt{color:#000080;border-top:1px solid transparent}
 div.input_area>div.highlight{margin:.4em;border:none;padding:0;background-color:transparent}
-div.input_area>div.highlight>pre{margin:0;border:none;padding:0;background-color:transparent}
+div.input_area>div.highlight>pre{margin:0;border:0;padding:0;background-color:transparent;font-size:14px;line-height:1.21429em}
 .CodeMirror{line-height:1.21429em;height:auto;background:none;}
 .CodeMirror-scroll{overflow-y:hidden;overflow-x:auto}
-.CodeMirror-lines{padding:.4em}
+@-moz-document url-prefix(){.CodeMirror-scroll{overflow-x:hidden}}.CodeMirror-lines{padding:.4em}
 .CodeMirror-linenumber{padding:0 8px 0 4px}
 .CodeMirror-gutters{border-bottom-left-radius:4px;border-top-left-radius:4px}
 .CodeMirror pre{padding:0;border:0;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
@@ -1408,7 +1405,7 @@ div.output_area{padding:0;page-break-inside:avoid;display:-webkit-box;-webkit-bo
 div.output_area .rendered_html table{margin-left:0;margin-right:0}
 div.output_area .rendered_html img{margin-left:0;margin-right:0}
 .output{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}
-@media (max-width:480px){div.output_area{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;vertical-align:baseline;color:#000;background-color:transparent;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
+@media (max-width:480px){div.output_area{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;color:#000;background-color:transparent;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;line-height:inherit}
 div.output_subarea{padding:.4em .4em 0 .4em;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
 div.output_text{text-align:left;color:#000;line-height:1.21429em}
 div.output_stderr{background:#fdd;}
@@ -1529,7 +1526,7 @@ ul#help_menu li a{overflow:hidden;padding-right:2.2em}ul#help_menu li a i{margin
 .notification_widget{color:#777;padding:1px 12px;margin:2px 4px;z-index:10;border:1px solid #ccc;border-radius:4px;background:rgba(240,240,240,0.5)}.notification_widget.span{padding-right:2px}
 div#pager_splitter{height:8px}
 #pager-container{position:relative;padding:15px 0}
-div#pager{font-size:14px;line-height:20px;overflow:auto;display:none}div#pager pre{line-height:1.21429em;color:#000;background-color:#f7f7f7;padding:.4em}
+div#pager{font-size:14px;line-height:20px;overflow:auto;display:none}div#pager pre{font-size:13px;line-height:1.21429em;color:#000;background-color:#f7f7f7;padding:.4em}
 .quickhelp{display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
 .shortcut_key{display:inline-block;width:20ex;text-align:right;font-family:monospace}
 .shortcut_descr{display:inline-block;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
@@ -1681,14 +1678,6 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="handling-fits-files">Handling FITS files</h1>
-<h2 id="documentation">Documentation</h2>
-<p>For more information about the features presented below, you can read the
-<a href="http://docs.astropy.org/en/stable/io/fits/index.html">astropy.io.fits</a> docs.</p>
-<h2 id="data">Data</h2>
-<p>The data used in this page is a <a href="data/gll_iem_v02_P6_V11_DIFFUSE.fit">model of the gamma-ray sky background</a> used for the LAT instrument on the Fermi telescope, as well as the <em>Fermi</em>/LAT <a href="data/gll_psc_v08.fit">point source catalog</a>.</p>
-<h2 id="reading-fits-files-and-accessing-data">Reading FITS files and accessing data</h2>
-<p>Opening a FITS file is relatively straightforward. We can open the
-background model included in the tutorial files:</p>
 </div>
 </div>
 </div>
@@ -1696,6 +1685,35 @@ background model included in the tutorial files:</p>
 <div class="input">
 <div class="prompt input_prompt">
 In&nbsp;[1]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="o">%</span><span class="k">matplotlib</span> <span class="n">inline</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="documentation">Documentation</h2>
+<p>For more information about the features presented below, you can read the <a href="http://docs.astropy.org/en/stable/io/fits/index.html">astropy.io.fits</a> docs.</p>
+<h2 id="data">Data</h2>
+<p>The data used in this page is a <a href="data/gll_iem_v02_P6_V11_DIFFUSE.fit">model of the gamma-ray sky background</a> used for the LAT instrument on the Fermi telescope, as well as the <em>Fermi</em>/LAT <a href="data/gll_psc_v08.fit">point source catalog</a>.</p>
+<h2 id="reading-fits-files-and-accessing-data">Reading FITS files and accessing data</h2>
+<p>Opening a FITS file is relatively straightforward. We can open the background model included in the tutorial files:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[2]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1710,7 +1728,7 @@ In&nbsp;[1]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[2]:
+In&nbsp;[3]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1727,16 +1745,14 @@ In&nbsp;[2]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The returned object, <code>hdulist</code>, behaves like a Python list, and each element
-maps to a Header-Data Unit (HDU) in the FITS file. You can view more
-information about the FITS file with:</p>
+<p>The returned object, <code>hdulist</code>, behaves like a Python list, and each element maps to a Header-Data Unit (HDU) in the FITS file. You can view more information about the FITS file with:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[3]:
+In&nbsp;[4]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1772,15 +1788,14 @@ No.    Name         Type      Cards   Dimensions   Format
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As we can see, this file contains two HDUs. To access the primary HDU, which
-contains the main data, you can then do:</p>
+<p>As we can see, this file contains two HDUs. To access the primary HDU, which contains the main data, you can then do:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[4]:
+In&nbsp;[5]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1797,17 +1812,14 @@ In&nbsp;[4]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The <code>hdu</code> object then has two important attributes: <code>data</code>, which behaves
-like a Numpy array, can be used to access the data, and <code>header</code>, which
-behaves like a dictionary, can be used to access the header information.
-First, we can take a look at the data:</p>
+<p>The <code>hdu</code> object then has two important attributes: <code>data</code>, which behaves like a Numpy array, can be used to access the data, and <code>header</code>, which behaves like a dictionary, can be used to access the header information. First, we can take a look at the data:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[5]:
+In&nbsp;[6]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1823,7 +1835,7 @@ In&nbsp;[5]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[5]:</div>
+    Out[6]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -1850,7 +1862,7 @@ In&nbsp;[5]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[6]:
+In&nbsp;[7]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1866,7 +1878,7 @@ In&nbsp;[6]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[6]:</div>
+    Out[7]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -1919,16 +1931,14 @@ HISTORY Scaled version of gll_iem_v02.fit for use with P6_V11_DIFFUSE
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>which shows that this is a Plate Carrée (<code>-CAR</code>) projection in Galactic
-Coordinates, and the third axis is photon energy. We can access individual
-header keywords using standard item notation:</p>
+<p>which shows that this is a Plate Carrée (<code>-CAR</code>) projection in Galactic Coordinates, and the third axis is photon energy. We can access individual header keywords using standard item notation:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[7]:
+In&nbsp;[8]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1944,7 +1954,7 @@ In&nbsp;[7]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[7]:</div>
+    Out[8]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -1962,7 +1972,7 @@ In&nbsp;[7]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[8]:
+In&nbsp;[9]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1978,7 +1988,7 @@ In&nbsp;[8]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[8]:</div>
+    Out[9]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -1998,15 +2008,14 @@ In&nbsp;[8]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Provided that we started up <code>ipython</code> with the <code>--pylab</code> flag, we can plot
-one of the slices in photon energy:</p>
+<p>Provided that we started up <code>ipython</code> with the <code>--pylab</code> flag, we can plot one of the slices in photon energy:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[9]:
+In&nbsp;[10]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2021,423 +2030,16 @@ In&nbsp;[9]:
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">
-    Out[9]:</div>
-
-
-<div class="output_text output_subarea output_pyout">
-<pre>
-&lt;matplotlib.image.AxesImage at 0x4710e10&gt;
-</pre>
-</div>
-
-</div>
-
 <div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_pyerr">
+<pre>
+<span class="ansired">---------------------------------------------------------------------------</span>
+<span class="ansired">NameError</span>                                 Traceback (most recent call last)
+<span class="ansigreen">&lt;ipython-input-10-f15bfbb34f2c&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">----&gt; 1</span><span class="ansired"> </span>plt<span class="ansiblue">.</span>imshow<span class="ansiblue">(</span>hdu<span class="ansiblue">.</span>data<span class="ansiblue">[</span><span class="ansicyan">0</span><span class="ansiblue">,</span><span class="ansiblue">:</span><span class="ansiblue">,</span><span class="ansiblue">:</span><span class="ansiblue">]</span><span class="ansiblue">,</span> origin<span class="ansiblue">=</span><span class="ansiblue">&apos;lower&apos;</span><span class="ansiblue">)</span><span class="ansiblue"></span>
 
-
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
-/gULFhzcsmXLFyby3bmOu+6665t1dXV9V1xxxc947u23377whhtueG7hwoUH1qxZs/v48eMzee3h
-hx9+YMGCBQcvv/zy/c8+++zaUub9jTfemHf99dfvaW5u/sXSpUt//sgjj/xxJeT/zJkztStXrvzx
-8uXL25csWdJx//33b66EfOsxPDxc1dLSsu+jH/3odysl7+9973u7li1b9lpLS8u+97///W2Vku9M
-JoPjx4/PvPXWW/9l8eLFv1yyZEnHj370o6vLPe/79++/vKWlZR+PCy644OQjjzzyx8XM94R2+Msu
-u+z1zs7OpsHBwdTy5cvbOzo6lpSyU+jx4osvXvfqq6+2KpHfd999X/7Sl770Z5lMBlu2bPnCF77w
-hS2ZTAa/+MUvmpcvX94+ODiY6uzsbLrsssteHxkZSZYq74cPH56zb9++lkwmg3fffXfaokWLftXR
-0bGkEvJ/6tSpKZlMBkNDQ9VXX331j1566aVrKyHfPL7yla/c+4lPfOKfP/axj+2olD7T1NTU+fbb
-b1+o5yoh35lMBnfeeefWxx9//JPsMydOnJhRKXnPZDIYGRlJzpkz5/Abb7wxr5j5nrAC/PCHP/zf
-brzxxl38vXnz5vs3b958fykr1Tw6OzublMgvv/zy/UeOHKnPZDyyvPzyy/dnMp601BnFjTfeuOs/
-/uM/ril1/nncfPPNzzz33HM3VFL+T506NWXFihU/+fnPf760UvLd3d3duHr16ue///3vr6JGXgl5
-b2pq6jx69OhFeq4S8n3ixIkZ8+fP/7V5vhLyzuPZZ59de+21175U7HxP2F4rthjz3t7ehol6fyHo
-6+urr6+v7wOA+vr6vr6+vnoAOHTo0CUajVNOZenq6mrat29f69VXX/3jSsh/Op1OtrS0tNfX1/et
-WrVqz9KlS39RCfkGgD/90z/92l/91V/dl0wm0zxXCXlPJBKZG2644fkVK1a88nd/93efrpR8d3Z2
-zp89e/Zbd9111z+8733ve/XTn/703506dWpqJeSd2LZt2+0bN258AihunU8YkceJMS9nJBKJTFQZ
-yqF8/f3902699dbvPPLII38yffr0d/VaueY/mUym29vbW3p6ehpffPHFD+7Zs2eVma9yzPe//uu/
-frSuru7N1tbWfZmQtRHlmvcf/OAHv7Nv377WnTt3fuRv/uZv/s+XXnrpOjNf5Zjv4eHh6ldfffV9
-99xzz6Ovvvrq+6ZOnXpqy5Yt95t5K8e8A8Dg4GDNd7/73Y/93u/93v80r4013xNG5JUYY15fX993
-5MiROQBw+PDhuXV1dW8Co8vS09PT2NDQ0FuqfALA0NBQ6tZbb/3OHXfc8e3169c/A1RW/mfMmHHy
-pptu+ref/vSnV1VCvn/4wx9+YMeOHevmz5/fuXHjxie+//3v/+4dd9zx7UrI+9y5cw8DwOzZs9+6
-5ZZbnm5ra1tZCflubGzsaWxs7Hn/+9//EwD4+Mc//i+vvvrq++bMmXOk3PMOADt37vzIVVdd9dPZ
-s2e/BRR5fE6UbWhoaKj60ksv/a/Ozs6mgYGBmnJzdmYyo23k991335dpq9q8efP9pjNiYGCg5te/
-/vX8Sy+99L/S6XSiVPlOp9OJO+6441uf+9znvqbnyz3/b7311sX01J8+fXrydddd9+Lzzz+/utzz
-bR579+79EG3k5Z73U6dOTXnnnXemZzIZ9Pf3T/3ABz7wg2effXZtueebx3XXXffir371q0WZTAZf
-/OIXH7zvvvu+XCl5v+2227b94z/+4yb+Lma+J7Qg//7v//6RRYsW/eqyyy57/eGHH36gVBVqO26/
-/fYn5s6deyiVSg02NjZ2f/Ob37zr7bffvnD16tXP28KD/vIv//LPL7vsstcvv/zy/bt27bqxlHl/
-6aWXrk0kEunly5e3M8Rp586dHy73/L/22mvLWltbX12+fHn7smXLXvvyl798XybjhcKVc77NY+/e
-vR9i1Eq55/3Xv/71/OXLl7cvX768fenSpT/nOCz3fPNob29fvmLFip9ceeWV/3nLLbf8rxMnTsyo
-hLz39/dPveiii45SiBa7zhOZTMlNuw4ODg4OY4D7QpCDg4NDhcMRuYODg0OFwxG5g4ODQ4XDEbmD
-g4NDhcMRuYODg0OFwxG5g4ODQ4Xj/wc230EtP9fzbAAAAABJRU5ErkJggg==
-"
->
+<span class="ansired">NameError</span>: name &apos;plt&apos; is not defined</pre>
 </div>
-
 </div>
 
 </div>
@@ -2449,19 +2051,15 @@ g4NDhcMRuYODg0OFwxG5g4ODQ4Xj/wc230EtP9fzbAAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Note that this is just a plot of an array, so the coordinates are just pixel
-coordinates at this stage. The data is stored with longitude increasing to the
-right (the opposite of the normal convention), but the Level 3 problem at the
-bottom of this page shows how to correctly flip the image.</p>
-<p>Modifying data or header information in a FITS file object is easy. We can
-update existing header keywords:</p>
+<p>Note that this is just a plot of an array, so the coordinates are just pixel coordinates at this stage. The data is stored with longitude increasing to the right (the opposite of the normal convention), but the Level 3 problem at the bottom of this page shows how to correctly flip the image.</p>
+<p>Modifying data or header information in a FITS file object is easy. We can update existing header keywords:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[10]:
+In&nbsp;[11]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2485,7 +2083,7 @@ In&nbsp;[10]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[11]:
+In&nbsp;[12]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2502,15 +2100,14 @@ In&nbsp;[11]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>and we can also change the data, for example extracting only the first slice
-in photon energy:</p>
+<p>and we can also change the data, for example extracting only the first slice in photon energy:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[12]:
+In&nbsp;[13]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2527,15 +2124,14 @@ In&nbsp;[12]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Note that this does not change the original FITS file, simply the FITS file
-object in memory. Since the data is now 2-dimensional, we can remove the WCS keywords for the third dimension:</p>
+<p>Note that this does not change the original FITS file, simply the FITS file object in memory. Since the data is now 2-dimensional, we can remove the WCS keywords for the third dimension:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[13]:
+In&nbsp;[14]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2563,7 +2159,7 @@ In&nbsp;[13]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[14]:
+In&nbsp;[15]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2604,7 +2200,7 @@ WARNING:astropy:Overwriting existing file &apos;lat_background_model_slice.fits&
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[15]:
+In&nbsp;[16]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2638,8 +2234,7 @@ WARNING:astropy:Overwriting existing file &apos;lat_background_model_slice_allhd
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>if you want to write out all of the original HDUs, including the modified one,
-to a file.</p>
+<p>if you want to write out all of the original HDUs, including the modified one, to a file.</p>
 <h2 id="creating-a-fits-file-from-scratch">Creating a FITS file from scratch</h2>
 <p>If you want to create a FITS file from scratch, you need to start off by creating an HDU object:</p>
 </div>
@@ -2648,7 +2243,7 @@ to a file.</p>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[16]:
+In&nbsp;[17]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2672,7 +2267,7 @@ In&nbsp;[16]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[17]:
+In&nbsp;[18]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2687,7 +2282,7 @@ In&nbsp;[17]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[18]:
+In&nbsp;[19]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2711,7 +2306,7 @@ In&nbsp;[18]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[19]:
+In&nbsp;[20]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2727,7 +2322,7 @@ In&nbsp;[19]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[19]:</div>
+    Out[20]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -2759,7 +2354,7 @@ EXTEND  =                    T
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[20]:
+In&nbsp;[21]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2783,7 +2378,7 @@ In&nbsp;[20]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[21]:
+In&nbsp;[22]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2818,15 +2413,14 @@ WARNING:astropy:Overwriting existing file &apos;random_array.fits&apos;.
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="convenience-functions">Convenience functions</h2>
-<p>In cases where you just want to access the data or header in a specific HDU,
-you can use the following convenience functions:</p>
+<p>In cases where you just want to access the data or header in a specific HDU, you can use the following convenience functions:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[22]:
+In&nbsp;[23]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2844,15 +2438,14 @@ In&nbsp;[22]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To get the data or header for an HDU other than the first, you can specify the
-extension name or index. The second HDU is called <code>energies</code>, so we can do:</p>
+<p>To get the data or header for an HDU other than the first, you can specify the extension name or index. The second HDU is called <code>energies</code>, so we can do:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[23]:
+In&nbsp;[24]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2876,7 +2469,7 @@ In&nbsp;[23]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[24]:
+In&nbsp;[25]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2895,16 +2488,14 @@ In&nbsp;[24]:
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>and similarly for <code>getheader</code>.</p>
 <h2 id="accessing-tabular-data">Accessing Tabular Data</h2>
-<p>Tabular data behaves very similarly to image data such as that shown above,
-but the data array is a structured Numpy array which requires column access
-via the item notation:</p>
+<p>Tabular data behaves very similarly to image data such as that shown above, but the data array is a structured Numpy array which requires column access via the item notation:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[25]:
+In&nbsp;[26]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2920,7 +2511,7 @@ In&nbsp;[25]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[26]:
+In&nbsp;[27]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2936,7 +2527,7 @@ In&nbsp;[26]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[26]:</div>
+    Out[27]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -2954,7 +2545,7 @@ In&nbsp;[26]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[27]:
+In&nbsp;[28]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2970,7 +2561,7 @@ In&nbsp;[27]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[27]:</div>
+    Out[28]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -2989,7 +2580,7 @@ array([  2.33711034e-01,   4.38849270e-01,   6.79812014e-01, ...,
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[28]:
+In&nbsp;[29]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3005,7 +2596,7 @@ In&nbsp;[28]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[28]:</div>
+    Out[29]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -3028,25 +2619,11 @@ array([ -7.81549788, -41.99647903,  62.33962631, ..., -30.62516785,
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="practical-exercises">Practical Exercises</h2>
 <h3 id="level-1">Level 1</h3>
-<p>Try and read in one of your own FITS files using <code>astropy.io.fits</code>, and
-see if you can also plot the array values in Matplotlib. Also, examine the
-header, and try and extract individual values. You can even try and modify
-the data/header and write the data back out - but take care not to write
-over the original file!</p>
+<p>Try and read in one of your own FITS files using <code>astropy.io.fits</code>, and see if you can also plot the array values in Matplotlib. Also, examine the header, and try and extract individual values. You can even try and modify the data/header and write the data back out - but take care not to write over the original file!</p>
 <h3 id="level-2">Level 2</h3>
-<p>Read in the LAT Point Source Catalog and make a scatter plot of the
-Galactic Coordinates of the sources (complete with axis labels). Bonus
-points if you can make the plot go between -180 and 180 instead of 0 and
-360 degrees. Note that the Point Source Catalog contains the Galactic
-Coordinates, so no need to convert them.</p>
+<p>Read in the LAT Point Source Catalog and make a scatter plot of the Galactic Coordinates of the sources (complete with axis labels). Bonus points if you can make the plot go between -180 and 180 instead of 0 and 360 degrees. Note that the Point Source Catalog contains the Galactic Coordinates, so no need to convert them.</p>
 <h3 id="level-3">Level 3</h3>
-<p>Using Matplotlib, make an all-sky plot of the LAT Background Model in the
-Plate Carée projection showing the LAT Point Source Catalog overlaid with
-markers, and with the correct coordinates on the axes. You should do this
-using only <code>astropy.io.fits</code>, Numpy, and Matplotlib (no WCS or
-coordinate conversion library). Hint: the -CAR projection is such that the
-x pixel position is proportional to longitude, and the y pixel position to
-latitude. Bonus points for a pretty colormap.</p>
+<p>Using Matplotlib, make an all-sky plot of the LAT Background Model in the Plate Carée projection showing the LAT Point Source Catalog overlaid with markers, and with the correct coordinates on the axes. You should do this using only <code>astropy.io.fits</code>, Numpy, and Matplotlib (no WCS or coordinate conversion library). Hint: the -CAR projection is such that the x pixel position is proportional to longitude, and the y pixel position to latitude. Bonus points for a pretty colormap.</p>
 </div>
 </div>
 </div>

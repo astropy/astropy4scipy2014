@@ -1277,7 +1277,6 @@ a .icon-rotate-90:before,a .icon-rotate-180:before,a .icon-rotate-270:before,a .
 .icon-weibo:before{content:"\f18a"}
 .icon-renren:before{content:"\f18b"}
 code{color:#000}
-pre{font-size:inherit;line-height:inherit}
 .border-box-sizing{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
 .corner-all{border-radius:4px}
 .hbox{display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
@@ -1341,8 +1340,6 @@ input.nbname_input,input.engine_num_input{padding-top:3px;padding-bottom:3px;hei
 input.engine_num_input{width:60px}
 .highlight_text{color:#00f}
 #project_name>.breadcrumb{padding:0;margin-bottom:0;background-color:transparent;font-weight:bold}
-.folder_icon:before{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;*margin-right:.3em;content:"\f114"}
-.notebook_icon:before{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;*margin-right:.3em;content:"\f02d"}
 .ansibold{font-weight:bold}
 .ansiblack{color:#000}
 .ansired{color:#8b0000}
@@ -1365,15 +1362,15 @@ div.cell.edit_mode{border-radius:4px;border:thin #008000 solid}
 div.cell{width:100%;padding:5px 5px 5px 0;margin:0;outline:none}
 div.prompt{min-width:11ex;padding:.4em;margin:0;font-family:monospace;text-align:right;line-height:1.21429em}
 @media (max-width:480px){div.prompt{text-align:left}}div.inner_cell{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
-div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7;line-height:1.21429em}
+div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7}
 div.prompt:empty{padding-top:0;padding-bottom:0}
 div.input{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
 @media (max-width:480px){div.input{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.input_prompt{color:#000080;border-top:1px solid transparent}
 div.input_area>div.highlight{margin:.4em;border:none;padding:0;background-color:transparent}
-div.input_area>div.highlight>pre{margin:0;border:none;padding:0;background-color:transparent}
+div.input_area>div.highlight>pre{margin:0;border:0;padding:0;background-color:transparent;font-size:14px;line-height:1.21429em}
 .CodeMirror{line-height:1.21429em;height:auto;background:none;}
 .CodeMirror-scroll{overflow-y:hidden;overflow-x:auto}
-.CodeMirror-lines{padding:.4em}
+@-moz-document url-prefix(){.CodeMirror-scroll{overflow-x:hidden}}.CodeMirror-lines{padding:.4em}
 .CodeMirror-linenumber{padding:0 8px 0 4px}
 .CodeMirror-gutters{border-bottom-left-radius:4px;border-top-left-radius:4px}
 .CodeMirror pre{padding:0;border:0;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
@@ -1408,7 +1405,7 @@ div.output_area{padding:0;page-break-inside:avoid;display:-webkit-box;-webkit-bo
 div.output_area .rendered_html table{margin-left:0;margin-right:0}
 div.output_area .rendered_html img{margin-left:0;margin-right:0}
 .output{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}
-@media (max-width:480px){div.output_area{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;vertical-align:baseline;color:#000;background-color:transparent;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
+@media (max-width:480px){div.output_area{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;color:#000;background-color:transparent;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;line-height:inherit}
 div.output_subarea{padding:.4em .4em 0 .4em;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
 div.output_text{text-align:left;color:#000;line-height:1.21429em}
 div.output_stderr{background:#fdd;}
@@ -1529,7 +1526,7 @@ ul#help_menu li a{overflow:hidden;padding-right:2.2em}ul#help_menu li a i{margin
 .notification_widget{color:#777;padding:1px 12px;margin:2px 4px;z-index:10;border:1px solid #ccc;border-radius:4px;background:rgba(240,240,240,0.5)}.notification_widget.span{padding-right:2px}
 div#pager_splitter{height:8px}
 #pager-container{position:relative;padding:15px 0}
-div#pager{font-size:14px;line-height:20px;overflow:auto;display:none}div#pager pre{line-height:1.21429em;color:#000;background-color:#f7f7f7;padding:.4em}
+div#pager{font-size:14px;line-height:20px;overflow:auto;display:none}div#pager pre{font-size:13px;line-height:1.21429em;color:#000;background-color:#f7f7f7;padding:.4em}
 .quickhelp{display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
 .shortcut_key{display:inline-block;width:20ex;text-align:right;font-family:monospace}
 .shortcut_descr{display:inline-block;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
@@ -1685,12 +1682,27 @@ div#notebook {
 </div>
 </div>
 
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[1]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="o">%</span><span class="k">matplotlib</span> <span class="n">inline</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To start with, read in the two data files representing the master source list and observations source list.  The fields for the two tables are respectively documented in:</p>
+<p>To start with, read in the two data files representing the master source list and observations source list. The fields for the two tables are respectively documented in:</p>
 <ul>
 <li><a href="http://cxc.harvard.edu/csc/columns/master.html">master_sources</a></li>
 <li><a href="http://cxc.harvard.edu/csc/columns/persrc.html">obs_sources</a></li>
@@ -1701,7 +1713,7 @@ div#notebook {
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[1]:
+In&nbsp;[2]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1716,7 +1728,7 @@ In&nbsp;[1]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[2]:
+In&nbsp;[3]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1747,7 +1759,7 @@ In&nbsp;[2]:
 <p>Do the following to explore the two tables:</p>
 <ul>
 <li>Display the data for each table in IPython notebook using the normal way of showing the value of a variable.</li>
-<li>Get a list of the column names for each table.  <em>Hint</em>: use <code>&lt;TAB&gt;</code> completion to easily discover all the attributes and methods, e.g. type <code>master_sources.</code> and then hit the <code>&lt;TAB&gt;</code> key.</li>
+<li>Get a list of the column names for each table. <em>Hint</em>: use <code>&lt;TAB&gt;</code> completion to easily discover all the attributes and methods, e.g. type <code>master_sources.</code> and then hit the <code>&lt;TAB&gt;</code> key.</li>
 <li>Find the length of each table.</li>
 <li>Find the column datatypes for each table.</li>
 </ul>
@@ -1757,7 +1769,7 @@ In&nbsp;[2]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[3]:
+In&nbsp;[4]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1773,41 +1785,10 @@ In&nbsp;[3]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[3]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<table id="table60173456"><thead><tr><th>msid</th><th>name</th><th>ra</th><th>dec</th></tr></thead><tr><td>11567</td><td>CXO J033206.1-275449</td><td>03 32 06.10</td><td>-27 54 49.73</td></tr><tr><td>11570</td><td>CXO J033151.1-275051</td><td>03 31 51.15</td><td>-27 50 51.66</td></tr><tr><td>11574</td><td>CXO J033236.1-275126</td><td>03 32 36.19</td><td>-27 51 26.87</td></tr><tr><td>11576</td><td>CXO J033253.0-275138</td><td>03 32 53.09</td><td>-27 51 38.28</td></tr><tr><td>11580</td><td>CXO J033213.4-274856</td><td>03 32 13.44</td><td>-27 48 56.20</td></tr><tr><td>11586</td><td>CXO J033218.8-275136</td><td>03 32 18.86</td><td>-27 51 36.08</td></tr><tr><td>11595</td><td>CXO J033244.3-275141</td><td>03 32 44.32</td><td>-27 51 41.71</td></tr><tr><td>11600</td><td>CXO J033234.7-275535</td><td>03 32 34.74</td><td>-27 55 35.82</td></tr><tr><td>11692</td><td>CXO J033153.4-274843</td><td>03 31 53.49</td><td>-27 48 43.92</td></tr><tr><td>11788</td><td>CXO J033202.2-275234</td><td>03 32 02.29</td><td>-27 52 34.42</td></tr><tr><td>11791</td><td>CXO J033228.0-274332</td><td>03 32 28.09</td><td>-27 43 32.02</td></tr><tr><td>...</td><td>...</td><td>...</td><td>...</td></tr><tr><td>33232</td><td>CXO J033225.9-274514</td><td>03 32 25.96</td><td>-27 45 14.82</td></tr><tr><td>33233</td><td>CXO J033230.0-274404</td><td>03 32 30.01</td><td>-27 44 04.50</td></tr><tr><td>33234</td><td>CXO J033237.4-274000</td><td>03 32 37.44</td><td>-27 40 00.74</td></tr><tr><td>33235</td><td>CXO J033149.4-275034</td><td>03 31 49.46</td><td>-27 50 34.20</td></tr><tr><td>33236</td><td>CXO J033149.4-274634</td><td>03 31 49.45</td><td>-27 46 34.46</td></tr><tr><td>33239</td><td>CXO J033222.7-275224</td><td>03 32 22.76</td><td>-27 52 24.10</td></tr><tr><td>33240</td><td>CXO J033226.5-274801</td><td>03 32 26.57</td><td>-27 48 01.82</td></tr><tr><td>37759</td><td>CXO J033309.5-274603</td><td>03 33 09.52</td><td>-27 46 03.30</td></tr><tr><td>148105</td><td>CXO J033234.2-273906</td><td>03 32 34.21</td><td>-27 39 06.46</td></tr><tr><td>148106</td><td>CXO J033234.4-273913</td><td>03 32 34.44</td><td>-27 39 13.28</td></tr><tr><td>148107</td><td>CXO J033247.9-274148</td><td>03 32 47.91</td><td>-27 41 48.03</td></tr></table>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[4]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">obs_sources</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
     Out[4]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table60059536"><thead><tr><th>obsid</th><th>obi</th><th>targname</th><th>gti_obs</th><th>flux_aper_b</th><th>src_cnts_aper_b</th><th>ra_b</th><th>dec_b</th><th>livetime</th><th>posid</th><th>theta</th><th>msid</th></tr></thead><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>2000-05-27T01:32:52</td><td>1.016e-14</td><td>53.492</td><td>03 32 50.25</td><td>-27 52 52.60</td><td>55967.0</td><td>14983</td><td>6.883</td><td>33150</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>2000-05-27T01:32:52</td><td>1.64e-14</td><td>112.29</td><td>03 32 37.77</td><td>-27 52 12.63</td><td>55967.0</td><td>14984</td><td>4.569</td><td>33164</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>2000-05-27T01:32:52</td><td>6.472e-15</td><td>43.247</td><td>03 32 43.22</td><td>-27 49 14.77</td><td>55967.0</td><td>14985</td><td>3.723</td><td>33183</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>2000-05-27T01:32:52</td><td>1.304e-14</td><td>69.774</td><td>03 32 59.85</td><td>-27 47 48.72</td><td>55967.0</td><td>14986</td><td>7.302</td><td>33198</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>2000-05-27T01:32:52</td><td>8.389e-14</td><td>594.61</td><td>03 32 08.67</td><td>-27 47 34.83</td><td>55970.2</td><td>14987</td><td>4.101</td><td>33202</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>2000-05-27T01:32:52</td><td>1.58e-14</td><td>90.888</td><td>03 32 29.98</td><td>-27 45 30.40</td><td>55967.0</td><td>14988</td><td>2.897</td><td>33140</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>2000-05-27T01:32:52</td><td>3.81e-15</td><td>24.617</td><td>03 32 30.22</td><td>-27 45 05.34</td><td>55967.0</td><td>14989</td><td>3.315</td><td>33142</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>2000-05-27T01:32:52</td><td>9.992e-15</td><td>73.295</td><td>03 32 10.93</td><td>-27 44 15.50</td><td>55967.0</td><td>14990</td><td>5.386</td><td>33143</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>2000-05-27T01:32:52</td><td>1.427e-14</td><td>100.45</td><td>03 32 36.71</td><td>-27 44 06.83</td><td>55967.0</td><td>14991</td><td>4.735</td><td>33144</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>2000-05-27T01:32:52</td><td>6.375e-15</td><td>59.919</td><td>03 32 10.52</td><td>-27 43 09.67</td><td>55967.0</td><td>14992</td><td>6.308</td><td>33145</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>2000-05-27T01:32:52</td><td>3.141e-14</td><td>172.74</td><td>03 32 47.89</td><td>-27 42 33.01</td><td>55967.0</td><td>14993</td><td>7.407</td><td>33148</td></tr><tr><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>2007-11-01T12:10:52</td><td>1.837e-14</td><td>114.47</td><td>03 32 26.97</td><td>-27 34 55.19</td><td>141416.0</td><td>44582</td><td>13.374</td><td>31730</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>2007-11-01T12:10:52</td><td>2.264e-15</td><td>23.458</td><td>03 32 58.54</td><td>-27 50 07.08</td><td>141397.4</td><td>44590</td><td>6.607</td><td>31719</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>2007-11-01T12:10:52</td><td>1.223e-15</td><td>32.509</td><td>03 32 02.48</td><td>-27 46 00.78</td><td>141400.5</td><td>44598</td><td>6.462</td><td>33132</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>2007-11-01T12:10:52</td><td>2.136e-15</td><td>23.913</td><td>03 32 32.06</td><td>-27 41 55.25</td><td>141381.9</td><td>44600</td><td>6.377</td><td>33210</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>2007-11-01T12:10:52</td><td>3.604e-16</td><td>12.814</td><td>03 32 14.53</td><td>-27 54 22.92</td><td>141400.5</td><td>44601</td><td>6.979</td><td>33178</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>2007-11-01T12:10:52</td><td>9.348e-15</td><td>64.379</td><td>03 31 52.61</td><td>-27 46 40.60</td><td>141400.5</td><td>44602</td><td>8.389</td><td>33226</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>2007-11-01T12:10:52</td><td>3.648e-16</td><td>10.546</td><td>03 33 04.26</td><td>-27 48 58.38</td><td>141397.4</td><td>44603</td><td>7.642</td><td>31739</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>2007-11-01T12:10:52</td><td>7.651e-15</td><td>105.91</td><td>03 32 39.83</td><td>-27 35 11.70</td><td>141416.0</td><td>44607</td><td>13.269</td><td>31732</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>2007-11-01T12:10:52</td><td>4.949e-15</td><td>32.443</td><td>03 32 46.32</td><td>-27 46 32.31</td><td>141381.9</td><td>44609</td><td>4.039</td><td>33227</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>2007-11-01T12:10:52</td><td>4.653e-15</td><td>35.693</td><td>03 32 40.84</td><td>-27 55 45.44</td><td>141400.5</td><td>44611</td><td>7.864</td><td>33197</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>2007-11-01T12:10:52</td><td>5.546e-15</td><td>79.046</td><td>03 32 18.43</td><td>-27 37 04.62</td><td>141416.0</td><td>44629</td><td>11.483</td><td>31734</td></tr></table>
+<table id="table4493596944"><thead><tr><th>msid</th><th>name</th><th>ra</th><th>dec</th></tr></thead><tr><td>11567</td><td>CXO J033206.1-275449</td><td>03 32 06.10</td><td>-27 54 49.73</td></tr><tr><td>11570</td><td>CXO J033151.1-275051</td><td>03 31 51.15</td><td>-27 50 51.66</td></tr><tr><td>11574</td><td>CXO J033236.1-275126</td><td>03 32 36.19</td><td>-27 51 26.87</td></tr><tr><td>11576</td><td>CXO J033253.0-275138</td><td>03 32 53.09</td><td>-27 51 38.28</td></tr><tr><td>11580</td><td>CXO J033213.4-274856</td><td>03 32 13.44</td><td>-27 48 56.20</td></tr><tr><td>11586</td><td>CXO J033218.8-275136</td><td>03 32 18.86</td><td>-27 51 36.08</td></tr><tr><td>11595</td><td>CXO J033244.3-275141</td><td>03 32 44.32</td><td>-27 51 41.71</td></tr><tr><td>11600</td><td>CXO J033234.7-275535</td><td>03 32 34.74</td><td>-27 55 35.82</td></tr><tr><td>11692</td><td>CXO J033153.4-274843</td><td>03 31 53.49</td><td>-27 48 43.92</td></tr><tr><td>11788</td><td>CXO J033202.2-275234</td><td>03 32 02.29</td><td>-27 52 34.42</td></tr><tr><td>11791</td><td>CXO J033228.0-274332</td><td>03 32 28.09</td><td>-27 43 32.02</td></tr><tr><td>...</td><td>...</td><td>...</td><td>...</td></tr><tr><td>33232</td><td>CXO J033225.9-274514</td><td>03 32 25.96</td><td>-27 45 14.82</td></tr><tr><td>33233</td><td>CXO J033230.0-274404</td><td>03 32 30.01</td><td>-27 44 04.50</td></tr><tr><td>33234</td><td>CXO J033237.4-274000</td><td>03 32 37.44</td><td>-27 40 00.74</td></tr><tr><td>33235</td><td>CXO J033149.4-275034</td><td>03 31 49.46</td><td>-27 50 34.20</td></tr><tr><td>33236</td><td>CXO J033149.4-274634</td><td>03 31 49.45</td><td>-27 46 34.46</td></tr><tr><td>33239</td><td>CXO J033222.7-275224</td><td>03 32 22.76</td><td>-27 52 24.10</td></tr><tr><td>33240</td><td>CXO J033226.5-274801</td><td>03 32 26.57</td><td>-27 48 01.82</td></tr><tr><td>37759</td><td>CXO J033309.5-274603</td><td>03 33 09.52</td><td>-27 46 03.30</td></tr><tr><td>148105</td><td>CXO J033234.2-273906</td><td>03 32 34.21</td><td>-27 39 06.46</td></tr><tr><td>148106</td><td>CXO J033234.4-273913</td><td>03 32 34.44</td><td>-27 39 13.28</td></tr><tr><td>148107</td><td>CXO J033247.9-274148</td><td>03 32 47.91</td><td>-27 41 48.03</td></tr></table>
 </div>
 
 </div>
@@ -1823,7 +1804,7 @@ In&nbsp;[5]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">master_sources</span><span class="o">.</span><span class="n">colnames</span>
+<div class="highlight"><pre><span class="n">obs_sources</span>
 </pre></div>
 
 </div>
@@ -1836,6 +1817,37 @@ In&nbsp;[5]:
 
 <div class="output_area"><div class="prompt output_prompt">
     Out[5]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<table id="table4493822544"><thead><tr><th>obsid</th><th>obi</th><th>targname</th><th>...</th><th>theta</th><th>msid</th></tr></thead><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>...</td><td>6.883</td><td>33150</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>...</td><td>4.569</td><td>33164</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>...</td><td>3.723</td><td>33183</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>...</td><td>7.302</td><td>33198</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>...</td><td>4.101</td><td>33202</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>...</td><td>2.897</td><td>33140</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>...</td><td>3.315</td><td>33142</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>...</td><td>5.386</td><td>33143</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>...</td><td>4.735</td><td>33144</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>...</td><td>6.308</td><td>33145</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>...</td><td>7.407</td><td>33148</td></tr><tr><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>...</td><td>13.374</td><td>31730</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>...</td><td>6.607</td><td>31719</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>...</td><td>6.462</td><td>33132</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>...</td><td>6.377</td><td>33210</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>...</td><td>6.979</td><td>33178</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>...</td><td>8.389</td><td>33226</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>...</td><td>7.642</td><td>31739</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>...</td><td>13.269</td><td>31732</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>...</td><td>4.039</td><td>33227</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>...</td><td>7.864</td><td>33197</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>...</td><td>11.483</td><td>31734</td></tr></table>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[6]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">master_sources</span><span class="o">.</span><span class="n">colnames</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[6]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -1853,7 +1865,7 @@ In&nbsp;[5]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[6]:
+In&nbsp;[7]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1869,7 +1881,7 @@ In&nbsp;[6]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[6]:</div>
+    Out[7]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -1898,7 +1910,7 @@ In&nbsp;[6]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[7]:
+In&nbsp;[8]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1914,7 +1926,7 @@ In&nbsp;[7]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[7]:</div>
+    Out[8]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -1932,7 +1944,7 @@ In&nbsp;[7]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[8]:
+In&nbsp;[9]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1948,7 +1960,7 @@ In&nbsp;[8]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[8]:</div>
+    Out[9]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -1966,7 +1978,7 @@ In&nbsp;[8]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[9]:
+In&nbsp;[10]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1982,7 +1994,7 @@ In&nbsp;[9]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[9]:</div>
+    Out[10]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -2000,7 +2012,7 @@ dtype([(&apos;msid&apos;, &apos;&gt;i8&apos;), (&apos;name&apos;, &apos;S20&apos
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[10]:
+In&nbsp;[11]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2016,7 +2028,7 @@ In&nbsp;[10]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[10]:</div>
+    Out[11]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -2036,7 +2048,7 @@ dtype([(&apos;obsid&apos;, &apos;&gt;i8&apos;), (&apos;obi&apos;, &apos;&gt;i8&a
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Normally one displays a table in IPython notebook by entering the variable name in a cell and pressing <code>shift-Enter</code>.  In a terminal session the default method is using something like <code>print(my_table)</code>.  In both cases the <code>Table</code> object prefers to display only a screenful of data to prevent having a zillion lines of output if the table is huge.  If you really want to see all the data you can use the <a href="http://astropy.readthedocs.org/en/stable/api/astropy.table.table.Table.html#astropy.table.table.Table.pprint">Table.pprint</a> method.</p>
+<p>Normally one displays a table in IPython notebook by entering the variable name in a cell and pressing <code>shift-Enter</code>. In a terminal session the default method is using something like <code>print(my_table)</code>. In both cases the <code>Table</code> object prefers to display only a screenful of data to prevent having a zillion lines of output if the table is huge. If you really want to see all the data you can use the <a href="http://astropy.readthedocs.org/en/stable/api/astropy.table.table.Table.html#astropy.table.table.Table.pprint">Table.pprint</a> method.</p>
 <ul>
 <li>Display all the rows of the <code>master_sources</code> table using its <code>pprint()</code> method.</li>
 <li>If you are working in a regular terminal window (not IPython notebook), try the <code>more()</code> method as well.</li>
@@ -2047,7 +2059,7 @@ dtype([(&apos;obsid&apos;, &apos;&gt;i8&apos;), (&apos;obi&apos;, &apos;&gt;i8&a
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[11]:
+In&nbsp;[12]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2300,7 +2312,7 @@ In&nbsp;[11]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For our analysis we don&#39;t actually need the <code>obi</code> (observation interval) column in the <code>obs_sources</code> table.</p>
+<p>For our analysis we don't actually need the <code>obi</code> (observation interval) column in the <code>obs_sources</code> table.</p>
 <ul>
 <li>Remove the <code>obi</code> column from the <code>obs_sources</code> table.</li>
 </ul>
@@ -2319,7 +2331,7 @@ In&nbsp;[11]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[12]:
+In&nbsp;[13]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2334,7 +2346,7 @@ In&nbsp;[12]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[13]:
+In&nbsp;[14]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2349,7 +2361,7 @@ In&nbsp;[13]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[14]:
+In&nbsp;[15]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2364,7 +2376,7 @@ In&nbsp;[14]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[15]:
+In&nbsp;[16]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2380,7 +2392,7 @@ In&nbsp;[15]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[15]:</div>
+    Out[16]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -2421,16 +2433,15 @@ In&nbsp;[15]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For each source detected in an individual observation (in the <code>obs_sources</code> table), let&#39;s look at the source flux values.</p>
+<p>For each source detected in an individual observation (in the <code>obs_sources</code> table), let's look at the source flux values.</p>
 <ul>
-<li>Use the matplotlib <a href="http://matplotlib.org/api/pyplot_api.html?highlight=pyplot.hist#matplotlib.pyplot.hist"><code>hist()</code></a> function to make a histogram of the source fluxes.  Since the fluxes vary by orders of magnitude,
-use the <code>numpy.log10</code> to put the fluxes in log space.</li>
+<li>Use the matplotlib <a href="http://matplotlib.org/api/pyplot_api.html?highlight=pyplot.hist#matplotlib.pyplot.hist"><code>hist()</code></a> function to make a histogram of the source fluxes. Since the fluxes vary by orders of magnitude, use the <code>numpy.log10</code> to put the fluxes in log space.</li>
 </ul>
 <p><em>HINT</em>: if you did not start notebook with <code>--pylab=inline</code> then try:</p>
 <pre><code>import matplotlib.pyplot as plt
-%matplotlib inline
-</code></pre><ul>
-<li>Also make the same plot but using only sources within 4 arcmin of the center.  <em>HINT</em>: use a boolean mask to select values of <code>theta</code> that are less than 4.0.</li>
+%matplotlib inline</code></pre>
+<ul>
+<li>Also make the same plot but using only sources within 4 arcmin of the center. <em>HINT</em>: use a boolean mask to select values of <code>theta</code> that are less than 4.0.</li>
 </ul>
 </div>
 </div>
@@ -2438,7 +2449,7 @@ use the <code>numpy.log10</code> to put the fluxes in log space.</li>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[16]:
+In&nbsp;[17]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2454,7 +2465,7 @@ In&nbsp;[16]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[17]:
+In&nbsp;[18]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2472,128 +2483,17 @@ In&nbsp;[17]:
 
 
 <div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_pyerr">
+<pre>
+<span class="ansired">---------------------------------------------------------------------------</span>
+<span class="ansired">NameError</span>                                 Traceback (most recent call last)
+<span class="ansigreen">&lt;ipython-input-18-9ab3ce35de6c&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">----&gt; 1</span><span class="ansired"> </span>vals<span class="ansiblue">,</span> bins<span class="ansiblue">,</span> patches <span class="ansiblue">=</span> plt<span class="ansiblue">.</span>hist<span class="ansiblue">(</span>np<span class="ansiblue">.</span>log10<span class="ansiblue">(</span>obs_sources<span class="ansiblue">[</span><span class="ansiblue">&apos;flux_aper_b&apos;</span><span class="ansiblue">]</span><span class="ansiblue">)</span><span class="ansiblue">,</span> bins<span class="ansiblue">=</span><span class="ansicyan">50</span><span class="ansiblue">)</span><span class="ansiblue"></span>
+<span class="ansigreen">      2</span> ok <span class="ansiblue">=</span> obs_sources<span class="ansiblue">[</span><span class="ansiblue">&apos;theta&apos;</span><span class="ansiblue">]</span> <span class="ansiblue">&lt;</span> <span class="ansicyan">4</span><span class="ansiblue"></span>
+<span class="ansigreen">      3</span> out <span class="ansiblue">=</span> plt<span class="ansiblue">.</span>hist<span class="ansiblue">(</span>np<span class="ansiblue">.</span>log10<span class="ansiblue">(</span>obs_sources<span class="ansiblue">[</span><span class="ansiblue">&apos;flux_aper_b&apos;</span><span class="ansiblue">]</span><span class="ansiblue">[</span>ok<span class="ansiblue">]</span><span class="ansiblue">)</span><span class="ansiblue">,</span> bins<span class="ansiblue">=</span>bins<span class="ansiblue">)</span><span class="ansiblue"></span>
 
-
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
-iXAjC2AG6kwSxxmAiXAjC2AG6kwSF7FnAOF45Nx5540x5Nb04XgkgX5oNOA9wnqR2T1E+wkFd7gL
-MCXDA6C8vHxeWlra/pSUlPrVq1ffb/T7+/z/0fIPl9PrQ6Oj4/iA9hmOGmFijQa8h++6T+9lSLiH
-akch4A53AaZkaBdQd3f3iLvuuuuZzZs3X5+UlHRgxowZf87NzS2bNGnSvrO99qWX1suOHbt+tP7c
-c2Pk4Yd/Jeeff34/q/A/QmDMmHFy9Ghbv94hNjZ+gB/SAUYlBLr9P0oGvD3TCCAoff5ODXUxMBtD
-A2DHjh0zJ06c+BeLxdIoInL77bcXb9y48ab+BMDq1Wtl//6ZImL5wfpzz10tS5f+s0yePLmfVQy+
-/27gffEBRiWc0voYpTPA7QO+D9AHRoqhL16v17Dl9ddfv2XZsmXP+b5fv379z+66666nfd+Lv/4Q
-FhYWFpazLkZ+VvsWQ88ANE3z9vVzr9dLPwYAmIShF4GTkpIONDU1TfB939TUNCE5ObnZyH0AAIxh
-aABcccUVO+vr61MaGxstJ0+ePGfDhg235ebmlhm5DwCAMQztAoqOju565pln7po7d+4furu7Ryxd
-unRdfy4AAwDCIBQXFkpKSm61Wq01UVFR3Z988sm0nj/bvXv3lFmzZn2Ynp7+WUZGxp7vv//+3N6v
-/+677+Kvv/76ypSUlDq73V5x+PDhuFDUOZDaGxoaLCNHjuzIzMyszszMrL7zzjvX+nv9Qw89VJiU
-lNTs2+69996bN1S1G1F/ONv+bL87Xq9Xvvrqq4tHjx59/Le//e19kdT+/a3frO3/8ccfz/S1aUZG
-xp7i4uLbzNb+g63dTG2/c+fO6b71FRUV9unTp+/MyMjYM3369J1bt2691qi2D8k/ZN++fWmff/55
-qs1m+2PP/4jOzs7oKVOm7N6zZ0+G1+uVtra2cd3d3VG9X79y5cpHV69e/Quv1ytOp/P++++/3zlU
-/wmBam9oaLBMnjx579leX1hY+NBjjz3286H8xTGy/nC2fV/1+5YFCxa8kZ+fvyHQB6hZ27+/9Zu1
-/U+cODHK97fa0tKSeMEFFxzq6uoaYab2H2ztZm376urqzJaWlkSv1yufffZZelJSUrO/1wfT9iGZ
-CygtLW2/v/UVFRU5U6ZM2ZORkbFXRGTcuHF+77YqKyvLraqqukZExOFwuGw2m9vpdBaEotbeAtU+
-EN4wjnYabP3hbHuRvusvLS3Nu/TSS78cPXr0//b1HmZt//7Ub9b2HzVqVIfv646OjlFjx449MmLE
-iG5/24ar/Qdbu1nbPjMz81Pf11artbajo2NUZ2dnTExMTGfvbQfa9kM6F1B9fX2KpmneefPmlU+f
-Pv2TNWvWrPS3ncfj0XVd94iI6Lru8Xg8+lDWGUhDQ8MlWVlZ1Tabzb1t27arA2339NNP3z116tTd
-S5cuXdfe3h43lDX2pT/1m7Xtjx8/fv6jjz76i8LCwsKzbWvG9u9v/WZtf5HTN3qmp6fXpKen1zz+
-+OM/D7SdGdu/P7Wbue193nzzzQXTp0//xN+Hv8jA2z7oALDb7ZUZGRl7ey/vvPPO/ECv6ezsjNm2
-bdvVr7766qJt27Zd/fbbb/9069at1/W1H03TvGe7v2Aoar/ooosONjU1Taiurs56/PHHf75o0aJX
-jx07Nqb3dnfeeed/NzQ0XPLpp59mjh8/vuW+++57zMjaQ11/T6Fo+2DrLywsLLz33nufOO+88070
-dZRj1vbvb/09man9RURmzpy5o6amJn3Xrl3T7rnnnqeOHDkytvc2oW7/UNbek9naXkSkpqYmvaCg
-wPn73//+3/z9PKi2D2WfVu++rOLi4tscDsdLvu8ffvjhX65Zs+Y/e7/u8ssv3+/r8zp48OD4yy+/
-fP9Q9ycG6sPt78+93v73u5upfjO0vb/65syZ877FYmmwWCwNcXFxh+Pj47979tlnl0dK+/e3frO2
-f+/luuuu29LzQqWZ2j/Y2s3c9k1NTcmpqamfb9++fXZ/3qO/bR/yLiBvj6OduXPn/mHv3r0ZHR0d
-o7q6uqKrqqquSU9Pr+n9mtzc3DKXy+UQEXG5XI68vLzSUNfpT8/aDx06dGF3d/cIEZEvv/zy0vr6
-+pRLL730y96vaWlpGe/7+u233/6p73pHOARTv1naXuSH9b///vv/0NDQcElDQ8MlK1asePLBBx98
-ZPny5Wt7v8as7d/f+s3a/o2NjZaurq5oEZGvvvrq7+rr61NSUlLqe7/GLO0fTO1mbfv29va4G2+8
-8X9Wr159/+zZsz8M9Jqg2j4UCfbWW2/9NDk5uWnkyJEduq63zps37z3fz1555ZV/Sk9P/2zy5Ml7
-e15lX7Zs2XO+VP7uu+/is7OzN4djOFag2t94440F6enpn2VmZlZPmzbtk3fffffGnrX7Envx4sUv
-Z2Rk7JkyZcrum266qbS1tVUfyqOHYOs3Q9uf7XfHt/Qe7RAJ7X+2+s3e/i+//PJi3+/PjBkzdvQc
-YmiW9g+2drO3/cMPP/zL0aNHH/cN78zMzKz+9ttvLzSi7TWv1/BuLgBABIjYJ4IBAAaHAAAARREA
-AKAoAgAAFEUAAICiCAAAUNT/ASVACY36Q5jQAAAAAElFTkSuQmCC
-"
->
+<span class="ansired">NameError</span>: name &apos;np&apos; is not defined</pre>
 </div>
-
 </div>
 
 </div>
@@ -2619,12 +2519,10 @@ AKAoAgAAFEUAAICiCAAAUNT/ASVACY36Q5jQAAAAAElFTkSuQmCC
 <ul>
 <li>Use the <a href="http://astropy.readthedocs.org/en/stable/table/operations.html#join">table.join()</a> function to make a single table called <code>sources</code> that has the master RA, Dec, and name included for each observation source.</li>
 </ul>
-<p><em>HINT</em>: the defaults for <code>keys</code> and <code>join_type=&#39;inner&#39;</code>  are correct in this case, so the simplest possible call to <code>join()</code> will work!</p>
+<p><em>HINT</em>: the defaults for <code>keys</code> and <code>join_type='inner'</code> are correct in this case, so the simplest possible call to <code>join()</code> will work!</p>
 <ul>
-<li><p><em>Intermediate</em>: Is the length of the new <code>sources</code> the same as <code>obs_sources</code>?  What happened?</p>
-</li>
-<li><p><em>Advanced</em>: Make a scatter plot of the RA (x-axis) and Dec (y-axis) difference between the master source position and the observation source position.  You&#39;ll need to use <code>coordinates</code>!</p>
-</li>
+<li><p><em>Intermediate</em>: Is the length of the new <code>sources</code> the same as <code>obs_sources</code>? What happened?</p></li>
+<li><p><em>Advanced</em>: Make a scatter plot of the RA (x-axis) and Dec (y-axis) difference between the master source position and the observation source position. You'll need to use <code>coordinates</code>!</p></li>
 </ul>
 </div>
 </div>
@@ -2632,7 +2530,7 @@ AKAoAgAAFEUAAICiCAAAUNT/ASVACY36Q5jQAAAAAElFTkSuQmCC
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[18]:
+In&nbsp;[19]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2647,7 +2545,7 @@ In&nbsp;[18]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[19]:
+In&nbsp;[20]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2662,7 +2560,7 @@ In&nbsp;[19]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[20]:
+In&nbsp;[21]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2693,7 +2591,7 @@ In&nbsp;[20]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[21]:
+In&nbsp;[22]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2708,7 +2606,7 @@ In&nbsp;[21]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[22]:
+In&nbsp;[23]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2723,7 +2621,7 @@ In&nbsp;[22]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[23]:
+In&nbsp;[24]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2739,7 +2637,7 @@ In&nbsp;[23]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[24]:
+In&nbsp;[25]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2755,12 +2653,12 @@ In&nbsp;[24]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[24]:</div>
+    Out[25]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-[&lt;matplotlib.lines.Line2D at 0x3fe03d0&gt;]
+[&lt;matplotlib.lines.Line2D at 0x10c1edd10&gt;]
 </pre>
 </div>
 
@@ -2770,239 +2668,225 @@ In&nbsp;[24]:
 
 
 <div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
-OZ8+8cQT/37r1i2Nmn2M2LBhw4YtNFvEC+Bv6+npmXHPPfec4gUk6XbixIk1WVlZbRkZGfby8vLS
-kfL39PTMsFgs70+ePPmGfBLCmTNnFi9YsOCTjIwM+7Zt2/4z1urGGKOysrIdGRkZ9qysrLZ33nln
-lbh/xYoV9VlZWW2LFi1qXrRoUfOVK1dmhrpew5VXum3duvX5jIwMe25u7vlz587lqVFXtbZw1s/h
-cBjGjx//N/HzeuSRR/bFYv1ef/31++bPn98ybty4gbNnz+ZLjxUPn99w9Qv356dG3Z588slns7Oz
-L+Tm5p7/4Q9/+FZvb++0QD87VT/YYLft27f/uqKi4inGGJWXl5eWlpaWy9P09/cnGI3GdofDYfB6
-vUlms/nj1tbWef7yf/XVVxNPnz59d2Vl5RZ5sFm6dGlTY2NjAWOMioqKak+cOLEmlurW0tIy32w2
-f+z1epMcDofBaDS2iy1Ai8Xyvvw/eyg3f+UVt+PHjxcXFRXVMsaooaGhsLCwsCGUdR0YGBgXL/Vz
-OByGBQsWfBKu/29q1e/ChQvZFy9ezJT/+4uXz2+4+oXz81OrbidPnrSKn0lpaWl5MP/3onq5mnDf
-y9PV1TX7xo0bUwoKCpqIiDZv3ryfd85orlt1dfXajRs3vpaUlNRnMBg6MjIy2hsbGwvFYzIVZ+v5
-Ky+v3oWFhY29vb0pHo8nNVR1bWpqKoiX+oWbWvXLzs5uy8zMvCQ/X7x8fsPVL5zUqpvVaj01bty4
-W2Iel8ulJwrss4vqYNPd3a3VarXdRMLste7ubq08jdvt1qWnpzvF93q93uV2u3VK8sunW7vdbp1e
-r3eJ73U6nVs8VqipVbfOzs40aR30er2rs7MzTXxfUlJSlZeX17x79+5nQl0nf+UdKU1nZ2daKOqq
-1ucVifoRETkcjjvy8vKaLRZL/enTp5erVTc16zecePn8/AnX5xeOuv3ud7/7x+Li4lqiwD47v1Of
-wyHa7uUJpWirm5L7lIKh9O+rpHUVaF3V/IzDXb+0tLROp9OZPn369Ovnzp3LX7du3dGWlpacKVOm
-3Bh96UcWyvqpXQY1jx2q+oXz81O7bnv27PlFcnKyd9OmTQcDLUPEg0003cuj0+ncYjNRfqxARKJu
-/vKofZ+S/NxOpzNd+u1nuPLp9XpXX19fUijrqoZw1y85OdmbnJzsJSLKz88/ZzQaL9vtdlN+fv65
-aK8fL+9I54ulz09J/cL5+alZt1deeeXB2tra4vfee2+lv2ON+NmFa/AxkG379u2/FmdG7N2792ne
-IHpfX1/i3LlzLzscDsPXX3+dLB949Zf/5ZdfflA+QaCgoKCxoaGh8NatWxq1JwioUTdx4O7rr79O
-/uyzz+6YO3fu5Vu3bmn6+/sTxNlnXq83af369W+8+OKLD4eyTv7Kyxuk/Oijj5aJg5ShrKta/x7D
-Xb8rV67M7O/vT2CM0eXLl+fqdDrXcLMWo7l+4maxWN4/c+bMYvF9vHx+w9UvnJ+fWnU7ceLEmvnz
-57fIZ64G8tmp8qGGagv3vTyM+aY+G43G9q1btz4fi3Xbs2fPPxuNxvasrKy2urq61Ywxunnz5qRw
-3KfEK29lZeWWysrKLWKaxx577AWj0diem5t7Xjp7J1R1VXMLZ/3efPPNH4lrAebn5599++23743F
-+r311ls/1Ov1zvHjx/9Nq9V61qxZcyKePr/h6vfGG2+sD+fnp0bdMjIy7N/97nc/503fHu1np2Es
-rMMYAAAwBkX1bDQAAIgPCDYAAKA6BBsAAFAdgg0AAKgOwQYAAFSHYAMAAKr7/2To6DS3qIxsAAAA
-AElFTkSuQmCC
+<img src="data:image/png;base64,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
+AAAAAElFTkSuQmCC
 "
 >
 </div>
@@ -3028,16 +2912,16 @@ AElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Finally, we can look at the variability properties of sources in the CDFS using the <a href="http://astropy.readthedocs.org/en/stable/table/operations.html#id2"><code>group_by()</code></a> functionality.  </p>
+<p>Finally, we can look at the variability properties of sources in the CDFS using the <a href="http://astropy.readthedocs.org/en/stable/table/operations.html#id2"><code>group_by()</code></a> functionality.</p>
 <p>This method makes a new table in which all the sources with identical master ID are next to each other.</p>
 <ul>
 <li>Make a new table <code>g_sources</code> which is the <code>sources</code> table grouped by the <code>msid</code> key using the <code>group_by()</code> method.</li>
 </ul>
-<p>The <code>g_sources</code> table is just a regular table with all the <code>sources</code> in a particular order.  The attribute <code>g_sources.groups</code> is an object that provides access to the <code>msid</code> sub-groups.  You can access the $i^{th}$ group with <code>g_sources.groups[i]</code>.</p>
+<p>The <code>g_sources</code> table is just a regular table with all the <code>sources</code> in a particular order. The attribute <code>g_sources.groups</code> is an object that provides access to the <code>msid</code> sub-groups. You can access the <span class="math">\(i^{th}\)</span> group with <code>g_sources.groups[i]</code>.</p>
 <p>In addition the <code>g_sources.groups.indices</code> attribute is an array with the indicies of the group boundaries.</p>
 <ul>
-<li>Using <code>np.diff()</code> find the number of repeat observations of each master sources.  <em>HINT</em>: use the indices, Luke.</li>
-<li>Print the 50th group and note which columns are the same for all group members and which are different.  Does this make sense?  In these few observations how many different target names were provided by observers?</li>
+<li>Using <code>np.diff()</code> find the number of repeat observations of each master sources. <em>HINT</em>: use the indices, Luke.</li>
+<li>Print the 50th group and note which columns are the same for all group members and which are different. Does this make sense? In these few observations how many different target names were provided by observers?</li>
 </ul>
 </div>
 </div>
@@ -3045,7 +2929,7 @@ AElFTkSuQmCC
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[25]:
+In&nbsp;[26]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3060,7 +2944,7 @@ In&nbsp;[25]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[26]:
+In&nbsp;[27]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3075,26 +2959,16 @@ In&nbsp;[26]:
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">
-    Out[26]:</div>
-
-
-<div class="output_text output_subarea output_pyout">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_pyerr">
 <pre>
-array([ 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  3,  1,
-        1,  1,  1,  1,  1,  1,  1,  1,  1,  5,  3,  1,  1,  2,  1,  1,  1,
-        1,  3,  2,  1,  1,  1,  1,  2,  1,  1,  2,  1,  4,  2,  1, 18,  5,
-        4,  9, 11,  3,  7,  2,  2,  1,  1,  1,  2,  1, 14,  7, 15,  1, 10,
-       12,  2,  2,  1,  1,  2, 17, 18,  5, 21, 21, 14, 15, 18,  4, 12, 16,
-       21, 16, 21, 21, 21, 21, 20, 19, 21, 21, 21, 18, 21, 21, 20, 11, 20,
-       14, 21,  8, 13,  6, 16, 18, 21, 11, 20, 14, 21, 11, 14, 21,  7,  7,
-       13, 21, 21, 14,  5, 11,  6, 14,  7, 20, 18, 13,  6, 19, 20, 20, 21,
-       11, 17,  6, 17,  9, 17, 10, 21,  8,  4,  7, 21, 20, 13,  6, 12,  8,
-       10,  4,  5,  5,  2,  4,  4, 11,  3,  4,  6,  6,  5,  3, 14,  9, 16,
-        3,  2,  1,  5,  5,  7,  1,  5,  1,  1,  3, 15])
-</pre>
-</div>
+<span class="ansired">---------------------------------------------------------------------------</span>
+<span class="ansired">NameError</span>                                 Traceback (most recent call last)
+<span class="ansigreen">&lt;ipython-input-27-b345f0dce8cf&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">----&gt; 1</span><span class="ansired"> </span>np<span class="ansiblue">.</span>diff<span class="ansiblue">(</span>g_sources<span class="ansiblue">.</span>groups<span class="ansiblue">.</span>indices<span class="ansiblue">)</span><span class="ansiblue"></span>
 
+<span class="ansired">NameError</span>: name &apos;np&apos; is not defined</pre>
+</div>
 </div>
 
 </div>
@@ -3104,7 +2978,7 @@ array([ 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  3,  1,
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[27]:
+In&nbsp;[28]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3120,10 +2994,10 @@ In&nbsp;[27]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[27]:</div>
+    Out[28]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table66478672"><thead><tr><th>msid</th><th>name</th><th>ra</th><th>dec</th><th>obsid</th><th>targname</th><th>obs_date</th><th>flux_aper_b</th><th>src_cnts_aper_b</th><th>ra_b</th><th>dec_b</th><th>livetime</th><th>posid</th><th>theta</th><th>src_rate_aper_b</th></tr></thead><tr><td>31719</td><td>CXO J033258.4-275007</td><td>03 32 58.48</td><td>-27 50 07.48</td><td>2405</td><td>AXAF SOUTHERN DEEP F</td><td>2000-12-11T08:24:19</td><td>1.994e-15</td><td>17.255</td><td>03 32 58.51</td><td>-27 50 07.28</td><td>59629.5</td><td>15119</td><td>6.712</td><td>0.000289370194283</td></tr><tr><td>31719</td><td>CXO J033258.4-275007</td><td>03 32 58.48</td><td>-27 50 07.48</td><td>582</td><td>AXAF Southern Deep Field</td><td>2000-06-03T02:59:50</td><td>4.272e-15</td><td>24.844</td><td>03 32 58.48</td><td>-27 50 09.86</td><td>130584.4</td><td>15461</td><td>7.209</td><td>0.000190252434441</td></tr><tr><td>31719</td><td>CXO J033258.4-275007</td><td>03 32 58.48</td><td>-27 50 07.48</td><td>8595</td><td>Chandra Deep Field-South</td><td>2007-10-19T14:33:54</td><td>1.342e-15</td><td>22.475</td><td>03 32 58.50</td><td>-27 50 07.45</td><td>115413.1</td><td>17633</td><td>6.731</td><td>0.000194735259689</td></tr><tr><td>31719</td><td>CXO J033258.4-275007</td><td>03 32 58.48</td><td>-27 50 07.48</td><td>8596</td><td>Chandra Deep Field-South</td><td>2007-10-24T13:44:48</td><td>6.401e-16</td><td>15.749</td><td>03 32 58.29</td><td>-27 50 04.95</td><td>115110.3</td><td>17863</td><td>6.605</td><td>0.000136816601121</td></tr><tr><td>31719</td><td>CXO J033258.4-275007</td><td>03 32 58.48</td><td>-27 50 07.48</td><td>8594</td><td>Chandra Deep Field-South</td><td>2007-11-01T12:10:52</td><td>2.264e-15</td><td>23.458</td><td>03 32 58.54</td><td>-27 50 07.08</td><td>141397.4</td><td>44590</td><td>6.607</td><td>0.000165901211762</td></tr></table>
+<table id="table4493597328"><thead><tr><th>msid</th><th>name</th><th>ra</th><th>...</th><th>posid</th><th>theta</th><th>src_rate_aper_b</th></tr></thead><tr><td>31719</td><td>CXO J033258.4-275007</td><td>03 32 58.48</td><td>...</td><td>17633</td><td>6.731</td><td>0.000194735259689</td></tr><tr><td>31719</td><td>CXO J033258.4-275007</td><td>03 32 58.48</td><td>...</td><td>15461</td><td>7.209</td><td>0.000190252434441</td></tr><tr><td>31719</td><td>CXO J033258.4-275007</td><td>03 32 58.48</td><td>...</td><td>17863</td><td>6.605</td><td>0.000136816601121</td></tr><tr><td>31719</td><td>CXO J033258.4-275007</td><td>03 32 58.48</td><td>...</td><td>44590</td><td>6.607</td><td>0.000165901211762</td></tr><tr><td>31719</td><td>CXO J033258.4-275007</td><td>03 32 58.48</td><td>...</td><td>15119</td><td>6.712</td><td>0.000289370194283</td></tr></table>
 </div>
 
 </div>
@@ -3147,11 +3021,11 @@ In&nbsp;[27]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The real power of grouping comes in the ability to create aggregate values for each of the groups, for instance the mean flux for each unique source.  This is done with the <a href="http://astropy.readthedocs.org/en/stable/table/operations.html#aggregation"><code>aggregate()</code></a> method, which takes a function reference as its input.  This function must take as input an array of values and return a single value.</p>
+<p>The real power of grouping comes in the ability to create aggregate values for each of the groups, for instance the mean flux for each unique source. This is done with the <a href="http://astropy.readthedocs.org/en/stable/table/operations.html#aggregation"><code>aggregate()</code></a> method, which takes a function reference as its input. This function must take as input an array of values and return a single value.</p>
 <p>Aggregate returns a new table that has a length equal to the number of groups.</p>
 <ul>
-<li>Compute the mean of all columns for each unique source (i.e. each group) using <code>aggregate</code> and the <code>np.mean</code> function.  Call this table <code>g_sources_mean</code>.</li>
-<li>Notice that aggregation cannot form a mean for certain columns and these are dropped from the output.  Use the <code>join()</code> function to restore the <code>master_sources</code> information to <code>g_sources_mean</code>.</li>
+<li>Compute the mean of all columns for each unique source (i.e. each group) using <code>aggregate</code> and the <code>np.mean</code> function. Call this table <code>g_sources_mean</code>.</li>
+<li>Notice that aggregation cannot form a mean for certain columns and these are dropped from the output. Use the <code>join()</code> function to restore the <code>master_sources</code> information to <code>g_sources_mean</code>.</li>
 </ul>
 </div>
 </div>
@@ -3159,7 +3033,7 @@ In&nbsp;[27]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[28]:
+In&nbsp;[29]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3175,56 +3049,15 @@ In&nbsp;[28]:
 
 
 <div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
+<div class="output_subarea output_text output_pyerr">
 <pre>
-WARNING: Cannot aggregate column &apos;name&apos; [astropy.table.groups]
-WARNING:astropy:Cannot aggregate column &apos;name&apos;
-WARNING: Cannot aggregate column &apos;ra&apos; [astropy.table.groups]
-WARNING:astropy:Cannot aggregate column &apos;ra&apos;
-WARNING: Cannot aggregate column &apos;dec&apos; [astropy.table.groups]
-WARNING:astropy:Cannot aggregate column &apos;dec&apos;
-WARNING: Cannot aggregate column &apos;targname&apos; [astropy.table.groups]
-WARNING:astropy:Cannot aggregate column &apos;targname&apos;
-WARNING: Cannot aggregate column &apos;obs_date&apos; [astropy.table.groups]
-WARNING:astropy:Cannot aggregate column &apos;obs_date&apos;
-WARNING: Cannot aggregate column &apos;ra_b&apos; [astropy.table.groups]
-WARNING:astropy:Cannot aggregate column &apos;ra_b&apos;
-WARNING: Cannot aggregate column &apos;dec_b&apos; [astropy.table.groups]
-WARNING:astropy:Cannot aggregate column &apos;dec_b&apos;
+<span class="ansired">---------------------------------------------------------------------------</span>
+<span class="ansired">NameError</span>                                 Traceback (most recent call last)
+<span class="ansigreen">&lt;ipython-input-29-2987b49d3cb5&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">----&gt; 1</span><span class="ansired"> </span>g_sources_mean <span class="ansiblue">=</span> g_sources<span class="ansiblue">.</span>groups<span class="ansiblue">.</span>aggregate<span class="ansiblue">(</span>np<span class="ansiblue">.</span>mean<span class="ansiblue">)</span><span class="ansiblue"></span>
 
-</pre>
+<span class="ansired">NameError</span>: name &apos;np&apos; is not defined</pre>
 </div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[29]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">g_sources_mean</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[29]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<table id="table66881424"><thead><tr><th>msid</th><th>obsid</th><th>flux_aper_b</th><th>src_cnts_aper_b</th><th>livetime</th><th>posid</th><th>theta</th><th>src_rate_aper_b</th></tr></thead><tr><td>11567</td><td>582.0</td><td>4.84e-15</td><td>35.507</td><td>130584.4</td><td>15460.0</td><td>7.987</td><td>0.00027190843623</td></tr><tr><td>11570</td><td>582.0</td><td>5.134e-15</td><td>55.591</td><td>130584.4</td><td>15468.0</td><td>8.321</td><td>0.000425709349662</td></tr><tr><td>11574</td><td>582.0</td><td>1.371e-15</td><td>17.829</td><td>130584.4</td><td>15498.0</td><td>3.743</td><td>0.000136532388249</td></tr><tr><td>11576</td><td>582.0</td><td>1.136e-15</td><td>10.197</td><td>130584.4</td><td>15502.0</td><td>6.666</td><td>7.80874285137e-05</td></tr><tr><td>11580</td><td>582.0</td><td>2.37e-15</td><td>16.011</td><td>130584.4</td><td>15509.0</td><td>3.057</td><td>0.000122610357746</td></tr><tr><td>11586</td><td>582.0</td><td>2.092e-15</td><td>15.765</td><td>130584.4</td><td>15382.0</td><td>3.75</td><td>0.000120726518635</td></tr><tr><td>11595</td><td>582.0</td><td>9.126e-16</td><td>25.018</td><td>130584.4</td><td>15418.0</td><td>5.117</td><td>0.000191584906007</td></tr><tr><td>11600</td><td>582.0</td><td>3.446e-15</td><td>23.171</td><td>130584.4</td><td>15431.0</td><td>7.488</td><td>0.00017744079691</td></tr><tr><td>11692</td><td>1672.0</td><td>2.476e-15</td><td>17.303</td><td>95138.1</td><td>15596.0</td><td>7.792</td><td>0.000181872456986</td></tr><tr><td>11788</td><td>2312.0</td><td>2.024e-16</td><td>20.78</td><td>123689.2</td><td>15863.0</td><td>6.978</td><td>0.000168001733377</td></tr><tr><td>11791</td><td>2312.0</td><td>2.085e-15</td><td>17.554</td><td>123686.1</td><td>15871.0</td><td>5.081</td><td>0.000141923789334</td></tr><tr><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr><tr><td>33230</td><td>2312.5</td><td>2.2935e-15</td><td>21.924</td><td>127047.0</td><td>30128.5</td><td>7.5865</td><td>0.000173165944648</td></tr><tr><td>33231</td><td>2313.0</td><td>1.486e-15</td><td>14.39</td><td>130401.7</td><td>44388.0</td><td>6.259</td><td>0.000110351322107</td></tr><tr><td>33232</td><td>4105.0</td><td>1.802e-15</td><td>16.0434</td><td>114748.98</td><td>27344.2</td><td>3.1536</td><td>0.00015063014691</td></tr><tr><td>33233</td><td>5932.2</td><td>1.91088e-15</td><td>24.2146</td><td>120034.52</td><td>22973.8</td><td>4.2568</td><td>0.000201076953671</td></tr><tr><td>33234</td><td>6971.57142857</td><td>5.16657142857e-15</td><td>40.4452857143</td><td>84860.6</td><td>17128.2857143</td><td>8.47985714286</td><td>0.000491974762848</td></tr><tr><td>33235</td><td>2313.0</td><td>1.115e-15</td><td>37.418</td><td>130401.7</td><td>44398.0</td><td>8.744</td><td>0.000286944111925</td></tr><tr><td>33236</td><td>4694.8</td><td>6.7688e-15</td><td>43.9302</td><td>110817.68</td><td>22787.0</td><td>8.804</td><td>0.000398015585979</td></tr><tr><td>33239</td><td>2313.0</td><td>1.776e-15</td><td>13.234</td><td>130407.9</td><td>44316.0</td><td>3.938</td><td>0.000101481582021</td></tr><tr><td>33240</td><td>2313.0</td><td>8.431e-16</td><td>11.136</td><td>130398.6</td><td>44286.0</td><td>0.697</td><td>8.5399689874e-05</td></tr><tr><td>37759</td><td>2074.33333333</td><td>4.34966666667e-15</td><td>32.363</td><td>116558.6</td><td>25248.0</td><td>9.44766666667</td><td>0.000284364926452</td></tr><tr><td>148107</td><td>7432.0</td><td>1.79882666667e-14</td><td>145.463133333</td><td>85670.4733333</td><td>20396.0666667</td><td>7.70033333333</td><td>0.00168226262547</td></tr></table>
-</div>
-
 </div>
 
 </div>
@@ -3238,10 +3071,29 @@ In&nbsp;[30]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">g_sources_mean</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">master_sources</span><span class="p">,</span> <span class="n">g_sources_mean</span><span class="p">)</span>
+<div class="highlight"><pre><span class="n">g_sources_mean</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_pyerr">
+<pre>
+<span class="ansired">---------------------------------------------------------------------------</span>
+<span class="ansired">NameError</span>                                 Traceback (most recent call last)
+<span class="ansigreen">&lt;ipython-input-30-ddbf9ead9a51&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">----&gt; 1</span><span class="ansired"> </span>g_sources_mean<span class="ansiblue"></span>
+
+<span class="ansired">NameError</span>: name &apos;g_sources_mean&apos; is not defined</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -3250,6 +3102,40 @@ In&nbsp;[30]:
 <div class="input">
 <div class="prompt input_prompt">
 In&nbsp;[31]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">g_sources_mean</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">master_sources</span><span class="p">,</span> <span class="n">g_sources_mean</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_pyerr">
+<pre>
+<span class="ansired">---------------------------------------------------------------------------</span>
+<span class="ansired">NameError</span>                                 Traceback (most recent call last)
+<span class="ansigreen">&lt;ipython-input-31-1cf77549e4d1&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">----&gt; 1</span><span class="ansired"> </span>g_sources_mean <span class="ansiblue">=</span> join<span class="ansiblue">(</span>master_sources<span class="ansiblue">,</span> g_sources_mean<span class="ansiblue">)</span><span class="ansiblue"></span>
+
+<span class="ansired">NameError</span>: name &apos;g_sources_mean&apos; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[32]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3264,13 +3150,16 @@ In&nbsp;[31]:
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">
-    Out[31]:</div>
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_pyerr">
+<pre>
+<span class="ansired">---------------------------------------------------------------------------</span>
+<span class="ansired">NameError</span>                                 Traceback (most recent call last)
+<span class="ansigreen">&lt;ipython-input-32-ddbf9ead9a51&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">----&gt; 1</span><span class="ansired"> </span>g_sources_mean<span class="ansiblue"></span>
 
-<div class="output_html rendered_html output_subarea output_pyout">
-<table id="table66939408"><thead><tr><th>msid</th><th>name</th><th>ra</th><th>dec</th><th>obsid</th><th>flux_aper_b</th><th>src_cnts_aper_b</th><th>livetime</th><th>posid</th><th>theta</th><th>src_rate_aper_b</th></tr></thead><tr><td>11567</td><td>CXO J033206.1-275449</td><td>03 32 06.10</td><td>-27 54 49.73</td><td>582.0</td><td>4.84e-15</td><td>35.507</td><td>130584.4</td><td>15460.0</td><td>7.987</td><td>0.00027190843623</td></tr><tr><td>11570</td><td>CXO J033151.1-275051</td><td>03 31 51.15</td><td>-27 50 51.66</td><td>582.0</td><td>5.134e-15</td><td>55.591</td><td>130584.4</td><td>15468.0</td><td>8.321</td><td>0.000425709349662</td></tr><tr><td>11574</td><td>CXO J033236.1-275126</td><td>03 32 36.19</td><td>-27 51 26.87</td><td>582.0</td><td>1.371e-15</td><td>17.829</td><td>130584.4</td><td>15498.0</td><td>3.743</td><td>0.000136532388249</td></tr><tr><td>11576</td><td>CXO J033253.0-275138</td><td>03 32 53.09</td><td>-27 51 38.28</td><td>582.0</td><td>1.136e-15</td><td>10.197</td><td>130584.4</td><td>15502.0</td><td>6.666</td><td>7.80874285137e-05</td></tr><tr><td>11580</td><td>CXO J033213.4-274856</td><td>03 32 13.44</td><td>-27 48 56.20</td><td>582.0</td><td>2.37e-15</td><td>16.011</td><td>130584.4</td><td>15509.0</td><td>3.057</td><td>0.000122610357746</td></tr><tr><td>11586</td><td>CXO J033218.8-275136</td><td>03 32 18.86</td><td>-27 51 36.08</td><td>582.0</td><td>2.092e-15</td><td>15.765</td><td>130584.4</td><td>15382.0</td><td>3.75</td><td>0.000120726518635</td></tr><tr><td>11595</td><td>CXO J033244.3-275141</td><td>03 32 44.32</td><td>-27 51 41.71</td><td>582.0</td><td>9.126e-16</td><td>25.018</td><td>130584.4</td><td>15418.0</td><td>5.117</td><td>0.000191584906007</td></tr><tr><td>11600</td><td>CXO J033234.7-275535</td><td>03 32 34.74</td><td>-27 55 35.82</td><td>582.0</td><td>3.446e-15</td><td>23.171</td><td>130584.4</td><td>15431.0</td><td>7.488</td><td>0.00017744079691</td></tr><tr><td>11692</td><td>CXO J033153.4-274843</td><td>03 31 53.49</td><td>-27 48 43.92</td><td>1672.0</td><td>2.476e-15</td><td>17.303</td><td>95138.1</td><td>15596.0</td><td>7.792</td><td>0.000181872456986</td></tr><tr><td>11788</td><td>CXO J033202.2-275234</td><td>03 32 02.29</td><td>-27 52 34.42</td><td>2312.0</td><td>2.024e-16</td><td>20.78</td><td>123689.2</td><td>15863.0</td><td>6.978</td><td>0.000168001733377</td></tr><tr><td>11791</td><td>CXO J033228.0-274332</td><td>03 32 28.09</td><td>-27 43 32.02</td><td>2312.0</td><td>2.085e-15</td><td>17.554</td><td>123686.1</td><td>15871.0</td><td>5.081</td><td>0.000141923789334</td></tr><tr><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr><tr><td>33230</td><td>CXO J033238.3-275552</td><td>03 32 38.33</td><td>-27 55 52.82</td><td>2312.5</td><td>2.2935e-15</td><td>21.924</td><td>127047.0</td><td>30128.5</td><td>7.5865</td><td>0.000173165944648</td></tr><tr><td>33231</td><td>CXO J033201.1-275033</td><td>03 32 01.12</td><td>-27 50 33.13</td><td>2313.0</td><td>1.486e-15</td><td>14.39</td><td>130401.7</td><td>44388.0</td><td>6.259</td><td>0.000110351322107</td></tr><tr><td>33232</td><td>CXO J033225.9-274514</td><td>03 32 25.96</td><td>-27 45 14.82</td><td>4105.0</td><td>1.802e-15</td><td>16.0434</td><td>114748.98</td><td>27344.2</td><td>3.1536</td><td>0.00015063014691</td></tr><tr><td>33233</td><td>CXO J033230.0-274404</td><td>03 32 30.01</td><td>-27 44 04.50</td><td>5932.2</td><td>1.91088e-15</td><td>24.2146</td><td>120034.52</td><td>22973.8</td><td>4.2568</td><td>0.000201076953671</td></tr><tr><td>33234</td><td>CXO J033237.4-274000</td><td>03 32 37.44</td><td>-27 40 00.74</td><td>6971.57142857</td><td>5.16657142857e-15</td><td>40.4452857143</td><td>84860.6</td><td>17128.2857143</td><td>8.47985714286</td><td>0.000491974762848</td></tr><tr><td>33235</td><td>CXO J033149.4-275034</td><td>03 31 49.46</td><td>-27 50 34.20</td><td>2313.0</td><td>1.115e-15</td><td>37.418</td><td>130401.7</td><td>44398.0</td><td>8.744</td><td>0.000286944111925</td></tr><tr><td>33236</td><td>CXO J033149.4-274634</td><td>03 31 49.45</td><td>-27 46 34.46</td><td>4694.8</td><td>6.7688e-15</td><td>43.9302</td><td>110817.68</td><td>22787.0</td><td>8.804</td><td>0.000398015585979</td></tr><tr><td>33239</td><td>CXO J033222.7-275224</td><td>03 32 22.76</td><td>-27 52 24.10</td><td>2313.0</td><td>1.776e-15</td><td>13.234</td><td>130407.9</td><td>44316.0</td><td>3.938</td><td>0.000101481582021</td></tr><tr><td>33240</td><td>CXO J033226.5-274801</td><td>03 32 26.57</td><td>-27 48 01.82</td><td>2313.0</td><td>8.431e-16</td><td>11.136</td><td>130398.6</td><td>44286.0</td><td>0.697</td><td>8.5399689874e-05</td></tr><tr><td>37759</td><td>CXO J033309.5-274603</td><td>03 33 09.52</td><td>-27 46 03.30</td><td>2074.33333333</td><td>4.34966666667e-15</td><td>32.363</td><td>116558.6</td><td>25248.0</td><td>9.44766666667</td><td>0.000284364926452</td></tr><tr><td>148107</td><td>CXO J033247.9-274148</td><td>03 32 47.91</td><td>-27 41 48.03</td><td>7432.0</td><td>1.79882666667e-14</td><td>145.463133333</td><td>85670.4733333</td><td>20396.0666667</td><td>7.70033333333</td><td>0.00168226262547</td></tr></table>
+<span class="ansired">NameError</span>: name &apos;g_sources_mean&apos; is not defined</pre>
 </div>
-
 </div>
 
 </div>

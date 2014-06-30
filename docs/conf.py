@@ -248,6 +248,6 @@ try:
 
     html_theme_options = {'logotext3': ':tutorials'}
 except ImportError:
-    pass
+    raise
 
 html_static_path.append('notebooks')

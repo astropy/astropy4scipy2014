@@ -20,9 +20,10 @@ Useful links
 Notebooks
 ---------
 
-* `Handling FITS Files <_static/notebooks/Handling_FITS_Files.html>`_ [`Problem solutions <_static/notebooks/Handling_FITS_Files_solutions.html>`_]
 * `Units and Quantities <_static/notebooks/Unit_Conversion.html>`_ [`Problem solutions <_static/notebooks/Unit_Conversion_solutions.html>`_]
 * `Tables <_static/notebooks/Tables.html>`_ [`Problem solutions <_static/notebooks/Tables_solutions.html>`_]
+* `Handling FITS Files <_static/notebooks/Handling_FITS_Files.html>`_ [`Problem solutions <_static/notebooks/Handling_FITS_Files_solutions.html>`_]
+* `Handling ASCII Data Tables <_static/notebooks/Handling_ASCII_data_tables.html>`_ [`Problem solutions <_static/notebooks/Handling_ASCII_data_tables_solutions.html>`_]
 * `Celestial Coordinates <_static/notebooks/Celestial_Coordinates.html>`_ [`Problem solutions <_static/notebooks/Celestial_Coordinates_solutions.html>`_]
 
 Getting help

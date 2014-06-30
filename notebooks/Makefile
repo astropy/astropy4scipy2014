@@ -13,7 +13,7 @@ $(HTML_NOTEBOOKS_DIR)/%.html : $(RUN_NOTEBOOKS_DIR)/%.ipynb | $(HTML_NOTEBOOKS_D
 	ipython nbconvert --to=html --stdout $< > $@
 
 $(RUN_NOTEBOOKS_DIR)/%.ipynb : %.ipynb | $(RUN_NOTEBOOKS_DIR)
-	runipy --pylab --matplotlib --skip-exceptions $< $@
+	runipy --skip-exceptions $< $@
 
 $(RUN_NOTEBOOKS_DIR) :
 	mkdir -p $(RUN_NOTEBOOKS_DIR)

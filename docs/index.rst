@@ -20,6 +20,7 @@ Useful links
 Notebooks
 ---------
 
+* `Introduction <_static/notebooks/Introduction.html>`_
 * `Units and Quantities <_static/notebooks/Unit_Conversion.html>`_ [`Problem solutions <_static/notebooks/Unit_Conversion_solutions.html>`_]
 * `Tables <_static/notebooks/Tables.html>`_ [`Problem solutions <_static/notebooks/Tables_solutions.html>`_]
 * `Handling FITS Files <_static/notebooks/Handling_FITS_Files.html>`_ [`Problem solutions <_static/notebooks/Handling_FITS_Files_solutions.html>`_]

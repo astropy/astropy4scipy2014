@@ -3,7 +3,7 @@
 <head>
 
 <meta charset="utf-8" />
-<title>Introduction</title>
+<title>04_Handling_FITS_Files</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -1680,27 +1680,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="A-Tutorial-for-Astropy">A Tutorial for Astropy<a class="anchor-link" href="#A-Tutorial-for-Astropy">&#182;</a></h1>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h1>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="A-brief-history-of-the-Astropy-Project">A brief history of the Astropy Project<a class="anchor-link" href="#A-brief-history-of-the-Astropy-Project">&#182;</a></h2>
+<h1 id="Handling-FITS-files">Handling FITS files<a class="anchor-link" href="#Handling-FITS-files">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -1711,171 +1691,9 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Started about 4 years ago<ul>
-<li>Goal to standardize on core set of astronomical libraries<ul>
-<li>And to foster use of standard libraries in Python application and library packages</li>
+<li><a href="http://astropy4scipy2014.readthedocs.org/">Back to tutorial home</a></li>
+<li><a href="https://github.com/astropy/astropy4scipy2014/raw/master/notebooks/Handling_FITS_Files.ipynb">Download raw notebook file</a></li>
 </ul>
-</li>
-</ul>
-</li>
-<li>STScI has migrated its standard libraries to astropy and is transitioning to use it for all its released software</li>
-<li>Very active community</li>
-<li>Much effort going into consistency and testing</li>
-<li>Some of the most active members are teaching this tutorial<ul>
-<li>Does not include me...</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Not-part-of-Tutorial">Not part of Tutorial<a class="anchor-link" href="#Not-part-of-Tutorial">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Intro to Python<ul>
-<li>though this still may be useful if you know no Python<ul>
-<li>i.e., you can see what is possible</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>comprehensive coverage of all of Astropy<ul>
-<li>Just too much in astropy to cover</li>
-</ul>
-</li>
-<li>covering other major astronomical tools in Python</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Outline-of-Tutorial">Outline of Tutorial<a class="anchor-link" href="#Outline-of-Tutorial">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Introduction (15 minutes talking / 15 minutes exercise): Perry Greenfield</li>
-<li>Units/Quantities (15/15): Erik Bray</li>
-<li>Tables (20/20): Tom Aldcroft</li>
-</ul>
-<p>15 minute break</p>
-<ul>
-<li>Data Access<ul>
-<li>FITS files (30/30): Erik Bray</li>
-<li>ascii tables (15/15): Tom Aldcroft</li>
-</ul>
-</li>
-<li>coordinates (sky/time) (15/15): Tom Robitaille</li>
-<li>Astropy work in progress (5): Tom Robitaille</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Software-Prerequisites">Software Prerequisites<a class="anchor-link" href="#Software-Prerequisites">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>astropy 0.4 (0.3.2 will suffice, but coordinates examples will be different in some cases; we wish to teach the new version even if not all have it installed)</li>
-<li>numpy 1.8.1</li>
-<li>matplotlib 1.3.1</li>
-<li>ipython 2.0.0</li>
-</ul>
-<p>Easist ways to obtain are:</p>
-<p>Anaconda (2.0) <a href="http://continuum.io/downloads">http://continuum.io/downloads</a></p>
-<p>Ureka (v1.4) ssb.stsci.edu/ureka</p>
-<p>Both of the above include astropy 0.3.2</p>
-<p>IPython Notebook is the basis for tutorial material</p>
-<ul>
-<li>show of hands: who has never used the IPython notebook?</li>
-<li>Tutorial notebooks are available from xxx</li>
-<li>Tutorial-related web pages are at xxx</li>
-<li>For exercises, note that &#39;<shift>-Return&#39; is needed to execute code cell<ul>
-<li>also note that only last item repr is shown (use print for multiple outputs)</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Practical-Exercises">Practical Exercises<a class="anchor-link" href="#Practical-Exercises">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Mainly to see that everything is working and installed on your computer</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Level-1">Level 1<a class="anchor-link" href="#Level-1">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p> Open the second tutorial session (Unit_Conversion.ipynb). Execute a few code cells</p>
 </div>
 </div>
 </div>
@@ -1886,9 +1704,76 @@ In&nbsp;[1]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="c"># example code cell</span>
-<span class="n">x</span> <span class="o">=</span> <span class="mi">2</span><span class="o">**</span><span class="mi">10</span>
-<span class="k">print</span> <span class="n">x</span>
+<div class="highlight"><pre><span class="o">%</span><span class="k">matplotlib</span> <span class="n">inline</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="documentation">Documentation</h2>
+<p>For more information about the features presented below, you can read the <a href="http://docs.astropy.org/en/stable/io/fits/index.html">astropy.io.fits</a> docs.</p>
+<h2 id="data">Data</h2>
+<p>The data used in this page is a <a href="data/gll_iem_v02_P6_V11_DIFFUSE.fit">model of the gamma-ray sky background</a> used for the LAT instrument on the Fermi telescope, as well as the <em>Fermi</em>/LAT <a href="data/gll_psc_v08.fit">point source catalog</a>.</p>
+<h2 id="reading-fits-files-and-accessing-data">Reading FITS files and accessing data</h2>
+<p>Opening a FITS file is relatively straightforward. We can open the background model included in the tutorial files:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[2]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[3]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">hdulist</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">&#39;data/gll_iem_v02_P6_V11_DIFFUSE.fit&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The returned object, <code>hdulist</code>, behaves like a Python list, and each element maps to a Header-Data Unit (HDU) in the FITS file. You can view more information about the FITS file with:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[4]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">hdulist</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -1902,7 +1787,10 @@ In&nbsp;[1]:
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-1024
+Filename: data/gll_iem_v02_P6_V11_DIFFUSE.fit
+No.    Name         Type      Cards   Dimensions   Format
+0    PRIMARY     PrimaryHDU      34   (720, 360, 30)   float32   
+1    ENERGIES    BinTableHDU     19   30R x 1C     [D]   
 
 </pre>
 </div>
@@ -1917,68 +1805,1207 @@ In&nbsp;[1]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Level-2">Level 2<a class="anchor-link" href="#Level-2">&#182;</a></h3>
+<p>As we can see, this file contains two HDUs. To access the primary HDU, which contains the main data, you can then do:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[5]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">hdu</span> <span class="o">=</span> <span class="n">hdulist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
 </div>
 </div>
 </div>
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Create a new cell and try the following imports</p>
-<pre><code>import numpy as np
-import astropy.units as u
-import astropy.io.fits as iof
-import astropy.wcs as wcs
-import astropy.io.ascii as ioa
-import astropy.coordinates as coord
-import astropy.time as time
-import matplotlib.pyplot as plt
-</code></pre><p>IF any of these don&#39;t work, ask for help with checking your installation.</p>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Level-3">Level 3<a class="anchor-link" href="#Level-3">&#182;</a></h3>
+<p>The <code>hdu</code> object then has two important attributes: <code>data</code>, which behaves like a Numpy array, can be used to access the data, and <code>header</code>, which behaves like a dictionary, can be used to access the header information. First, we can take a look at the data:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[6]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[6]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+(30, 360, 720)
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Try executing the following commands within an ipython notebook cell (requires downloading data files and unpacking. Run these commands from the directory that the files are in):</p>
-<pre><code># assumes above imports have been done
-hdus = fits.open(&#39;pix.fits&#39;)
-plt.imshow(hdus[0].data, vmin=0, vmax=500)
-</code></pre>
+<p>This tells us that it is a 3-d cube. We can now take a peak at the header:</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
+In&nbsp;[7]:
 </div>
 <div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Level-4">Level 4<a class="anchor-link" href="#Level-4">&#182;</a></h3>
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">header</span>
+</pre></div>
+
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[7]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+SIMPLE  =                    T / Written by IDL:  Thu Jan 20 07:19:05 2011      
+BITPIX  =                  -32 /                                                
+NAXIS   =                    3 / number of data axes                            
+NAXIS1  =                  720 / length of data axis 1                          
+NAXIS2  =                  360 / length of data axis 2                          
+NAXIS3  =                   30 / length of data axis 3                          
+EXTEND  =                    T / FITS dataset may contain extensions            
+COMMENT   FITS (Flexible Image Transport System) format is defined in &apos;Astronomy
+COMMENT   and Astrophysics&apos;, volume 376, page 359; bibcode: 2001A&amp;A...376..359H 
+FLUX    =        8.42259635886 /                                                
+CRVAL1  =                   0. / Value of longitude in pixel CRPIX1             
+CDELT1  =                  0.5 / Step size in longitude                         
+CRPIX1  =                360.5 / Pixel that has value CRVAL1                    
+CTYPE1  = &apos;GLON-CAR&apos;           / The type of parameter 1 (Galactic longitude in 
+CUNIT1  = &apos;deg     &apos;           / The unit of parameter 1                        
+CRVAL2  =                   0. / Value of latitude in pixel CRPIX2              
+CDELT2  =                  0.5 / Step size in latitude                          
+CRPIX2  =                180.5 / Pixel that has value CRVAL2                    
+CTYPE2  = &apos;GLAT-CAR&apos;           / The type of parameter 2 (Galactic latitude in C
+CUNIT2  = &apos;deg     &apos;           / The unit of parameter 2                        
+CRVAL3  =                  50. / Energy of pixel CRPIX3                         
+CDELT3  =    0.113828620540137 / log10 of step size in energy (if it is logarith
+CRPIX3  =                   1. / Pixel that has value CRVAL3                    
+CTYPE3  = &apos;photon energy&apos;      / Axis 3 is the spectra                          
+CUNIT3  = &apos;MeV     &apos;           / The unit of axis 3                             
+CHECKSUM= &apos;3fdO3caL3caL3caL&apos;   / HDU checksum updated 2009-07-07T22:31:18       
+DATASUM = &apos;2184619035&apos;         / data unit checksum updated 2009-07-07T22:31:18 
+DATE    = &apos;2009-07-07&apos;         /                                                
+FILENAME= &apos;$TEMPDIR/diffuse/gll_iem_v02.fit&apos; /File name with version number     
+TELESCOP= &apos;GLAST   &apos;           /                                                
+INSTRUME= &apos;LAT     &apos;           /                                                
+ORIGIN  = &apos;LISOC   &apos;           /LAT team product delivered from the LISOC       
+OBSERVER= &apos;MICHELSON&apos;          /Instrument PI                                   
+HISTORY Scaled version of gll_iem_v02.fit for use with P6_V11_DIFFUSE           
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Write a python function to compute the first 10**100 primes in 5 minutes. Select the most interesting one.</p>
+<p>which shows that this is a Plate Carrée (<code>-CAR</code>) projection in Galactic Coordinates, and the third axis is photon energy. We can access individual header keywords using standard item notation:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[8]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s">&#39;TELESCOP&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[8]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+&apos;GLAST&apos;
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[9]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s">&#39;INSTRUME&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[9]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+&apos;LAT&apos;
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Provided that we started up <code>ipython</code> with the <code>--pylab</code> flag, we can plot one of the slices in photon energy:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[10]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">hdu</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">,:,:],</span> <span class="n">origin</span><span class="o">=</span><span class="s">&#39;lower&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[10]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+&lt;matplotlib.image.AxesImage at 0x1084303d0&gt;
+</pre>
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+7IE9BU4V4DuVP5LUMjkhdcomjaYjQQKpI2XuH8+0P04jOdUR0jRl4skdJL+guNeFXN7pXLfjpAEj
+gXYtzUKDTdJgk1R/nMScr8p03EcTJNZA0rWn4MR1w16cc8D5bKWsrcA58xNuDODYKuytNtrslUbO
+gMS0bspV/HpuppuA7yYx8jOkLv46abeec8DfoDEYnrIuvSHfdxque8VX+YnTt/Off/63+MrazXzn
+87/AdT//CPx38NXLb+T20/8Z/y+v4e0XfplV9rh98x/yCr7An/F93MON3Hv+er5z60vc/fjNPH7u
+ch7+0g1sXv8Mx694juuv+TrHeI7LeIK7z7+YcxvH2Di/zZnjX+WW7c/w0//qXXz0NT/I1c89zEeO
+/xAfeOANXHH5Q+zdt8W1N32d1V148dZX+IHzf8afrPw9/uEz7+bqP3uMs3/z+fyLEz/NGx/9E+68
+8dt5zZ98kvtvvY5nT23ypj/9Q775iQe5+U1b/N53/ads5gb8yff+Ac9tbPIXP3GBh+/6j/jg836E
+PVb5Os/nE/e+hmMnz3HN6fv46zv/BhfedyK17x6JxzxNExqRF1H8SR6OR/I5xQeVtv44TVhB6evn
+odFQzTXl2WPygmmI3kcSyLKABgNYXYG9e2iYqx5+isTQjuWx/hhJcirz5rFciBjw8xiOoX0nnN6C
+wR48/TXY+7c0bp6naJSxE6R5I94hX7h827uZ+Mesbgqmylf+ZKbrShrF55J8vfz5j9AIICmcj9J4
+FtS40CihCm5LgRWjlpLpmUjnaRZIHc998gzwH0OBb8+RkX+IZnQpsCPtVEEwmS8apWJUT9FIOJlQ
+cpVIsz9JYwap8eRPFHM/TsOMZX5idAg+W6SOnLd71BHOzLUaTdqx7leKmwSOZsYxO6/BKFeL1F6p
+Puv59+XA8+DYyfzYZ4Bv5HNXkwZhFiirl8JLV5rq3Qc8ruDfVjLvXXm/DHhJLuqxTM7XaIyC1fTo
+b2l69+zBzi68aCOt7Xpevvb+/IjH+Vacj9XchE/kJpRr/9L8/OcDV8DqTdvsfWaDtau2GVwJK2sD
+dp/ZbJiZ0pi/A1Yu3WFr5zznPn8yzcuvkWSeDKjnZTqvzU0zAD5uXfyqATe86Ovsfm2dB/7NDZx8
+8RMMrlzl/N4mJ656jste9DgbT2wzuBwu33oU7lzhqZOXcNOz9/CNL9/Is5eeZOMlF7j15R/gsfuu
+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
+iopp4f8HfsEGKKtaQpwAAAAASUVORK5CYII=
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note that this is just a plot of an array, so the coordinates are just pixel coordinates at this stage. The data is stored with longitude increasing to the right (the opposite of the normal convention), but the Level 3 problem at the bottom of this page shows how to correctly flip the image.</p>
+<p>Modifying data or header information in a FITS file object is easy. We can update existing header keywords:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[11]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s">&#39;TELESCOP&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;Fermi Gamma-ray Space Telescope&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>or add new ones:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[12]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s">&#39;MODIFIED&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;21 Nov 2013&#39;</span>  <span class="c"># adds a new keyword</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>and we can also change the data, for example extracting only the first slice in photon energy:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[13]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">hdu</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">,:,:]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note that this does not change the original FITS file, simply the FITS file object in memory. Since the data is now 2-dimensional, we can remove the WCS keywords for the third dimension:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[14]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s">&#39;CRPIX3&#39;</span><span class="p">)</span>
+<span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s">&#39;CRVAL3&#39;</span><span class="p">)</span>
+<span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s">&#39;CDELT3&#39;</span><span class="p">)</span>
+<span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s">&#39;CUNIT3&#39;</span><span class="p">)</span>
+<span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s">&#39;CTYPE3&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You can write the FITS file object to a file with:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[15]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">writeto</span><span class="p">(</span><span class="s">&#39;lat_background_model_slice.fits&#39;</span><span class="p">,</span> <span class="n">clobber</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>
+WARNING: Overwriting existing file &apos;lat_background_model_slice.fits&apos;. [astropy.io.fits.file]
+WARNING:astropy:Overwriting existing file &apos;lat_background_model_slice.fits&apos;.
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>if you want to simply write out this HDU to a file, or:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[16]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">hdulist</span><span class="o">.</span><span class="n">writeto</span><span class="p">(</span><span class="s">&#39;lat_background_model_slice_allhdus.fits&#39;</span><span class="p">,</span> <span class="n">clobber</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>
+WARNING: Overwriting existing file &apos;lat_background_model_slice_allhdus.fits&apos;. [astropy.io.fits.file]
+WARNING:astropy:Overwriting existing file &apos;lat_background_model_slice_allhdus.fits&apos;.
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>if you want to write out all of the original HDUs, including the modified one, to a file.</p>
+<h2 id="creating-a-fits-file-from-scratch">Creating a FITS file from scratch</h2>
+<p>If you want to create a FITS file from scratch, you need to start off by creating an HDU object:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[17]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">hdu</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">PrimaryHDU</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>and you can then populate the data and header attributes with whatever information you like:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[18]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[19]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note that setting the data automatically populates the header with basic information:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[20]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">header</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[20]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+SIMPLE  =                    T / conforms to FITS standard                      
+BITPIX  =                  -64 / array data type                                
+NAXIS   =                    2 / number of array dimensions                     
+NAXIS1  =                  128                                                  
+NAXIS2  =                  128                                                  
+EXTEND  =                    T                                                  
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>and you should never have to set header keywords such as <code>NAXIS</code>, <code>NAXIS1</code>, and so on manually. We can then set additional header keywords:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[21]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s">&#39;telescop&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;Python Observatory&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>and we can then write out the FITS file to disk:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[22]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">writeto</span><span class="p">(</span><span class="s">&#39;random_array.fits&#39;</span><span class="p">,</span> <span class="n">clobber</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>
+WARNING: Overwriting existing file &apos;random_array.fits&apos;. [astropy.io.fits.file]
+WARNING:astropy:Overwriting existing file &apos;random_array.fits&apos;.
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="convenience-functions">Convenience functions</h2>
+<p>In cases where you just want to access the data or header in a specific HDU, you can use the following convenience functions:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[23]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">data</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">getdata</span><span class="p">(</span><span class="s">&#39;data/gll_iem_v02_P6_V11_DIFFUSE.fit&#39;</span><span class="p">)</span>
+<span class="n">header</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="s">&#39;data/gll_iem_v02_P6_V11_DIFFUSE.fit&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To get the data or header for an HDU other than the first, you can specify the extension name or index. The second HDU is called <code>energies</code>, so we can do:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[24]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">data</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">getdata</span><span class="p">(</span><span class="s">&#39;data/gll_iem_v02_P6_V11_DIFFUSE.fit&#39;</span><span class="p">,</span> <span class="n">extname</span><span class="o">=</span><span class="s">&#39;energies&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>or:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[25]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">data</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">getdata</span><span class="p">(</span><span class="s">&#39;data/gll_iem_v02_P6_V11_DIFFUSE.fit&#39;</span><span class="p">,</span> <span class="n">ext</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>and similarly for <code>getheader</code>.</p>
+<h2 id="accessing-tabular-data">Accessing Tabular Data</h2>
+<p>Tabular data behaves very similarly to image data such as that shown above, but the data array is a structured Numpy array which requires column access via the item notation:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[26]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span>
+<span class="n">hdulist</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">&#39;data/gll_psc_v08.fit&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[27]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">hdulist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[27]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+&apos;LAT_Point_Source_Catalog&apos;
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[28]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">hdulist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;RAJ2000&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[28]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+array([  2.33711034e-01,   4.38849270e-01,   6.79812014e-01, ...,
+         3.59759430e+02,   3.59859894e+02,   3.59906921e+02], dtype=float32)
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[29]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">hdulist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;DEJ2000&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[29]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+array([ -7.81549788, -41.99647903,  62.33962631, ..., -30.62516785,
+        67.86333466,  65.73053741], dtype=float32)
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="practical-exercises">Practical Exercises</h2>
+<h3 id="level-1">Level 1</h3>
+<p>Try and read in one of your own FITS files using <code>astropy.io.fits</code>, and see if you can also plot the array values in Matplotlib. Also, examine the header, and try and extract individual values. You can even try and modify the data/header and write the data back out - but take care not to write over the original file!</p>
+<h3 id="level-2">Level 2</h3>
+<p>Read in the LAT Point Source Catalog and make a scatter plot of the Galactic Coordinates of the sources (complete with axis labels). Bonus points if you can make the plot go between -180 and 180 instead of 0 and 360 degrees. Note that the Point Source Catalog contains the Galactic Coordinates, so no need to convert them.</p>
+<h3 id="level-3">Level 3</h3>
+<p>Using Matplotlib, make an all-sky plot of the LAT Background Model in the Plate Carée projection showing the LAT Point Source Catalog overlaid with markers, and with the correct coordinates on the axes. You should do this using only <code>astropy.io.fits</code>, Numpy, and Matplotlib (no WCS or coordinate conversion library). Hint: the -CAR projection is such that the x pixel position is proportional to longitude, and the y pixel position to latitude. Bonus points for a pretty colormap.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="#Handling-FITS-files">Back to top</a></p>
 </div>
 </div>
 </div>

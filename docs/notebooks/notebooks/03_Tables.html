@@ -3,7 +3,7 @@
 <head>
 
 <meta charset="utf-8" />
-<title>Handling_FITS_Files</title>
+<title>03_Tables</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -1277,6 +1277,7 @@ a .icon-rotate-90:before,a .icon-rotate-180:before,a .icon-rotate-270:before,a .
 .icon-weibo:before{content:"\f18a"}
 .icon-renren:before{content:"\f18b"}
 code{color:#000}
+pre{font-size:inherit;line-height:inherit}
 .border-box-sizing{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
 .corner-all{border-radius:4px}
 .hbox{display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
@@ -1340,6 +1341,8 @@ input.nbname_input,input.engine_num_input{padding-top:3px;padding-bottom:3px;hei
 input.engine_num_input{width:60px}
 .highlight_text{color:#00f}
 #project_name>.breadcrumb{padding:0;margin-bottom:0;background-color:transparent;font-weight:bold}
+.folder_icon:before{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;*margin-right:.3em;content:"\f114"}
+.notebook_icon:before{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;*margin-right:.3em;content:"\f02d"}
 .ansibold{font-weight:bold}
 .ansiblack{color:#000}
 .ansired{color:#8b0000}
@@ -1362,15 +1365,15 @@ div.cell.edit_mode{border-radius:4px;border:thin #008000 solid}
 div.cell{width:100%;padding:5px 5px 5px 0;margin:0;outline:none}
 div.prompt{min-width:11ex;padding:.4em;margin:0;font-family:monospace;text-align:right;line-height:1.21429em}
 @media (max-width:480px){div.prompt{text-align:left}}div.inner_cell{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
-div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7}
+div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7;line-height:1.21429em}
 div.prompt:empty{padding-top:0;padding-bottom:0}
 div.input{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
 @media (max-width:480px){div.input{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.input_prompt{color:#000080;border-top:1px solid transparent}
 div.input_area>div.highlight{margin:.4em;border:none;padding:0;background-color:transparent}
-div.input_area>div.highlight>pre{margin:0;border:0;padding:0;background-color:transparent;font-size:14px;line-height:1.21429em}
+div.input_area>div.highlight>pre{margin:0;border:none;padding:0;background-color:transparent}
 .CodeMirror{line-height:1.21429em;height:auto;background:none;}
 .CodeMirror-scroll{overflow-y:hidden;overflow-x:auto}
-@-moz-document url-prefix(){.CodeMirror-scroll{overflow-x:hidden}}.CodeMirror-lines{padding:.4em}
+.CodeMirror-lines{padding:.4em}
 .CodeMirror-linenumber{padding:0 8px 0 4px}
 .CodeMirror-gutters{border-bottom-left-radius:4px;border-top-left-radius:4px}
 .CodeMirror pre{padding:0;border:0;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
@@ -1405,7 +1408,7 @@ div.output_area{padding:0;page-break-inside:avoid;display:-webkit-box;-webkit-bo
 div.output_area .rendered_html table{margin-left:0;margin-right:0}
 div.output_area .rendered_html img{margin-left:0;margin-right:0}
 .output{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}
-@media (max-width:480px){div.output_area{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;color:#000;background-color:transparent;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;line-height:inherit}
+@media (max-width:480px){div.output_area{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;vertical-align:baseline;color:#000;background-color:transparent;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
 div.output_subarea{padding:.4em .4em 0 .4em;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
 div.output_text{text-align:left;color:#000;line-height:1.21429em}
 div.output_stderr{background:#fdd;}
@@ -1526,7 +1529,7 @@ ul#help_menu li a{overflow:hidden;padding-right:2.2em}ul#help_menu li a i{margin
 .notification_widget{color:#777;padding:1px 12px;margin:2px 4px;z-index:10;border:1px solid #ccc;border-radius:4px;background:rgba(240,240,240,0.5)}.notification_widget.span{padding-right:2px}
 div#pager_splitter{height:8px}
 #pager-container{position:relative;padding:15px 0}
-div#pager{font-size:14px;line-height:20px;overflow:auto;display:none}div#pager pre{font-size:13px;line-height:1.21429em;color:#000;background-color:#f7f7f7;padding:.4em}
+div#pager{font-size:14px;line-height:20px;overflow:auto;display:none}div#pager pre{line-height:1.21429em;color:#000;background-color:#f7f7f7;padding:.4em}
 .quickhelp{display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
 .shortcut_key{display:inline-block;width:20ex;text-align:right;font-family:monospace}
 .shortcut_descr{display:inline-block;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
@@ -1677,7 +1680,47 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="handling-fits-files">Handling FITS files</h1>
+<h1 id="Tables-introduction">Tables introduction<a class="anchor-link" href="#Tables-introduction">&#182;</a></h1>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><a href="http://astropy4scipy2014.readthedocs.org/">Back to tutorial home</a></li>
+<li><a href="https://github.com/astropy/astropy4scipy2014/raw/master/notebooks/Tables.ipynb">Download raw notebook file</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The astropy <a href="http://docs.astropy.org/en/stable/table/index.html">Table</a> class provides an extension of NumPy structured arrays for storing and manipulating heterogeneous tables of data. A few notable features of this package are:</p>
+<ul>
+<li>Initialize a table from a wide variety of input data structures and types.</li>
+<li>Modify a table by adding or removing columns, changing column names, or adding new rows of data.</li>
+<li>Handle tables containing missing values.</li>
+<li>Include table and column metadata as flexible data structures.</li>
+<li>Specify a description, units and output formatting for columns.</li>
+<li>Perform operations like database joins, concatenation, and grouping.</li>
+<li>Manipulate multidimensional columns.</li>
+<li>Methods for Reading and writing Table objects to files</li>
+<li>Integration with Astropy <a href="http://astropy.readthedocs.org/en/stable/units/index.html">Units and Quantities</a></li>
+</ul>
+<h2 id="why-not-pandas">Why not Pandas</h2>
+<p>The <a href="http://pandas.pydata.org/pandas-docs/stable/">Pandas</a> package provides a powerful, high-performance table object via the <a href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html#pandas.DataFrame">DataFrame</a> class. Unfortunately there are a few issues that prevent use as a generalize table object in astronomy. The most crucial is lack of support for multidimensional table columns. This is commonly used in standard FITS data products, for instance the Chandra energy response matrix used to analyze spectral data.</p>
+<h2 id="documentation">Documentation</h2>
+<p>For more information about the features presented below, you can read the <a href="http://docs.astropy.org/en/stable/table/index.html">astropy.table</a> docs.</p>
+<hr />
+<hr />
+<h1 id="tutorial">Tutorial</h1>
 </div>
 </div>
 </div>
@@ -1688,7 +1731,9 @@ In&nbsp;[1]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="o">%</span><span class="k">matplotlib</span> <span class="n">inline</span>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">division</span>
+<span class="kn">from</span> <span class="nn">astropy.table</span> <span class="kn">import</span> <span class="n">Table</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 </pre></div>
 
 </div>
@@ -1701,12 +1746,20 @@ In&nbsp;[1]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="documentation">Documentation</h2>
-<p>For more information about the features presented below, you can read the <a href="http://docs.astropy.org/en/stable/io/fits/index.html">astropy.io.fits</a> docs.</p>
-<h2 id="data">Data</h2>
-<p>The data used in this page is a <a href="data/gll_iem_v02_P6_V11_DIFFUSE.fit">model of the gamma-ray sky background</a> used for the LAT instrument on the Fermi telescope, as well as the <em>Fermi</em>/LAT <a href="data/gll_psc_v08.fit">point source catalog</a>.</p>
-<h2 id="reading-fits-files-and-accessing-data">Reading FITS files and accessing data</h2>
-<p>Opening a FITS file is relatively straightforward. We can open the background model included in the tutorial files:</p>
+<h2 id="creating-tables">Creating tables</h2>
+<p>There is great deal of flexibility in the way that a table can be initially constructed:</p>
+<ul>
+<li>Read an existing table from a file or web URL</li>
+<li>Add columns of data one by one</li>
+<li>Add rows of data one by one</li>
+<li><p>From an existing data structure in memory:</p></li>
+<li>List of data columns</li>
+<li>Dict of data columns</li>
+<li>List of row dicts</li>
+<li>Numpy homgeneous array or structured array</li>
+<li><p>List of row records (new in 0.4)</p></li>
+</ul>
+<p>See the documentation section on <a href="http://astropy.readthedocs.org/en/stable/table/construct_table.html">Constructing a table</a> for the gory details and plenty of examples.</p>
 </div>
 </div>
 </div>
@@ -1717,22 +1770,9 @@ In&nbsp;[2]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[3]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">hdulist</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">&#39;data/gll_iem_v02_P6_V11_DIFFUSE.fit&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span class="n">t</span> <span class="o">=</span> <span class="n">Table</span><span class="p">()</span>
+<span class="n">t</span><span class="p">[</span><span class="s">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;source 1&#39;</span><span class="p">,</span> <span class="s">&#39;source 2&#39;</span><span class="p">,</span> <span class="s">&#39;source 3&#39;</span><span class="p">,</span> <span class="s">&#39;source 4&#39;</span><span class="p">]</span>
+<span class="n">t</span><span class="p">[</span><span class="s">&#39;flux&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">,</span> <span class="mf">3.1</span><span class="p">,</span> <span class="mf">4.3</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -1745,7 +1785,54 @@ In&nbsp;[3]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The returned object, <code>hdulist</code>, behaves like a Python list, and each element maps to a Header-Data Unit (HDU) in the FITS file. You can view more information about the FITS file with:</p>
+<h3 id="looking-at-your-table">Looking at your table</h3>
+<p>In IPython notebook, showing a table will produce a nice HTML representation of the table:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[3]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">t</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[3]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<table id="table4394504784"><thead><tr><th>name</th><th>flux</th></tr></thead><tr><td>source 1</td><td>1.2</td></tr><tr><td>source 2</td><td>2.2</td></tr><tr><td>source 3</td><td>3.1</td></tr><tr><td>source 4</td><td>4.3</td></tr></table>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If you did the same in a terminal session you get a different view that isn't as pretty but does give a bit more information about the table:</p>
+<pre><code>&gt;&gt;&gt; t
+&lt;Table rows=4 names=(&#39;name&#39;,&#39;flux&#39;)&gt;
+array([(&#39;source 1&#39;, 1.2), (&#39;source 2&#39;, 2.2), (&#39;source 3&#39;, 3.1),
+       (&#39;source 4&#39;, 4.3)], 
+      dtype=[(&#39;name&#39;, &#39;S8&#39;), (&#39;flux&#39;, &#39;&lt;f8&#39;)])</code></pre>
+<p>To get a plain view which is the same in notebook and terminal use <code>print()</code>:</p>
 </div>
 </div>
 </div>
@@ -1756,7 +1843,7 @@ In&nbsp;[4]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdulist</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1770,10 +1857,12 @@ In&nbsp;[4]:
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-Filename: data/gll_iem_v02_P6_V11_DIFFUSE.fit
-No.    Name         Type      Cards   Dimensions   Format
-0    PRIMARY     PrimaryHDU      34   (720, 360, 30)   float32   
-1    ENERGIES    BinTableHDU     19   30R x 1C     [D]   
+  name   flux
+-------- ----
+source 1  1.2
+source 2  2.2
+source 3  3.1
+source 4  4.3
 
 </pre>
 </div>
@@ -1788,7 +1877,7 @@ No.    Name         Type      Cards   Dimensions   Format
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As we can see, this file contains two HDUs. To access the primary HDU, which contains the main data, you can then do:</p>
+<p>To get the table column names and data types using the <code>colnames</code> and <code>dtype</code> properties:</p>
 </div>
 </div>
 </div>
@@ -1799,22 +1888,32 @@ In&nbsp;[5]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span> <span class="o">=</span> <span class="n">hdulist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight"><pre><span class="n">t</span><span class="o">.</span><span class="n">colnames</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[5]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+[&apos;name&apos;, &apos;flux&apos;]
+</pre>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The <code>hdu</code> object then has two important attributes: <code>data</code>, which behaves like a Numpy array, can be used to access the data, and <code>header</code>, which behaves like a dictionary, can be used to access the header information. First, we can take a look at the data:</p>
+
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -1823,7 +1922,7 @@ In&nbsp;[6]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span>
+<div class="highlight"><pre><span class="n">t</span><span class="o">.</span><span class="n">dtype</span>
 </pre></div>
 
 </div>
@@ -1840,7 +1939,7 @@ In&nbsp;[6]:
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-(30, 360, 720)
+dtype([(&apos;name&apos;, &apos;S8&apos;), (&apos;flux&apos;, &apos;&lt;f8&apos;)])
 </pre>
 </div>
 
@@ -1855,7 +1954,8 @@ In&nbsp;[6]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This tells us that it is a 3-d cube. We can now take a peak at the header:</p>
+<h3 id="accessing-parts-of-the-table">Accessing parts of the table</h3>
+<p>We can access the columns and rows as for numpy structured arrays. Notice that the outputs are <code>Column</code>, <code>Row</code> or <code>Table</code> objects depending on the context.</p>
 </div>
 </div>
 </div>
@@ -1866,7 +1966,7 @@ In&nbsp;[7]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">header</span>
+<div class="highlight"><pre><span class="n">t</span><span class="p">[</span><span class="s">&#39;flux&#39;</span><span class="p">]</span>  <span class="c"># Flux column (notice meta attributes)</span>
 </pre></div>
 
 </div>
@@ -1883,40 +1983,8 @@ In&nbsp;[7]:
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-SIMPLE  =                    T / Written by IDL:  Thu Jan 20 07:19:05 2011      
-BITPIX  =                  -32 /                                                
-NAXIS   =                    3 / number of data axes                            
-NAXIS1  =                  720 / length of data axis 1                          
-NAXIS2  =                  360 / length of data axis 2                          
-NAXIS3  =                   30 / length of data axis 3                          
-EXTEND  =                    T / FITS dataset may contain extensions            
-COMMENT   FITS (Flexible Image Transport System) format is defined in &apos;Astronomy
-COMMENT   and Astrophysics&apos;, volume 376, page 359; bibcode: 2001A&amp;A...376..359H 
-FLUX    =        8.42259635886 /                                                
-CRVAL1  =                   0. / Value of longitude in pixel CRPIX1             
-CDELT1  =                  0.5 / Step size in longitude                         
-CRPIX1  =                360.5 / Pixel that has value CRVAL1                    
-CTYPE1  = &apos;GLON-CAR&apos;           / The type of parameter 1 (Galactic longitude in 
-CUNIT1  = &apos;deg     &apos;           / The unit of parameter 1                        
-CRVAL2  =                   0. / Value of latitude in pixel CRPIX2              
-CDELT2  =                  0.5 / Step size in latitude                          
-CRPIX2  =                180.5 / Pixel that has value CRVAL2                    
-CTYPE2  = &apos;GLAT-CAR&apos;           / The type of parameter 2 (Galactic latitude in C
-CUNIT2  = &apos;deg     &apos;           / The unit of parameter 2                        
-CRVAL3  =                  50. / Energy of pixel CRPIX3                         
-CDELT3  =    0.113828620540137 / log10 of step size in energy (if it is logarith
-CRPIX3  =                   1. / Pixel that has value CRVAL3                    
-CTYPE3  = &apos;photon energy&apos;      / Axis 3 is the spectra                          
-CUNIT3  = &apos;MeV     &apos;           / The unit of axis 3                             
-CHECKSUM= &apos;3fdO3caL3caL3caL&apos;   / HDU checksum updated 2009-07-07T22:31:18       
-DATASUM = &apos;2184619035&apos;         / data unit checksum updated 2009-07-07T22:31:18 
-DATE    = &apos;2009-07-07&apos;         /                                                
-FILENAME= &apos;$TEMPDIR/diffuse/gll_iem_v02.fit&apos; /File name with version number     
-TELESCOP= &apos;GLAST   &apos;           /                                                
-INSTRUME= &apos;LAT     &apos;           /                                                
-ORIGIN  = &apos;LISOC   &apos;           /LAT team product delivered from the LISOC       
-OBSERVER= &apos;MICHELSON&apos;          /Instrument PI                                   
-HISTORY Scaled version of gll_iem_v02.fit for use with P6_V11_DIFFUSE           
+&lt;Column name=&apos;flux&apos; unit=None format=None description=None&gt;
+array([ 1.2,  2.2,  3.1,  4.3])
 </pre>
 </div>
 
@@ -1926,15 +1994,6 @@ HISTORY Scaled version of gll_iem_v02.fit for use with P6_V11_DIFFUSE
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>which shows that this is a Plate Carrée (<code>-CAR</code>) projection in Galactic Coordinates, and the third axis is photon energy. We can access individual header keywords using standard item notation:</p>
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -1942,7 +2001,7 @@ In&nbsp;[8]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s">&#39;TELESCOP&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span class="n">t</span><span class="p">[</span><span class="s">&#39;flux&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>  <span class="c"># Row 1 of flux column</span>
 </pre></div>
 
 </div>
@@ -1959,7 +2018,7 @@ In&nbsp;[8]:
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-&apos;GLAST&apos;
+2.2000000000000002
 </pre>
 </div>
 
@@ -1976,7 +2035,7 @@ In&nbsp;[9]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s">&#39;INSTRUME&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c"># Row obj for with row 1 values</span>
 </pre></div>
 
 </div>
@@ -1993,7 +2052,9 @@ In&nbsp;[9]:
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-&apos;LAT&apos;
+&lt;Row 1 of table
+ values=(&apos;source 2&apos;, 2.2)
+ dtype=[(&apos;name&apos;, &apos;S8&apos;), (&apos;flux&apos;, &apos;&lt;f8&apos;)]&gt;
 </pre>
 </div>
 
@@ -2003,15 +2064,6 @@ In&nbsp;[9]:
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Provided that we started up <code>ipython</code> with the <code>--pylab</code> flag, we can plot one of the slices in photon energy:</p>
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -2019,7 +2071,7 @@ In&nbsp;[10]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">hdu</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">,:,:],</span> <span class="n">origin</span><span class="o">=</span><span class="s">&#39;lower&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s">&#39;flux&#39;</span><span class="p">]</span>  <span class="c"># Flux column of row 1</span>
 </pre></div>
 
 </div>
@@ -2030,31 +2082,21 @@ In&nbsp;[10]:
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_text output_pyerr">
+<div class="output_area"><div class="prompt output_prompt">
+    Out[10]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
 <pre>
-<span class="ansired">---------------------------------------------------------------------------</span>
-<span class="ansired">NameError</span>                                 Traceback (most recent call last)
-<span class="ansigreen">&lt;ipython-input-10-f15bfbb34f2c&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
-<span class="ansigreen">----&gt; 1</span><span class="ansired"> </span>plt<span class="ansiblue">.</span>imshow<span class="ansiblue">(</span>hdu<span class="ansiblue">.</span>data<span class="ansiblue">[</span><span class="ansicyan">0</span><span class="ansiblue">,</span><span class="ansiblue">:</span><span class="ansiblue">,</span><span class="ansiblue">:</span><span class="ansiblue">]</span><span class="ansiblue">,</span> origin<span class="ansiblue">=</span><span class="ansiblue">&apos;lower&apos;</span><span class="ansiblue">)</span><span class="ansiblue"></span>
-
-<span class="ansired">NameError</span>: name &apos;plt&apos; is not defined</pre>
+2.2000000000000002
+</pre>
 </div>
+
 </div>
 
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Note that this is just a plot of an array, so the coordinates are just pixel coordinates at this stage. The data is stored with longitude increasing to the right (the opposite of the normal convention), but the Level 3 problem at the bottom of this page shows how to correctly flip the image.</p>
-<p>Modifying data or header information in a FITS file object is easy. We can update existing header keywords:</p>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -2063,22 +2105,29 @@ In&nbsp;[11]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s">&#39;TELESCOP&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;Fermi Gamma-ray Space Telescope&quot;</span>
+<div class="highlight"><pre><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>  <span class="c"># 2nd and 3rd rows in a new table</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[11]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<table id="table4394504464"><thead><tr><th>name</th><th>flux</th></tr></thead><tr><td>source 2</td><td>2.2</td></tr><tr><td>source 3</td><td>3.1</td></tr></table>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>or add new ones:</p>
+
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -2087,10 +2136,26 @@ In&nbsp;[12]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s">&#39;MODIFIED&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;21 Nov 2013&#39;</span>  <span class="c"># adds a new keyword</span>
+<div class="highlight"><pre><span class="n">t</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[12]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<table id="table4394504912"><thead><tr><th>name</th><th>flux</th></tr></thead><tr><td>source 2</td><td>2.2</td></tr><tr><td>source 4</td><td>4.3</td></tr></table>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -2100,7 +2165,7 @@ In&nbsp;[12]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>and we can also change the data, for example extracting only the first slice in photon energy:</p>
+<p><strong>One of the most powerful concepts is using boolean selection masks to filter tables</strong></p>
 </div>
 </div>
 </div>
@@ -2111,10 +2176,27 @@ In&nbsp;[13]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">hdu</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">,:,:]</span>
+<div class="highlight"><pre><span class="n">mask</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="s">&#39;flux&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">3.0</span>  <span class="c"># Define boolean mask for all flux values &gt; 3</span>
+<span class="n">t</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>  <span class="c"># Create a new table with only the &quot;high flux&quot; sources</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[13]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<table id="table4394505360"><thead><tr><th>name</th><th>flux</th></tr></thead><tr><td>source 3</td><td>3.1</td></tr><tr><td>source 4</td><td>4.3</td></tr></table>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -2124,7 +2206,9 @@ In&nbsp;[13]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Note that this does not change the original FITS file, simply the FITS file object in memory. Since the data is now 2-dimensional, we can remove the WCS keywords for the third dimension:</p>
+<h3 id="modifying-the-table">Modifying the table</h3>
+<p>Once the table exists with defined columns there are a number of ways to modify the table in place. These are fully documented in the section <a href="http://astropy.readthedocs.org/en/stable/table/modify_table.html#modifying-a-table">Modifying a Table</a>.</p>
+<p>To give a couple of simple examples, you can add rows with the <a href="http://astropy.readthedocs.org/en/stable/api/astropy.table.table.Table.html#astropy.table.table.Table.add_row">add_row()</a> method or add new columns using dict-style assignment:</p>
 </div>
 </div>
 </div>
@@ -2135,14 +2219,28 @@ In&nbsp;[14]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s">&#39;CRPIX3&#39;</span><span class="p">)</span>
-<span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s">&#39;CRVAL3&#39;</span><span class="p">)</span>
-<span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s">&#39;CDELT3&#39;</span><span class="p">)</span>
-<span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s">&#39;CUNIT3&#39;</span><span class="p">)</span>
-<span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s">&#39;CTYPE3&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span class="n">t</span><span class="o">.</span><span class="n">add_row</span><span class="p">((</span><span class="s">&#39;source 5&#39;</span><span class="p">,</span> <span class="mf">10.1</span><span class="p">))</span>  <span class="c"># Add a new source at the end</span>
+<span class="n">t</span><span class="p">[</span><span class="s">&#39;logflux&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="s">&#39;flux&#39;</span><span class="p">])</span>  <span class="c"># Compute the log10 of the flux</span>
+<span class="n">t</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[14]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<table id="table4394504784"><thead><tr><th>name</th><th>flux</th><th>logflux</th></tr></thead><tr><td>source 1</td><td>1.2</td><td>0.0791812460476</td></tr><tr><td>source 2</td><td>2.2</td><td>0.342422680822</td></tr><tr><td>source 3</td><td>3.1</td><td>0.491361693834</td></tr><tr><td>source 4</td><td>4.3</td><td>0.63346845558</td></tr><tr><td>source 5</td><td>10.1</td><td>1.00432137378</td></tr></table>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -2152,7 +2250,7 @@ In&nbsp;[14]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>You can write the FITS file object to a file with:</p>
+<p>Notice that the <code>logflux</code> column really has too many output digits given the precision of the input values. We can fix this by setting the format using normal Python formatting syntax:</p>
 </div>
 </div>
 </div>
@@ -2163,7 +2261,9 @@ In&nbsp;[15]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">writeto</span><span class="p">(</span><span class="s">&#39;lat_background_model_slice.fits&#39;</span><span class="p">,</span> <span class="n">clobber</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<div class="highlight"><pre><span class="n">t</span><span class="p">[</span><span class="s">&#39;flux&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">format</span> <span class="o">=</span> <span class="s">&#39;</span><span class="si">%.2f</span><span class="s">&#39;</span>
+<span class="n">t</span><span class="p">[</span><span class="s">&#39;logflux&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">format</span> <span class="o">=</span> <span class="s">&#39;</span><span class="si">%.2f</span><span class="s">&#39;</span>
+<span class="n">t</span>
 </pre></div>
 
 </div>
@@ -2174,14 +2274,13 @@ In&nbsp;[15]:
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>
-WARNING: Overwriting existing file &apos;lat_background_model_slice.fits&apos;. [astropy.io.fits.file]
-WARNING:astropy:Overwriting existing file &apos;lat_background_model_slice.fits&apos;.
+<div class="output_area"><div class="prompt output_prompt">
+    Out[15]:</div>
 
-</pre>
+<div class="output_html rendered_html output_subarea output_pyout">
+<table id="table4394504784"><thead><tr><th>name</th><th>flux</th><th>logflux</th></tr></thead><tr><td>source 1</td><td>1.20</td><td>0.08</td></tr><tr><td>source 2</td><td>2.20</td><td>0.34</td></tr><tr><td>source 3</td><td>3.10</td><td>0.49</td></tr><tr><td>source 4</td><td>4.30</td><td>0.63</td></tr><tr><td>source 5</td><td>10.10</td><td>1.00</td></tr></table>
 </div>
+
 </div>
 
 </div>
@@ -2193,7 +2292,9 @@ WARNING:astropy:Overwriting existing file &apos;lat_background_model_slice.fits&
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>if you want to simply write out this HDU to a file, or:</p>
+<h3 id="converting-the-table-to-numpy">Converting the table to numpy</h3>
+<p>Sometimes you may not want or be able to use a <code>Table</code> object and prefer to work with a plain numpy array. This is easily done by passing the table to the <code>np.array()</code> constructor.</p>
+<p><em>This makes a copy of the data</em>. If you have a huge table and don't want to waste memory, supply <code>copy=False</code> to the constructor, but be warned that changing the output numpy array will change the original table.</p>
 </div>
 </div>
 </div>
@@ -2204,7 +2305,7 @@ In&nbsp;[16]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdulist</span><span class="o">.</span><span class="n">writeto</span><span class="p">(</span><span class="s">&#39;lat_background_model_slice_allhdus.fits&#39;</span><span class="p">,</span> <span class="n">clobber</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<div class="highlight"><pre><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -2215,14 +2316,21 @@ In&nbsp;[16]:
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>
-WARNING: Overwriting existing file &apos;lat_background_model_slice_allhdus.fits&apos;. [astropy.io.fits.file]
-WARNING:astropy:Overwriting existing file &apos;lat_background_model_slice_allhdus.fits&apos;.
+<div class="output_area"><div class="prompt output_prompt">
+    Out[16]:</div>
 
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+array([(&apos;source 1&apos;, 1.2, 0.07918124604762482),
+       (&apos;source 2&apos;, 2.2, 0.3424226808222063),
+       (&apos;source 3&apos;, 3.1, 0.4913616938342727),
+       (&apos;source 4&apos;, 4.3, 0.6334684555795865),
+       (&apos;source 5&apos;, 10.1, 1.0043213737826426)], 
+      dtype=[(&apos;name&apos;, &apos;S8&apos;), (&apos;flux&apos;, &apos;&lt;f8&apos;), (&apos;logflux&apos;, &apos;&lt;f8&apos;)])
 </pre>
 </div>
+
 </div>
 
 </div>
@@ -2234,9 +2342,7 @@ WARNING:astropy:Overwriting existing file &apos;lat_background_model_slice_allhd
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>if you want to write out all of the original HDUs, including the modified one, to a file.</p>
-<h2 id="creating-a-fits-file-from-scratch">Creating a FITS file from scratch</h2>
-<p>If you want to create a FITS file from scratch, you need to start off by creating an HDU object:</p>
+<h2 id="masked-tables">Masked tables</h2>
 </div>
 </div>
 </div>
@@ -2247,22 +2353,33 @@ In&nbsp;[17]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">PrimaryHDU</span><span class="p">()</span>
+<div class="highlight"><pre><span class="n">t2</span> <span class="o">=</span> <span class="n">Table</span><span class="p">([[</span><span class="s">&#39;x&#39;</span><span class="p">,</span> <span class="s">&#39;y&#39;</span><span class="p">,</span> <span class="s">&#39;z&#39;</span><span class="p">],</span> 
+            <span class="p">[</span><span class="mf">1.1</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">,</span> <span class="mf">3.3</span><span class="p">]],</span>
+           <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;name&#39;</span><span class="p">,</span> <span class="s">&#39;value&#39;</span><span class="p">],</span>
+           <span class="n">masked</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">t2</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[17]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<table id="table4394506064"><thead><tr><th>name</th><th>value</th></tr></thead><tr><td>x</td><td>1.1</td></tr><tr><td>y</td><td>2.2</td></tr><tr><td>z</td><td>3.3</td></tr></table>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>and you can then populate the data and header attributes with whatever information you like:</p>
+
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -2271,7 +2388,7 @@ In&nbsp;[18]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<div class="highlight"><pre><span class="n">t2</span><span class="p">[</span><span class="s">&#39;value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mask</span> <span class="o">=</span> <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -2286,103 +2403,7 @@ In&nbsp;[19]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Note that setting the data automatically populates the header with basic information:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[20]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">header</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[20]:</div>
-
-
-<div class="output_text output_subarea output_pyout">
-<pre>
-SIMPLE  =                    T / conforms to FITS standard                      
-BITPIX  =                  -64 / array data type                                
-NAXIS   =                    2 / number of array dimensions                     
-NAXIS1  =                  128                                                  
-NAXIS2  =                  128                                                  
-EXTEND  =                    T                                                  
-</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>and you should never have to set header keywords such as <code>NAXIS</code>, <code>NAXIS1</code>, and so on manually. We can then set additional header keywords:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[21]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s">&#39;telescop&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;Python Observatory&#39;</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>and we can then write out the FITS file to disk:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[22]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">writeto</span><span class="p">(</span><span class="s">&#39;random_array.fits&#39;</span><span class="p">,</span> <span class="n">clobber</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="n">t2</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -2394,10 +2415,49 @@ In&nbsp;[22]:
 
 
 <div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
+<div class="output_subarea output_stream output_stdout output_text">
 <pre>
-WARNING: Overwriting existing file &apos;random_array.fits&apos;. [astropy.io.fits.file]
-WARNING:astropy:Overwriting existing file &apos;random_array.fits&apos;.
+name value
+---- -----
+   x   1.1
+   y    --
+   z   3.3
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[20]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">t2</span><span class="p">[</span><span class="s">&#39;value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fill_value</span> <span class="o">=</span> <span class="o">-</span><span class="mi">99</span>
+<span class="k">print</span><span class="p">(</span><span class="n">t2</span><span class="o">.</span><span class="n">filled</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+name value
+---- -----
+   x   1.1
+   y -99.0
+   z   3.3
 
 </pre>
 </div>
@@ -2412,20 +2472,46 @@ WARNING:astropy:Overwriting existing file &apos;random_array.fits&apos;.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="convenience-functions">Convenience functions</h2>
-<p>In cases where you just want to access the data or header in a specific HDU, you can use the following convenience functions:</p>
+<h2 id="high-level-table-operations">High-level table operations</h2>
+<p>So far we've just worked with one table at a time and viewed that table as a monolithic entity. Astropy also supports high-level <a href="http://astropy.readthedocs.org/en/stable/table/operations.html">Table operations</a> that manipulate multiple tables or view one table as a collection of sub-tables (groups).</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Documentation</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><a href="http://astropy.readthedocs.org/en/stable/table/operations.html#id2">Grouped operations</a></td>
+<td align="left">Group tables and columns by keys</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="http://astropy.readthedocs.org/en/stable/table/operations.html#id3">Stack vertically</a></td>
+<td align="left">Concatenate input tables along rows</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="http://astropy.readthedocs.org/en/stable/table/operations.html#id4">Stack horizontally</a></td>
+<td align="left">Concatenate input tables along columns</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="http://astropy.readthedocs.org/en/stable/table/operations.html#join">Join</a></td>
+<td align="left">Database-style join of two tables</td>
+</tr>
+</tbody>
+</table>
+<p>Here we'll just introduce the join operation but go into more detail on the others in the exercises.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[23]:
+In&nbsp;[21]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">data</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">getdata</span><span class="p">(</span><span class="s">&#39;data/gll_iem_v02_P6_V11_DIFFUSE.fit&#39;</span><span class="p">)</span>
-<span class="n">header</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="s">&#39;data/gll_iem_v02_P6_V11_DIFFUSE.fit&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">astropy.table</span> <span class="kn">import</span> <span class="n">join</span>
 </pre></div>
 
 </div>
@@ -2438,84 +2524,18 @@ In&nbsp;[23]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To get the data or header for an HDU other than the first, you can specify the extension name or index. The second HDU is called <code>energies</code>, so we can do:</p>
+<p>Now recall our original table <code>t</code>:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[24]:
+In&nbsp;[22]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">data</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">getdata</span><span class="p">(</span><span class="s">&#39;data/gll_iem_v02_P6_V11_DIFFUSE.fit&#39;</span><span class="p">,</span> <span class="n">extname</span><span class="o">=</span><span class="s">&#39;energies&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>or:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[25]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">data</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">getdata</span><span class="p">(</span><span class="s">&#39;data/gll_iem_v02_P6_V11_DIFFUSE.fit&#39;</span><span class="p">,</span> <span class="n">ext</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>and similarly for <code>getheader</code>.</p>
-<h2 id="accessing-tabular-data">Accessing Tabular Data</h2>
-<p>Tabular data behaves very similarly to image data such as that shown above, but the data array is a structured Numpy array which requires column access via the item notation:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[26]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span>
-<span class="n">hdulist</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">&#39;data/gll_psc_v08.fit&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[27]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">hdulist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+<div class="highlight"><pre><span class="n">t</span>
 </pre></div>
 
 </div>
@@ -2527,17 +2547,196 @@ In&nbsp;[27]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[27]:</div>
+    Out[22]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<table id="table4394504784"><thead><tr><th>name</th><th>flux</th><th>logflux</th></tr></thead><tr><td>source 1</td><td>1.20</td><td>0.08</td></tr><tr><td>source 2</td><td>2.20</td><td>0.34</td></tr><tr><td>source 3</td><td>3.10</td><td>0.49</td></tr><tr><td>source 4</td><td>4.30</td><td>0.63</td></tr><tr><td>source 5</td><td>10.10</td><td>1.00</td></tr></table>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now say that we now got some additional flux values from a different reference for a different, but overlapping sample of sources:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[23]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">t2</span> <span class="o">=</span> <span class="n">Table</span><span class="p">()</span>
+<span class="n">t2</span><span class="p">[</span><span class="s">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;source 1&#39;</span><span class="p">,</span> <span class="s">&#39;source 3&#39;</span><span class="p">,</span> <span class="s">&#39;source 8&#39;</span><span class="p">]</span>
+<span class="n">t2</span><span class="p">[</span><span class="s">&#39;flux2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.4</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mf">8.6</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we can get a master table of flux measurements which are joined matching the values the <code>name</code> column. This includes every row from each of the two tables, which is known as an <strong><code>outer</code></strong> join.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[24]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">t3</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t2</span><span class="p">,</span> <span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;name&#39;</span><span class="p">],</span> <span class="n">join_type</span><span class="o">=</span><span class="s">&#39;outer&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">t3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+  name    flux logflux flux2
+-------- ----- ------- -----
+source 1  1.20    0.08   1.4
+source 2  2.20    0.34    --
+source 3  3.10    0.49   3.5
+source 4  4.30    0.63    --
+source 5 10.10    1.00    --
+source 8   nan     nan   8.6
+
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>
+/Users/aldcroft/anaconda/lib/python2.7/site-packages/numpy/ma/core.py:3847: UserWarning: Warning: converting a masked element to nan.
+  warnings.warn(&quot;Warning: converting a masked element to nan.&quot;)
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[25]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">t3</span><span class="p">[</span><span class="s">&#39;flux2&#39;</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[25]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-&apos;LAT_Point_Source_Catalog&apos;
+4.5
 </pre>
 </div>
 
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Alternately we could choose to keep only rows where both tables had a valid measurement using an <strong><code>inner</code></strong> join:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[26]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">join</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t2</span><span class="p">,</span> <span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;name&#39;</span><span class="p">],</span> <span class="n">join_type</span><span class="o">=</span><span class="s">&#39;inner&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[26]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<table id="table4394506704"><thead><tr><th>name</th><th>flux</th><th>logflux</th><th>flux2</th></tr></thead><tr><td>source 1</td><td>1.20</td><td>0.08</td><td>1.4</td></tr><tr><td>source 3</td><td>3.10</td><td>0.49</td><td>3.5</td></tr></table>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="writing-data">Writing data</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[27]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">t3</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;test.fits&#39;</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
 </div>
 </div>
 
@@ -2549,33 +2748,23 @@ In&nbsp;[28]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdulist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;RAJ2000&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span class="n">t3</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;test.vot&#39;</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s">&#39;votable&#39;</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[28]:</div>
-
-
-<div class="output_text output_subarea output_pyout">
-<pre>
-array([  2.33711034e-01,   4.38849270e-01,   6.79812014e-01, ...,
-         3.59759430e+02,   3.59859894e+02,   3.59906921e+02], dtype=float32)
-</pre>
 </div>
-
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
-
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="reading-data">Reading data</h2>
+<p>You can read data using the <a href="http://astropy.readthedocs.org/en/stable/api/astropy.table.table.Table.html#astropy.table.table.Table.read">Table.read()</a> method:</p>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -2584,7 +2773,8 @@ In&nbsp;[29]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdulist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;DEJ2000&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span class="n">t4</span> <span class="o">=</span> <span class="n">Table</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s">&#39;test.fits&#39;</span><span class="p">)</span>
+<span class="n">t4</span>
 </pre></div>
 
 </div>
@@ -2598,12 +2788,8 @@ In&nbsp;[29]:
 <div class="output_area"><div class="prompt output_prompt">
     Out[29]:</div>
 
-
-<div class="output_text output_subarea output_pyout">
-<pre>
-array([ -7.81549788, -41.99647903,  62.33962631, ..., -30.62516785,
-        67.86333466,  65.73053741], dtype=float32)
-</pre>
+<div class="output_html rendered_html output_subarea output_pyout">
+<table id="table4394505808"><thead><tr><th>name</th><th>flux</th><th>logflux</th><th>flux2</th></tr></thead><tr><td>source 1</td><td>1.2</td><td>0.0791812460476</td><td>1.4</td></tr><tr><td>source 2</td><td>2.2</td><td>0.342422680822</td><td>nan</td></tr><tr><td>source 3</td><td>3.1</td><td>0.491361693834</td><td>3.5</td></tr><tr><td>source 4</td><td>4.3</td><td>0.63346845558</td><td>nan</td></tr><tr><td>source 5</td><td>10.1</td><td>1.00432137378</td><td>nan</td></tr><tr><td>source 8</td><td>nan</td><td>nan</td><td>8.6</td></tr></table>
 </div>
 
 </div>
@@ -2617,13 +2803,361 @@ array([ -7.81549788, -41.99647903,  62.33962631, ..., -30.62516785,
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="practical-exercises">Practical Exercises</h2>
-<h3 id="level-1">Level 1</h3>
-<p>Try and read in one of your own FITS files using <code>astropy.io.fits</code>, and see if you can also plot the array values in Matplotlib. Also, examine the header, and try and extract individual values. You can even try and modify the data/header and write the data back out - but take care not to write over the original file!</p>
-<h3 id="level-2">Level 2</h3>
-<p>Read in the LAT Point Source Catalog and make a scatter plot of the Galactic Coordinates of the sources (complete with axis labels). Bonus points if you can make the plot go between -180 and 180 instead of 0 and 360 degrees. Note that the Point Source Catalog contains the Galactic Coordinates, so no need to convert them.</p>
-<h3 id="level-3">Level 3</h3>
-<p>Using Matplotlib, make an all-sky plot of the LAT Background Model in the Plate Carée projection showing the LAT Point Source Catalog overlaid with markers, and with the correct coordinates on the axes. You should do this using only <code>astropy.io.fits</code>, Numpy, and Matplotlib (no WCS or coordinate conversion library). Hint: the -CAR projection is such that the x pixel position is proportional to longitude, and the y pixel position to latitude. Bonus points for a pretty colormap.</p>
+<h1 id="Practical-Exercises">Practical Exercises<a class="anchor-link" href="#Practical-Exercises">&#182;</a></h1>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In these exercises you will work with data from the <a href="http://cxc.harvard.edu/csc/">Chandra Source Catalog</a>. In particular we will analyze the properties of sources from a series of 21 <a href="http://cxc.harvard.edu/cdo/cdfs.html">Chandra Deep Field South</a> observations taken during 2000 and 2007.</p>
+<p>The data sets used in these exercises were generated using the code in the <strong><code>supplemental/chandra_deep_field_south</code></strong> notebook to query the CSC via the web API. You can try this yourself (but maybe not all at once!) if you have the <a href="http://docs.python-requests.org/en/latest/">requests</a> module installed. More information on querying the CSC can be found in the <a href="http://cxc.harvard.edu/csc/cli/index.html">command line interface</a> documentation.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Read-the-data">Read the data<a class="anchor-link" href="#Read-the-data">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To start with, read in the two data files representing the master source list and observations source list. The fields for the two tables are respectively documented in:</p>
+<ul>
+<li><a href="http://cxc.harvard.edu/csc/columns/master.html">master_sources</a></li>
+<li><a href="http://cxc.harvard.edu/csc/columns/persrc.html">obs_sources</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[30]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">master_sources</span> <span class="o">=</span> <span class="n">Table</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s">&#39;data/cdfs_master_sources.fits&#39;</span><span class="p">)</span>
+<span class="n">obs_sources</span> <span class="o">=</span> <span class="n">Table</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s">&#39;data/cdfs_obs_sources.fits&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><code>master_sources</code></strong></p>
+<p>Each distinct X-ray source identified on the sky is represented in the catalog by a single &quot;master source&quot; entry and one or more &quot;source observation&quot; entries, one for each observation in which the source has been detected. The master source entry records the best estimates of the properties of a source, based on the data extracted from the set of observations in which the source has been detected. The subset of fields in our exercise table file are:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">msid</td>
+<td align="left">Master source ID</td>
+</tr>
+<tr class="even">
+<td align="left">name</td>
+<td align="left">Source name in the Chandra catalog</td>
+</tr>
+<tr class="odd">
+<td align="left">ra</td>
+<td align="left">Source RA (deg)</td>
+</tr>
+<tr class="even">
+<td align="left">dec</td>
+<td align="left">Source Dec (deg)</td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>obs_sources</code></strong></p>
+<p>The individual source entries record all of the properties about a detection extracted from a single observation, as well as associated file-based data products, which are observation-specific. The subset of fields in our exercise table file are:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">obsid</td>
+<td align="left">Observation ID</td>
+</tr>
+<tr class="even">
+<td align="left">obi</td>
+<td align="left">Observation interval</td>
+</tr>
+<tr class="odd">
+<td align="left">targname</td>
+<td align="left">Target name</td>
+</tr>
+<tr class="even">
+<td align="left">gti_obs</td>
+<td align="left">Observation date</td>
+</tr>
+<tr class="odd">
+<td align="left">flux_aper_b</td>
+<td align="left">Broad band (0.5 - 7 keV) flux (erg/cm2/sec)</td>
+</tr>
+<tr class="even">
+<td align="left">src_cnts_aper_b</td>
+<td align="left">Broad band source counts</td>
+</tr>
+<tr class="odd">
+<td align="left">ra_b</td>
+<td align="left">Source RA (deg)</td>
+</tr>
+<tr class="even">
+<td align="left">dec_b</td>
+<td align="left">Source Dec (deg)</td>
+</tr>
+<tr class="odd">
+<td align="left">livetime</td>
+<td align="left">Observation duration (sec)</td>
+</tr>
+<tr class="even">
+<td align="left">posid</td>
+<td align="left">Position ID</td>
+</tr>
+<tr class="odd">
+<td align="left">theta</td>
+<td align="left">Off-axis angle (arcmin)</td>
+</tr>
+<tr class="even">
+<td align="left">msid</td>
+<td align="left">Master source ID</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Level-1">Level 1<a class="anchor-link" href="#Level-1">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Exploring-the-tables">Exploring the tables<a class="anchor-link" href="#Exploring-the-tables">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Do the following to explore the two tables:</p>
+<ul>
+<li>Display the data for each table in IPython notebook using the normal way of showing the value of a variable.</li>
+<li>Get a list of the column names for each table. <em>Hint</em>: use <code>&lt;TAB&gt;</code> completion to easily discover all the attributes and methods, e.g. type <code>master_sources.</code> and then hit the <code>&lt;TAB&gt;</code> key.</li>
+<li>Find the length of each table.</li>
+<li>Find the column datatypes for each table.</li>
+</ul>
+<p>Normally one displays a table in IPython notebook by entering the variable name in a cell and pressing <code>shift-Enter</code>. In a terminal session the default method is using something like <code>print(my_table)</code>. In both cases the <code>Table</code> object prefers to display only a screenful of data to prevent having a zillion lines of output if the table is huge. If you really want to see all the data you can use the <a href="http://astropy.readthedocs.org/en/stable/api/astropy.table.table.Table.html#astropy.table.table.Table.pprint">Table.pprint</a> method. Clicking on that documentation link will tell you the relevant arguments for the method.</p>
+<ul>
+<li>Display all the rows of the <code>master_sources</code> table using its <code>pprint()</code> method.</li>
+<li>If you are working in a regular terminal window (not IPython notebook), try the <code>more()</code> method as well.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Modifying-tables">Modifying tables<a class="anchor-link" href="#Modifying-tables">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For our analysis we don't actually need the <code>obi</code> (observation interval) column in the <code>obs_sources</code> table.</p>
+<ul>
+<li>Remove the <code>obi</code> column from the <code>obs_sources</code> table.</li>
+</ul>
+<p>The <code>gti_obs</code> column name is a bit obscure (GTI is a good time interval, FWIW).</p>
+<ul>
+<li>Rename the <code>gti_obs</code> column to <code>obs_date</code>.</li>
+</ul>
+<p>It would be nice to have a count rate in addition to the source counts.</p>
+<ul>
+<li>Add a new column <code>src_rate_aper_b</code> which is the source counts divided by observation duration in sec.</li>
+</ul>
+<p>Some of the sources have a negative net flux in the broad band</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Level-2">Level 2<a class="anchor-link" href="#Level-2">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Looking-at-the-observation-source-data">Looking at the observation source data<a class="anchor-link" href="#Looking-at-the-observation-source-data">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For each source detected in an individual observation (in the <code>obs_sources</code> table), let's look at the source flux values.</p>
+<ul>
+<li>Use the matplotlib <a href="http://matplotlib.org/api/pyplot_api.html?highlight=pyplot.hist#matplotlib.pyplot.hist"><code>hist()</code></a> function to make a histogram of the source fluxes. Since the fluxes vary by orders of magnitude, use the <code>numpy.log10</code> to put the fluxes in log space.</li>
+</ul>
+<p><em>HINT</em>: if you did not start notebook with <code>--pylab=inline</code> then try:</p>
+<pre><code>import matplotlib.pyplot as plt
+%matplotlib inline</code></pre>
+<ul>
+<li>Now make the same plot but using only sources within 4 arcmin of the center. <em>HINT</em>: use a boolean mask to select values of <code>theta</code> that are less than 4.0.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Join-the-master_sources-and-obs_sources-tables">Join the master_sources and obs_sources tables<a class="anchor-link" href="#Join-the-master_sources-and-obs_sources-tables">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <code>master_sources</code> and <code>obs_sources</code> tables share a common <code>msid</code> column. What we now want is to join the master RA and Dec positions and master source names with the individual observations table.</p>
+<ul>
+<li>Use the <a href="http://astropy.readthedocs.org/en/stable/table/operations.html#join">table.join()</a> function to make a single table called <code>sources</code> that has the master RA, Dec, and name included for each observation source.</li>
+</ul>
+<p><em>HINT</em>: the defaults for <code>keys</code> and <code>join_type='inner'</code> are correct in this case, so the simplest possible call to <code>join()</code> will work!</p>
+<ul>
+<li><p><em>Intermediate</em>: Is the length of the new <code>sources</code> the same as <code>obs_sources</code>? What happened?</p></li>
+<li><p><em>Advanced</em>: Make a scatter plot of the RA (x-axis) and Dec (y-axis) difference between the master source position and the observation source position. You'll need to use <code>coordinates</code>!</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Level-3">Level 3<a class="anchor-link" href="#Level-3">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Grouped-properties-of-sources">Grouped properties of <code>sources</code><a class="anchor-link" href="#Grouped-properties-of-sources">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Finally, we can look at the variability properties of sources in the CDFS using the <a href="http://astropy.readthedocs.org/en/stable/table/operations.html#id2"><code>group_by()</code></a> functionality.</p>
+<p>This method makes a new table in which all the sources with identical master ID are next to each other.</p>
+<ul>
+<li>Make a new table <code>g_sources</code> which is the <code>sources</code> table grouped by the <code>msid</code> key using the <code>group_by()</code> method.</li>
+</ul>
+<p>The <code>g_sources</code> table is just a regular table with all the <code>sources</code> in a particular order. The attribute <code>g_sources.groups</code> is an object that provides access to the <code>msid</code> sub-groups. You can access the <span class="math">\(i^{th}\)</span> group with <code>g_sources.groups[i]</code>.</p>
+<p>In addition the <code>g_sources.groups.indices</code> attribute is an array with the indicies of the group boundaries.</p>
+<ul>
+<li>Using <code>np.diff()</code> find the number of repeat observations of each master sources. <em>HINT</em>: use the indices, Luke.</li>
+<li>Print the 50th group and note which columns are the same for all group members and which are different. Does this make sense? In these few observations how many different target names were provided by observers?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Aggregation">Aggregation<a class="anchor-link" href="#Aggregation">&#182;</a></h4>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The real power of grouping comes in the ability to create aggregate values for each of the groups, for instance the mean flux for each unique source. This is done with the <a href="http://astropy.readthedocs.org/en/stable/table/operations.html#aggregation"><code>aggregate()</code></a> method, which takes a function reference as its input. This function must take as input an array of values and return a single value.</p>
+<p>Aggregate returns a new table that has a length equal to the number of groups.</p>
+<ul>
+<li>Compute the mean of all columns for each unique source (i.e. each group) using <code>aggregate</code> and the <code>np.mean</code> function. Call this table <code>g_sources_mean</code>.</li>
+<li>Notice that aggregation cannot form a mean for certain columns and these are dropped from the output. Use the <code>join()</code> function to restore the <code>master_sources</code> information to <code>g_sources_mean</code>.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="#Tables-introduction">Back to top</a></p>
 </div>
 </div>
 </div>

@@ -3,7 +3,7 @@
 <head>
 
 <meta charset="utf-8" />
-<title>Tables</title>
+<title>03_Tables_solutions</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -1277,6 +1277,7 @@ a .icon-rotate-90:before,a .icon-rotate-180:before,a .icon-rotate-270:before,a .
 .icon-weibo:before{content:"\f18a"}
 .icon-renren:before{content:"\f18b"}
 code{color:#000}
+pre{font-size:inherit;line-height:inherit}
 .border-box-sizing{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
 .corner-all{border-radius:4px}
 .hbox{display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
@@ -1340,6 +1341,8 @@ input.nbname_input,input.engine_num_input{padding-top:3px;padding-bottom:3px;hei
 input.engine_num_input{width:60px}
 .highlight_text{color:#00f}
 #project_name>.breadcrumb{padding:0;margin-bottom:0;background-color:transparent;font-weight:bold}
+.folder_icon:before{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;*margin-right:.3em;content:"\f114"}
+.notebook_icon:before{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;*margin-right:.3em;content:"\f02d"}
 .ansibold{font-weight:bold}
 .ansiblack{color:#000}
 .ansired{color:#8b0000}
@@ -1362,15 +1365,15 @@ div.cell.edit_mode{border-radius:4px;border:thin #008000 solid}
 div.cell{width:100%;padding:5px 5px 5px 0;margin:0;outline:none}
 div.prompt{min-width:11ex;padding:.4em;margin:0;font-family:monospace;text-align:right;line-height:1.21429em}
 @media (max-width:480px){div.prompt{text-align:left}}div.inner_cell{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
-div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7}
+div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7;line-height:1.21429em}
 div.prompt:empty{padding-top:0;padding-bottom:0}
 div.input{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
 @media (max-width:480px){div.input{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.input_prompt{color:#000080;border-top:1px solid transparent}
 div.input_area>div.highlight{margin:.4em;border:none;padding:0;background-color:transparent}
-div.input_area>div.highlight>pre{margin:0;border:0;padding:0;background-color:transparent;font-size:14px;line-height:1.21429em}
+div.input_area>div.highlight>pre{margin:0;border:none;padding:0;background-color:transparent}
 .CodeMirror{line-height:1.21429em;height:auto;background:none;}
 .CodeMirror-scroll{overflow-y:hidden;overflow-x:auto}
-@-moz-document url-prefix(){.CodeMirror-scroll{overflow-x:hidden}}.CodeMirror-lines{padding:.4em}
+.CodeMirror-lines{padding:.4em}
 .CodeMirror-linenumber{padding:0 8px 0 4px}
 .CodeMirror-gutters{border-bottom-left-radius:4px;border-top-left-radius:4px}
 .CodeMirror pre{padding:0;border:0;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
@@ -1405,7 +1408,7 @@ div.output_area{padding:0;page-break-inside:avoid;display:-webkit-box;-webkit-bo
 div.output_area .rendered_html table{margin-left:0;margin-right:0}
 div.output_area .rendered_html img{margin-left:0;margin-right:0}
 .output{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}
-@media (max-width:480px){div.output_area{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;color:#000;background-color:transparent;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;line-height:inherit}
+@media (max-width:480px){div.output_area{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;vertical-align:baseline;color:#000;background-color:transparent;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
 div.output_subarea{padding:.4em .4em 0 .4em;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
 div.output_text{text-align:left;color:#000;line-height:1.21429em}
 div.output_stderr{background:#fdd;}
@@ -1526,7 +1529,7 @@ ul#help_menu li a{overflow:hidden;padding-right:2.2em}ul#help_menu li a i{margin
 .notification_widget{color:#777;padding:1px 12px;margin:2px 4px;z-index:10;border:1px solid #ccc;border-radius:4px;background:rgba(240,240,240,0.5)}.notification_widget.span{padding-right:2px}
 div#pager_splitter{height:8px}
 #pager-container{position:relative;padding:15px 0}
-div#pager{font-size:14px;line-height:20px;overflow:auto;display:none}div#pager pre{font-size:13px;line-height:1.21429em;color:#000;background-color:#f7f7f7;padding:.4em}
+div#pager{font-size:14px;line-height:20px;overflow:auto;display:none}div#pager pre{line-height:1.21429em;color:#000;background-color:#f7f7f7;padding:.4em}
 .quickhelp{display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
 .shortcut_key{display:inline-block;width:20ex;text-align:right;font-family:monospace}
 .shortcut_descr{display:inline-block;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
@@ -1677,26 +1680,20 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="tables-introduction">Tables introduction</h1>
-<p>The astropy <a href="http://docs.astropy.org/en/stable/table/index.html">Table</a> class provides an extension of NumPy structured arrays for storing and manipulating heterogeneous tables of data. A few notable features of this package are:</p>
+<h1 id="Tables---solutions">Tables - solutions<a class="anchor-link" href="#Tables---solutions">&#182;</a></h1>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Initialize a table from a wide variety of input data structures and types.</li>
-<li>Modify a table by adding or removing columns, changing column names, or adding new rows of data.</li>
-<li>Handle tables containing missing values.</li>
-<li>Include table and column metadata as flexible data structures.</li>
-<li>Specify a description, units and output formatting for columns.</li>
-<li>Perform operations like database joins, concatenation, and grouping.</li>
-<li>Manipulate multidimensional columns.</li>
-<li>Methods for Reading and writing Table objects to files</li>
-<li>Integration with Astropy <a href="http://astropy.readthedocs.org/en/stable/units/index.html">Units and Quantities</a></li>
+<li><a href="http://astropy4scipy2014.readthedocs.org/">Back to tutorial home</a></li>
+<li><a href="https://github.com/astropy/astropy4scipy2014/raw/master/notebooks/Tables_solutions.ipynb">Download raw notebook file</a></li>
 </ul>
-<h2 id="why-not-pandas">Why not Pandas</h2>
-<p>The <a href="http://pandas.pydata.org/pandas-docs/stable/">Pandas</a> package provides a powerful, high-performance table object via the <a href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html#pandas.DataFrame">DataFrame</a> class. Unfortunately there are a few issues that prevent use as a generalize table object in astronomy. The most crucial is lack of support for multidimensional table columns. This is commonly used in standard FITS data products, for instance the Chandra energy response matrix used to analyze spectral data.</p>
-<h2 id="documentation">Documentation</h2>
-<p>For more information about the features presented below, you can read the <a href="http://docs.astropy.org/en/stable/table/index.html">astropy.table</a> docs.</p>
-<hr />
-<hr />
-<h1 id="tutorial">Tutorial</h1>
 </div>
 </div>
 </div>
@@ -1707,8 +1704,8 @@ In&nbsp;[1]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">division</span>
-<span class="kn">from</span> <span class="nn">astropy.table</span> <span class="kn">import</span> <span class="n">Table</span>
+<div class="highlight"><pre><span class="o">%</span><span class="k">matplotlib</span> <span class="n">inline</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 </pre></div>
 
@@ -1722,20 +1719,11 @@ In&nbsp;[1]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="creating-tables">Creating tables</h2>
-<p>There is great deal of flexibility in the way that a table can be initially constructed:</p>
+<p>To start with, read in the two data files representing the master source list and observations source list. The fields for the two tables are respectively documented in:</p>
 <ul>
-<li>Read an existing table from a file or web URL</li>
-<li>Add columns of data one by one</li>
-<li>Add rows of data one by one</li>
-<li><p>From an existing data structure in memory:</p></li>
-<li>List of data columns</li>
-<li>Dict of data columns</li>
-<li>List of row dicts</li>
-<li>Numpy homgeneous array or structured array</li>
-<li><p>List of row records (new in 0.4)</p></li>
+<li><a href="http://cxc.harvard.edu/csc/columns/master.html">master_sources</a></li>
+<li><a href="http://cxc.harvard.edu/csc/columns/persrc.html">obs_sources</a></li>
 </ul>
-<p>See the documentation section on <a href="http://astropy.readthedocs.org/en/stable/table/construct_table.html">Constructing a table</a> for the gory details and plenty of examples.</p>
 </div>
 </div>
 </div>
@@ -1746,1169 +1734,18 @@ In&nbsp;[2]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">t</span> <span class="o">=</span> <span class="n">Table</span><span class="p">()</span>
-<span class="n">t</span><span class="p">[</span><span class="s">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;source 1&#39;</span><span class="p">,</span> <span class="s">&#39;source 2&#39;</span><span class="p">,</span> <span class="s">&#39;source 3&#39;</span><span class="p">,</span> <span class="s">&#39;source 4&#39;</span><span class="p">]</span>
-<span class="n">t</span><span class="p">[</span><span class="s">&#39;flux&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">,</span> <span class="mf">3.1</span><span class="p">,</span> <span class="mf">4.3</span><span class="p">]</span>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">astropy.table</span> <span class="kn">import</span> <span class="n">Table</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="looking-at-your-table">Looking at your table</h3>
-<p>In IPython notebook, showing a table will produce a nice HTML representation of the table:</p>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
 In&nbsp;[3]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">t</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[3]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<table id="table4431800464"><thead><tr><th>name</th><th>flux</th></tr></thead><tr><td>source 1</td><td>1.2</td></tr><tr><td>source 2</td><td>2.2</td></tr><tr><td>source 3</td><td>3.1</td></tr><tr><td>source 4</td><td>4.3</td></tr></table>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>If you did the same in a terminal session you get a different view that isn't as pretty but does give a bit more information about the table:</p>
-<pre><code>&gt;&gt;&gt; t
-&lt;Table rows=4 names=(&#39;name&#39;,&#39;flux&#39;)&gt;
-array([(&#39;source 1&#39;, 1.2), (&#39;source 2&#39;, 2.2), (&#39;source 3&#39;, 3.1),
-       (&#39;source 4&#39;, 4.3)], 
-      dtype=[(&#39;name&#39;, &#39;S8&#39;), (&#39;flux&#39;, &#39;&lt;f8&#39;)])</code></pre>
-<p>To get a plain view which is the same in notebook and terminal use <code>print()</code>:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[4]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-  name   flux
--------- ----
-source 1  1.2
-source 2  2.2
-source 3  3.1
-source 4  4.3
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>To get the table column names and data types using the <code>colnames</code> and <code>dtype</code> properties:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[5]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">t</span><span class="o">.</span><span class="n">colnames</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[5]:</div>
-
-
-<div class="output_text output_subarea output_pyout">
-<pre>
-[&apos;name&apos;, &apos;flux&apos;]
-</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[6]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">t</span><span class="o">.</span><span class="n">dtype</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[6]:</div>
-
-
-<div class="output_text output_subarea output_pyout">
-<pre>
-dtype([(&apos;name&apos;, &apos;S8&apos;), (&apos;flux&apos;, &apos;&lt;f8&apos;)])
-</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="accessing-parts-of-the-table">Accessing parts of the table</h3>
-<p>We can access the columns and rows as for numpy structured arrays. Notice that the outputs are <code>Column</code>, <code>Row</code> or <code>Table</code> objects depending on the context.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[7]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">t</span><span class="p">[</span><span class="s">&#39;flux&#39;</span><span class="p">]</span>  <span class="c"># Flux column (notice meta attributes)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[7]:</div>
-
-
-<div class="output_text output_subarea output_pyout">
-<pre>
-&lt;Column name=&apos;flux&apos; unit=None format=None description=None&gt;
-array([ 1.2,  2.2,  3.1,  4.3])
-</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[8]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">t</span><span class="p">[</span><span class="s">&#39;flux&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>  <span class="c"># Row 1 of flux column</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[8]:</div>
-
-
-<div class="output_text output_subarea output_pyout">
-<pre>
-2.2000000000000002
-</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[9]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c"># Row obj for with row 1 values</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[9]:</div>
-
-
-<div class="output_text output_subarea output_pyout">
-<pre>
-&lt;Row 1 of table
- values=(&apos;source 2&apos;, 2.2)
- dtype=[(&apos;name&apos;, &apos;S8&apos;), (&apos;flux&apos;, &apos;&lt;f8&apos;)]&gt;
-</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[10]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s">&#39;flux&#39;</span><span class="p">]</span>  <span class="c"># Flux column of row 1</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[10]:</div>
-
-
-<div class="output_text output_subarea output_pyout">
-<pre>
-2.2000000000000002
-</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[11]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>  <span class="c"># 2nd and 3rd rows in a new table</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[11]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<table id="table4431800144"><thead><tr><th>name</th><th>flux</th></tr></thead><tr><td>source 2</td><td>2.2</td></tr><tr><td>source 3</td><td>3.1</td></tr></table>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[12]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">t</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[12]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<table id="table4431800080"><thead><tr><th>name</th><th>flux</th></tr></thead><tr><td>source 2</td><td>2.2</td></tr><tr><td>source 4</td><td>4.3</td></tr></table>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>One of the most powerful concepts is using boolean selection masks to filter tables</strong></p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[13]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">mask</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="s">&#39;flux&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">3.0</span>  <span class="c"># Define boolean mask for all flux values &gt; 3</span>
-<span class="n">t</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>  <span class="c"># Create a new table with only the &quot;high flux&quot; sources</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[13]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<table id="table4431801360"><thead><tr><th>name</th><th>flux</th></tr></thead><tr><td>source 3</td><td>3.1</td></tr><tr><td>source 4</td><td>4.3</td></tr></table>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="modifying-the-table">Modifying the table</h3>
-<p>Once the table exists with defined columns there are a number of ways to modify the table in place. These are fully documented in the section <a href="http://astropy.readthedocs.org/en/stable/table/modify_table.html#modifying-a-table">Modifying a Table</a>.</p>
-<p>To give a couple of simple examples, you can add rows with the <a href="http://astropy.readthedocs.org/en/stable/api/astropy.table.table.Table.html#astropy.table.table.Table.add_row">add_row()</a> method or add new columns using dict-style assignment:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[14]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">t</span><span class="o">.</span><span class="n">add_row</span><span class="p">((</span><span class="s">&#39;source 5&#39;</span><span class="p">,</span> <span class="mf">10.1</span><span class="p">))</span>  <span class="c"># Add a new source at the end</span>
-<span class="n">t</span><span class="p">[</span><span class="s">&#39;logflux&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="s">&#39;flux&#39;</span><span class="p">])</span>  <span class="c"># Compute the log10 of the flux</span>
-<span class="n">t</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[14]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<table id="table4431800464"><thead><tr><th>name</th><th>flux</th><th>logflux</th></tr></thead><tr><td>source 1</td><td>1.2</td><td>0.0791812460476</td></tr><tr><td>source 2</td><td>2.2</td><td>0.342422680822</td></tr><tr><td>source 3</td><td>3.1</td><td>0.491361693834</td></tr><tr><td>source 4</td><td>4.3</td><td>0.63346845558</td></tr><tr><td>source 5</td><td>10.1</td><td>1.00432137378</td></tr></table>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Notice that the <code>logflux</code> column really has too many output digits given the precision of the input values. We can fix this by setting the format using normal Python formatting syntax:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[15]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">t</span><span class="p">[</span><span class="s">&#39;flux&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">format</span> <span class="o">=</span> <span class="s">&#39;</span><span class="si">%.2f</span><span class="s">&#39;</span>
-<span class="n">t</span><span class="p">[</span><span class="s">&#39;logflux&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">format</span> <span class="o">=</span> <span class="s">&#39;</span><span class="si">%.2f</span><span class="s">&#39;</span>
-<span class="n">t</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[15]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<table id="table4431800464"><thead><tr><th>name</th><th>flux</th><th>logflux</th></tr></thead><tr><td>source 1</td><td>1.20</td><td>0.08</td></tr><tr><td>source 2</td><td>2.20</td><td>0.34</td></tr><tr><td>source 3</td><td>3.10</td><td>0.49</td></tr><tr><td>source 4</td><td>4.30</td><td>0.63</td></tr><tr><td>source 5</td><td>10.10</td><td>1.00</td></tr></table>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="converting-the-table-to-numpy">Converting the table to numpy</h3>
-<p>Sometimes you may not want or be able to use a <code>Table</code> object and prefer to work with a plain numpy array. This is easily done by passing the table to the <code>np.array()</code> constructor.</p>
-<p><em>This makes a copy of the data</em>. If you have a huge table and don't want to waste memory, supply <code>copy=False</code> to the constructor, but be warned that changing the output numpy array will change the original table.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[16]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[16]:</div>
-
-
-<div class="output_text output_subarea output_pyout">
-<pre>
-array([(&apos;source 1&apos;, 1.2, 0.07918124604762482),
-       (&apos;source 2&apos;, 2.2, 0.3424226808222063),
-       (&apos;source 3&apos;, 3.1, 0.4913616938342727),
-       (&apos;source 4&apos;, 4.3, 0.6334684555795865),
-       (&apos;source 5&apos;, 10.1, 1.0043213737826426)], 
-      dtype=[(&apos;name&apos;, &apos;S8&apos;), (&apos;flux&apos;, &apos;&lt;f8&apos;), (&apos;logflux&apos;, &apos;&lt;f8&apos;)])
-</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="masked-tables">Masked tables</h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[17]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">t2</span> <span class="o">=</span> <span class="n">Table</span><span class="p">([[</span><span class="s">&#39;x&#39;</span><span class="p">,</span> <span class="s">&#39;y&#39;</span><span class="p">,</span> <span class="s">&#39;z&#39;</span><span class="p">],</span> 
-            <span class="p">[</span><span class="mf">1.1</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">,</span> <span class="mf">3.3</span><span class="p">]],</span>
-           <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;name&#39;</span><span class="p">,</span> <span class="s">&#39;value&#39;</span><span class="p">],</span>
-           <span class="n">masked</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="n">t2</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[17]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<table id="table4431802192"><thead><tr><th>name</th><th>value</th></tr></thead><tr><td>x</td><td>1.1</td></tr><tr><td>y</td><td>2.2</td></tr><tr><td>z</td><td>3.3</td></tr></table>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[18]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">t2</span><span class="p">[</span><span class="s">&#39;value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mask</span> <span class="o">=</span> <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[19]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="n">t2</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-name value
----- -----
-   x   1.1
-   y    --
-   z   3.3
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[20]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">t2</span><span class="p">[</span><span class="s">&#39;value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fill_value</span> <span class="o">=</span> <span class="o">-</span><span class="mi">99</span>
-<span class="k">print</span><span class="p">(</span><span class="n">t2</span><span class="o">.</span><span class="n">filled</span><span class="p">())</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-name value
----- -----
-   x   1.1
-   y -99.0
-   z   3.3
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="high-level-table-operations">High-level table operations</h2>
-<p>So far we've just worked with one table at a time and viewed that table as a monolithic entity. Astropy also supports high-level <a href="http://astropy.readthedocs.org/en/stable/table/operations.html">Table operations</a> that manipulate multiple tables or view one table as a collection of sub-tables (groups).</p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Documentation</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><a href="http://astropy.readthedocs.org/en/stable/table/operations.html#id2">Grouped operations</a></td>
-<td align="left">Group tables and columns by keys</td>
-</tr>
-<tr class="even">
-<td align="left"><a href="http://astropy.readthedocs.org/en/stable/table/operations.html#id3">Stack vertically</a></td>
-<td align="left">Concatenate input tables along rows</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="http://astropy.readthedocs.org/en/stable/table/operations.html#id4">Stack horizontally</a></td>
-<td align="left">Concatenate input tables along columns</td>
-</tr>
-<tr class="even">
-<td align="left"><a href="http://astropy.readthedocs.org/en/stable/table/operations.html#join">Join</a></td>
-<td align="left">Database-style join of two tables</td>
-</tr>
-</tbody>
-</table>
-<p>Here we'll just introduce the join operation but go into more detail on the others in the exercises.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[21]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">astropy.table</span> <span class="kn">import</span> <span class="n">join</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Now recall our original table <code>t</code>:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[22]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">t</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[22]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<table id="table4431800464"><thead><tr><th>name</th><th>flux</th><th>logflux</th></tr></thead><tr><td>source 1</td><td>1.20</td><td>0.08</td></tr><tr><td>source 2</td><td>2.20</td><td>0.34</td></tr><tr><td>source 3</td><td>3.10</td><td>0.49</td></tr><tr><td>source 4</td><td>4.30</td><td>0.63</td></tr><tr><td>source 5</td><td>10.10</td><td>1.00</td></tr></table>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Now say that we now got some additional flux values from a different reference for a different, but overlapping sample of sources:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[23]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">t2</span> <span class="o">=</span> <span class="n">Table</span><span class="p">()</span>
-<span class="n">t2</span><span class="p">[</span><span class="s">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;source 1&#39;</span><span class="p">,</span> <span class="s">&#39;source 3&#39;</span><span class="p">,</span> <span class="s">&#39;source 8&#39;</span><span class="p">]</span>
-<span class="n">t2</span><span class="p">[</span><span class="s">&#39;flux2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.4</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mf">8.6</span><span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Now we can get a master table of flux measurements which are joined matching the values the <code>name</code> column. This includes every row from each of the two tables, which is known as an <strong><code>outer</code></strong> join.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[24]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">t3</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t2</span><span class="p">,</span> <span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;name&#39;</span><span class="p">],</span> <span class="n">join_type</span><span class="o">=</span><span class="s">&#39;outer&#39;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">t3</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-  name    flux logflux flux2
--------- ----- ------- -----
-source 1  1.20    0.08   1.4
-source 2  2.20    0.34    --
-source 3  3.10    0.49   3.5
-source 4  4.30    0.63    --
-source 5 10.10    1.00    --
-source 8   nan     nan   8.6
-
-</pre>
-</div>
-</div>
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>
-/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/ma/core.py:3847: UserWarning: Warning: converting a masked element to nan.
-  warnings.warn(&quot;Warning: converting a masked element to nan.&quot;)
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[25]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">t3</span><span class="p">[</span><span class="s">&#39;flux2&#39;</span><span class="p">])</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[25]:</div>
-
-
-<div class="output_text output_subarea output_pyout">
-<pre>
-4.5
-</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Alternately we could choose to keep only rows where both tables had a valid measurement using an <strong><code>inner</code></strong> join:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[26]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">join</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t2</span><span class="p">,</span> <span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;name&#39;</span><span class="p">],</span> <span class="n">join_type</span><span class="o">=</span><span class="s">&#39;inner&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[26]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<table id="table4408600784"><thead><tr><th>name</th><th>flux</th><th>logflux</th><th>flux2</th></tr></thead><tr><td>source 1</td><td>1.20</td><td>0.08</td><td>1.4</td></tr><tr><td>source 3</td><td>3.10</td><td>0.49</td><td>3.5</td></tr></table>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="writing-data">Writing data</h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[27]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">t3</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;test.fits&#39;</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[28]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">t3</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;test.vot&#39;</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s">&#39;votable&#39;</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="reading-data">Reading data</h2>
-<p>You can read data using the <a href="http://astropy.readthedocs.org/en/stable/api/astropy.table.table.Table.html#astropy.table.table.Table.read">Table.read()</a> method:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[29]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">t4</span> <span class="o">=</span> <span class="n">Table</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s">&#39;test.fits&#39;</span><span class="p">)</span>
-<span class="n">t4</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[29]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<table id="table4428598224"><thead><tr><th>name</th><th>flux</th><th>logflux</th><th>flux2</th></tr></thead><tr><td>source 1</td><td>1.2</td><td>0.0791812460476</td><td>1.4</td></tr><tr><td>source 2</td><td>2.2</td><td>0.342422680822</td><td>nan</td></tr><tr><td>source 3</td><td>3.1</td><td>0.491361693834</td><td>3.5</td></tr><tr><td>source 4</td><td>4.3</td><td>0.63346845558</td><td>nan</td></tr><tr><td>source 5</td><td>10.1</td><td>1.00432137378</td><td>nan</td></tr><tr><td>source 8</td><td>nan</td><td>nan</td><td>8.6</td></tr></table>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Practical-Exercises">Practical Exercises<a class="anchor-link" href="#Practical-Exercises">&#182;</a></h1>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>In these exercises you will work with data from the <a href="http://cxc.harvard.edu/csc/">Chandra Source Catalog</a>. In particular we will analyze the properties of sources from a series of 21 <a href="http://cxc.harvard.edu/cdo/cdfs.html">Chandra Deep Field South</a> observations taken during 2000 and 2007.</p>
-<p>The data sets used in these exercises were generated using the code in the <strong><code>supplemental/chandra_deep_field_south</code></strong> notebook to query the CSC via the web API. You can try this yourself (but maybe not all at once!) if you have the <a href="http://docs.python-requests.org/en/latest/">requests</a> module installed. More information on querying the CSC can be found in the <a href="http://cxc.harvard.edu/csc/cli/index.html">command line interface</a> documentation.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Read-the-data">Read the data<a class="anchor-link" href="#Read-the-data">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>To start with, read in the two data files representing the master source list and observations source list. The fields for the two tables are respectively documented in:</p>
-<ul>
-<li><a href="http://cxc.harvard.edu/csc/columns/master.html">master_sources</a></li>
-<li><a href="http://cxc.harvard.edu/csc/columns/persrc.html">obs_sources</a></li>
-</ul>
-<p><strong><code>master_sources</code></strong></p>
-<p>Each distinct X-ray source identified on the sky is represented in the catalog by a single &quot;master source&quot; entry and one or more &quot;source observation&quot; entries, one for each observation in which the source has been detected. The master source entry records the best estimates of the properties of a source, based on the data extracted from the set of observations in which the source has been detected. The subset of fields in our exercise table file are:</p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Name</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">msid</td>
-<td align="left">Master source ID</td>
-</tr>
-<tr class="even">
-<td align="left">name</td>
-<td align="left">Source name in the Chandra catalog</td>
-</tr>
-<tr class="odd">
-<td align="left">ra</td>
-<td align="left">Source RA (deg)</td>
-</tr>
-<tr class="even">
-<td align="left">dec</td>
-<td align="left">Source Dec (deg)</td>
-</tr>
-</tbody>
-</table>
-<p><strong><code>obs_sources</code></strong></p>
-<p>The individual source entries record all of the properties about a detection extracted from a single observation, as well as associated file-based data products, which are observation-specific. The subset of fields in our exercise table file are:</p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Name</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">obsid</td>
-<td align="left">Observation ID</td>
-</tr>
-<tr class="even">
-<td align="left">obi</td>
-<td align="left">Observation interval</td>
-</tr>
-<tr class="odd">
-<td align="left">targname</td>
-<td align="left">Target name</td>
-</tr>
-<tr class="even">
-<td align="left">gti_obs</td>
-<td align="left">Observation date</td>
-</tr>
-<tr class="odd">
-<td align="left">flux_aper_b</td>
-<td align="left">Broad band (0.5 - 7 keV) flux (erg/cm2/sec)</td>
-</tr>
-<tr class="even">
-<td align="left">src_cnts_aper_b</td>
-<td align="left">Broad band source counts</td>
-</tr>
-<tr class="odd">
-<td align="left">ra_b</td>
-<td align="left">Source RA (deg)</td>
-</tr>
-<tr class="even">
-<td align="left">dec_b</td>
-<td align="left">Source Dec (deg)</td>
-</tr>
-<tr class="odd">
-<td align="left">livetime</td>
-<td align="left">Observation duration (sec)</td>
-</tr>
-<tr class="even">
-<td align="left">posid</td>
-<td align="left">Position ID</td>
-</tr>
-<tr class="odd">
-<td align="left">theta</td>
-<td align="left">Off-axis angle (arcmin)</td>
-</tr>
-<tr class="even">
-<td align="left">msid</td>
-<td align="left">Master source ID</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[30]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2926,7 +1763,7 @@ In&nbsp;[30]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exploring-the-tables">Exploring the tables<a class="anchor-link" href="#Exploring-the-tables">&#182;</a></h3>
+<h3 id="Exploring-the-data">Exploring the data<a class="anchor-link" href="#Exploring-the-data">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -2943,6 +1780,291 @@ In&nbsp;[30]:
 <li>Find the length of each table.</li>
 <li>Find the column datatypes for each table.</li>
 </ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[4]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">master_sources</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[4]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<table id="table4336044944"><thead><tr><th>msid</th><th>name</th><th>ra</th><th>dec</th></tr></thead><tr><td>11567</td><td>CXO J033206.1-275449</td><td>03 32 06.10</td><td>-27 54 49.73</td></tr><tr><td>11570</td><td>CXO J033151.1-275051</td><td>03 31 51.15</td><td>-27 50 51.66</td></tr><tr><td>11574</td><td>CXO J033236.1-275126</td><td>03 32 36.19</td><td>-27 51 26.87</td></tr><tr><td>11576</td><td>CXO J033253.0-275138</td><td>03 32 53.09</td><td>-27 51 38.28</td></tr><tr><td>11580</td><td>CXO J033213.4-274856</td><td>03 32 13.44</td><td>-27 48 56.20</td></tr><tr><td>11586</td><td>CXO J033218.8-275136</td><td>03 32 18.86</td><td>-27 51 36.08</td></tr><tr><td>11595</td><td>CXO J033244.3-275141</td><td>03 32 44.32</td><td>-27 51 41.71</td></tr><tr><td>11600</td><td>CXO J033234.7-275535</td><td>03 32 34.74</td><td>-27 55 35.82</td></tr><tr><td>11692</td><td>CXO J033153.4-274843</td><td>03 31 53.49</td><td>-27 48 43.92</td></tr><tr><td>11788</td><td>CXO J033202.2-275234</td><td>03 32 02.29</td><td>-27 52 34.42</td></tr><tr><td>11791</td><td>CXO J033228.0-274332</td><td>03 32 28.09</td><td>-27 43 32.02</td></tr><tr><td>...</td><td>...</td><td>...</td><td>...</td></tr><tr><td>33232</td><td>CXO J033225.9-274514</td><td>03 32 25.96</td><td>-27 45 14.82</td></tr><tr><td>33233</td><td>CXO J033230.0-274404</td><td>03 32 30.01</td><td>-27 44 04.50</td></tr><tr><td>33234</td><td>CXO J033237.4-274000</td><td>03 32 37.44</td><td>-27 40 00.74</td></tr><tr><td>33235</td><td>CXO J033149.4-275034</td><td>03 31 49.46</td><td>-27 50 34.20</td></tr><tr><td>33236</td><td>CXO J033149.4-274634</td><td>03 31 49.45</td><td>-27 46 34.46</td></tr><tr><td>33239</td><td>CXO J033222.7-275224</td><td>03 32 22.76</td><td>-27 52 24.10</td></tr><tr><td>33240</td><td>CXO J033226.5-274801</td><td>03 32 26.57</td><td>-27 48 01.82</td></tr><tr><td>37759</td><td>CXO J033309.5-274603</td><td>03 33 09.52</td><td>-27 46 03.30</td></tr><tr><td>148105</td><td>CXO J033234.2-273906</td><td>03 32 34.21</td><td>-27 39 06.46</td></tr><tr><td>148106</td><td>CXO J033234.4-273913</td><td>03 32 34.44</td><td>-27 39 13.28</td></tr><tr><td>148107</td><td>CXO J033247.9-274148</td><td>03 32 47.91</td><td>-27 41 48.03</td></tr></table>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[5]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">obs_sources</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[5]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<table id="table4407183504"><thead><tr><th>obsid</th><th>obi</th><th>targname</th><th>gti_obs</th><th>flux_aper_b</th><th>src_cnts_aper_b</th><th>ra_b</th><th>dec_b</th><th>livetime</th><th>posid</th><th>theta</th><th>msid</th></tr></thead><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>2000-05-27T01:32:52</td><td>1.016e-14</td><td>53.492</td><td>03 32 50.25</td><td>-27 52 52.60</td><td>55967.0</td><td>14983</td><td>6.883</td><td>33150</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>2000-05-27T01:32:52</td><td>1.64e-14</td><td>112.29</td><td>03 32 37.77</td><td>-27 52 12.63</td><td>55967.0</td><td>14984</td><td>4.569</td><td>33164</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>2000-05-27T01:32:52</td><td>6.472e-15</td><td>43.247</td><td>03 32 43.22</td><td>-27 49 14.77</td><td>55967.0</td><td>14985</td><td>3.723</td><td>33183</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>2000-05-27T01:32:52</td><td>1.304e-14</td><td>69.774</td><td>03 32 59.85</td><td>-27 47 48.72</td><td>55967.0</td><td>14986</td><td>7.302</td><td>33198</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>2000-05-27T01:32:52</td><td>8.389e-14</td><td>594.61</td><td>03 32 08.67</td><td>-27 47 34.83</td><td>55970.2</td><td>14987</td><td>4.101</td><td>33202</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>2000-05-27T01:32:52</td><td>1.58e-14</td><td>90.888</td><td>03 32 29.98</td><td>-27 45 30.40</td><td>55967.0</td><td>14988</td><td>2.897</td><td>33140</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>2000-05-27T01:32:52</td><td>3.81e-15</td><td>24.617</td><td>03 32 30.22</td><td>-27 45 05.34</td><td>55967.0</td><td>14989</td><td>3.315</td><td>33142</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>2000-05-27T01:32:52</td><td>9.992e-15</td><td>73.295</td><td>03 32 10.93</td><td>-27 44 15.50</td><td>55967.0</td><td>14990</td><td>5.386</td><td>33143</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>2000-05-27T01:32:52</td><td>1.427e-14</td><td>100.45</td><td>03 32 36.71</td><td>-27 44 06.83</td><td>55967.0</td><td>14991</td><td>4.735</td><td>33144</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>2000-05-27T01:32:52</td><td>6.375e-15</td><td>59.919</td><td>03 32 10.52</td><td>-27 43 09.67</td><td>55967.0</td><td>14992</td><td>6.308</td><td>33145</td></tr><tr><td>441</td><td>0</td><td>AXAF Southern Deep Field - ACIS-I</td><td>2000-05-27T01:32:52</td><td>3.141e-14</td><td>172.74</td><td>03 32 47.89</td><td>-27 42 33.01</td><td>55967.0</td><td>14993</td><td>7.407</td><td>33148</td></tr><tr><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>2007-11-01T12:10:52</td><td>1.837e-14</td><td>114.47</td><td>03 32 26.97</td><td>-27 34 55.19</td><td>141416.0</td><td>44582</td><td>13.374</td><td>31730</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>2007-11-01T12:10:52</td><td>2.264e-15</td><td>23.458</td><td>03 32 58.54</td><td>-27 50 07.08</td><td>141397.4</td><td>44590</td><td>6.607</td><td>31719</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>2007-11-01T12:10:52</td><td>1.223e-15</td><td>32.509</td><td>03 32 02.48</td><td>-27 46 00.78</td><td>141400.5</td><td>44598</td><td>6.462</td><td>33132</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>2007-11-01T12:10:52</td><td>2.136e-15</td><td>23.913</td><td>03 32 32.06</td><td>-27 41 55.25</td><td>141381.9</td><td>44600</td><td>6.377</td><td>33210</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>2007-11-01T12:10:52</td><td>3.604e-16</td><td>12.814</td><td>03 32 14.53</td><td>-27 54 22.92</td><td>141400.5</td><td>44601</td><td>6.979</td><td>33178</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>2007-11-01T12:10:52</td><td>9.348e-15</td><td>64.379</td><td>03 31 52.61</td><td>-27 46 40.60</td><td>141400.5</td><td>44602</td><td>8.389</td><td>33226</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>2007-11-01T12:10:52</td><td>3.648e-16</td><td>10.546</td><td>03 33 04.26</td><td>-27 48 58.38</td><td>141397.4</td><td>44603</td><td>7.642</td><td>31739</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>2007-11-01T12:10:52</td><td>7.651e-15</td><td>105.91</td><td>03 32 39.83</td><td>-27 35 11.70</td><td>141416.0</td><td>44607</td><td>13.269</td><td>31732</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>2007-11-01T12:10:52</td><td>4.949e-15</td><td>32.443</td><td>03 32 46.32</td><td>-27 46 32.31</td><td>141381.9</td><td>44609</td><td>4.039</td><td>33227</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>2007-11-01T12:10:52</td><td>4.653e-15</td><td>35.693</td><td>03 32 40.84</td><td>-27 55 45.44</td><td>141400.5</td><td>44611</td><td>7.864</td><td>33197</td></tr><tr><td>8594</td><td>1</td><td>Chandra Deep Field-South</td><td>2007-11-01T12:10:52</td><td>5.546e-15</td><td>79.046</td><td>03 32 18.43</td><td>-27 37 04.62</td><td>141416.0</td><td>44629</td><td>11.483</td><td>31734</td></tr></table>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[6]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">master_sources</span><span class="o">.</span><span class="n">colnames</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[6]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+[&apos;msid&apos;, &apos;name&apos;, &apos;ra&apos;, &apos;dec&apos;]
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[7]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">obs_sources</span><span class="o">.</span><span class="n">colnames</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[7]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+[&apos;obsid&apos;,
+ &apos;obi&apos;,
+ &apos;targname&apos;,
+ &apos;gti_obs&apos;,
+ &apos;flux_aper_b&apos;,
+ &apos;src_cnts_aper_b&apos;,
+ &apos;ra_b&apos;,
+ &apos;dec_b&apos;,
+ &apos;livetime&apos;,
+ &apos;posid&apos;,
+ &apos;theta&apos;,
+ &apos;msid&apos;]
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[8]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="nb">len</span><span class="p">(</span><span class="n">master_sources</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[8]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+209
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[9]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="nb">len</span><span class="p">(</span><span class="n">obs_sources</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[9]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+1637
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[10]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">master_sources</span><span class="o">.</span><span class="n">dtype</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[10]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+dtype([(&apos;msid&apos;, &apos;&gt;i8&apos;), (&apos;name&apos;, &apos;S20&apos;), (&apos;ra&apos;, &apos;S12&apos;), (&apos;dec&apos;, &apos;S12&apos;)])
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[11]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">obs_sources</span><span class="o">.</span><span class="n">dtype</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[11]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+dtype([(&apos;obsid&apos;, &apos;&gt;i8&apos;), (&apos;obi&apos;, &apos;&gt;i8&apos;), (&apos;targname&apos;, &apos;S50&apos;), (&apos;gti_obs&apos;, &apos;S19&apos;), (&apos;flux_aper_b&apos;, &apos;&gt;f8&apos;), (&apos;src_cnts_aper_b&apos;, &apos;&gt;f8&apos;), (&apos;ra_b&apos;, &apos;S12&apos;), (&apos;dec_b&apos;, &apos;S12&apos;), (&apos;livetime&apos;, &apos;&gt;f8&apos;), (&apos;posid&apos;, &apos;&gt;i8&apos;), (&apos;theta&apos;, &apos;&gt;f8&apos;), (&apos;msid&apos;, &apos;&gt;i8&apos;)])
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>Normally one displays a table in IPython notebook by entering the variable name in a cell and pressing <code>shift-Enter</code>. In a terminal session the default method is using something like <code>print(my_table)</code>. In both cases the <code>Table</code> object prefers to display only a screenful of data to prevent having a zillion lines of output if the table is huge. If you really want to see all the data you can use the <a href="http://astropy.readthedocs.org/en/stable/api/astropy.table.table.Table.html#astropy.table.table.Table.pprint">Table.pprint</a> method.</p>
 <ul>
 <li>Display all the rows of the <code>master_sources</code> table using its <code>pprint()</code> method.</li>
@@ -2950,6 +2072,247 @@ In&nbsp;[30]:
 </ul>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[12]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">master_sources</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">max_lines</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+<span class="ansired"> msid          name              ra          dec     </span>
+<span class="ansired">------ -------------------- ------------ ------------</span>
+ 11567 CXO J033206.1-275449  03 32 06.10 -27 54 49.73
+ 11570 CXO J033151.1-275051  03 31 51.15 -27 50 51.66
+ 11574 CXO J033236.1-275126  03 32 36.19 -27 51 26.87
+ 11576 CXO J033253.0-275138  03 32 53.09 -27 51 38.28
+ 11580 CXO J033213.4-274856  03 32 13.44 -27 48 56.20
+ 11586 CXO J033218.8-275136  03 32 18.86 -27 51 36.08
+ 11595 CXO J033244.3-275141  03 32 44.32 -27 51 41.71
+ 11600 CXO J033234.7-275535  03 32 34.74 -27 55 35.82
+ 11692 CXO J033153.4-274843  03 31 53.49 -27 48 43.92
+ 11788 CXO J033202.2-275234  03 32 02.29 -27 52 34.42
+ 11791 CXO J033228.0-274332  03 32 28.09 -27 43 32.02
+ 11792 CXO J033233.7-274912  03 32 33.78 -27 49 12.12
+ 11797 CXO J033159.5-275018  03 31 59.58 -27 50 18.30
+ 11802 CXO J033243.4-274612  03 32 43.48 -27 46 12.33
+ 11807 CXO J033243.5-274633  03 32 43.50 -27 46 33.03
+ 11818 CXO J033244.3-275251  03 32 44.31 -27 52 51.25
+ 12009 CXO J033159.6-274948  03 31 59.65 -27 49 48.84
+ 12013 CXO J033309.9-274620  03 33 09.95 -27 46 20.51
+ 12072 CXO J033258.7-274635  03 32 58.70 -27 46 35.06
+ 12113 CXO J033303.6-274331  03 33 03.65 -27 43 31.08
+ 12118 CXO J033250.1-274135  03 32 50.17 -27 41 35.03
+ 12190 CXO J033304.9-274729  03 33 04.96 -27 47 29.26
+ 12219 CXO J033251.8-274229  03 32 51.88 -27 42 29.50
+ 12224 CXO J033309.2-274449  03 33 09.24 -27 44 49.67
+ 12232 CXO J033259.7-274325  03 32 59.75 -27 43 25.77
+ 12267 CXO J033157.4-274216  03 31 57.40 -27 42 16.39
+ 12281 CXO J033202.5-274430  03 32 02.59 -27 44 30.60
+ 12282 CXO J033208.4-274047  03 32 08.40 -27 40 47.07
+ 12285 CXO J033217.1-274137  03 32 17.13 -27 41 37.67
+ 12289 CXO J033210.9-274343  03 32 10.92 -27 43 43.98
+ 12301 CXO J033204.8-274128  03 32 04.86 -27 41 28.23
+ 12307 CXO J033153.9-274226  03 31 53.92 -27 42 26.27
+ 12312 CXO J033206.3-274023  03 32 06.31 -27 40 23.88
+ 12331 CXO J033144.9-274540  03 31 44.99 -27 45 40.72
+ 12337 CXO J033204.3-274245  03 32 04.30 -27 42 45.29
+ 12338 CXO J033208.0-274239  03 32 08.00 -27 42 39.62
+ 12339 CXO J033200.6-274216  03 32 00.68 -27 42 16.11
+ 12340 CXO J033208.2-274154  03 32 08.29 -27 41 54.06
+ 12342 CXO J033204.3-274026  03 32 04.31 -27 40 26.27
+ 12385 CXO J033157.7-274208  03 31 57.75 -27 42 08.68
+ 12399 CXO J033154.4-274159  03 31 54.42 -27 41 59.43
+ 12429 CXO J033205.8-274447  03 32 05.80 -27 44 47.51
+ 12430 CXO J033154.9-274310  03 31 54.92 -27 43 10.82
+ 12456 CXO J033215.8-273955  03 32 15.84 -27 39 55.15
+ 12461 CXO J033216.1-275645  03 32 16.17 -27 56 45.72
+ 12511 CXO J033200.8-275334  03 32 00.84 -27 53 34.05
+ 12518 CXO J033204.3-275648  03 32 04.33 -27 56 48.09
+ 12571 CXO J033158.4-275436  03 31 58.43 -27 54 36.43
+ 12578 CXO J033155.3-275448  03 31 55.37 -27 54 48.37
+ 12581 CXO J033225.0-274101  03 32 25.06 -27 41 01.46
+ 12619 CXO J033151.9-275326  03 31 51.97 -27 53 26.90
+ 12654 CXO J033213.1-275528  03 32 13.17 -27 55 28.48
+ 12730 CXO J033246.4-275413  03 32 46.48 -27 54 13.78
+ 12741 CXO J033303.0-275146  03 33 03.04 -27 51 46.85
+ 12821 CXO J033236.6-275808  03 32 36.69 -27 58 08.96
+ 12928 CXO J033221.4-275550  03 32 21.44 -27 55 50.52
+ 12936 CXO J033206.5-274642  03 32 06.54 -27 46 42.54
+ 13154 CXO J033231.3-273917  03 32 31.31 -27 39 17.81
+ 13169 CXO J033225.0-275514  03 32 25.02 -27 55 14.76
+ 13251 CXO J033249.2-274050  03 32 49.23 -27 40 50.23
+ 13258 CXO J033156.3-275131  03 31 56.39 -27 51 31.72
+ 13263 CXO J033147.7-274829  03 31 47.76 -27 48 29.56
+ 13264 CXO J033245.6-274213  03 32 45.66 -27 42 13.00
+ 13265 CXO J033230.3-273933  03 32 30.39 -27 39 33.84
+ 13267 CXO J033207.1-275229  03 32 07.10 -27 52 29.98
+ 13268 CXO J033229.7-274240  03 32 29.70 -27 42 40.99
+ 13416 CXO J033243.9-275454  03 32 43.97 -27 54 54.29
+ 13418 CXO J033247.5-274300  03 32 47.55 -27 43 00.56
+ 13462 CXO J033242.6-274340  03 32 42.65 -27 43 40.91
+ 13512 CXO J033201.4-274139  03 32 01.49 -27 41 39.28
+ 13515 CXO J033220.7-274528  03 32 20.76 -27 45 28.65
+ 13589 CXO J033240.1-273934  03 32 40.15 -27 39 34.93
+ 13593 CXO J033300.7-275520  03 33 00.75 -27 55 20.72
+ 13596 CXO J033218.3-274537  03 32 18.36 -27 45 37.10
+ 31695 CXO J033259.0-274339  03 32 59.05 -27 43 39.80
+ 31719 CXO J033258.4-275007  03 32 58.48 -27 50 07.48
+ 31720 CXO J033214.8-275103  03 32 14.85 -27 51 03.71
+ 31722 CXO J033232.7-275151  03 32 32.73 -27 51 51.16
+ 31725 CXO J033238.1-273945  03 32 38.12 -27 39 45.27
+ 31735 CXO J033146.6-274552  03 31 46.64 -27 45 52.75
+ 31736 CXO J033248.1-275256  03 32 48.18 -27 52 56.89
+ 31738 CXO J033231.3-275726  03 32 31.37 -27 57 26.33
+ 31739 CXO J033304.2-274857  03 33 04.24 -27 48 57.71
+ 31740 CXO J033220.8-275223  03 32 20.82 -27 52 23.25
+ 31741 CXO J033244.3-274819  03 32 44.38 -27 48 19.15
+ 31742 CXO J033243.0-274621  03 32 43.02 -27 46 21.20
+ 31743 CXO J033219.8-274519  03 32 19.86 -27 45 19.55
+ 31744 CXO J033235.9-274058  03 32 35.94 -27 40 58.65
+ 33022 CXO J033238.0-274626  03 32 38.03 -27 46 26.55
+ 33028 CXO J033207.6-275213  03 32 07.64 -27 52 13.60
+ 33044 CXO J033241.8-275202  03 32 41.85 -27 52 02.57
+ 33102 CXO J033257.5-274549  03 32 57.58 -27 45 49.08
+ 33104 CXO J033229.0-275730  03 32 29.01 -27 57 30.34
+ 33106 CXO J033218.9-274755  03 32 18.99 -27 47 55.73
+ 33107 CXO J033218.2-275241  03 32 18.21 -27 52 41.31
+ 33112 CXO J033229.7-275145  03 32 29.73 -27 51 45.69
+ 33114 CXO J033233.5-275418  03 32 33.58 -27 54 18.78
+ 33115 CXO J033225.4-275109  03 32 25.40 -27 51 09.86
+ 33123 CXO J033205.3-274643  03 32 05.34 -27 46 43.95
+ 33126 CXO J033259.3-274858  03 32 59.31 -27 48 58.82
+ 33127 CXO J033310.1-274842  03 33 10.19 -27 48 42.26
+ 33128 CXO J033244.5-274835  03 32 44.59 -27 48 35.77
+ 33129 CXO J033226.9-274105  03 32 26.99 -27 41 05.37
+ 33130 CXO J033226.4-274035  03 32 26.48 -27 40 35.91
+ 33131 CXO J033222.5-274604  03 32 22.53 -27 46 04.11
+ 33132 CXO J033202.4-274600  03 32 02.45 -27 46 00.55
+ 33133 CXO J033203.6-274604  03 32 03.67 -27 46 04.01
+ 33134 CXO J033157.0-275108  03 31 57.04 -27 51 08.37
+ 33136 CXO J033242.0-275702  03 32 42.03 -27 57 02.12
+ 33137 CXO J033233.0-274547  03 32 33.01 -27 45 47.69
+ 33140 CXO J033229.9-274530  03 32 29.97 -27 45 30.16
+ 33141 CXO J033230.0-274523  03 32 30.05 -27 45 23.81
+ 33142 CXO J033230.2-274504  03 32 30.21 -27 45 04.88
+ 33143 CXO J033210.9-274415  03 32 10.92 -27 44 15.22
+ 33144 CXO J033236.7-274406  03 32 36.71 -27 44 06.69
+ 33145 CXO J033210.5-274309  03 32 10.51 -27 43 09.39
+ 33146 CXO J033217.1-274303  03 32 17.15 -27 43 03.62
+ 33147 CXO J033217.1-275220  03 32 17.17 -27 52 20.83
+ 33148 CXO J033247.8-274232  03 32 47.88 -27 42 32.97
+ 33149 CXO J033238.9-275700  03 32 38.90 -27 57 00.52
+ 33150 CXO J033250.2-275252  03 32 50.24 -27 52 52.16
+ 33151 CXO J033212.9-275236  03 32 12.94 -27 52 36.76
+ 33152 CXO J033214.9-275127  03 32 14.98 -27 51 27.31
+ 33153 CXO J033252.8-275119  03 32 52.88 -27 51 19.86
+ 33154 CXO J033211.3-275213  03 32 11.39 -27 52 13.76
+ 33155 CXO J033229.8-275106  03 32 29.85 -27 51 06.09
+ 33156 CXO J033214.0-275100  03 32 14.00 -27 51 00.79
+ 33157 CXO J033218.3-275055  03 32 18.34 -27 50 55.29
+ 33158 CXO J033158.2-275041  03 31 58.27 -27 50 41.96
+ 33159 CXO J033259.6-275030  03 32 59.67 -27 50 30.30
+ 33160 CXO J033152.4-275017  03 31 52.47 -27 50 17.71
+ 33161 CXO J033206.1-274927  03 32 06.12 -27 49 27.96
+ 33162 CXO J033210.9-274856  03 32 10.96 -27 48 56.33
+ 33163 CXO J033239.6-274850  03 32 39.66 -27 48 50.92
+ 33164 CXO J033237.7-275212  03 32 37.76 -27 52 12.44
+ 33165 CXO J033158.0-274834  03 31 58.09 -27 48 34.11
+ 33166 CXO J033302.6-274823  03 33 02.62 -27 48 23.01
+ 33167 CXO J033208.0-274657  03 32 08.00 -27 46 57.53
+ 33168 CXO J033201.4-274647  03 32 01.41 -27 46 47.36
+ 33169 CXO J033211.7-274628  03 32 11.77 -27 46 28.37
+ 33170 CXO J033239.7-274611  03 32 39.72 -27 46 11.63
+ 33171 CXO J033303.6-274518  03 33 03.62 -27 45 18.66
+ 33172 CXO J033239.0-274439  03 32 39.03 -27 44 39.57
+ 33173 CXO J033241.8-274400  03 32 41.87 -27 44 00.20
+ 33174 CXO J033244.4-274940  03 32 44.45 -27 49 40.28
+ 33175 CXO J033213.2-274241  03 32 13.23 -27 42 41.20
+ 33176 CXO J033225.1-274219  03 32 25.15 -27 42 19.07
+ 33177 CXO J033234.9-275511  03 32 34.95 -27 55 11.36
+ 33178 CXO J033214.5-275421  03 32 14.57 -27 54 21.45
+ 33179 CXO J033205.1-275355  03 32 05.17 -27 53 55.09
+ 33180 CXO J033200.5-275353  03 32 00.55 -27 53 53.13
+ 33181 CXO J033203.8-275329  03 32 03.89 -27 53 29.21
+ 33182 CXO J033235.2-275317  03 32 35.21 -27 53 17.93
+ 33183 CXO J033243.2-274914  03 32 43.22 -27 49 14.39
+ 33184 CXO J033259.7-274626  03 32 59.77 -27 46 26.42
+ 33185 CXO J033301.5-274542  03 33 01.57 -27 45 42.57
+ 33186 CXO J033254.7-274503  03 32 54.72 -27 45 03.34
+ 33187 CXO J033209.4-274807  03 32 09.45 -27 48 07.02
+ 33188 CXO J033201.6-274327  03 32 01.60 -27 43 27.42
+ 33189 CXO J033200.3-274320  03 32 00.38 -27 43 20.06
+ 33190 CXO J033225.6-274306  03 32 25.67 -27 43 06.05
+ 33191 CXO J033214.9-274225  03 32 14.98 -27 42 25.23
+ 33192 CXO J033227.6-274145  03 32 27.62 -27 41 45.26
+ 33193 CXO J033226.7-274146  03 32 26.76 -27 41 46.05
+ 33194 CXO J033224.2-274126  03 32 24.25 -27 41 26.81
+ 33195 CXO J033211.0-274054  03 32 11.01 -27 40 54.29
+ 33196 CXO J033224.8-275600  03 32 24.85 -27 56 00.17
+ 33197 CXO J033240.8-275546  03 32 40.85 -27 55 46.61
+ 33198 CXO J033259.8-274748  03 32 59.85 -27 47 48.17
+ 33199 CXO J033249.6-275453  03 32 49.66 -27 54 53.98
+ 33200 CXO J033249.1-275504  03 32 49.14 -27 55 04.31
+ 33201 CXO J033203.0-274450  03 32 03.07 -27 44 50.30
+ 33202 CXO J033208.6-274734  03 32 08.66 -27 47 34.62
+ 33203 CXO J033226.6-274014  03 32 26.65 -27 40 13.99
+ 33204 CXO J033216.2-273930  03 32 16.21 -27 39 30.78
+ 33205 CXO J033150.4-275152  03 31 50.41 -27 51 52.06
+ 33206 CXO J033307.6-275127  03 33 07.60 -27 51 27.13
+ 33207 CXO J033147.9-275045  03 31 47.96 -27 50 45.97
+ 33208 CXO J033242.8-274702  03 32 42.82 -27 47 02.69
+ 33209 CXO J033229.8-274424  03 32 29.83 -27 44 24.43
+ 33210 CXO J033232.1-274155  03 32 32.10 -27 41 55.49
+ 33211 CXO J033247.0-275334  03 32 47.07 -27 53 34.51
+ 33212 CXO J033152.3-274753  03 31 52.30 -27 47 53.05
+ 33213 CXO J033243.0-274845  03 32 43.02 -27 48 45.26
+ 33214 CXO J033246.8-274212  03 32 46.80 -27 42 12.96
+ 33218 CXO J033220.4-274732  03 32 20.47 -27 47 32.59
+ 33219 CXO J033255.4-274751  03 32 55.49 -27 47 51.70
+ 33220 CXO J033204.4-274643  03 32 04.49 -27 46 43.23
+ 33221 CXO J033244.0-274635  03 32 44.01 -27 46 35.78
+ 33222 CXO J033228.8-274355  03 32 28.81 -27 43 55.97
+ 33223 CXO J033233.3-274236  03 32 33.33 -27 42 36.22
+ 33225 CXO J033305.8-274649  03 33 05.89 -27 46 49.79
+ 33226 CXO J033152.5-274642  03 31 52.54 -27 46 42.85
+ 33227 CXO J033246.3-274632  03 32 46.33 -27 46 32.30
+ 33228 CXO J033239.0-274602  03 32 39.08 -27 46 02.08
+ 33229 CXO J033220.0-274447  03 32 20.05 -27 44 47.25
+ 33230 CXO J033238.3-275552  03 32 38.33 -27 55 52.82
+ 33231 CXO J033201.1-275033  03 32 01.12 -27 50 33.13
+ 33232 CXO J033225.9-274514  03 32 25.96 -27 45 14.82
+ 33233 CXO J033230.0-274404  03 32 30.01 -27 44 04.50
+ 33234 CXO J033237.4-274000  03 32 37.44 -27 40 00.74
+ 33235 CXO J033149.4-275034  03 31 49.46 -27 50 34.20
+ 33236 CXO J033149.4-274634  03 31 49.45 -27 46 34.46
+ 33239 CXO J033222.7-275224  03 32 22.76 -27 52 24.10
+ 33240 CXO J033226.5-274801  03 32 26.57 -27 48 01.82
+ 37759 CXO J033309.5-274603  03 33 09.52 -27 46 03.30
+148105 CXO J033234.2-273906  03 32 34.21 -27 39 06.46
+148106 CXO J033234.4-273913  03 32 34.44 -27 39 13.28
+148107 CXO J033247.9-274148  03 32 47.91 -27 41 48.03
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -2982,6 +2345,96 @@ In&nbsp;[30]:
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[13]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">obs_sources</span><span class="o">.</span><span class="n">remove_column</span><span class="p">(</span><span class="s">&#39;obi&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[14]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">obs_sources</span><span class="o">.</span><span class="n">rename_column</span><span class="p">(</span><span class="s">&#39;gti_obs&#39;</span><span class="p">,</span> <span class="s">&#39;obs_date&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[15]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">obs_sources</span><span class="p">[</span><span class="s">&#39;src_rate_aper_b&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">obs_sources</span><span class="p">[</span><span class="s">&#39;src_cnts_aper_b&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">obs_sources</span><span class="p">[</span><span class="s">&#39;livetime&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[16]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">obs_sources</span><span class="o">.</span><span class="n">colnames</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[16]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+[&apos;obsid&apos;,
+ &apos;targname&apos;,
+ &apos;obs_date&apos;,
+ &apos;flux_aper_b&apos;,
+ &apos;src_cnts_aper_b&apos;,
+ &apos;ra_b&apos;,
+ &apos;dec_b&apos;,
+ &apos;livetime&apos;,
+ &apos;posid&apos;,
+ &apos;theta&apos;,
+ &apos;msid&apos;,
+ &apos;src_rate_aper_b&apos;]
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3005,10 +2458,126 @@ In&nbsp;[30]:
 <pre><code>import matplotlib.pyplot as plt
 %matplotlib inline</code></pre>
 <ul>
-<li>Now make the same plot but using only sources within 4 arcmin of the center. <em>HINT</em>: use a boolean mask to select values of <code>theta</code> that are less than 4.0.</li>
+<li>Also make the same plot but using only sources within 4 arcmin of the center. <em>HINT</em>: use a boolean mask to select values of <code>theta</code> that are less than 4.0.</li>
 </ul>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[17]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">vals</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">patches</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">obs_sources</span><span class="p">[</span><span class="s">&#39;flux_aper_b&#39;</span><span class="p">]),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">ok</span> <span class="o">=</span> <span class="n">obs_sources</span><span class="p">[</span><span class="s">&#39;theta&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">4</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">obs_sources</span><span class="p">[</span><span class="s">&#39;flux_aper_b&#39;</span><span class="p">][</span><span class="n">ok</span><span class="p">]),</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+B3x+FA2lJgSuAAAAAElFTkSuQmCC
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -3036,6 +2605,331 @@ In&nbsp;[30]:
 </ul>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[18]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">astropy.table</span> <span class="kn">import</span> <span class="n">join</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[19]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">sources</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">master_sources</span><span class="p">,</span> <span class="n">obs_sources</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[20]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sources</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">obs_sources</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+(1555, 1637)
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[21]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="c"># Some of the obs_sources had an `msid` value that is not in the `master_sources` table</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[22]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="kn">import</span> <span class="n">SkyCoord</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[23]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">master_c</span> <span class="o">=</span> <span class="n">SkyCoord</span><span class="p">(</span><span class="n">sources</span><span class="p">[</span><span class="s">&#39;ra&#39;</span><span class="p">],</span> <span class="n">sources</span><span class="p">[</span><span class="s">&#39;dec&#39;</span><span class="p">],</span> <span class="n">unit</span><span class="o">=</span><span class="s">&#39;hourangle,deg&#39;</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="s">&#39;icrs&#39;</span><span class="p">)</span>
+<span class="n">obs_c</span> <span class="o">=</span> <span class="n">SkyCoord</span><span class="p">(</span><span class="n">sources</span><span class="p">[</span><span class="s">&#39;ra_b&#39;</span><span class="p">],</span> <span class="n">sources</span><span class="p">[</span><span class="s">&#39;dec_b&#39;</span><span class="p">],</span> <span class="n">unit</span><span class="o">=</span><span class="s">&#39;hourangle,deg&#39;</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="s">&#39;icrs&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[24]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">((</span><span class="n">master_c</span><span class="o">.</span><span class="n">ra</span> <span class="o">-</span> <span class="n">obs_c</span><span class="o">.</span><span class="n">ra</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="n">master_c</span><span class="o">.</span><span class="n">dec</span> <span class="o">-</span> <span class="n">obs_c</span><span class="o">.</span><span class="n">dec</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="s">&#39;.&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[24]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+[&lt;matplotlib.lines.Line2D at 0x10749e510&gt;]
+</pre>
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+gg==
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -3066,6 +2960,96 @@ In&nbsp;[30]:
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[25]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">g_sources</span> <span class="o">=</span> <span class="n">sources</span><span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="s">&#39;msid&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[26]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">g_sources</span><span class="o">.</span><span class="n">groups</span><span class="o">.</span><span class="n">indices</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[26]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+array([ 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  3,  1,
+        1,  1,  1,  1,  1,  1,  1,  1,  1,  5,  3,  1,  1,  2,  1,  1,  1,
+        1,  3,  2,  1,  1,  1,  1,  2,  1,  1,  2,  1,  4,  2,  1, 18,  5,
+        4,  9, 11,  3,  7,  2,  2,  1,  1,  1,  2,  1, 14,  7, 15,  1, 10,
+       12,  2,  2,  1,  1,  2, 17, 18,  5, 21, 21, 14, 15, 18,  4, 12, 16,
+       21, 16, 21, 21, 21, 21, 20, 19, 21, 21, 21, 18, 21, 21, 20, 11, 20,
+       14, 21,  8, 13,  6, 16, 18, 21, 11, 20, 14, 21, 11, 14, 21,  7,  7,
+       13, 21, 21, 14,  5, 11,  6, 14,  7, 20, 18, 13,  6, 19, 20, 20, 21,
+       11, 17,  6, 17,  9, 17, 10, 21,  8,  4,  7, 21, 20, 13,  6, 12,  8,
+       10,  4,  5,  5,  2,  4,  4, 11,  3,  4,  6,  6,  5,  3, 14,  9, 16,
+        3,  2,  1,  5,  5,  7,  1,  5,  1,  1,  3, 15])
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[27]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">g_sources</span><span class="o">.</span><span class="n">groups</span><span class="p">[</span><span class="mi">50</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[27]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<table id="table4416720272"><thead><tr><th>msid</th><th>name</th><th>ra</th><th>dec</th><th>obsid</th><th>targname</th><th>obs_date</th><th>flux_aper_b</th><th>src_cnts_aper_b</th><th>ra_b</th><th>dec_b</th><th>livetime</th><th>posid</th><th>theta</th><th>src_rate_aper_b</th></tr></thead><tr><td>31719</td><td>CXO J033258.4-275007</td><td>03 32 58.48</td><td>-27 50 07.48</td><td>8595</td><td>Chandra Deep Field-South</td><td>2007-10-19T14:33:54</td><td>1.342e-15</td><td>22.475</td><td>03 32 58.50</td><td>-27 50 07.45</td><td>115413.1</td><td>17633</td><td>6.731</td><td>0.000194735259689</td></tr><tr><td>31719</td><td>CXO J033258.4-275007</td><td>03 32 58.48</td><td>-27 50 07.48</td><td>582</td><td>AXAF Southern Deep Field</td><td>2000-06-03T02:59:50</td><td>4.272e-15</td><td>24.844</td><td>03 32 58.48</td><td>-27 50 09.86</td><td>130584.4</td><td>15461</td><td>7.209</td><td>0.000190252434441</td></tr><tr><td>31719</td><td>CXO J033258.4-275007</td><td>03 32 58.48</td><td>-27 50 07.48</td><td>8596</td><td>Chandra Deep Field-South</td><td>2007-10-24T13:44:48</td><td>6.401e-16</td><td>15.749</td><td>03 32 58.29</td><td>-27 50 04.95</td><td>115110.3</td><td>17863</td><td>6.605</td><td>0.000136816601121</td></tr><tr><td>31719</td><td>CXO J033258.4-275007</td><td>03 32 58.48</td><td>-27 50 07.48</td><td>8594</td><td>Chandra Deep Field-South</td><td>2007-11-01T12:10:52</td><td>2.264e-15</td><td>23.458</td><td>03 32 58.54</td><td>-27 50 07.08</td><td>141397.4</td><td>44590</td><td>6.607</td><td>0.000165901211762</td></tr><tr><td>31719</td><td>CXO J033258.4-275007</td><td>03 32 58.48</td><td>-27 50 07.48</td><td>2405</td><td>AXAF SOUTHERN DEEP F</td><td>2000-12-11T08:24:19</td><td>1.994e-15</td><td>17.255</td><td>03 32 58.51</td><td>-27 50 07.28</td><td>59629.5</td><td>15119</td><td>6.712</td><td>0.000289370194283</td></tr></table>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3087,6 +3071,136 @@ In&nbsp;[30]:
 <li>Compute the mean of all columns for each unique source (i.e. each group) using <code>aggregate</code> and the <code>np.mean</code> function. Call this table <code>g_sources_mean</code>.</li>
 <li>Notice that aggregation cannot form a mean for certain columns and these are dropped from the output. Use the <code>join()</code> function to restore the <code>master_sources</code> information to <code>g_sources_mean</code>.</li>
 </ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[28]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">g_sources_mean</span> <span class="o">=</span> <span class="n">g_sources</span><span class="o">.</span><span class="n">groups</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>
+WARNING: Cannot aggregate column &apos;name&apos; [astropy.table.groups]
+WARNING:astropy:Cannot aggregate column &apos;name&apos;
+WARNING: Cannot aggregate column &apos;ra&apos; [astropy.table.groups]
+WARNING:astropy:Cannot aggregate column &apos;ra&apos;
+WARNING: Cannot aggregate column &apos;dec&apos; [astropy.table.groups]
+WARNING:astropy:Cannot aggregate column &apos;dec&apos;
+WARNING: Cannot aggregate column &apos;targname&apos; [astropy.table.groups]
+WARNING:astropy:Cannot aggregate column &apos;targname&apos;
+WARNING: Cannot aggregate column &apos;obs_date&apos; [astropy.table.groups]
+WARNING:astropy:Cannot aggregate column &apos;obs_date&apos;
+WARNING: Cannot aggregate column &apos;ra_b&apos; [astropy.table.groups]
+WARNING:astropy:Cannot aggregate column &apos;ra_b&apos;
+WARNING: Cannot aggregate column &apos;dec_b&apos; [astropy.table.groups]
+WARNING:astropy:Cannot aggregate column &apos;dec_b&apos;
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[29]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">g_sources_mean</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[29]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<table id="table4416566800"><thead><tr><th>msid</th><th>obsid</th><th>flux_aper_b</th><th>src_cnts_aper_b</th><th>livetime</th><th>posid</th><th>theta</th><th>src_rate_aper_b</th></tr></thead><tr><td>11567</td><td>582.0</td><td>4.84e-15</td><td>35.507</td><td>130584.4</td><td>15460.0</td><td>7.987</td><td>0.00027190843623</td></tr><tr><td>11570</td><td>582.0</td><td>5.134e-15</td><td>55.591</td><td>130584.4</td><td>15468.0</td><td>8.321</td><td>0.000425709349662</td></tr><tr><td>11574</td><td>582.0</td><td>1.371e-15</td><td>17.829</td><td>130584.4</td><td>15498.0</td><td>3.743</td><td>0.000136532388249</td></tr><tr><td>11576</td><td>582.0</td><td>1.136e-15</td><td>10.197</td><td>130584.4</td><td>15502.0</td><td>6.666</td><td>7.80874285137e-05</td></tr><tr><td>11580</td><td>582.0</td><td>2.37e-15</td><td>16.011</td><td>130584.4</td><td>15509.0</td><td>3.057</td><td>0.000122610357746</td></tr><tr><td>11586</td><td>582.0</td><td>2.092e-15</td><td>15.765</td><td>130584.4</td><td>15382.0</td><td>3.75</td><td>0.000120726518635</td></tr><tr><td>11595</td><td>582.0</td><td>9.126e-16</td><td>25.018</td><td>130584.4</td><td>15418.0</td><td>5.117</td><td>0.000191584906007</td></tr><tr><td>11600</td><td>582.0</td><td>3.446e-15</td><td>23.171</td><td>130584.4</td><td>15431.0</td><td>7.488</td><td>0.00017744079691</td></tr><tr><td>11692</td><td>1672.0</td><td>2.476e-15</td><td>17.303</td><td>95138.1</td><td>15596.0</td><td>7.792</td><td>0.000181872456986</td></tr><tr><td>11788</td><td>2312.0</td><td>2.024e-16</td><td>20.78</td><td>123689.2</td><td>15863.0</td><td>6.978</td><td>0.000168001733377</td></tr><tr><td>11791</td><td>2312.0</td><td>2.085e-15</td><td>17.554</td><td>123686.1</td><td>15871.0</td><td>5.081</td><td>0.000141923789334</td></tr><tr><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr><tr><td>33230</td><td>2312.5</td><td>2.2935e-15</td><td>21.924</td><td>127047.0</td><td>30128.5</td><td>7.5865</td><td>0.000173165944648</td></tr><tr><td>33231</td><td>2313.0</td><td>1.486e-15</td><td>14.39</td><td>130401.7</td><td>44388.0</td><td>6.259</td><td>0.000110351322107</td></tr><tr><td>33232</td><td>4105.0</td><td>1.802e-15</td><td>16.0434</td><td>114748.98</td><td>27344.2</td><td>3.1536</td><td>0.00015063014691</td></tr><tr><td>33233</td><td>5932.2</td><td>1.91088e-15</td><td>24.2146</td><td>120034.52</td><td>22973.8</td><td>4.2568</td><td>0.000201076953671</td></tr><tr><td>33234</td><td>6971.57142857</td><td>5.16657142857e-15</td><td>40.4452857143</td><td>84860.6</td><td>17128.2857143</td><td>8.47985714286</td><td>0.000491974762848</td></tr><tr><td>33235</td><td>2313.0</td><td>1.115e-15</td><td>37.418</td><td>130401.7</td><td>44398.0</td><td>8.744</td><td>0.000286944111925</td></tr><tr><td>33236</td><td>4694.8</td><td>6.7688e-15</td><td>43.9302</td><td>110817.68</td><td>22787.0</td><td>8.804</td><td>0.000398015585979</td></tr><tr><td>33239</td><td>2313.0</td><td>1.776e-15</td><td>13.234</td><td>130407.9</td><td>44316.0</td><td>3.938</td><td>0.000101481582021</td></tr><tr><td>33240</td><td>2313.0</td><td>8.431e-16</td><td>11.136</td><td>130398.6</td><td>44286.0</td><td>0.697</td><td>8.5399689874e-05</td></tr><tr><td>37759</td><td>2074.33333333</td><td>4.34966666667e-15</td><td>32.363</td><td>116558.6</td><td>25248.0</td><td>9.44766666667</td><td>0.000284364926452</td></tr><tr><td>148107</td><td>7432.0</td><td>1.79882666667e-14</td><td>145.463133333</td><td>85670.4733333</td><td>20396.0666667</td><td>7.70033333333</td><td>0.00168226262547</td></tr></table>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[30]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">g_sources_mean</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">master_sources</span><span class="p">,</span> <span class="n">g_sources_mean</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[31]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">g_sources_mean</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[31]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<table id="table4408491408"><thead><tr><th>msid</th><th>name</th><th>ra</th><th>dec</th><th>obsid</th><th>flux_aper_b</th><th>src_cnts_aper_b</th><th>livetime</th><th>posid</th><th>theta</th><th>src_rate_aper_b</th></tr></thead><tr><td>11567</td><td>CXO J033206.1-275449</td><td>03 32 06.10</td><td>-27 54 49.73</td><td>582.0</td><td>4.84e-15</td><td>35.507</td><td>130584.4</td><td>15460.0</td><td>7.987</td><td>0.00027190843623</td></tr><tr><td>11570</td><td>CXO J033151.1-275051</td><td>03 31 51.15</td><td>-27 50 51.66</td><td>582.0</td><td>5.134e-15</td><td>55.591</td><td>130584.4</td><td>15468.0</td><td>8.321</td><td>0.000425709349662</td></tr><tr><td>11574</td><td>CXO J033236.1-275126</td><td>03 32 36.19</td><td>-27 51 26.87</td><td>582.0</td><td>1.371e-15</td><td>17.829</td><td>130584.4</td><td>15498.0</td><td>3.743</td><td>0.000136532388249</td></tr><tr><td>11576</td><td>CXO J033253.0-275138</td><td>03 32 53.09</td><td>-27 51 38.28</td><td>582.0</td><td>1.136e-15</td><td>10.197</td><td>130584.4</td><td>15502.0</td><td>6.666</td><td>7.80874285137e-05</td></tr><tr><td>11580</td><td>CXO J033213.4-274856</td><td>03 32 13.44</td><td>-27 48 56.20</td><td>582.0</td><td>2.37e-15</td><td>16.011</td><td>130584.4</td><td>15509.0</td><td>3.057</td><td>0.000122610357746</td></tr><tr><td>11586</td><td>CXO J033218.8-275136</td><td>03 32 18.86</td><td>-27 51 36.08</td><td>582.0</td><td>2.092e-15</td><td>15.765</td><td>130584.4</td><td>15382.0</td><td>3.75</td><td>0.000120726518635</td></tr><tr><td>11595</td><td>CXO J033244.3-275141</td><td>03 32 44.32</td><td>-27 51 41.71</td><td>582.0</td><td>9.126e-16</td><td>25.018</td><td>130584.4</td><td>15418.0</td><td>5.117</td><td>0.000191584906007</td></tr><tr><td>11600</td><td>CXO J033234.7-275535</td><td>03 32 34.74</td><td>-27 55 35.82</td><td>582.0</td><td>3.446e-15</td><td>23.171</td><td>130584.4</td><td>15431.0</td><td>7.488</td><td>0.00017744079691</td></tr><tr><td>11692</td><td>CXO J033153.4-274843</td><td>03 31 53.49</td><td>-27 48 43.92</td><td>1672.0</td><td>2.476e-15</td><td>17.303</td><td>95138.1</td><td>15596.0</td><td>7.792</td><td>0.000181872456986</td></tr><tr><td>11788</td><td>CXO J033202.2-275234</td><td>03 32 02.29</td><td>-27 52 34.42</td><td>2312.0</td><td>2.024e-16</td><td>20.78</td><td>123689.2</td><td>15863.0</td><td>6.978</td><td>0.000168001733377</td></tr><tr><td>11791</td><td>CXO J033228.0-274332</td><td>03 32 28.09</td><td>-27 43 32.02</td><td>2312.0</td><td>2.085e-15</td><td>17.554</td><td>123686.1</td><td>15871.0</td><td>5.081</td><td>0.000141923789334</td></tr><tr><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr><tr><td>33230</td><td>CXO J033238.3-275552</td><td>03 32 38.33</td><td>-27 55 52.82</td><td>2312.5</td><td>2.2935e-15</td><td>21.924</td><td>127047.0</td><td>30128.5</td><td>7.5865</td><td>0.000173165944648</td></tr><tr><td>33231</td><td>CXO J033201.1-275033</td><td>03 32 01.12</td><td>-27 50 33.13</td><td>2313.0</td><td>1.486e-15</td><td>14.39</td><td>130401.7</td><td>44388.0</td><td>6.259</td><td>0.000110351322107</td></tr><tr><td>33232</td><td>CXO J033225.9-274514</td><td>03 32 25.96</td><td>-27 45 14.82</td><td>4105.0</td><td>1.802e-15</td><td>16.0434</td><td>114748.98</td><td>27344.2</td><td>3.1536</td><td>0.00015063014691</td></tr><tr><td>33233</td><td>CXO J033230.0-274404</td><td>03 32 30.01</td><td>-27 44 04.50</td><td>5932.2</td><td>1.91088e-15</td><td>24.2146</td><td>120034.52</td><td>22973.8</td><td>4.2568</td><td>0.000201076953671</td></tr><tr><td>33234</td><td>CXO J033237.4-274000</td><td>03 32 37.44</td><td>-27 40 00.74</td><td>6971.57142857</td><td>5.16657142857e-15</td><td>40.4452857143</td><td>84860.6</td><td>17128.2857143</td><td>8.47985714286</td><td>0.000491974762848</td></tr><tr><td>33235</td><td>CXO J033149.4-275034</td><td>03 31 49.46</td><td>-27 50 34.20</td><td>2313.0</td><td>1.115e-15</td><td>37.418</td><td>130401.7</td><td>44398.0</td><td>8.744</td><td>0.000286944111925</td></tr><tr><td>33236</td><td>CXO J033149.4-274634</td><td>03 31 49.45</td><td>-27 46 34.46</td><td>4694.8</td><td>6.7688e-15</td><td>43.9302</td><td>110817.68</td><td>22787.0</td><td>8.804</td><td>0.000398015585979</td></tr><tr><td>33239</td><td>CXO J033222.7-275224</td><td>03 32 22.76</td><td>-27 52 24.10</td><td>2313.0</td><td>1.776e-15</td><td>13.234</td><td>130407.9</td><td>44316.0</td><td>3.938</td><td>0.000101481582021</td></tr><tr><td>33240</td><td>CXO J033226.5-274801</td><td>03 32 26.57</td><td>-27 48 01.82</td><td>2313.0</td><td>8.431e-16</td><td>11.136</td><td>130398.6</td><td>44286.0</td><td>0.697</td><td>8.5399689874e-05</td></tr><tr><td>37759</td><td>CXO J033309.5-274603</td><td>03 33 09.52</td><td>-27 46 03.30</td><td>2074.33333333</td><td>4.34966666667e-15</td><td>32.363</td><td>116558.6</td><td>25248.0</td><td>9.44766666667</td><td>0.000284364926452</td></tr><tr><td>148107</td><td>CXO J033247.9-274148</td><td>03 32 47.91</td><td>-27 41 48.03</td><td>7432.0</td><td>1.79882666667e-14</td><td>145.463133333</td><td>85670.4733333</td><td>20396.0666667</td><td>7.70033333333</td><td>0.00168226262547</td></tr></table>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="#Tables---solutions">Back to top</a></p>
 </div>
 </div>
 </div>

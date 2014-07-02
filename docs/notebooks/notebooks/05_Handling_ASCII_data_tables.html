@@ -3,7 +3,7 @@
 <head>
 
 <meta charset="utf-8" />
-<title>Unit_Conversion</title>
+<title>05_Handling_ASCII_data_tables</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -1277,6 +1277,7 @@ a .icon-rotate-90:before,a .icon-rotate-180:before,a .icon-rotate-270:before,a .
 .icon-weibo:before{content:"\f18a"}
 .icon-renren:before{content:"\f18b"}
 code{color:#000}
+pre{font-size:inherit;line-height:inherit}
 .border-box-sizing{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
 .corner-all{border-radius:4px}
 .hbox{display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
@@ -1340,6 +1341,8 @@ input.nbname_input,input.engine_num_input{padding-top:3px;padding-bottom:3px;hei
 input.engine_num_input{width:60px}
 .highlight_text{color:#00f}
 #project_name>.breadcrumb{padding:0;margin-bottom:0;background-color:transparent;font-weight:bold}
+.folder_icon:before{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;*margin-right:.3em;content:"\f114"}
+.notebook_icon:before{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;*margin-right:.3em;content:"\f02d"}
 .ansibold{font-weight:bold}
 .ansiblack{color:#000}
 .ansired{color:#8b0000}
@@ -1362,15 +1365,15 @@ div.cell.edit_mode{border-radius:4px;border:thin #008000 solid}
 div.cell{width:100%;padding:5px 5px 5px 0;margin:0;outline:none}
 div.prompt{min-width:11ex;padding:.4em;margin:0;font-family:monospace;text-align:right;line-height:1.21429em}
 @media (max-width:480px){div.prompt{text-align:left}}div.inner_cell{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
-div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7}
+div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7;line-height:1.21429em}
 div.prompt:empty{padding-top:0;padding-bottom:0}
 div.input{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
 @media (max-width:480px){div.input{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.input_prompt{color:#000080;border-top:1px solid transparent}
 div.input_area>div.highlight{margin:.4em;border:none;padding:0;background-color:transparent}
-div.input_area>div.highlight>pre{margin:0;border:0;padding:0;background-color:transparent;font-size:14px;line-height:1.21429em}
+div.input_area>div.highlight>pre{margin:0;border:none;padding:0;background-color:transparent}
 .CodeMirror{line-height:1.21429em;height:auto;background:none;}
 .CodeMirror-scroll{overflow-y:hidden;overflow-x:auto}
-@-moz-document url-prefix(){.CodeMirror-scroll{overflow-x:hidden}}.CodeMirror-lines{padding:.4em}
+.CodeMirror-lines{padding:.4em}
 .CodeMirror-linenumber{padding:0 8px 0 4px}
 .CodeMirror-gutters{border-bottom-left-radius:4px;border-top-left-radius:4px}
 .CodeMirror pre{padding:0;border:0;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
@@ -1405,7 +1408,7 @@ div.output_area{padding:0;page-break-inside:avoid;display:-webkit-box;-webkit-bo
 div.output_area .rendered_html table{margin-left:0;margin-right:0}
 div.output_area .rendered_html img{margin-left:0;margin-right:0}
 .output{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}
-@media (max-width:480px){div.output_area{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;color:#000;background-color:transparent;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;line-height:inherit}
+@media (max-width:480px){div.output_area{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;vertical-align:baseline;color:#000;background-color:transparent;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
 div.output_subarea{padding:.4em .4em 0 .4em;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
 div.output_text{text-align:left;color:#000;line-height:1.21429em}
 div.output_stderr{background:#fdd;}
@@ -1526,7 +1529,7 @@ ul#help_menu li a{overflow:hidden;padding-right:2.2em}ul#help_menu li a i{margin
 .notification_widget{color:#777;padding:1px 12px;margin:2px 4px;z-index:10;border:1px solid #ccc;border-radius:4px;background:rgba(240,240,240,0.5)}.notification_widget.span{padding-right:2px}
 div#pager_splitter{height:8px}
 #pager-container{position:relative;padding:15px 0}
-div#pager{font-size:14px;line-height:20px;overflow:auto;display:none}div#pager pre{font-size:13px;line-height:1.21429em;color:#000;background-color:#f7f7f7;padding:.4em}
+div#pager{font-size:14px;line-height:20px;overflow:auto;display:none}div#pager pre{line-height:1.21429em;color:#000;background-color:#f7f7f7;padding:.4em}
 .quickhelp{display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
 .shortcut_key{display:inline-block;width:20ex;text-align:right;font-family:monospace}
 .shortcut_descr{display:inline-block;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
@@ -1677,7 +1680,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Unit-Conversion">Unit Conversion<a class="anchor-link" href="#Unit-Conversion">&#182;</a></h1>
+<h1 id="Handling-ASCII-table-files">Handling ASCII table files<a class="anchor-link" href="#Handling-ASCII-table-files">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -1687,7 +1690,29 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Documentation">Documentation<a class="anchor-link" href="#Documentation">&#182;</a></h3>
+<ul>
+<li><a href="http://astropy4scipy2014.readthedocs.org/">Back to tutorial home</a></li>
+<li><a href="https://github.com/astropy/astropy4scipy2014/raw/master/notebooks/Handling_ASCII_data_tables.ipynb">Download raw notebook file</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>An <strong>ASCII data table</strong> refers to a tabular data set where the values are encoded in ASCII and are written in a row-oriented format where each table row is (effectively) on one line. Frequently these data files are somewhat free format in nature and do not conform to precisely definition standards such as FITS.</p>
+<p>ASCII data tables are a fact of life for scientists and you need to be able to read and write them effectively.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="astropy.io.ascii"><code>astropy.io.ascii</code><a class="anchor-link" href="#astropy.io.ascii">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -1697,7 +1722,47 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For more information about the features presented below, you can read the <a href="http://docs.astropy.org/en/stable/units/index.html">astropy.units</a> docs.</p>
+<p>The <a href="http://astropy.readthedocs.org/en/stable/io/ascii/index.html">astropy.io.ascii</a> package provides methods for reading and writing a wide range of ASCII data table formats from basic character-separated tables to astronomy-specific or even application-specific formats.</p>
+<p>This package isn't the fastest ASCII table reader/writer available, but it is one of the most flexible and most of the time it should just work out of the box. <em>[About speed, there is a Google Summer of Code 2014 student working on making it fast!]</em></p>
+<p>The following shows a few of the ASCII formats that are available, while the section on <a href="http://astropy.readthedocs.org/en/stable/io/ascii/index.html#id1">Supported formats</a> contains the full list.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Format</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><a href="http://astropy.readthedocs.org/en/stable/api/astropy.io.ascii.basic.Basic.html">Basic</a></td>
+<td align="left">basic table with customizable delimiters and header configurations</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="http://astropy.readthedocs.org/en/stable/api/astropy.io.ascii.cds.Cds.html">CDS</a></td>
+<td align="left"><a href="http://vizier.u-strasbg.fr/doc/catstd.htx">CDS format</a> table (also Vizier and ApJ machine readable tables)</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="http://astropy.readthedocs.org/en/stable/api/astropy.io.ascii.daophot.Daophot.html">DAOphot</a></td>
+<td align="left">table from the IRAF DAOphot package</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="http://astropy.readthedocs.org/en/stable/api/astropy.io.ascii.fixedwidth.FixedWidth.html">Fixed width</a></td>
+<td align="left">table with fixed-width columns (see also <a href="http://astropy.readthedocs.org/en/stable/io/ascii/fixed_width_gallery.html">Fixed-width Gallery</a>)</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="http://astropy.readthedocs.org/en/stable/api/astropy.io.ascii.ipac.Ipac.html">IPAC</a></td>
+<td align="left"><a href="http://irsa.ipac.caltech.edu/applications/DDGEN/Doc/ipac_tbl.html">IPAC format</a> table</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="http://astropy.readthedocs.org/en/stable/api/astropy.io.ascii.latex.Latex.html">LaTex</a></td>
+<td align="left">LaTeX table with data in the tabular environment</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="http://astropy.readthedocs.org/en/stable/api/astropy.io.ascii.sextractor.SExtractor.html">SExtractor</a></td>
+<td align="left">SExtractor format table</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -1706,7 +1771,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Representing-units-and-quantities">Representing units and quantities<a class="anchor-link" href="#Representing-units-and-quantities">&#182;</a></h3>
+<h3 id="Choice-of-interface">Choice of interface<a class="anchor-link" href="#Choice-of-interface">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -1716,8 +1781,40 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Astropy includes a powerful framework for units that allows users to attach units to scalars and arrays, and manipulate/combine these, keeping track of the units.</p>
-<p>Since we may want to use a number of units in expressions, it is easiest and most concise to import the units module with:</p>
+<p>There are two equally valid ways of reading and writing ASCII tables within astropy:</p>
+<ul>
+<li>Directly use the <code>astropy.io.ascii</code> module</li>
+<li>Use the <a href="">Unified I/O interface</a> with the Table class</li>
+</ul>
+<p>Internally there is no difference since they both end up calling the <code>astropy.io.ascii</code> routines. It depends somewhat on your taste:</p>
+<p><strong>Functional interface</strong></p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="ch">from</span> astropy.io <span class="ch">import</span> <span class="dt">ascii</span>
+&gt;&gt;&gt; pets = <span class="dt">ascii</span>.read(data)
+&gt;&gt;&gt; <span class="dt">ascii</span>.write(pets, <span class="st">&#39;pets.tex&#39;</span>, <span class="dt">format</span>=<span class="st">&#39;latex&#39;</span>)  <span class="co"># format=&#39;&lt;format_name&gt;&#39;</span></code></pre>
+<p><strong>Table interface</strong></p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="ch">from</span> astropy.table <span class="ch">import</span> Table
+&gt;&gt;&gt; pets = Table.read(data, <span class="dt">format</span>=<span class="st">&#39;ascii&#39;</span>)  <span class="co"># format=&#39;ascii&#39;</span>
+&gt;&gt;&gt; pets.write(<span class="st">&#39;pets.tex&#39;</span>, <span class="dt">format</span>=<span class="st">&#39;ascii.latex&#39;</span>)  <span class="co"># format=&#39;ascii.&lt;format_name&gt;&#39;</span></code></pre>
+<p><strong>Overall we recommend using the Table interface</strong>, because this also lets you read and write many tables in FITS or VOTable format using the same syntax. Note that for ASCII tables there is <em>absolutely no functional</em> difference between the interfaces, while for FITS and VOTable the direct interfaces (<code>astropy.io.fits</code> and <code>astropy.io.votable</code>) have more functionality than the <code>Table</code> interface.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Reading-tables">Reading tables<a class="anchor-link" href="#Reading-tables">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>First example:</p>
 </div>
 </div>
 </div>
@@ -1728,23 +1825,14 @@ In&nbsp;[1]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">astropy.table</span> <span class="kn">import</span> <span class="n">Table</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>though note that this will conflict with any variable called <code>u</code>.</p>
-<p>Units can then be accessed with:</p>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -1753,7 +1841,12 @@ In&nbsp;[2]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">u</span><span class="o">.</span><span class="n">m</span>
+<div class="highlight"><pre><span class="n">lines</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;animal        number</span>
+<span class="s">           &quot;siamese cat&quot;    1   </span>
+<span class="s">             dog            3   &quot;&quot;&quot;</span>
+
+<span class="n">pets</span> <span class="o">=</span> <span class="n">Table</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s">&#39;ascii&#39;</span><span class="p">)</span>
+<span class="n">pets</span>
 </pre></div>
 
 </div>
@@ -1767,9 +1860,8 @@ In&nbsp;[2]:
 <div class="output_area"><div class="prompt output_prompt">
     Out[2]:</div>
 
-
-<div class="output_latex output_subarea output_pyout">
-$\mathrm{m}$
+<div class="output_html rendered_html output_subarea output_pyout">
+<table id="table4336358928"><thead><tr><th>animal</th><th>number</th></tr></thead><tr><td>siamese cat</td><td>1</td></tr><tr><td>dog</td><td>3</td></tr></table>
 </div>
 
 </div>
@@ -1783,7 +1875,65 @@ $\mathrm{m}$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>They all have a docstring defining them:</p>
+<h3 id="Arguments-to-read()">Arguments to <code>read()</code><a class="anchor-link" href="#Arguments-to-read()">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The online documentation on <a href="http://astropy.readthedocs.org/en/stable/io/ascii/read.html#parameters-for-read">Parameters for reading</a> has more information.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="table-argument----Show-me-the-table"><code>table</code> argument -- Show me the table<a class="anchor-link" href="#table-argument----Show-me-the-table">&#182;</a></h5>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The required first argument for every table read call is <code>table</code>, which provides access to the actual table data. It can be provided several different formats:</p>
+<ul>
+<li>Name of a file (string)</li>
+<li>Single string containing all table lines separated by newlines</li>
+<li>File-like object with a callable read() method</li>
+<li>List of strings where each list element is a table line</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="format-argument----What's-the-format-Kenneth?"><code>format</code> argument -- What's the format Kenneth?<a class="anchor-link" href="#format-argument----What's-the-format-Kenneth?">&#182;</a></h5>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This specifies the file format, with available options describe in <a href="http://astropy.readthedocs.org/en/stable/io/ascii/index.html#id1">Supported Formats</a>.</p>
+<ul>
+<li><code>Table.read()</code>: specifying <code>format='ascii'</code> is the generic &quot;try to guess the format&quot; option, or <code>format='ascii.&lt;format_name&gt;'</code>.</li>
+<li><code>ascii.read()</code>: do not provide <code>format</code> for the generic &quot;guess the format&quot; option, or <code>format='&lt;format_name&gt;'</code>.</li>
+</ul>
 </div>
 </div>
 </div>
@@ -1794,7 +1944,16 @@ In&nbsp;[3]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">__doc__</span>
+<div class="highlight"><pre><span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="s">r&#39;\begin{table}&#39;</span><span class="p">,</span>
+         <span class="s">r&#39;\begin{tabular}{ l c r }&#39;</span><span class="p">,</span>
+         <span class="s">r&#39;X &amp; Y &amp; Z </span><span class="se">\\</span><span class="s">&#39;</span><span class="p">,</span>
+         <span class="s">r&#39;1 &amp; 2 &amp; 3 </span><span class="se">\\</span><span class="s">&#39;</span><span class="p">,</span>
+         <span class="s">r&#39;4 &amp; 5 &amp; 6 </span><span class="se">\\</span><span class="s">&#39;</span><span class="p">,</span>
+         <span class="s">r&#39;7 &amp; 8 &amp; 9 </span><span class="se">\\</span><span class="s">&#39;</span><span class="p">,</span>
+         <span class="s">r&#39;\end{tabular}&#39;</span><span class="p">,</span>
+         <span class="s">r&#39;\end{table}&#39;</span><span class="p">]</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">Table</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s">&#39;ascii.latex&#39;</span><span class="p">)</span>
+<span class="n">t</span>
 </pre></div>
 
 </div>
@@ -1808,11 +1967,8 @@ In&nbsp;[3]:
 <div class="output_area"><div class="prompt output_prompt">
     Out[3]:</div>
 
-
-<div class="output_text output_subarea output_pyout">
-<pre>
-u&apos;meter: base unit of length in SI&apos;
-</pre>
+<div class="output_html rendered_html output_subarea output_pyout">
+<table id="table4336357520"><thead><tr><th>X</th><th>Y</th><th>Z</th></tr></thead><tr><td>1</td><td>2</td><td>3</td></tr><tr><td>4</td><td>5</td><td>6</td></tr><tr><td>7</td><td>8</td><td>9</td></tr></table>
 </div>
 
 </div>
@@ -1820,6 +1976,25 @@ u&apos;meter: base unit of length in SI&apos;
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="guess-argument----To-guess-or-not-to-guess"><code>guess</code> argument -- To guess or not to guess<a class="anchor-link" href="#guess-argument----To-guess-or-not-to-guess">&#182;</a></h5>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The default behavior of <code>ascii.read()</code> is that it tries to guess the table format. This often works:</p>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -1828,7 +2003,9 @@ In&nbsp;[4]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">physical_type</span>
+<div class="highlight"><pre><span class="n">Table</span><span class="o">.</span><span class="n">read</span><span class="p">([</span><span class="s">&#39;# a | b&#39;</span><span class="p">,</span>  <span class="c"># Commented header contains column names</span>
+            <span class="s">&#39;1 | 2&#39;</span><span class="p">],</span> 
+           <span class="n">format</span><span class="o">=</span><span class="s">&#39;ascii&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1842,11 +2019,8 @@ In&nbsp;[4]:
 <div class="output_area"><div class="prompt output_prompt">
     Out[4]:</div>
 
-
-<div class="output_text output_subarea output_pyout">
-<pre>
-u&apos;length&apos;
-</pre>
+<div class="output_html rendered_html output_subarea output_pyout">
+<table id="table4394631952"><thead><tr><th>a</th><th>b</th></tr></thead><tr><td>1</td><td>2</td></tr></table>
 </div>
 
 </div>
@@ -1854,6 +2028,21 @@ u&apos;length&apos;
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The reader uses the <a href="http://www.willitblend.com/">Will it blend</a> strategy in reverse: throw the input data into each format reader and see if something nice comes out.</p>
+<ul>
+<li>Most of the time the reader gives garbage or an exception, but the first time a reader returns a nice looking table then guessing stops and that table is returned.<br /></li>
+<li>The order of input formats is carefully tuned to maximize the likelihood of guessing the right format.<br /></li>
+<li>The concept of what makes a &quot;nice looking table&quot; also relies on some assumptions that may not always be the case.</li>
+</ul>
+<p>Guessing doesn't always work:</p>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -1862,7 +2051,12 @@ In&nbsp;[5]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">u</span><span class="o">.</span><span class="n">pc</span>
+<div class="highlight"><pre><span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;year &amp; event&#39;</span><span class="p">,</span>
+         <span class="s">&#39;2015 &amp; Pigs fly&#39;</span><span class="p">]</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">Table</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s">&#39;ascii&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1873,19 +2067,66 @@ In&nbsp;[5]:
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">
-    Out[5]:</div>
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
 
+ERROR: Unable to guess table format with the guesses listed below:
+Reader:Basic fill_values: [(&apos;&apos;, &apos;0&apos;)] strict_names: True
+Reader:Rdb fill_values: [(&apos;&apos;, &apos;0&apos;)] strict_names: True
+Reader:Tab fill_values: [(&apos;&apos;, &apos;0&apos;)] strict_names: True
+Reader:Cds fill_values: [(&apos;&apos;, &apos;0&apos;)] strict_names: True
+Reader:Daophot fill_values: [(&apos;&apos;, &apos;0&apos;)] strict_names: True
+Reader:SExtractor fill_values: [(&apos;&apos;, &apos;0&apos;)] strict_names: True
+Reader:Ipac fill_values: [(&apos;&apos;, &apos;0&apos;)] strict_names: True
+Reader:Latex fill_values: [(&apos;&apos;, &apos;0&apos;)] strict_names: True
+Reader:AASTex fill_values: [(&apos;&apos;, &apos;0&apos;)] strict_names: True
+Reader:HTML fill_values: [(&apos;&apos;, &apos;0&apos;)] strict_names: True
+Reader:CommentedHeader delimiter: &apos;|&apos; fill_values: [(&apos;&apos;, &apos;0&apos;)] quotechar: &apos;&quot;&apos; strict_names: True
+Reader:CommentedHeader delimiter: &apos;|&apos; fill_values: [(&apos;&apos;, &apos;0&apos;)] quotechar: &quot;&apos;&quot; strict_names: True
+Reader:CommentedHeader delimiter: &apos;,&apos; fill_values: [(&apos;&apos;, &apos;0&apos;)] quotechar: &apos;&quot;&apos; strict_names: True
+Reader:CommentedHeader delimiter: &apos;,&apos; fill_values: [(&apos;&apos;, &apos;0&apos;)] quotechar: &quot;&apos;&quot; strict_names: True
+Reader:CommentedHeader delimiter: &apos; &apos; fill_values: [(&apos;&apos;, &apos;0&apos;)] quotechar: &apos;&quot;&apos; strict_names: True
+Reader:CommentedHeader delimiter: &apos; &apos; fill_values: [(&apos;&apos;, &apos;0&apos;)] quotechar: &quot;&apos;&quot; strict_names: True
+Reader:CommentedHeader delimiter: &apos;\\s&apos; fill_values: [(&apos;&apos;, &apos;0&apos;)] quotechar: &apos;&quot;&apos; strict_names: True
+Reader:CommentedHeader delimiter: &apos;\\s&apos; fill_values: [(&apos;&apos;, &apos;0&apos;)] quotechar: &quot;&apos;&quot; strict_names: True
+Reader:Basic delimiter: &apos;|&apos; fill_values: [(&apos;&apos;, &apos;0&apos;)] quotechar: &apos;&quot;&apos; strict_names: True
+Reader:Basic delimiter: &apos;|&apos; fill_values: [(&apos;&apos;, &apos;0&apos;)] quotechar: &quot;&apos;&quot; strict_names: True
+Reader:Basic delimiter: &apos;,&apos; fill_values: [(&apos;&apos;, &apos;0&apos;)] quotechar: &apos;&quot;&apos; strict_names: True
+Reader:Basic delimiter: &apos;,&apos; fill_values: [(&apos;&apos;, &apos;0&apos;)] quotechar: &quot;&apos;&quot; strict_names: True
+Reader:Basic delimiter: &apos; &apos; fill_values: [(&apos;&apos;, &apos;0&apos;)] quotechar: &apos;&quot;&apos; strict_names: True
+Reader:Basic delimiter: &apos; &apos; fill_values: [(&apos;&apos;, &apos;0&apos;)] quotechar: &quot;&apos;&quot; strict_names: True
+Reader:Basic delimiter: &apos;\\s&apos; fill_values: [(&apos;&apos;, &apos;0&apos;)] quotechar: &apos;&quot;&apos; strict_names: True
+Reader:Basic delimiter: &apos;\\s&apos; fill_values: [(&apos;&apos;, &apos;0&apos;)] quotechar: &quot;&apos;&quot; strict_names: True
+Reader:NoHeader delimiter: &apos;|&apos; fill_values: [(&apos;&apos;, &apos;0&apos;)] quotechar: &apos;&quot;&apos; strict_names: True
+Reader:NoHeader delimiter: &apos;|&apos; fill_values: [(&apos;&apos;, &apos;0&apos;)] quotechar: &quot;&apos;&quot; strict_names: True
+Reader:NoHeader delimiter: &apos;,&apos; fill_values: [(&apos;&apos;, &apos;0&apos;)] quotechar: &apos;&quot;&apos; strict_names: True
+Reader:NoHeader delimiter: &apos;,&apos; fill_values: [(&apos;&apos;, &apos;0&apos;)] quotechar: &quot;&apos;&quot; strict_names: True
+Reader:NoHeader delimiter: &apos; &apos; fill_values: [(&apos;&apos;, &apos;0&apos;)] quotechar: &apos;&quot;&apos; strict_names: True
+Reader:NoHeader delimiter: &apos; &apos; fill_values: [(&apos;&apos;, &apos;0&apos;)] quotechar: &quot;&apos;&quot; strict_names: True
+Reader:NoHeader delimiter: &apos;\\s&apos; fill_values: [(&apos;&apos;, &apos;0&apos;)] quotechar: &apos;&quot;&apos; strict_names: True
+Reader:NoHeader delimiter: &apos;\\s&apos; fill_values: [(&apos;&apos;, &apos;0&apos;)] quotechar: &quot;&apos;&quot; strict_names: True
+Reader:Basic fill_values: [(&apos;&apos;, &apos;0&apos;)]
+ERROR: Unable to guess table format with the guesses listed above.
+Check the table and try with guess=False and appropriate arguments to read()
 
-<div class="output_latex output_subarea output_pyout">
-$\mathrm{pc}$
+</pre>
+</div>
 </div>
 
 </div>
-
-</div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr />
+<p>When this happens you need to give <code>ascii.read</code> a bit of help. The first step is to turn off guessing and provide what you think is the right format. In this case this is a character-delimited table (using <code>&amp;</code>).</p>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -1894,7 +2135,10 @@ In&nbsp;[6]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">u</span><span class="o">.</span><span class="n">pc</span><span class="o">.</span><span class="n">__doc__</span>
+<div class="highlight"><pre><span class="k">try</span><span class="p">:</span>
+    <span class="n">Table</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s">&#39;ascii.basic&#39;</span><span class="p">,</span> <span class="n">guess</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1905,16 +2149,15 @@ In&nbsp;[6]:
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">
-    Out[6]:</div>
-
-
-<div class="output_text output_subarea output_pyout">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
 <pre>
-u&apos;parsec: approximately 3.26 light-years.&apos;
+Number of header columns (3) inconsistent with data columns (4) at data line 0
+Header values: [&apos;year&apos;, &apos;&amp;&apos;, &apos;event&apos;]
+Data values: [&apos;2015&apos;, &apos;&amp;&apos;, &apos;Pigs&apos;, &apos;fly&apos;]
+
 </pre>
 </div>
-
 </div>
 
 </div>
@@ -1928,7 +2171,7 @@ In&nbsp;[7]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">u</span><span class="o">.</span><span class="n">s</span>
+<div class="highlight"><pre><span class="n">Table</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s">&#39;ascii.basic&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s">&#39;&amp;&#39;</span><span class="p">,</span> <span class="n">guess</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1942,9 +2185,8 @@ In&nbsp;[7]:
 <div class="output_area"><div class="prompt output_prompt">
     Out[7]:</div>
 
-
-<div class="output_latex output_subarea output_pyout">
-$\mathrm{s}$
+<div class="output_html rendered_html output_subarea output_pyout">
+<table id="table4399938256"><thead><tr><th>year</th><th>event</th></tr></thead><tr><td>2015</td><td>Pigs fly</td></tr></table>
 </div>
 
 </div>
@@ -1952,6 +2194,39 @@ $\mathrm{s}$
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr />
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="delimiter,-comment,-and-quotechar----Define-table-characteristics"><code>delimiter</code>, <code>comment</code>, and <code>quotechar</code> -- Define table characteristics<a class="anchor-link" href="#delimiter,-comment,-and-quotechar----Define-table-characteristics">&#182;</a></h5>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>These arguments mostly apply to the <code>basic</code> format:</p>
+<ul>
+<li><code>delimiter</code>: the characters <code>&lt;SPACE&gt;</code>, <code>'|'</code>, <code>','</code>, <code>'\t'</code>, and <code>'\s'</code> (tab or space) are defaults.</li>
+<li><code>comment</code>: if this regular expression matches the beginning of a table line then that line will be discarded from header or data processing.</li>
+<li><code>quotechar</code>: This specifies the quote character and will typically be either the single or double quote character.</li>
+</ul>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -1960,7 +2235,11 @@ In&nbsp;[8]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">u</span><span class="o">.</span><span class="n">kg</span>
+<div class="highlight"><pre><span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;a * b&#39;</span><span class="p">,</span>  <span class="c"># Don&#39;t ever make a table like this!</span>
+         <span class="s">&#39;^hello * world^ * 5&#39;</span><span class="p">,</span>
+         <span class="s">&#39;! Comment line&#39;</span><span class="p">,</span>
+         <span class="s">&#39;more * values&#39;</span><span class="p">]</span>
+<span class="n">Table</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s">&#39;ascii.basic&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s">&#39;*&#39;</span><span class="p">,</span> <span class="n">comment</span><span class="o">=</span><span class="s">&#39;!&#39;</span><span class="p">,</span> <span class="n">quotechar</span><span class="o">=</span><span class="s">&#39;^&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1974,9 +2253,8 @@ In&nbsp;[8]:
 <div class="output_area"><div class="prompt output_prompt">
     Out[8]:</div>
 
-
-<div class="output_latex output_subarea output_pyout">
-$\mathrm{kg}$
+<div class="output_html rendered_html output_subarea output_pyout">
+<table id="table4394632848"><thead><tr><th>a</th><th>b</th></tr></thead><tr><td>hello * world</td><td>5</td></tr><tr><td>more</td><td>values</td></tr></table>
 </div>
 
 </div>
@@ -1990,7 +2268,7 @@ $\mathrm{kg}$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The full list of available units is available <a href="https://astropy.readthedocs.org/en/stable/units/index.html#module-astropy.units.si">here</a>.</p>
+<hr />
 </div>
 </div>
 </div>
@@ -1999,7 +2277,23 @@ $\mathrm{kg}$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can create composite units:</p>
+<h5 id="header_start,-data_start,-and-data_end----Locate-the-header-and-data"><code>header_start</code>, <code>data_start</code>, and <code>data_end</code> -- Locate the header and data<a class="anchor-link" href="#header_start,-data_start,-and-data_end----Locate-the-header-and-data">&#182;</a></h5>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <strong>header</strong> is defined as the part of the table which contains column names and any other information such as column types and other metadata. Frequently the header is a single line of column names, but it maybe long or might not exist.</p>
+<p>The <strong>data</strong> section is the part which has the data values.</p>
+<ul>
+<li><strong><code>header_start</code></strong> : This specifies in the line index where the header begins. Comment lines are not included in this count and the counting starts from 0 (first non-comment line has index=0). If set to None this indicates that there is no header line and the column names will be auto-generated. The default is dependent on the format.</li>
+<li><strong><code>data_start</code></strong>: This specifies in the line index where the data lines begin where the counting starts from 0 and does not include comment lines. The default is dependent on the format.</li>
+<li><strong><code>data_end</code></strong>: If this is not None then it allows for excluding lines at the end that are not valid data lines. A negative value means to count from the end, so -1 would exclude the last line, -2 the last two lines, and so on.</li>
+</ul>
 </div>
 </div>
 </div>
@@ -2010,27 +2304,21 @@ In&nbsp;[9]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">u</span><span class="o">.</span><span class="n">m</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">kg</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="o">**</span><span class="mi">2</span>
+<div class="highlight"><pre><span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;Some irrelevant stuff here&#39;</span><span class="p">,</span>    <span class="c"># Line 0</span>
+         <span class="s">&#39;&#39;</span><span class="p">,</span>                              <span class="c">#   Blank (only whitespace) =&gt; Not included in count</span>
+         <span class="s">&#39;# Properly commented out line&#39;</span><span class="p">,</span> <span class="c">#   Comment =&gt; Not included</span>
+         <span class="s">&#39; col0  col1&#39;</span><span class="p">,</span>                   <span class="c"># Line 1 (header start)</span>
+         <span class="s">&#39;&#39;</span><span class="p">,</span>                              <span class="c">#   Blank</span>
+         <span class="s">&#39;More junk from table creator&#39;</span><span class="p">,</span>  <span class="c"># Line 2</span>
+         <span class="s">&#39; 10   20 &#39;</span><span class="p">,</span>                     <span class="c"># Line 3 (data start)</span>
+         <span class="s">&#39;# comment line&#39;</span><span class="p">,</span>                <span class="c">#   Comment</span>
+         <span class="s">&#39; 20   40 &#39;</span><span class="p">,</span>                     <span class="c"># Line 4 (-2, data end)</span>
+         <span class="s">&#39;/ Why do people do this?&#39;</span><span class="p">,</span>      <span class="c"># Line 5 (-1)</span>
+         <span class="s">&#39;/ Just to make life hard.&#39;</span>      <span class="c"># Line 6 (-0)</span>
+    <span class="p">]</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[9]:</div>
-
-
-<div class="output_latex output_subarea output_pyout">
-$\mathrm{\frac{m}{kg\,s^{2}}}$
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -2042,7 +2330,7 @@ In&nbsp;[10]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="nb">repr</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">kg</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<div class="highlight"><pre><span class="n">Table</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s">&#39;ascii&#39;</span><span class="p">,</span> <span class="n">header_start</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">data_start</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">data_end</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="n">guess</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -2056,11 +2344,8 @@ In&nbsp;[10]:
 <div class="output_area"><div class="prompt output_prompt">
     Out[10]:</div>
 
-
-<div class="output_text output_subarea output_pyout">
-<pre>
-&apos;Unit(&quot;m / (kg s2)&quot;)&apos;
-</pre>
+<div class="output_html rendered_html output_subarea output_pyout">
+<table id="table4399936784"><thead><tr><th>col0</th><th>col1</th></tr></thead><tr><td>10</td><td>20</td></tr><tr><td>20</td><td>40</td></tr></table>
 </div>
 
 </div>
@@ -2074,7 +2359,26 @@ In&nbsp;[10]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The most useful feature about the units is the ability to attach them to scalars or arrays, creating <code>Quantity</code> objects:</p>
+<hr />
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="converters-argument----Give-me-the-right-types"><code>converters</code> argument -- Give me the right types<a class="anchor-link" href="#converters-argument----Give-me-the-right-types">&#182;</a></h5>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Sometimes the automatic type inference doesn't do you wanted.</p>
 </div>
 </div>
 </div>
@@ -2085,27 +2389,16 @@ In&nbsp;[11]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="mf">3.</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span>
+<div class="highlight"><pre><span class="n">lines</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;</span>
+<span class="s">char float</span>
+<span class="s">&quot;1&quot; 1</span>
+<span class="s">&quot;2&quot; 2</span>
+<span class="s">&quot;3&quot; 3</span>
+<span class="s">&quot;4&quot; 4</span>
+<span class="s">&quot;&quot;&quot;</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[11]:</div>
-
-
-<div class="output_latex output_subarea output_pyout">
-$3 \; \mathrm{m}$
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -2117,22 +2410,8 @@ In&nbsp;[12]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[13]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">])</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">pc</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">year</span>
+<div class="highlight"><pre><span class="n">t</span> <span class="o">=</span> <span class="n">Table</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s">&#39;ascii&#39;</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">dtype</span>
 </pre></div>
 
 </div>
@@ -2144,12 +2423,64 @@ In&nbsp;[13]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[13]:</div>
+    Out[12]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-&lt;Quantity [ 1.2, 2.2, 1.7] pc / yr&gt;
+dtype([(&apos;char&apos;, &apos;&lt;i8&apos;), (&apos;float&apos;, &apos;&lt;i8&apos;)])
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[13]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">ascii</span>
+<span class="n">converters</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;char&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">ascii</span><span class="o">.</span><span class="n">convert_numpy</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">str</span><span class="p">)],</span>
+              <span class="s">&#39;float&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">ascii</span><span class="o">.</span><span class="n">convert_numpy</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float</span><span class="p">)]}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[14]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">t</span> <span class="o">=</span> <span class="n">Table</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s">&#39;ascii&#39;</span><span class="p">,</span> <span class="n">converters</span><span class="o">=</span><span class="n">converters</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">dtype</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[14]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+dtype([(&apos;char&apos;, &apos;S1&apos;), (&apos;float&apos;, &apos;&lt;f8&apos;)])
 </pre>
 </div>
 
@@ -2164,7 +2495,16 @@ In&nbsp;[13]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Combining-and-converting-units">Combining and converting units<a class="anchor-link" href="#Combining-and-converting-units">&#182;</a></h3>
+<hr />
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="names,-include_names,-exclude_names----What-to-call-the-columns-and-what-you-find-interesting"><code>names</code>, <code>include_names</code>, <code>exclude_names</code> -- What to call the columns and what you find interesting<a class="anchor-link" href="#names,-include_names,-exclude_names----What-to-call-the-columns-and-what-you-find-interesting">&#182;</a></h5>
 </div>
 </div>
 </div>
@@ -2174,24 +2514,9 @@ In&nbsp;[13]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Quantities can then be combined:</p>
+<p>Some tables arrive nameless, that is to say there is no definition of the column names within the table. When that is the case <code>ascii.read()</code> will automatically assign names like <code>col0</code>, <code>col1</code> and so on. These aren't very descriptive and the <code>names</code> argument gives you a way to fix that on reading the table.</p>
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[14]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">q1</span> <span class="o">=</span> <span class="mf">3.</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -2200,13 +2525,42 @@ In&nbsp;[15]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">q2</span> <span class="o">=</span> <span class="mf">5.</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">g</span><span class="o">**</span><span class="mi">2</span>
+<div class="highlight"><pre><span class="n">lines</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;</span>
+<span class="s">1 2 3</span>
+<span class="s">4 5 6</span>
+<span class="s">&quot;&quot;&quot;</span>
+<span class="n">Table</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s">&#39;ascii&#39;</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">])</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[15]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<table id="table4399979728"><thead><tr><th>a</th><th>b</th><th>c</th></tr></thead><tr><td>1</td><td>2</td><td>3</td></tr><tr><td>4</td><td>5</td><td>6</td></tr></table>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Maybe someone has given you a table with tons of columns that are mostly uninteresting to you:</p>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -2215,7 +2569,12 @@ In&nbsp;[16]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">q1</span> <span class="o">*</span> <span class="n">q2</span>
+<div class="highlight"><pre><span class="n">lines</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;</span>
+<span class="s">a b c d e f g h i j k planet color</span>
+<span class="s">1 2 3 4 5 6 7 8 1 2 3 mars reddish</span>
+<span class="s">9 8 7 6 5 4 3 2 1 0 1 earth blue-ish</span>
+<span class="s">&quot;&quot;&quot;</span>
+<span class="n">Table</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s">&#39;ascii&#39;</span><span class="p">,</span> <span class="n">include_names</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;planet&#39;</span><span class="p">,</span> <span class="s">&#39;color&#39;</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -2229,9 +2588,8 @@ In&nbsp;[16]:
 <div class="output_area"><div class="prompt output_prompt">
     Out[16]:</div>
 
-
-<div class="output_latex output_subarea output_pyout">
-$15 \; \mathrm{\frac{cm\,m}{s\,g^{2}}}$
+<div class="output_html rendered_html output_subarea output_pyout">
+<table id="table4399977040"><thead><tr><th>planet</th><th>color</th></tr></thead><tr><td>mars</td><td>reddish</td></tr><tr><td>earth</td><td>blue-ish</td></tr></table>
 </div>
 
 </div>
@@ -2245,7 +2603,48 @@ $15 \; \mathrm{\frac{cm\,m}{s\,g^{2}}}$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>and converted to different units:</p>
+<hr />
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="fill_values,-fill_include_names,-fill_exclude_names----Handling-missing-or-bad-values"><code>fill_values</code>, <code>fill_include_names</code>, <code>fill_exclude_names</code> -- Handling missing or bad values<a class="anchor-link" href="#fill_values,-fill_include_names,-fill_exclude_names----Handling-missing-or-bad-values">&#182;</a></h5>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This can be used to fill missing values in the table or replace strings with special meaning. See the <a href="http://astropy.readthedocs.org/en/stable/io/ascii/read.html#bad-or-missing-values">Bad or missing values</a> section for more information and examples.</p>
+<p>The default is that any blank table values are treated as missing.</p>
+<p>Unfortunately there isn't time here for the joy and madness of fill values!</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Writing-tables">Writing tables<a class="anchor-link" href="#Writing-tables">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Once you understand reading tables then writing is pretty simple and comparitively boring. The online documentation on <a href="http://astropy.readthedocs.org/en/stable/io/ascii/read.html#parameters-for-read">Parameters for write()</a> describes the arguments, most of which should be familiar by now.</p>
+<p>Instead of going through the parameters exhaustively we'll just show a few examples here.</p>
 </div>
 </div>
 </div>
@@ -2256,7 +2655,29 @@ In&nbsp;[17]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="p">(</span><span class="n">q1</span> <span class="o">*</span> <span class="n">q2</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+<div class="highlight"><pre><span class="n">lines</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;</span>
+<span class="s">X Y Z</span>
+<span class="s">1 2.0022 &#39;hello world&#39;</span>
+<span class="s">-99 4.01234 &#39;so long world&#39;</span>
+<span class="s">&quot;&quot;&quot;</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">ascii</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>  <span class="c"># For variety we show the functional interface</span>
+<span class="n">t</span><span class="p">[</span><span class="s">&#39;Y&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unit</span> <span class="o">=</span> <span class="s">&#39;m/s&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[18]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">t</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s">&#39;ascii&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -2267,40 +2688,17 @@ In&nbsp;[17]:
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">
-    Out[17]:</div>
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+X Y Z
+1 2.0022 &quot;hello world&quot;
+-99 4.01234 &quot;so long world&quot;
 
-
-<div class="output_latex output_subarea output_pyout">
-$150000 \; \mathrm{\frac{m^{2}}{s\,kg^{2}}}$
-</div>
-
-</div>
-
+</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The units and value of a quantity can be accessed separately via the <code>value</code> and <code>unit</code> attributes:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[18]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">q</span> <span class="o">=</span> <span class="mf">5.</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">pc</span>
-</pre></div>
-
-</div>
 </div>
 </div>
 
@@ -2312,7 +2710,7 @@ In&nbsp;[19]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">q</span><span class="o">.</span><span class="n">value</span>
+<div class="highlight"><pre><span class="n">t</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s">&#39;ascii&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s">&#39;,&#39;</span><span class="p">)</span>  <span class="c"># Or just format=&#39;ascii.csv&#39; in astropy 0.4 and later</span>
 </pre></div>
 
 </div>
@@ -2323,16 +2721,15 @@ In&nbsp;[19]:
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">
-    Out[19]:</div>
-
-
-<div class="output_text output_subarea output_pyout">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
 <pre>
-5.0
+X,Y,Z
+1,2.0022,hello world
+-99,4.01234,so long world
+
 </pre>
 </div>
-
 </div>
 
 </div>
@@ -2346,7 +2743,7 @@ In&nbsp;[20]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">q</span><span class="o">.</span><span class="n">unit</span>
+<div class="highlight"><pre><span class="n">ascii</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s">&#39;aastex&#39;</span><span class="p">)</span>  <span class="c"># default functional interface output is sys.stdout</span>
 </pre></div>
 
 </div>
@@ -2357,38 +2754,24 @@ In&nbsp;[20]:
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">
-    Out[20]:</div>
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+\begin{deluxetable}{ccc}
+\tablehead{\colhead{X} &amp; \colhead{Y} &amp; \colhead{Z}}
+\startdata
+1 &amp; 2.0022 &amp; hello world \\
+-99 &amp; 4.01234 &amp; so long world \\
+\enddata
+\end{deluxetable}
 
-
-<div class="output_latex output_subarea output_pyout">
-$\mathrm{pc}$
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Advanced-features">Advanced features<a class="anchor-link" href="#Advanced-features">&#182;</a></h3>
-</div>
+</pre>
 </div>
 </div>
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The units of a quantity can be decomposed into a set of base units using the <code>decompose()</code> method. By default, units will be decomposed to S.I.:</p>
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -2397,7 +2780,7 @@ In&nbsp;[21]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="p">(</span><span class="mf">3.</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">pc</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">g</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">year</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">decompose</span><span class="p">()</span>
+<div class="highlight"><pre><span class="n">t</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s">&#39;ascii.ipac&#39;</span><span class="p">,</span> <span class="n">formats</span><span class="o">=</span><span class="p">{</span><span class="s">&#39;Y&#39;</span><span class="p">:</span> <span class="s">&#39;</span><span class="si">%.4f</span><span class="s">&#39;</span><span class="p">})</span>
 </pre></div>
 
 </div>
@@ -2408,28 +2791,23 @@ In&nbsp;[21]:
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">
-    Out[21]:</div>
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+|   X|     Y|            Z|
+|long|double|         char|
+|    | m / s|             |
+|null|  null|         null|
+    1 2.0022   hello world 
+  -99 4.0123 so long world 
 
-
-<div class="output_latex output_subarea output_pyout">
-$929.531 \; \mathrm{\frac{m^{2}}{kg\,s^{2}}}$
+</pre>
 </div>
-
 </div>
 
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>To compose into c.g.s. bases:</p>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -2438,7 +2816,7 @@ In&nbsp;[22]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">u</span><span class="o">.</span><span class="n">cgs</span><span class="o">.</span><span class="n">bases</span>
+<div class="highlight"><pre><span class="n">t</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s">&#39;ascii.ipac&#39;</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;A&#39;</span><span class="p">,</span> <span class="s">&#39;B&#39;</span><span class="p">,</span> <span class="s">&#39;C&#39;</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -2449,23 +2827,18 @@ In&nbsp;[22]:
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">
-    Out[22]:</div>
-
-
-<div class="output_text output_subarea output_pyout">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
 <pre>
-{Unit(&quot;mol&quot;),
- Unit(&quot;rad&quot;),
- Unit(&quot;cd&quot;),
- Unit(&quot;cm&quot;),
- Unit(&quot;g&quot;),
- Unit(&quot;s&quot;),
- Unit(&quot;C&quot;),
- Unit(&quot;K&quot;)}
+|   A|      B|            C|
+|long| double|         char|
+|    |  m / s|             |
+|null|   null|         null|
+    1  2.0022   hello world 
+  -99 4.01234 so long world 
+
 </pre>
 </div>
-
 </div>
 
 </div>
@@ -2479,222 +2852,7 @@ In&nbsp;[23]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="p">(</span><span class="mf">3.</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">pc</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">g</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">year</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">decompose</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cgs</span><span class="o">.</span><span class="n">bases</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[23]:</div>
-
-
-<div class="output_latex output_subarea output_pyout">
-$9295.31 \; \mathrm{\frac{cm^{2}}{g\,s^{2}}}$
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>To decompose and recompose into the highest-level c.g.s. units, one can do:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[24]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="p">(</span><span class="mf">3.</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">pc</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">g</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">year</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">cgs</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[24]:</div>
-
-
-<div class="output_latex output_subarea output_pyout">
-$9295.31 \; \mathrm{\frac{erg}{g^{2}}}$
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Using-physical-constants">Using physical constants<a class="anchor-link" href="#Using-physical-constants">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The <a href="http://docs.astropy.org/en/v0.2.1/constants/index.html">astropy.constants</a> module contains physical constants relevant for Astronomy, and these are defined with units attached to them using the <code>astropy.units</code> framework.</p>
-<p>If we want to compute the Gravitational force felt by a 100. * u.kg space probe by the Sun, at a distance of 3.2au, we can do:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[25]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">astropy.constants</span> <span class="kn">import</span> <span class="n">G</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[26]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">F</span> <span class="o">=</span> <span class="p">(</span><span class="n">G</span> <span class="o">*</span> <span class="mf">1.</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">M_sun</span> <span class="o">*</span> <span class="mf">100.</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mf">3.2</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">au</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[27]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">F</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[27]:</div>
-
-
-<div class="output_latex output_subarea output_pyout">
-$6.51742\times 10^{-10} \; \mathrm{\frac{m^{3}\,M_{\odot}}{AU^{2}\,s^{2}}}$
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[28]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">F</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">N</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[28]:</div>
-
-
-<div class="output_latex output_subarea output_pyout">
-$0.0579271 \; \mathrm{N}$
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The full list of available physical constants is shown <a href="http://docs.astropy.org/en/stable/constants/index.html#module-astropy.constants">here</a> (and additions are welcome!).</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Equivalencies">Equivalencies<a class="anchor-link" href="#Equivalencies">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Equivalencies can be used to convert quantities that are not strictly the same physical type:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[29]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="p">(</span><span class="mf">450.</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">nm</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">)</span>
+<div class="highlight"><pre><span class="n">t</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s">&#39;ascii.latex&#39;</span><span class="p">,</span> <span class="n">fill_values</span><span class="o">=</span><span class="p">[(</span><span class="s">&#39;-99&#39;</span><span class="p">,</span> <span class="s">&#39;...&#39;</span><span class="p">)])</span>
 </pre></div>
 
 </div>
@@ -2706,298 +2864,18 @@ In&nbsp;[29]:
 
 
 <div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_text output_pyerr">
+<div class="output_subarea output_stream output_stdout output_text">
 <pre>
-<span class="ansired">---------------------------------------------------------------------------</span>
-<span class="ansired">UnitsError</span>                                Traceback (most recent call last)
-<span class="ansigreen">&lt;ipython-input-29-e4fbcb033257&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
-<span class="ansigreen">----&gt; 1</span><span class="ansired"> </span><span class="ansiblue">(</span><span class="ansicyan">450.</span> <span class="ansiblue">*</span> u<span class="ansiblue">.</span>nm<span class="ansiblue">)</span><span class="ansiblue">.</span>to<span class="ansiblue">(</span>u<span class="ansiblue">.</span>GHz<span class="ansiblue">)</span><span class="ansiblue"></span>
+\begin{table}
+\begin{tabular}{ccc}
+X &amp; Y &amp; Z \\
+1 &amp; 2.0022 &amp; hello world \\
+... &amp; 4.01234 &amp; so long world \\
+\end{tabular}
+\end{table}
 
-<span class="ansigreen">/Users/tom/Library/Python/2.7/lib/python/site-packages/astropy-0.4.dev9065-py2.7-macosx-10.8-x86_64.egg/astropy/units/quantity.pyc</span> in <span class="ansicyan">to</span><span class="ansiblue">(self, unit, equivalencies)</span>
-<span class="ansigreen">    566</span>         unit <span class="ansiblue">=</span> Unit<span class="ansiblue">(</span>unit<span class="ansiblue">)</span><span class="ansiblue"></span>
-<span class="ansigreen">    567</span>         new_val = np.asarray(
-<span class="ansigreen">--&gt; 568</span><span class="ansired">             self.unit.to(unit, self.value, equivalencies=equivalencies))
-</span><span class="ansigreen">    569</span>         <span class="ansigreen">return</span> self<span class="ansiblue">.</span>_new_view<span class="ansiblue">(</span>new_val<span class="ansiblue">,</span> unit<span class="ansiblue">)</span><span class="ansiblue"></span>
-<span class="ansigreen">    570</span> <span class="ansiblue"></span>
-
-<span class="ansigreen">/Users/tom/Library/Python/2.7/lib/python/site-packages/astropy-0.4.dev9065-py2.7-macosx-10.8-x86_64.egg/astropy/units/core.pyc</span> in <span class="ansicyan">to</span><span class="ansiblue">(self, other, value, equivalencies)</span>
-<span class="ansigreen">    910</span>             If units are inconsistent<span class="ansiblue"></span>
-<span class="ansigreen">    911</span>         &quot;&quot;&quot;
-<span class="ansigreen">--&gt; 912</span><span class="ansired">         </span><span class="ansigreen">return</span> self<span class="ansiblue">.</span>get_converter<span class="ansiblue">(</span>other<span class="ansiblue">,</span> equivalencies<span class="ansiblue">=</span>equivalencies<span class="ansiblue">)</span><span class="ansiblue">(</span>value<span class="ansiblue">)</span><span class="ansiblue"></span>
-<span class="ansigreen">    913</span> <span class="ansiblue"></span>
-<span class="ansigreen">    914</span>     <span class="ansigreen">def</span> in_units<span class="ansiblue">(</span>self<span class="ansiblue">,</span> other<span class="ansiblue">,</span> value<span class="ansiblue">=</span><span class="ansicyan">1.0</span><span class="ansiblue">,</span> equivalencies<span class="ansiblue">=</span><span class="ansiblue">[</span><span class="ansiblue">]</span><span class="ansiblue">)</span><span class="ansiblue">:</span><span class="ansiblue"></span>
-
-<span class="ansigreen">/Users/tom/Library/Python/2.7/lib/python/site-packages/astropy-0.4.dev9065-py2.7-macosx-10.8-x86_64.egg/astropy/units/core.pyc</span> in <span class="ansicyan">get_converter</span><span class="ansiblue">(self, other, equivalencies)</span>
-<span class="ansigreen">    846</span>         <span class="ansigreen">except</span> UnitsError<span class="ansiblue">:</span><span class="ansiblue"></span>
-<span class="ansigreen">    847</span>             return self._apply_equivalences(
-<span class="ansigreen">--&gt; 848</span><span class="ansired">                 self, other, self._normalize_equivalencies(equivalencies))
-</span><span class="ansigreen">    849</span>         <span class="ansigreen">return</span> <span class="ansigreen">lambda</span> val<span class="ansiblue">:</span> scale <span class="ansiblue">*</span> _condition_arg<span class="ansiblue">(</span>val<span class="ansiblue">)</span><span class="ansiblue"></span>
-<span class="ansigreen">    850</span> <span class="ansiblue"></span>
-
-<span class="ansigreen">/Users/tom/Library/Python/2.7/lib/python/site-packages/astropy-0.4.dev9065-py2.7-macosx-10.8-x86_64.egg/astropy/units/core.pyc</span> in <span class="ansicyan">_apply_equivalences</span><span class="ansiblue">(self, unit, other, equivalencies)</span>
-<span class="ansigreen">    809</span>         raise UnitsError(
-<span class="ansigreen">    810</span>             &quot;{0} and {1} are not convertible&quot;.format(
-<span class="ansigreen">--&gt; 811</span><span class="ansired">                 unit_str, other_str))
-</span><span class="ansigreen">    812</span> <span class="ansiblue"></span>
-<span class="ansigreen">    813</span>     <span class="ansigreen">def</span> get_converter<span class="ansiblue">(</span>self<span class="ansiblue">,</span> other<span class="ansiblue">,</span> equivalencies<span class="ansiblue">=</span><span class="ansiblue">[</span><span class="ansiblue">]</span><span class="ansiblue">)</span><span class="ansiblue">:</span><span class="ansiblue"></span>
-
-<span class="ansired">UnitsError</span>: &apos;nm&apos; (length) and &apos;GHz&apos; (frequency) are not convertible</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[30]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="p">(</span><span class="mf">450.</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">nm</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span> <span class="n">equivalencies</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">spectral</span><span class="p">())</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[30]:</div>
-
-
-<div class="output_latex output_subarea output_pyout">
-$666205 \; \mathrm{GHz}$
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[31]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="p">(</span><span class="mf">450.</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">eV</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">nm</span><span class="p">,</span> <span class="n">equivalencies</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">spectral</span><span class="p">())</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[31]:</div>
-
-
-<div class="output_latex output_subarea output_pyout">
-$2.7552 \; \mathrm{nm}$
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[32]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">q</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1e-18</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">erg</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">AA</span><span class="p">)</span>
-<span class="n">q</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">Jy</span><span class="p">,</span> <span class="n">equivalencies</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">spectral_density</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[32]:</div>
-
-
-<div class="output_latex output_subarea output_pyout">
-$3.33564 \; \mathrm{Jy}$
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Integration-with-Numpy-ufuncs">Integration with Numpy ufuncs<a class="anchor-link" href="#Integration-with-Numpy-ufuncs">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Most of the <a href="http://www.numpy.org">Numpy</a> functions understand Quantity objects:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[33]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">30</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">degree</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[33]:</div>
-
-
-<div class="output_latex output_subarea output_pyout">
-$0.5 \; \mathrm{}$
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[34]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[34]:</div>
-
-
-<div class="output_latex output_subarea output_pyout">
-$10 \; \mathrm{km}$
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[35]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">/</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[35]:</div>
-
-
-<div class="output_latex output_subarea output_pyout">
-$1.001 \; \mathrm{}$
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Care needs to be taken with dimensionless units. Passing raw values to an inverse trig function, there will be no units in the result:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[36]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[36]:</div>
-
-
-<div class="output_text output_subarea output_pyout">
-<pre>
-1.5707963267948966
 </pre>
 </div>
-
 </div>
 
 </div>
@@ -3009,80 +2887,7 @@ In&nbsp;[36]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>However, <code>u.dimensionless_unscaled</code> creates a Quantity &quot;with the dimensionless unit&quot; from a value, and therefore we do units in the output:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[37]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">dimensionless_unscaled</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[37]:</div>
-
-
-<div class="output_latex output_subarea output_pyout">
-$1.5708 \; \mathrm{rad}$
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[38]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">dimensionless_unscaled</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">degree</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[38]:</div>
-
-
-<div class="output_latex output_subarea output_pyout">
-$90 \; \mathrm{{}^{\circ}}$
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Practical-Exercises">Practical Exercises<a class="anchor-link" href="#Practical-Exercises">&#182;</a></h2>
+<h1 id="Practical-exercises">Practical exercises<a class="anchor-link" href="#Practical-exercises">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -3092,70 +2897,133 @@ $90 \; \mathrm{{}^{\circ}}$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="level-1">Level 1</h3>
-<p>What is 1 barn megaparsecs in teaspoons? Note that teaspoons are not part of the standard set of units, but it can be found in:</p>
+<h3 id="Level-1-2:-Basic-reading">Level 1-2: Basic reading<a class="anchor-link" href="#Level-1-2:-Basic-reading">&#182;</a></h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+
+<div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
-In&nbsp;[39]:
 </div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">astropy.units</span> <span class="kn">import</span> <span class="n">imperial</span>
-<span class="n">imperial</span><span class="o">.</span><span class="n">tsp</span>  
-</pre></div>
-
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>First familiarize yourself with the available supported formats:</p>
+<ul>
+<li>Open up the <a href="http://astropy.readthedocs.org/en/stable/io/ascii/index.html#id1">Supported formats</a> page and click through the documentation for each format.</li>
+<li>Which formats document support for table metadata like column units, comments or additional descriptions?</li>
+</ul>
+<p>Read the following files in the <strong><code>data/ascii/</code></strong> sub-directory and show the contents for each one. Try to use the minimum effort and number of non-default options possible.</p>
+<p>The pattern will be <code>Table.read('data/ascii/&lt;filename&gt;', format='...', ...)</code>.</p>
+<p><em>HINT</em>: You can examine each file with <code>%cat &lt;filename&gt;</code> in IPython notebook (e.g. <code>%cat data/ascii/basic.dat</code>).</p>
+<ul>
+<li><code>'basic.dat'</code></li>
+<li><code>'ipac.dat'</code> -- from <a href="http://irsa.ipac.caltech.edu/frontpage/">NASA/IPAC Infrared Science Archive</a></li>
+<li><code>'daophot.dat.gz'</code> -- Hint: unzipping is automatic</li>
+<li><code>'cds/lhs2065.dat'</code> -- Hint: read the docs! Note that Vizier catalog results are in CDS format.</li>
+<li><code>'fixed_width.dat'</code> -- Hint: check out the <a href="http://astropy.readthedocs.org/en/stable/io/ascii/fixed_width_gallery.html">Fixed width gallery</a>.</li>
+</ul>
 </div>
 </div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[39]:</div>
-
-
-<div class="output_latex output_subarea output_pyout">
-$\mathrm{tsp}$
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="level-2">Level 2</h3>
-<p>What is <span class="math">\(3 \mathrm{nm}^2 \mathrm{Mpc} / \mathrm{m}^3\)</span> in dimensionless units?</p>
-<h3 id="level-3">Level 3</h3>
-<p>Try and use equivalencies to find the doppler shifted wavelength of a line at <span class="math">\(454.4\mathrm{nm}\)</span> if the object is moving at a velocity of <span class="math">\(510\mathrm{km}/\mathrm{s}\)</span>. You will need to read up more about the available equivalencies <a href="http://docs.astropy.org/en/stable/units/equivalencies.html">here</a></p>
+<h3 id="Level-2:-Metadata">Level 2: Metadata<a class="anchor-link" href="#Level-2:-Metadata">&#182;</a></h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+
+<div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
-In&nbsp;[40]:
 </div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre> 
-</pre></div>
-
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For the table from <code>'ipac.dat'</code>, there is table metadata that is in an ordered dictionary in the table <code>meta</code> attribute. If you read the table into a variable named <code>dat</code> then you would be looking at <code>dat.meta</code>.</p>
+<ul>
+<li>Print the keys of <code>dat.meta</code>. What are they?</li>
+<li>Print each of the <code>keywords</code> and their values from <code>dat.meta</code>, one per line in the format <code>keyword: value</code>.</li>
+<li>For each column in the table print the column name and unit. <em>HINT</em> remember <code>colnames</code>.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Level-3:-Harder-reading">Level 3: Harder reading<a class="anchor-link" href="#Level-3:-Harder-reading">&#182;</a></h3>
 </div>
 </div>
 </div>
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Read two slightly challenging tables:</p>
+<ul>
+<li><code>hard1.dat</code> -- This is part of a real data file produced by a Sybase SQL query.</li>
+<li><code>hard2.dat</code> -- Your neighbor asked you to help computerize his garden and handed you this data file to read. You'll need to study up on <code>fill_values</code>.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Level-1:-Writing">Level 1: Writing<a class="anchor-link" href="#Level-1:-Writing">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Start from the table from <code>'ipac.dat'</code> and make a new table that has just first 2 lines of the first 3 columns. This is done with:</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; dat3 = dat[<span class="st">&#39;designation&#39;</span>, <span class="st">&#39;ra&#39;</span>, <span class="st">&#39;dec&#39;</span>][:<span class="dv">2</span>]</code></pre>
+<p>Find the output format output that will create each of the following three outputs from the table <code>t3</code>. You can use the pattern:</p>
+<pre><code>import sys
+dat3.write(sys.stdout, format=&#39;...&#39;, ...)</code></pre>
+<h5 id="format-1">Format 1</h5>
+<pre><code>designation,ra,dec,sigra,sigdec
+J095542.55+690421.2,148.9273263,69.0725621,0.0401,0.039
+J095540.45+690439.1,148.9185759,69.0775361,0.0519,0.0494</code></pre>
+<h5 id="format-2">Format 2</h5>
+<pre><code>        designation          ra        dec
+------------------- ----------- ----------
+J095542.55+690421.2 148.9273263 69.0725621
+J095540.45+690439.1 148.9185759 69.0775361</code></pre>
+<h5 id="format-3">Format 3</h5>
+<pre><code>\begin{table}
+\begin{tabular}{ccc}
+designation &amp; ra &amp; dec \\
+J095542.55+690421.2 &amp; 148.9273263 &amp; 69.0725621 \\
+J095540.45+690439.1 &amp; 148.9185759 &amp; 69.0775361 \\
+\end{tabular}
+\end{table}</code></pre>
+<h3 id="level-2-writing-ipac">Level 2: Writing IPAC</h3>
+<ul>
+<li>Now write the <code>dat3</code> table back out in IPAC format. Does it look like the output has the same units and metadata as the original?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="#Handling-ASCII-table-files">Back to top</a></p>
+</div>
+</div>
 </div>
     </div>
   </div>

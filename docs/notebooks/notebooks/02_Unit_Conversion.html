@@ -3,7 +3,7 @@
 <head>
 
 <meta charset="utf-8" />
-<title>Handling_FITS_Files</title>
+<title>02_Unit_Conversion</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -1277,6 +1277,7 @@ a .icon-rotate-90:before,a .icon-rotate-180:before,a .icon-rotate-270:before,a .
 .icon-weibo:before{content:"\f18a"}
 .icon-renren:before{content:"\f18b"}
 code{color:#000}
+pre{font-size:inherit;line-height:inherit}
 .border-box-sizing{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
 .corner-all{border-radius:4px}
 .hbox{display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
@@ -1340,6 +1341,8 @@ input.nbname_input,input.engine_num_input{padding-top:3px;padding-bottom:3px;hei
 input.engine_num_input{width:60px}
 .highlight_text{color:#00f}
 #project_name>.breadcrumb{padding:0;margin-bottom:0;background-color:transparent;font-weight:bold}
+.folder_icon:before{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;*margin-right:.3em;content:"\f114"}
+.notebook_icon:before{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;*margin-right:.3em;content:"\f02d"}
 .ansibold{font-weight:bold}
 .ansiblack{color:#000}
 .ansired{color:#8b0000}
@@ -1362,15 +1365,15 @@ div.cell.edit_mode{border-radius:4px;border:thin #008000 solid}
 div.cell{width:100%;padding:5px 5px 5px 0;margin:0;outline:none}
 div.prompt{min-width:11ex;padding:.4em;margin:0;font-family:monospace;text-align:right;line-height:1.21429em}
 @media (max-width:480px){div.prompt{text-align:left}}div.inner_cell{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
-div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7}
+div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7;line-height:1.21429em}
 div.prompt:empty{padding-top:0;padding-bottom:0}
 div.input{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
 @media (max-width:480px){div.input{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.input_prompt{color:#000080;border-top:1px solid transparent}
 div.input_area>div.highlight{margin:.4em;border:none;padding:0;background-color:transparent}
-div.input_area>div.highlight>pre{margin:0;border:0;padding:0;background-color:transparent;font-size:14px;line-height:1.21429em}
+div.input_area>div.highlight>pre{margin:0;border:none;padding:0;background-color:transparent}
 .CodeMirror{line-height:1.21429em;height:auto;background:none;}
 .CodeMirror-scroll{overflow-y:hidden;overflow-x:auto}
-@-moz-document url-prefix(){.CodeMirror-scroll{overflow-x:hidden}}.CodeMirror-lines{padding:.4em}
+.CodeMirror-lines{padding:.4em}
 .CodeMirror-linenumber{padding:0 8px 0 4px}
 .CodeMirror-gutters{border-bottom-left-radius:4px;border-top-left-radius:4px}
 .CodeMirror pre{padding:0;border:0;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
@@ -1405,7 +1408,7 @@ div.output_area{padding:0;page-break-inside:avoid;display:-webkit-box;-webkit-bo
 div.output_area .rendered_html table{margin-left:0;margin-right:0}
 div.output_area .rendered_html img{margin-left:0;margin-right:0}
 .output{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}
-@media (max-width:480px){div.output_area{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;color:#000;background-color:transparent;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;line-height:inherit}
+@media (max-width:480px){div.output_area{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;vertical-align:baseline;color:#000;background-color:transparent;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
 div.output_subarea{padding:.4em .4em 0 .4em;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
 div.output_text{text-align:left;color:#000;line-height:1.21429em}
 div.output_stderr{background:#fdd;}
@@ -1526,7 +1529,7 @@ ul#help_menu li a{overflow:hidden;padding-right:2.2em}ul#help_menu li a i{margin
 .notification_widget{color:#777;padding:1px 12px;margin:2px 4px;z-index:10;border:1px solid #ccc;border-radius:4px;background:rgba(240,240,240,0.5)}.notification_widget.span{padding-right:2px}
 div#pager_splitter{height:8px}
 #pager-container{position:relative;padding:15px 0}
-div#pager{font-size:14px;line-height:20px;overflow:auto;display:none}div#pager pre{font-size:13px;line-height:1.21429em;color:#000;background-color:#f7f7f7;padding:.4em}
+div#pager{font-size:14px;line-height:20px;overflow:auto;display:none}div#pager pre{line-height:1.21429em;color:#000;background-color:#f7f7f7;padding:.4em}
 .quickhelp{display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
 .shortcut_key{display:inline-block;width:20ex;text-align:right;font-family:monospace}
 .shortcut_descr{display:inline-block;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
@@ -1677,7 +1680,59 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="handling-fits-files">Handling FITS files</h1>
+<h1 id="Unit-Conversion">Unit Conversion<a class="anchor-link" href="#Unit-Conversion">&#182;</a></h1>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><a href="http://astropy4scipy2014.readthedocs.org/">Back to tutorial home</a></li>
+<li><a href="https://github.com/astropy/astropy4scipy2014/raw/master/notebooks/02_Unit_Conversion.ipynb">Download raw notebook file</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Documentation">Documentation<a class="anchor-link" href="#Documentation">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For more information about the features presented below, you can read the <a href="http://docs.astropy.org/en/stable/units/index.html">astropy.units</a> docs.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Representing-units-and-quantities">Representing units and quantities<a class="anchor-link" href="#Representing-units-and-quantities">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Astropy includes a powerful framework for units that allows users to attach units to scalars and arrays, and manipulate/combine these, keeping track of the units.</p>
+<p>Since we may want to use a number of units in expressions, it is easiest and most concise to import the units module with:</p>
 </div>
 </div>
 </div>
@@ -1688,7 +1743,7 @@ In&nbsp;[1]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="o">%</span><span class="k">matplotlib</span> <span class="n">inline</span>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
 </pre></div>
 
 </div>
@@ -1701,12 +1756,8 @@ In&nbsp;[1]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="documentation">Documentation</h2>
-<p>For more information about the features presented below, you can read the <a href="http://docs.astropy.org/en/stable/io/fits/index.html">astropy.io.fits</a> docs.</p>
-<h2 id="data">Data</h2>
-<p>The data used in this page is a <a href="data/gll_iem_v02_P6_V11_DIFFUSE.fit">model of the gamma-ray sky background</a> used for the LAT instrument on the Fermi telescope, as well as the <em>Fermi</em>/LAT <a href="data/gll_psc_v08.fit">point source catalog</a>.</p>
-<h2 id="reading-fits-files-and-accessing-data">Reading FITS files and accessing data</h2>
-<p>Opening a FITS file is relatively straightforward. We can open the background model included in the tutorial files:</p>
+<p>though note that this will conflict with any variable called <code>u</code>.</p>
+<p>Units can then be accessed with:</p>
 </div>
 </div>
 </div>
@@ -1717,46 +1768,7 @@ In&nbsp;[2]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[3]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">hdulist</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">&#39;data/gll_iem_v02_P6_V11_DIFFUSE.fit&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The returned object, <code>hdulist</code>, behaves like a Python list, and each element maps to a Header-Data Unit (HDU) in the FITS file. You can view more information about the FITS file with:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[4]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">hdulist</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<div class="highlight"><pre><span class="n">u</span><span class="o">.</span><span class="n">m</span>
 </pre></div>
 
 </div>
@@ -1767,16 +1779,14 @@ In&nbsp;[4]:
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-Filename: data/gll_iem_v02_P6_V11_DIFFUSE.fit
-No.    Name         Type      Cards   Dimensions   Format
-0    PRIMARY     PrimaryHDU      34   (720, 360, 30)   float32   
-1    ENERGIES    BinTableHDU     19   30R x 1C     [D]   
+<div class="output_area"><div class="prompt output_prompt">
+    Out[2]:</div>
 
-</pre>
+
+<div class="output_latex output_subarea output_pyout">
+$\mathrm{m}$
 </div>
+
 </div>
 
 </div>
@@ -1788,9 +1798,77 @@ No.    Name         Type      Cards   Dimensions   Format
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As we can see, this file contains two HDUs. To access the primary HDU, which contains the main data, you can then do:</p>
+<p>They all have a docstring defining them:</p>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[3]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">__doc__</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[3]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+u&apos;meter: base unit of length in SI&apos;
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[4]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">physical_type</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[4]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+u&apos;length&apos;
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -1799,22 +1877,30 @@ In&nbsp;[5]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span> <span class="o">=</span> <span class="n">hdulist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight"><pre><span class="n">u</span><span class="o">.</span><span class="n">pc</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[5]:</div>
+
+
+<div class="output_latex output_subarea output_pyout">
+$\mathrm{pc}$
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The <code>hdu</code> object then has two important attributes: <code>data</code>, which behaves like a Numpy array, can be used to access the data, and <code>header</code>, which behaves like a dictionary, can be used to access the header information. First, we can take a look at the data:</p>
+
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -1823,7 +1909,7 @@ In&nbsp;[6]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span>
+<div class="highlight"><pre><span class="n">u</span><span class="o">.</span><span class="n">pc</span><span class="o">.</span><span class="n">__doc__</span>
 </pre></div>
 
 </div>
@@ -1840,7 +1926,7 @@ In&nbsp;[6]:
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-(30, 360, 720)
+u&apos;parsec: approximately 3.26 light-years.&apos;
 </pre>
 </div>
 
@@ -1850,15 +1936,6 @@ In&nbsp;[6]:
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This tells us that it is a 3-d cube. We can now take a peak at the header:</p>
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -1866,7 +1943,7 @@ In&nbsp;[7]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">header</span>
+<div class="highlight"><pre><span class="n">u</span><span class="o">.</span><span class="n">s</span>
 </pre></div>
 
 </div>
@@ -1881,43 +1958,8 @@ In&nbsp;[7]:
     Out[7]:</div>
 
 
-<div class="output_text output_subarea output_pyout">
-<pre>
-SIMPLE  =                    T / Written by IDL:  Thu Jan 20 07:19:05 2011      
-BITPIX  =                  -32 /                                                
-NAXIS   =                    3 / number of data axes                            
-NAXIS1  =                  720 / length of data axis 1                          
-NAXIS2  =                  360 / length of data axis 2                          
-NAXIS3  =                   30 / length of data axis 3                          
-EXTEND  =                    T / FITS dataset may contain extensions            
-COMMENT   FITS (Flexible Image Transport System) format is defined in &apos;Astronomy
-COMMENT   and Astrophysics&apos;, volume 376, page 359; bibcode: 2001A&amp;A...376..359H 
-FLUX    =        8.42259635886 /                                                
-CRVAL1  =                   0. / Value of longitude in pixel CRPIX1             
-CDELT1  =                  0.5 / Step size in longitude                         
-CRPIX1  =                360.5 / Pixel that has value CRVAL1                    
-CTYPE1  = &apos;GLON-CAR&apos;           / The type of parameter 1 (Galactic longitude in 
-CUNIT1  = &apos;deg     &apos;           / The unit of parameter 1                        
-CRVAL2  =                   0. / Value of latitude in pixel CRPIX2              
-CDELT2  =                  0.5 / Step size in latitude                          
-CRPIX2  =                180.5 / Pixel that has value CRVAL2                    
-CTYPE2  = &apos;GLAT-CAR&apos;           / The type of parameter 2 (Galactic latitude in C
-CUNIT2  = &apos;deg     &apos;           / The unit of parameter 2                        
-CRVAL3  =                  50. / Energy of pixel CRPIX3                         
-CDELT3  =    0.113828620540137 / log10 of step size in energy (if it is logarith
-CRPIX3  =                   1. / Pixel that has value CRVAL3                    
-CTYPE3  = &apos;photon energy&apos;      / Axis 3 is the spectra                          
-CUNIT3  = &apos;MeV     &apos;           / The unit of axis 3                             
-CHECKSUM= &apos;3fdO3caL3caL3caL&apos;   / HDU checksum updated 2009-07-07T22:31:18       
-DATASUM = &apos;2184619035&apos;         / data unit checksum updated 2009-07-07T22:31:18 
-DATE    = &apos;2009-07-07&apos;         /                                                
-FILENAME= &apos;$TEMPDIR/diffuse/gll_iem_v02.fit&apos; /File name with version number     
-TELESCOP= &apos;GLAST   &apos;           /                                                
-INSTRUME= &apos;LAT     &apos;           /                                                
-ORIGIN  = &apos;LISOC   &apos;           /LAT team product delivered from the LISOC       
-OBSERVER= &apos;MICHELSON&apos;          /Instrument PI                                   
-HISTORY Scaled version of gll_iem_v02.fit for use with P6_V11_DIFFUSE           
-</pre>
+<div class="output_latex output_subarea output_pyout">
+$\mathrm{s}$
 </div>
 
 </div>
@@ -1925,15 +1967,6 @@ HISTORY Scaled version of gll_iem_v02.fit for use with P6_V11_DIFFUSE
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>which shows that this is a Plate Carrée (<code>-CAR</code>) projection in Galactic Coordinates, and the third axis is photon energy. We can access individual header keywords using standard item notation:</p>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -1942,7 +1975,7 @@ In&nbsp;[8]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s">&#39;TELESCOP&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span class="n">u</span><span class="o">.</span><span class="n">kg</span>
 </pre></div>
 
 </div>
@@ -1957,10 +1990,8 @@ In&nbsp;[8]:
     Out[8]:</div>
 
 
-<div class="output_text output_subarea output_pyout">
-<pre>
-&apos;GLAST&apos;
-</pre>
+<div class="output_latex output_subarea output_pyout">
+$\mathrm{kg}$
 </div>
 
 </div>
@@ -1968,6 +1999,24 @@ In&nbsp;[8]:
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The full list of available units is available <a href="https://astropy.readthedocs.org/en/stable/units/index.html#module-astropy.units.si">here</a>.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can create composite units:</p>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -1976,7 +2025,7 @@ In&nbsp;[9]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s">&#39;INSTRUME&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span class="n">u</span><span class="o">.</span><span class="n">m</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">kg</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="o">**</span><span class="mi">2</span>
 </pre></div>
 
 </div>
@@ -1991,9 +2040,41 @@ In&nbsp;[9]:
     Out[9]:</div>
 
 
+<div class="output_latex output_subarea output_pyout">
+$\mathrm{\frac{m}{kg\,s^{2}}}$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[10]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="nb">repr</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">kg</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[10]:</div>
+
+
 <div class="output_text output_subarea output_pyout">
 <pre>
-&apos;LAT&apos;
+&apos;Unit(&quot;m / (kg s2)&quot;)&apos;
 </pre>
 </div>
 
@@ -2008,51 +2089,7 @@ In&nbsp;[9]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Provided that we started up <code>ipython</code> with the <code>--pylab</code> flag, we can plot one of the slices in photon energy:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[10]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">hdu</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">,:,:],</span> <span class="n">origin</span><span class="o">=</span><span class="s">&#39;lower&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_text output_pyerr">
-<pre>
-<span class="ansired">---------------------------------------------------------------------------</span>
-<span class="ansired">NameError</span>                                 Traceback (most recent call last)
-<span class="ansigreen">&lt;ipython-input-10-f15bfbb34f2c&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
-<span class="ansigreen">----&gt; 1</span><span class="ansired"> </span>plt<span class="ansiblue">.</span>imshow<span class="ansiblue">(</span>hdu<span class="ansiblue">.</span>data<span class="ansiblue">[</span><span class="ansicyan">0</span><span class="ansiblue">,</span><span class="ansiblue">:</span><span class="ansiblue">,</span><span class="ansiblue">:</span><span class="ansiblue">]</span><span class="ansiblue">,</span> origin<span class="ansiblue">=</span><span class="ansiblue">&apos;lower&apos;</span><span class="ansiblue">)</span><span class="ansiblue"></span>
-
-<span class="ansired">NameError</span>: name &apos;plt&apos; is not defined</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Note that this is just a plot of an array, so the coordinates are just pixel coordinates at this stage. The data is stored with longitude increasing to the right (the opposite of the normal convention), but the Level 3 problem at the bottom of this page shows how to correctly flip the image.</p>
-<p>Modifying data or header information in a FITS file object is easy. We can update existing header keywords:</p>
+<p>The most useful feature about the units is the ability to attach them to scalars or arrays, creating <code>Quantity</code> objects:</p>
 </div>
 </div>
 </div>
@@ -2063,211 +2100,35 @@ In&nbsp;[11]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s">&#39;TELESCOP&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;Fermi Gamma-ray Space Telescope&quot;</span>
+<div class="highlight"><pre><span class="mf">3.</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[11]:</div>
+
+
+<div class="output_latex output_subarea output_pyout">
+$3 \; \mathrm{m}$
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>or add new ones:</p>
+
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
 In&nbsp;[12]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s">&#39;MODIFIED&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;21 Nov 2013&#39;</span>  <span class="c"># adds a new keyword</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>and we can also change the data, for example extracting only the first slice in photon energy:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[13]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">hdu</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">,:,:]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Note that this does not change the original FITS file, simply the FITS file object in memory. Since the data is now 2-dimensional, we can remove the WCS keywords for the third dimension:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[14]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s">&#39;CRPIX3&#39;</span><span class="p">)</span>
-<span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s">&#39;CRVAL3&#39;</span><span class="p">)</span>
-<span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s">&#39;CDELT3&#39;</span><span class="p">)</span>
-<span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s">&#39;CUNIT3&#39;</span><span class="p">)</span>
-<span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s">&#39;CTYPE3&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>You can write the FITS file object to a file with:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[15]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">writeto</span><span class="p">(</span><span class="s">&#39;lat_background_model_slice.fits&#39;</span><span class="p">,</span> <span class="n">clobber</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>
-WARNING: Overwriting existing file &apos;lat_background_model_slice.fits&apos;. [astropy.io.fits.file]
-WARNING:astropy:Overwriting existing file &apos;lat_background_model_slice.fits&apos;.
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>if you want to simply write out this HDU to a file, or:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[16]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">hdulist</span><span class="o">.</span><span class="n">writeto</span><span class="p">(</span><span class="s">&#39;lat_background_model_slice_allhdus.fits&#39;</span><span class="p">,</span> <span class="n">clobber</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>
-WARNING: Overwriting existing file &apos;lat_background_model_slice_allhdus.fits&apos;. [astropy.io.fits.file]
-WARNING:astropy:Overwriting existing file &apos;lat_background_model_slice_allhdus.fits&apos;.
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>if you want to write out all of the original HDUs, including the modified one, to a file.</p>
-<h2 id="creating-a-fits-file-from-scratch">Creating a FITS file from scratch</h2>
-<p>If you want to create a FITS file from scratch, you need to start off by creating an HDU object:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[17]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">PrimaryHDU</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>and you can then populate the data and header attributes with whatever information you like:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[18]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2282,14 +2143,33 @@ In&nbsp;[18]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[19]:
+In&nbsp;[13]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">))</span>
+<div class="highlight"><pre><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">])</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">pc</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">year</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[13]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+&lt;Quantity [ 1.2, 2.2, 1.7] pc / yr&gt;
+</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -2299,9 +2179,180 @@ In&nbsp;[19]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Note that setting the data automatically populates the header with basic information:</p>
+<h3 id="Combining-and-converting-units">Combining and converting units<a class="anchor-link" href="#Combining-and-converting-units">&#182;</a></h3>
 </div>
 </div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Quantities can then be combined:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[14]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">q1</span> <span class="o">=</span> <span class="mf">3.</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[15]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">q2</span> <span class="o">=</span> <span class="mf">5.</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">g</span><span class="o">**</span><span class="mi">2</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[16]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">q1</span> <span class="o">*</span> <span class="n">q2</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[16]:</div>
+
+
+<div class="output_latex output_subarea output_pyout">
+$15 \; \mathrm{\frac{cm\,m}{s\,g^{2}}}$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>and converted to different units:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[17]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="p">(</span><span class="n">q1</span> <span class="o">*</span> <span class="n">q2</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[17]:</div>
+
+
+<div class="output_latex output_subarea output_pyout">
+$150000 \; \mathrm{\frac{m^{2}}{s\,kg^{2}}}$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The units and value of a quantity can be accessed separately via the <code>value</code> and <code>unit</code> attributes:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[18]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">q</span> <span class="o">=</span> <span class="mf">5.</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">pc</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[19]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">q</span><span class="o">.</span><span class="n">value</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[19]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+5.0
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -2310,7 +2361,7 @@ In&nbsp;[20]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">header</span>
+<div class="highlight"><pre><span class="n">q</span><span class="o">.</span><span class="n">unit</span>
 </pre></div>
 
 </div>
@@ -2325,15 +2376,8 @@ In&nbsp;[20]:
     Out[20]:</div>
 
 
-<div class="output_text output_subarea output_pyout">
-<pre>
-SIMPLE  =                    T / conforms to FITS standard                      
-BITPIX  =                  -64 / array data type                                
-NAXIS   =                    2 / number of array dimensions                     
-NAXIS1  =                  128                                                  
-NAXIS2  =                  128                                                  
-EXTEND  =                    T                                                  
-</pre>
+<div class="output_latex output_subarea output_pyout">
+$\mathrm{pc}$
 </div>
 
 </div>
@@ -2347,7 +2391,17 @@ EXTEND  =                    T
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>and you should never have to set header keywords such as <code>NAXIS</code>, <code>NAXIS1</code>, and so on manually. We can then set additional header keywords:</p>
+<h3 id="Advanced-features">Advanced features<a class="anchor-link" href="#Advanced-features">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The units of a quantity can be decomposed into a set of base units using the <code>decompose()</code> method. By default, units will be decomposed to S.I.:</p>
 </div>
 </div>
 </div>
@@ -2358,31 +2412,7 @@ In&nbsp;[21]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s">&#39;telescop&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;Python Observatory&#39;</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>and we can then write out the FITS file to disk:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[22]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">hdu</span><span class="o">.</span><span class="n">writeto</span><span class="p">(</span><span class="s">&#39;random_array.fits&#39;</span><span class="p">,</span> <span class="n">clobber</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<div class="highlight"><pre><span class="p">(</span><span class="mf">3.</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">pc</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">g</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">year</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">decompose</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -2393,14 +2423,14 @@ In&nbsp;[22]:
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>
-WARNING: Overwriting existing file &apos;random_array.fits&apos;. [astropy.io.fits.file]
-WARNING:astropy:Overwriting existing file &apos;random_array.fits&apos;.
+<div class="output_area"><div class="prompt output_prompt">
+    Out[21]:</div>
 
-</pre>
+
+<div class="output_latex output_subarea output_pyout">
+$929.531 \; \mathrm{\frac{m^{2}}{kg\,s^{2}}}$
 </div>
+
 </div>
 
 </div>
@@ -2412,10 +2442,50 @@ WARNING:astropy:Overwriting existing file &apos;random_array.fits&apos;.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="convenience-functions">Convenience functions</h2>
-<p>In cases where you just want to access the data or header in a specific HDU, you can use the following convenience functions:</p>
+<p>To compose into c.g.s. bases:</p>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[22]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">u</span><span class="o">.</span><span class="n">cgs</span><span class="o">.</span><span class="n">bases</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[22]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+{Unit(&quot;mol&quot;),
+ Unit(&quot;rad&quot;),
+ Unit(&quot;cd&quot;),
+ Unit(&quot;cm&quot;),
+ Unit(&quot;g&quot;),
+ Unit(&quot;s&quot;),
+ Unit(&quot;C&quot;),
+ Unit(&quot;K&quot;)}
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -2424,11 +2494,27 @@ In&nbsp;[23]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">data</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">getdata</span><span class="p">(</span><span class="s">&#39;data/gll_iem_v02_P6_V11_DIFFUSE.fit&#39;</span><span class="p">)</span>
-<span class="n">header</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="s">&#39;data/gll_iem_v02_P6_V11_DIFFUSE.fit&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span class="p">(</span><span class="mf">3.</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">pc</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">g</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">year</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">decompose</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cgs</span><span class="o">.</span><span class="n">bases</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[23]:</div>
+
+
+<div class="output_latex output_subarea output_pyout">
+$9295.31 \; \mathrm{\frac{cm^{2}}{g\,s^{2}}}$
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -2438,7 +2524,7 @@ In&nbsp;[23]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To get the data or header for an HDU other than the first, you can specify the extension name or index. The second HDU is called <code>energies</code>, so we can do:</p>
+<p>To decompose and recompose into the highest-level c.g.s. units, one can do:</p>
 </div>
 </div>
 </div>
@@ -2449,10 +2535,27 @@ In&nbsp;[24]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">data</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">getdata</span><span class="p">(</span><span class="s">&#39;data/gll_iem_v02_P6_V11_DIFFUSE.fit&#39;</span><span class="p">,</span> <span class="n">extname</span><span class="o">=</span><span class="s">&#39;energies&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span class="p">(</span><span class="mf">3.</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">pc</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">g</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">year</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">cgs</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[24]:</div>
+
+
+<div class="output_latex output_subarea output_pyout">
+$9295.31 \; \mathrm{\frac{erg}{g^{2}}}$
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -2462,7 +2565,18 @@ In&nbsp;[24]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>or:</p>
+<h3 id="Using-physical-constants">Using physical constants<a class="anchor-link" href="#Using-physical-constants">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <a href="http://docs.astropy.org/en/v0.2.1/constants/index.html">astropy.constants</a> module contains physical constants relevant for Astronomy, and these are defined with units attached to them using the <code>astropy.units</code> framework.</p>
+<p>If we want to compute the Gravitational force felt by a 100. * u.kg space probe by the Sun, at a distance of 3.2au, we can do:</p>
 </div>
 </div>
 </div>
@@ -2473,24 +2587,13 @@ In&nbsp;[25]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">data</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">getdata</span><span class="p">(</span><span class="s">&#39;data/gll_iem_v02_P6_V11_DIFFUSE.fit&#39;</span><span class="p">,</span> <span class="n">ext</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">astropy.constants</span> <span class="kn">import</span> <span class="n">G</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>and similarly for <code>getheader</code>.</p>
-<h2 id="accessing-tabular-data">Accessing Tabular Data</h2>
-<p>Tabular data behaves very similarly to image data such as that shown above, but the data array is a structured Numpy array which requires column access via the item notation:</p>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -2499,8 +2602,7 @@ In&nbsp;[26]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span>
-<span class="n">hdulist</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">&#39;data/gll_psc_v08.fit&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span class="n">F</span> <span class="o">=</span> <span class="p">(</span><span class="n">G</span> <span class="o">*</span> <span class="mf">1.</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">M_sun</span> <span class="o">*</span> <span class="mf">100.</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mf">3.2</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">au</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
 </pre></div>
 
 </div>
@@ -2515,7 +2617,7 @@ In&nbsp;[27]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdulist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+<div class="highlight"><pre><span class="n">F</span>
 </pre></div>
 
 </div>
@@ -2530,10 +2632,8 @@ In&nbsp;[27]:
     Out[27]:</div>
 
 
-<div class="output_text output_subarea output_pyout">
-<pre>
-&apos;LAT_Point_Source_Catalog&apos;
-</pre>
+<div class="output_latex output_subarea output_pyout">
+$6.51742\times 10^{-10} \; \mathrm{\frac{m^{3}\,M_{\odot}}{AU^{2}\,s^{2}}}$
 </div>
 
 </div>
@@ -2549,7 +2649,7 @@ In&nbsp;[28]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdulist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;RAJ2000&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span class="n">F</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">N</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -2564,13 +2664,100 @@ In&nbsp;[28]:
     Out[28]:</div>
 
 
-<div class="output_text output_subarea output_pyout">
-<pre>
-array([  2.33711034e-01,   4.38849270e-01,   6.79812014e-01, ...,
-         3.59759430e+02,   3.59859894e+02,   3.59906921e+02], dtype=float32)
-</pre>
+<div class="output_latex output_subarea output_pyout">
+$0.0579271 \; \mathrm{N}$
 </div>
 
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The full list of available physical constants is shown <a href="http://docs.astropy.org/en/stable/constants/index.html#module-astropy.constants">here</a> (and additions are welcome!).</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Equivalencies">Equivalencies<a class="anchor-link" href="#Equivalencies">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Equivalencies can be used to convert quantities that are not strictly the same physical type:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[29]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="p">(</span><span class="mf">450.</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">nm</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_pyerr">
+<pre>
+<span class="ansired">---------------------------------------------------------------------------</span>
+<span class="ansired">UnitsError</span>                                Traceback (most recent call last)
+<span class="ansigreen">&lt;ipython-input-29-e4fbcb033257&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">----&gt; 1</span><span class="ansired"> </span><span class="ansiblue">(</span><span class="ansicyan">450.</span> <span class="ansiblue">*</span> u<span class="ansiblue">.</span>nm<span class="ansiblue">)</span><span class="ansiblue">.</span>to<span class="ansiblue">(</span>u<span class="ansiblue">.</span>GHz<span class="ansiblue">)</span><span class="ansiblue"></span>
+
+<span class="ansigreen">/Users/aldcroft/anaconda/lib/python2.7/site-packages/astropy/units/quantity.pyc</span> in <span class="ansicyan">to</span><span class="ansiblue">(self, unit, equivalencies)</span>
+<span class="ansigreen">    566</span>         unit <span class="ansiblue">=</span> Unit<span class="ansiblue">(</span>unit<span class="ansiblue">)</span><span class="ansiblue"></span>
+<span class="ansigreen">    567</span>         new_val = np.asarray(
+<span class="ansigreen">--&gt; 568</span><span class="ansired">             self.unit.to(unit, self.value, equivalencies=equivalencies))
+</span><span class="ansigreen">    569</span>         <span class="ansigreen">return</span> self<span class="ansiblue">.</span>_new_view<span class="ansiblue">(</span>new_val<span class="ansiblue">,</span> unit<span class="ansiblue">)</span><span class="ansiblue"></span>
+<span class="ansigreen">    570</span> <span class="ansiblue"></span>
+
+<span class="ansigreen">/Users/aldcroft/anaconda/lib/python2.7/site-packages/astropy/units/core.pyc</span> in <span class="ansicyan">to</span><span class="ansiblue">(self, other, value, equivalencies)</span>
+<span class="ansigreen">    910</span>             If units are inconsistent<span class="ansiblue"></span>
+<span class="ansigreen">    911</span>         &quot;&quot;&quot;
+<span class="ansigreen">--&gt; 912</span><span class="ansired">         </span><span class="ansigreen">return</span> self<span class="ansiblue">.</span>get_converter<span class="ansiblue">(</span>other<span class="ansiblue">,</span> equivalencies<span class="ansiblue">=</span>equivalencies<span class="ansiblue">)</span><span class="ansiblue">(</span>value<span class="ansiblue">)</span><span class="ansiblue"></span>
+<span class="ansigreen">    913</span> <span class="ansiblue"></span>
+<span class="ansigreen">    914</span>     <span class="ansigreen">def</span> in_units<span class="ansiblue">(</span>self<span class="ansiblue">,</span> other<span class="ansiblue">,</span> value<span class="ansiblue">=</span><span class="ansicyan">1.0</span><span class="ansiblue">,</span> equivalencies<span class="ansiblue">=</span><span class="ansiblue">[</span><span class="ansiblue">]</span><span class="ansiblue">)</span><span class="ansiblue">:</span><span class="ansiblue"></span>
+
+<span class="ansigreen">/Users/aldcroft/anaconda/lib/python2.7/site-packages/astropy/units/core.pyc</span> in <span class="ansicyan">get_converter</span><span class="ansiblue">(self, other, equivalencies)</span>
+<span class="ansigreen">    846</span>         <span class="ansigreen">except</span> UnitsError<span class="ansiblue">:</span><span class="ansiblue"></span>
+<span class="ansigreen">    847</span>             return self._apply_equivalences(
+<span class="ansigreen">--&gt; 848</span><span class="ansired">                 self, other, self._normalize_equivalencies(equivalencies))
+</span><span class="ansigreen">    849</span>         <span class="ansigreen">return</span> <span class="ansigreen">lambda</span> val<span class="ansiblue">:</span> scale <span class="ansiblue">*</span> _condition_arg<span class="ansiblue">(</span>val<span class="ansiblue">)</span><span class="ansiblue"></span>
+<span class="ansigreen">    850</span> <span class="ansiblue"></span>
+
+<span class="ansigreen">/Users/aldcroft/anaconda/lib/python2.7/site-packages/astropy/units/core.pyc</span> in <span class="ansicyan">_apply_equivalences</span><span class="ansiblue">(self, unit, other, equivalencies)</span>
+<span class="ansigreen">    809</span>         raise UnitsError(
+<span class="ansigreen">    810</span>             &quot;{0} and {1} are not convertible&quot;.format(
+<span class="ansigreen">--&gt; 811</span><span class="ansired">                 unit_str, other_str))
+</span><span class="ansigreen">    812</span> <span class="ansiblue"></span>
+<span class="ansigreen">    813</span>     <span class="ansigreen">def</span> get_converter<span class="ansiblue">(</span>self<span class="ansiblue">,</span> other<span class="ansiblue">,</span> equivalencies<span class="ansiblue">=</span><span class="ansiblue">[</span><span class="ansiblue">]</span><span class="ansiblue">)</span><span class="ansiblue">:</span><span class="ansiblue"></span>
+
+<span class="ansired">UnitsError</span>: &apos;nm&apos; (length) and &apos;GHz&apos; (frequency) are not convertible</pre>
+</div>
 </div>
 
 </div>
@@ -2580,11 +2767,11 @@ array([  2.33711034e-01,   4.38849270e-01,   6.79812014e-01, ...,
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[29]:
+In&nbsp;[30]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">hdulist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;DEJ2000&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span class="p">(</span><span class="mf">450.</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">nm</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span> <span class="n">equivalencies</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">spectral</span><span class="p">())</span>
 </pre></div>
 
 </div>
@@ -2596,13 +2783,233 @@ In&nbsp;[29]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[29]:</div>
+    Out[30]:</div>
+
+
+<div class="output_latex output_subarea output_pyout">
+$666205 \; \mathrm{GHz}$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[31]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="p">(</span><span class="mf">450.</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">eV</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">nm</span><span class="p">,</span> <span class="n">equivalencies</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">spectral</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[31]:</div>
+
+
+<div class="output_latex output_subarea output_pyout">
+$2.7552 \; \mathrm{nm}$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[32]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">q</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1e-18</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">erg</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">AA</span><span class="p">)</span>
+<span class="n">q</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">Jy</span><span class="p">,</span> <span class="n">equivalencies</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">spectral_density</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[32]:</div>
+
+
+<div class="output_latex output_subarea output_pyout">
+$3.33564 \; \mathrm{Jy}$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Integration-with-Numpy-ufuncs">Integration with Numpy ufuncs<a class="anchor-link" href="#Integration-with-Numpy-ufuncs">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Most of the <a href="http://www.numpy.org">Numpy</a> functions understand Quantity objects:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[33]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">30</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">degree</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[33]:</div>
+
+
+<div class="output_latex output_subarea output_pyout">
+$0.5 \; \mathrm{}$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[34]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[34]:</div>
+
+
+<div class="output_latex output_subarea output_pyout">
+$10 \; \mathrm{km}$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[35]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">/</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[35]:</div>
+
+
+<div class="output_latex output_subarea output_pyout">
+$1.001 \; \mathrm{}$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Care needs to be taken with dimensionless units. Passing raw values to an inverse trig function, there will be no units in the result:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[36]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[36]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-array([ -7.81549788, -41.99647903,  62.33962631, ..., -30.62516785,
-        67.86333466,  65.73053741], dtype=float32)
+1.5707963267948966
 </pre>
 </div>
 
@@ -2617,13 +3024,145 @@ array([ -7.81549788, -41.99647903,  62.33962631, ..., -30.62516785,
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="practical-exercises">Practical Exercises</h2>
+<p>However, <code>u.dimensionless_unscaled</code> creates a Quantity &quot;with the dimensionless unit&quot; from a value, and therefore we do units in the output:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[37]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">dimensionless_unscaled</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[37]:</div>
+
+
+<div class="output_latex output_subarea output_pyout">
+$1.5708 \; \mathrm{rad}$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[38]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">dimensionless_unscaled</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">degree</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[38]:</div>
+
+
+<div class="output_latex output_subarea output_pyout">
+$90 \; \mathrm{{}^{\circ}}$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Practical-Exercises">Practical Exercises<a class="anchor-link" href="#Practical-Exercises">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="level-1">Level 1</h3>
-<p>Try and read in one of your own FITS files using <code>astropy.io.fits</code>, and see if you can also plot the array values in Matplotlib. Also, examine the header, and try and extract individual values. You can even try and modify the data/header and write the data back out - but take care not to write over the original file!</p>
+<p>What is 1 barn megaparsecs in teaspoons? Note that teaspoons are not part of the standard set of units, but it can be found in:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[39]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">astropy.units</span> <span class="kn">import</span> <span class="n">imperial</span>
+<span class="n">imperial</span><span class="o">.</span><span class="n">tsp</span>  
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[39]:</div>
+
+
+<div class="output_latex output_subarea output_pyout">
+$\mathrm{tsp}$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="level-2">Level 2</h3>
-<p>Read in the LAT Point Source Catalog and make a scatter plot of the Galactic Coordinates of the sources (complete with axis labels). Bonus points if you can make the plot go between -180 and 180 instead of 0 and 360 degrees. Note that the Point Source Catalog contains the Galactic Coordinates, so no need to convert them.</p>
+<p>What is <span class="math">\(3 \mathrm{nm}^2 \mathrm{Mpc} / \mathrm{m}^3\)</span> in dimensionless units?</p>
 <h3 id="level-3">Level 3</h3>
-<p>Using Matplotlib, make an all-sky plot of the LAT Background Model in the Plate Carée projection showing the LAT Point Source Catalog overlaid with markers, and with the correct coordinates on the axes. You should do this using only <code>astropy.io.fits</code>, Numpy, and Matplotlib (no WCS or coordinate conversion library). Hint: the -CAR projection is such that the x pixel position is proportional to longitude, and the y pixel position to latitude. Bonus points for a pretty colormap.</p>
+<p>Try and use equivalencies to find the doppler shifted wavelength of a line at <span class="math">\(454.4\mathrm{nm}\)</span> if the object is moving at a velocity of <span class="math">\(510\mathrm{km}/\mathrm{s}\)</span>. You will need to read up more about the available equivalencies <a href="http://docs.astropy.org/en/stable/units/equivalencies.html">here</a></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="#Unit-Conversion">Back to top</a></p>
 </div>
 </div>
 </div>

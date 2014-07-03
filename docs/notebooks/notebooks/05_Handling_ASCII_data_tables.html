@@ -3,7 +3,7 @@
 <head>
 
 <meta charset="utf-8" />
-<title>Handling_ASCII_data_tables</title>
+<title>05_Handling_ASCII_data_tables</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -1277,6 +1277,7 @@ a .icon-rotate-90:before,a .icon-rotate-180:before,a .icon-rotate-270:before,a .
 .icon-weibo:before{content:"\f18a"}
 .icon-renren:before{content:"\f18b"}
 code{color:#000}
+pre{font-size:inherit;line-height:inherit}
 .border-box-sizing{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
 .corner-all{border-radius:4px}
 .hbox{display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
@@ -1340,6 +1341,8 @@ input.nbname_input,input.engine_num_input{padding-top:3px;padding-bottom:3px;hei
 input.engine_num_input{width:60px}
 .highlight_text{color:#00f}
 #project_name>.breadcrumb{padding:0;margin-bottom:0;background-color:transparent;font-weight:bold}
+.folder_icon:before{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;*margin-right:.3em;content:"\f114"}
+.notebook_icon:before{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;*margin-right:.3em;content:"\f02d"}
 .ansibold{font-weight:bold}
 .ansiblack{color:#000}
 .ansired{color:#8b0000}
@@ -1362,15 +1365,15 @@ div.cell.edit_mode{border-radius:4px;border:thin #008000 solid}
 div.cell{width:100%;padding:5px 5px 5px 0;margin:0;outline:none}
 div.prompt{min-width:11ex;padding:.4em;margin:0;font-family:monospace;text-align:right;line-height:1.21429em}
 @media (max-width:480px){div.prompt{text-align:left}}div.inner_cell{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
-div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7}
+div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7;line-height:1.21429em}
 div.prompt:empty{padding-top:0;padding-bottom:0}
 div.input{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
 @media (max-width:480px){div.input{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.input_prompt{color:#000080;border-top:1px solid transparent}
 div.input_area>div.highlight{margin:.4em;border:none;padding:0;background-color:transparent}
-div.input_area>div.highlight>pre{margin:0;border:0;padding:0;background-color:transparent;font-size:14px;line-height:1.21429em}
+div.input_area>div.highlight>pre{margin:0;border:none;padding:0;background-color:transparent}
 .CodeMirror{line-height:1.21429em;height:auto;background:none;}
 .CodeMirror-scroll{overflow-y:hidden;overflow-x:auto}
-@-moz-document url-prefix(){.CodeMirror-scroll{overflow-x:hidden}}.CodeMirror-lines{padding:.4em}
+.CodeMirror-lines{padding:.4em}
 .CodeMirror-linenumber{padding:0 8px 0 4px}
 .CodeMirror-gutters{border-bottom-left-radius:4px;border-top-left-radius:4px}
 .CodeMirror pre{padding:0;border:0;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
@@ -1405,7 +1408,7 @@ div.output_area{padding:0;page-break-inside:avoid;display:-webkit-box;-webkit-bo
 div.output_area .rendered_html table{margin-left:0;margin-right:0}
 div.output_area .rendered_html img{margin-left:0;margin-right:0}
 .output{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}
-@media (max-width:480px){div.output_area{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;color:#000;background-color:transparent;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;line-height:inherit}
+@media (max-width:480px){div.output_area{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;vertical-align:baseline;color:#000;background-color:transparent;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
 div.output_subarea{padding:.4em .4em 0 .4em;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
 div.output_text{text-align:left;color:#000;line-height:1.21429em}
 div.output_stderr{background:#fdd;}
@@ -1526,7 +1529,7 @@ ul#help_menu li a{overflow:hidden;padding-right:2.2em}ul#help_menu li a i{margin
 .notification_widget{color:#777;padding:1px 12px;margin:2px 4px;z-index:10;border:1px solid #ccc;border-radius:4px;background:rgba(240,240,240,0.5)}.notification_widget.span{padding-right:2px}
 div#pager_splitter{height:8px}
 #pager-container{position:relative;padding:15px 0}
-div#pager{font-size:14px;line-height:20px;overflow:auto;display:none}div#pager pre{font-size:13px;line-height:1.21429em;color:#000;background-color:#f7f7f7;padding:.4em}
+div#pager{font-size:14px;line-height:20px;overflow:auto;display:none}div#pager pre{line-height:1.21429em;color:#000;background-color:#f7f7f7;padding:.4em}
 .quickhelp{display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
 .shortcut_key{display:inline-block;width:20ex;text-align:right;font-family:monospace}
 .shortcut_descr{display:inline-block;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
@@ -1687,6 +1690,18 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><a href="http://astropy4scipy2014.readthedocs.org/">Back to tutorial home</a></li>
+<li><a href="https://github.com/astropy/astropy4scipy2014/raw/master/notebooks/05_Handling_ASCII_data_tables.ipynb">Download raw notebook file</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>An <strong>ASCII data table</strong> refers to a tabular data set where the values are encoded in ASCII and are written in a row-oriented format where each table row is (effectively) on one line. Frequently these data files are somewhat free format in nature and do not conform to precisely definition standards such as FITS.</p>
 <p>ASCII data tables are a fact of life for scientists and you need to be able to read and write them effectively.</p>
 </div>
@@ -1773,9 +1788,9 @@ div#notebook {
 </ul>
 <p>Internally there is no difference since they both end up calling the <code>astropy.io.ascii</code> routines. It depends somewhat on your taste:</p>
 <p><strong>Functional interface</strong></p>
-<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="ch">from</span> astropy.io <span class="ch">import</span> ascii
-&gt;&gt;&gt; pets = ascii.read(data)
-&gt;&gt;&gt; ascii.write(pets, <span class="st">&#39;pets.tex&#39;</span>, <span class="dt">format</span>=<span class="st">&#39;latex&#39;</span>)  <span class="co"># format=&#39;&lt;format_name&gt;&#39;</span></code></pre>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="ch">from</span> astropy.io <span class="ch">import</span> <span class="dt">ascii</span>
+&gt;&gt;&gt; pets = <span class="dt">ascii</span>.read(data)
+&gt;&gt;&gt; <span class="dt">ascii</span>.write(pets, <span class="st">&#39;pets.tex&#39;</span>, <span class="dt">format</span>=<span class="st">&#39;latex&#39;</span>)  <span class="co"># format=&#39;&lt;format_name&gt;&#39;</span></code></pre>
 <p><strong>Table interface</strong></p>
 <pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="ch">from</span> astropy.table <span class="ch">import</span> Table
 &gt;&gt;&gt; pets = Table.read(data, <span class="dt">format</span>=<span class="st">&#39;ascii&#39;</span>)  <span class="co"># format=&#39;ascii&#39;</span>
@@ -1810,7 +1825,8 @@ In&nbsp;[1]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">astropy.table</span> <span class="kn">import</span> <span class="n">Table</span>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">astropy.table</span> <span class="kn">import</span> <span class="n">Table</span>
 </pre></div>
 
 </div>
@@ -1845,7 +1861,7 @@ In&nbsp;[2]:
     Out[2]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table4470589584"><thead><tr><th>animal</th><th>number</th></tr></thead><tr><td>siamese cat</td><td>1</td></tr><tr><td>dog</td><td>3</td></tr></table>
+<table id="table4336358928"><thead><tr><th>animal</th><th>number</th></tr></thead><tr><td>siamese cat</td><td>1</td></tr><tr><td>dog</td><td>3</td></tr></table>
 </div>
 
 </div>
@@ -1952,7 +1968,7 @@ In&nbsp;[3]:
     Out[3]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table4470591440"><thead><tr><th>X</th><th>Y</th><th>Z</th></tr></thead><tr><td>1</td><td>2</td><td>3</td></tr><tr><td>4</td><td>5</td><td>6</td></tr><tr><td>7</td><td>8</td><td>9</td></tr></table>
+<table id="table4336357520"><thead><tr><th>X</th><th>Y</th><th>Z</th></tr></thead><tr><td>1</td><td>2</td><td>3</td></tr><tr><td>4</td><td>5</td><td>6</td></tr><tr><td>7</td><td>8</td><td>9</td></tr></table>
 </div>
 
 </div>
@@ -2004,7 +2020,7 @@ In&nbsp;[4]:
     Out[4]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table4470778384"><thead><tr><th>a</th><th>b</th></tr></thead><tr><td>1</td><td>2</td></tr></table>
+<table id="table4394631952"><thead><tr><th>a</th><th>b</th></tr></thead><tr><td>1</td><td>2</td></tr></table>
 </div>
 
 </div>
@@ -2170,7 +2186,7 @@ In&nbsp;[7]:
     Out[7]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table4477430928"><thead><tr><th>year</th><th>event</th></tr></thead><tr><td>2015</td><td>Pigs fly</td></tr></table>
+<table id="table4399938256"><thead><tr><th>year</th><th>event</th></tr></thead><tr><td>2015</td><td>Pigs fly</td></tr></table>
 </div>
 
 </div>
@@ -2238,7 +2254,7 @@ In&nbsp;[8]:
     Out[8]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table4477506256"><thead><tr><th>a</th><th>b</th></tr></thead><tr><td>hello * world</td><td>5</td></tr><tr><td>more</td><td>values</td></tr></table>
+<table id="table4394632848"><thead><tr><th>a</th><th>b</th></tr></thead><tr><td>hello * world</td><td>5</td></tr><tr><td>more</td><td>values</td></tr></table>
 </div>
 
 </div>
@@ -2329,7 +2345,7 @@ In&nbsp;[10]:
     Out[10]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table4477428688"><thead><tr><th>col0</th><th>col1</th></tr></thead><tr><td>10</td><td>20</td></tr><tr><td>20</td><td>40</td></tr></table>
+<table id="table4399936784"><thead><tr><th>col0</th><th>col1</th></tr></thead><tr><td>10</td><td>20</td></tr><tr><td>20</td><td>40</td></tr></table>
 </div>
 
 </div>
@@ -2438,27 +2454,6 @@ In&nbsp;[13]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_text output_pyerr">
-<pre>
-<span class="ansired">---------------------------------------------------------------------------</span>
-<span class="ansired">NameError</span>                                 Traceback (most recent call last)
-<span class="ansigreen">&lt;ipython-input-13-3aff8c76b33e&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
-<span class="ansigreen">      1</span> <span class="ansigreen">from</span> astropy<span class="ansiblue">.</span>io <span class="ansigreen">import</span> ascii<span class="ansiblue"></span>
-<span class="ansigreen">----&gt; 2</span><span class="ansired"> converters = {&apos;char&apos;: [ascii.convert_numpy(np.str)],
-</span><span class="ansigreen">      3</span>               &apos;float&apos;: [ascii.convert_numpy(np.float)]}
-
-<span class="ansired">NameError</span>: name &apos;np&apos; is not defined</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -2479,17 +2474,16 @@ In&nbsp;[14]:
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_text output_pyerr">
-<pre>
-<span class="ansired">---------------------------------------------------------------------------</span>
-<span class="ansired">NameError</span>                                 Traceback (most recent call last)
-<span class="ansigreen">&lt;ipython-input-14-ea570010cd5e&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
-<span class="ansigreen">----&gt; 1</span><span class="ansired"> </span>t <span class="ansiblue">=</span> Table<span class="ansiblue">.</span>read<span class="ansiblue">(</span>lines<span class="ansiblue">,</span> format<span class="ansiblue">=</span><span class="ansiblue">&apos;ascii&apos;</span><span class="ansiblue">,</span> converters<span class="ansiblue">=</span>converters<span class="ansiblue">)</span><span class="ansiblue"></span>
-<span class="ansigreen">      2</span> t<span class="ansiblue">.</span>dtype<span class="ansiblue"></span>
+<div class="output_area"><div class="prompt output_prompt">
+    Out[14]:</div>
 
-<span class="ansired">NameError</span>: name &apos;converters&apos; is not defined</pre>
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+dtype([(&apos;char&apos;, &apos;S1&apos;), (&apos;float&apos;, &apos;&lt;f8&apos;)])
+</pre>
 </div>
+
 </div>
 
 </div>
@@ -2550,7 +2544,7 @@ In&nbsp;[15]:
     Out[15]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table4478198096"><thead><tr><th>a</th><th>b</th><th>c</th></tr></thead><tr><td>1</td><td>2</td><td>3</td></tr><tr><td>4</td><td>5</td><td>6</td></tr></table>
+<table id="table4399979728"><thead><tr><th>a</th><th>b</th><th>c</th></tr></thead><tr><td>1</td><td>2</td><td>3</td></tr><tr><td>4</td><td>5</td><td>6</td></tr></table>
 </div>
 
 </div>
@@ -2595,7 +2589,7 @@ In&nbsp;[16]:
     Out[16]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table4478199504"><thead><tr><th>planet</th><th>color</th></tr></thead><tr><td>mars</td><td>reddish</td></tr><tr><td>earth</td><td>blue-ish</td></tr></table>
+<table id="table4399977040"><thead><tr><th>planet</th><th>color</th></tr></thead><tr><td>mars</td><td>reddish</td></tr><tr><td>earth</td><td>blue-ish</td></tr></table>
 </div>
 
 </div>
@@ -2716,7 +2710,7 @@ In&nbsp;[19]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">t</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s">&#39;ascii.csv&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span class="n">t</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s">&#39;ascii&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s">&#39;,&#39;</span><span class="p">)</span>  <span class="c"># Or just format=&#39;ascii.csv&#39; in astropy 0.4 and later</span>
 </pre></div>
 
 </div>
@@ -2893,7 +2887,7 @@ X &amp; Y &amp; Z \\
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Practical-exercises">Practical exercises<a class="anchor-link" href="#Practical-exercises">&#182;</a></h2>
+<h1 id="Practical-exercises">Practical exercises<a class="anchor-link" href="#Practical-exercises">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -2903,7 +2897,7 @@ X &amp; Y &amp; Z \\
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Basic-reading">Basic reading<a class="anchor-link" href="#Basic-reading">&#182;</a></h3>
+<h3 id="Level-1-2:-Basic-reading">Level 1-2: Basic reading<a class="anchor-link" href="#Level-1-2:-Basic-reading">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -2919,6 +2913,8 @@ X &amp; Y &amp; Z \\
 <li>Which formats document support for table metadata like column units, comments or additional descriptions?</li>
 </ul>
 <p>Read the following files in the <strong><code>data/ascii/</code></strong> sub-directory and show the contents for each one. Try to use the minimum effort and number of non-default options possible.</p>
+<p>The pattern will be <code>Table.read('data/ascii/&lt;filename&gt;', format='...', ...)</code>.</p>
+<p><em>HINT</em>: You can examine each file with <code>%cat &lt;filename&gt;</code> in IPython notebook (e.g. <code>%cat data/ascii/basic.dat</code>).</p>
 <ul>
 <li><code>'basic.dat'</code></li>
 <li><code>'ipac.dat'</code> -- from <a href="http://irsa.ipac.caltech.edu/frontpage/">NASA/IPAC Infrared Science Archive</a></li>
@@ -2934,7 +2930,7 @@ X &amp; Y &amp; Z \\
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Metadata">Metadata<a class="anchor-link" href="#Metadata">&#182;</a></h3>
+<h3 id="Level-2:-Metadata">Level 2: Metadata<a class="anchor-link" href="#Level-2:-Metadata">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -2958,7 +2954,7 @@ X &amp; Y &amp; Z \\
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Harder-reading-(if-you-have-time)">Harder reading (if you have time)<a class="anchor-link" href="#Harder-reading-(if-you-have-time)">&#182;</a></h3>
+<h3 id="Level-3:-Harder-reading">Level 3: Harder reading<a class="anchor-link" href="#Level-3:-Harder-reading">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -2981,7 +2977,7 @@ X &amp; Y &amp; Z \\
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Writing">Writing<a class="anchor-link" href="#Writing">&#182;</a></h3>
+<h3 id="Level-1:-Writing">Level 1: Writing<a class="anchor-link" href="#Level-1:-Writing">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -3013,10 +3009,19 @@ J095542.55+690421.2 &amp; 148.9273263 &amp; 69.0725621 \\
 J095540.45+690439.1 &amp; 148.9185759 &amp; 69.0775361 \\
 \end{tabular}
 \end{table}</code></pre>
-<h5 id="ipac">IPAC</h5>
+<h3 id="level-2-writing-ipac">Level 2: Writing IPAC</h3>
 <ul>
 <li>Now write the <code>dat3</code> table back out in IPAC format. Does it look like the output has the same units and metadata as the original?</li>
 </ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="#Handling-ASCII-table-files">Back to top</a></p>
 </div>
 </div>
 </div>

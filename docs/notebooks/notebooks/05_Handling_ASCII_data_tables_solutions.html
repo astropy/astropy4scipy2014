@@ -1277,7 +1277,6 @@ a .icon-rotate-90:before,a .icon-rotate-180:before,a .icon-rotate-270:before,a .
 .icon-weibo:before{content:"\f18a"}
 .icon-renren:before{content:"\f18b"}
 code{color:#000}
-pre{font-size:inherit;line-height:inherit}
 .border-box-sizing{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
 .corner-all{border-radius:4px}
 .hbox{display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
@@ -1341,8 +1340,6 @@ input.nbname_input,input.engine_num_input{padding-top:3px;padding-bottom:3px;hei
 input.engine_num_input{width:60px}
 .highlight_text{color:#00f}
 #project_name>.breadcrumb{padding:0;margin-bottom:0;background-color:transparent;font-weight:bold}
-.folder_icon:before{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;*margin-right:.3em;content:"\f114"}
-.notebook_icon:before{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;*margin-right:.3em;content:"\f02d"}
 .ansibold{font-weight:bold}
 .ansiblack{color:#000}
 .ansired{color:#8b0000}
@@ -1365,15 +1362,15 @@ div.cell.edit_mode{border-radius:4px;border:thin #008000 solid}
 div.cell{width:100%;padding:5px 5px 5px 0;margin:0;outline:none}
 div.prompt{min-width:11ex;padding:.4em;margin:0;font-family:monospace;text-align:right;line-height:1.21429em}
 @media (max-width:480px){div.prompt{text-align:left}}div.inner_cell{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
-div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7;line-height:1.21429em}
+div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7}
 div.prompt:empty{padding-top:0;padding-bottom:0}
 div.input{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
 @media (max-width:480px){div.input{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.input_prompt{color:#000080;border-top:1px solid transparent}
 div.input_area>div.highlight{margin:.4em;border:none;padding:0;background-color:transparent}
-div.input_area>div.highlight>pre{margin:0;border:none;padding:0;background-color:transparent}
+div.input_area>div.highlight>pre{margin:0;border:0;padding:0;background-color:transparent;font-size:14px;line-height:1.21429em}
 .CodeMirror{line-height:1.21429em;height:auto;background:none;}
 .CodeMirror-scroll{overflow-y:hidden;overflow-x:auto}
-.CodeMirror-lines{padding:.4em}
+@-moz-document url-prefix(){.CodeMirror-scroll{overflow-x:hidden}}.CodeMirror-lines{padding:.4em}
 .CodeMirror-linenumber{padding:0 8px 0 4px}
 .CodeMirror-gutters{border-bottom-left-radius:4px;border-top-left-radius:4px}
 .CodeMirror pre{padding:0;border:0;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
@@ -1408,7 +1405,7 @@ div.output_area{padding:0;page-break-inside:avoid;display:-webkit-box;-webkit-bo
 div.output_area .rendered_html table{margin-left:0;margin-right:0}
 div.output_area .rendered_html img{margin-left:0;margin-right:0}
 .output{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}
-@media (max-width:480px){div.output_area{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;vertical-align:baseline;color:#000;background-color:transparent;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
+@media (max-width:480px){div.output_area{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;color:#000;background-color:transparent;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;line-height:inherit}
 div.output_subarea{padding:.4em .4em 0 .4em;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
 div.output_text{text-align:left;color:#000;line-height:1.21429em}
 div.output_stderr{background:#fdd;}
@@ -1529,7 +1526,7 @@ ul#help_menu li a{overflow:hidden;padding-right:2.2em}ul#help_menu li a i{margin
 .notification_widget{color:#777;padding:1px 12px;margin:2px 4px;z-index:10;border:1px solid #ccc;border-radius:4px;background:rgba(240,240,240,0.5)}.notification_widget.span{padding-right:2px}
 div#pager_splitter{height:8px}
 #pager-container{position:relative;padding:15px 0}
-div#pager{font-size:14px;line-height:20px;overflow:auto;display:none}div#pager pre{line-height:1.21429em;color:#000;background-color:#f7f7f7;padding:.4em}
+div#pager{font-size:14px;line-height:20px;overflow:auto;display:none}div#pager pre{font-size:13px;line-height:1.21429em;color:#000;background-color:#f7f7f7;padding:.4em}
 .quickhelp{display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
 .shortcut_key{display:inline-block;width:20ex;text-align:right;font-family:monospace}
 .shortcut_descr{display:inline-block;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
@@ -1773,7 +1770,7 @@ In&nbsp;[2]:
     Out[2]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table4401886160"><thead><tr><th>obsid</th><th>redshift</th><th>X</th><th>Y</th><th>object</th><th>radius</th></tr></thead><tr><td>877</td><td>0.22</td><td>4378</td><td>3892</td><td>Source 82</td><td>12.5</td></tr><tr><td>3102</td><td>0.32</td><td>4167</td><td>4085</td><td>Q1250+568-A</td><td>9.0</td></tr></table>
+<table id="table4541149136"><thead><tr><th>obsid</th><th>redshift</th><th>X</th><th>Y</th><th>object</th><th>radius</th></tr></thead><tr><td>877</td><td>0.22</td><td>4378</td><td>3892</td><td>Source 82</td><td>12.5</td></tr><tr><td>3102</td><td>0.32</td><td>4167</td><td>4085</td><td>Q1250+568-A</td><td>9.0</td></tr></table>
 </div>
 
 </div>
@@ -1804,7 +1801,7 @@ In&nbsp;[3]:
     Out[3]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table4401889104"><thead><tr><th>designation</th><th>ra</th><th>dec</th><th>sigra</th><th>sigdec</th><th>sigradec</th><th>w1mpro</th><th>w1sigmpro</th><th>w1snr</th><th>w1rchi2</th><th>w2mpro</th><th>w2sigmpro</th><th>w2snr</th><th>w2rchi2</th><th>w3mpro</th><th>w3sigmpro</th><th>w3snr</th><th>w3rchi2</th><th>w4mpro</th><th>w4sigmpro</th><th>w4snr</th><th>w4rchi2</th><th>nb</th><th>na</th><th>w1sat</th><th>w2sat</th><th>w3sat</th><th>w4sat</th><th>pmra</th><th>sigpmra</th><th>pmdec</th><th>sigpmdec</th><th>cc_flags</th><th>ext_flg</th><th>var_flg</th><th>ph_qual</th><th>moon_lev</th><th>w1nm</th><th>w1m</th><th>w2nm</th><th>w2m</th><th>w3nm</th><th>w3m</th><th>w4nm</th><th>w4m</th><th>dist</th><th>angle</th></tr></thead><thead><tr><th></th><th>deg</th><th>deg</th><th>arcsec</th><th>arcsec</th><th>arcsec</th><th>mag</th><th>mag</th><th></th><th></th><th>mag</th><th>mag</th><th></th><th></th><th>mag</th><th>mag</th><th></th><th></th><th>mag</th><th>mag</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>maspyr</th><th>maspyr</th><th>maspyr</th><th>maspyr</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>arcsec</th><th>deg</th></tr></thead><tr><td>J095542.55+690421.2</td><td>148.9273263</td><td>69.0725621</td><td>0.0401</td><td>0.039</td><td>-0.0079</td><td>11.006</td><td>0.023</td><td>47.3</td><td>124.2</td><td>11.31</td><td>0.022</td><td>49.3</td><td>42.3</td><td>10.069</td><td>0.069</td><td>15.7</td><td>1.585</td><td>8.399</td><td>0.313</td><td>3.5</td><td>0.9217</td><td>1</td><td>0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.001</td><td>937</td><td>40</td><td>-42</td><td>41</td><td>dhhd</td><td>3</td><td>n20n</td><td>AAAB</td><td>0000</td><td>38</td><td>38</td><td>38</td><td>38</td><td>17</td><td>17</td><td>0</td><td>17</td><td>56.727613</td><td>62.457064</td></tr><tr><td>J095540.45+690439.1</td><td>148.9185759</td><td>69.0775361</td><td>0.0519</td><td>0.0494</td><td>0.011</td><td>11.233</td><td>0.029</td><td>37.3</td><td>83.99</td><td>11.51</td><td>0.026</td><td>42.5</td><td>33.49</td><td>10.53</td><td>0.097</td><td>11.1</td><td>1.346</td><td>8.212</td><td>0.31</td><td>1.9</td><td>0.8811</td><td>2</td><td>0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.001</td><td>-586</td><td>54</td><td>570</td><td>59</td><td>hhd0</td><td>3</td><td>441n</td><td>AAAU</td><td>0000</td><td>38</td><td>38</td><td>38</td><td>38</td><td>16</td><td>18</td><td>1</td><td>18</td><td>58.91976</td><td>41.495112</td></tr><tr><td>J095522.94+690330.8</td><td>148.8456095</td><td>69.0585649</td><td>0.0412</td><td>0.0405</td><td>0.0044</td><td>11.353</td><td>0.022</td><td>49.7</td><td>155.8</td><td>11.693</td><td>0.022</td><td>48.6</td><td>36.42</td><td>9.816</td><td>0.06</td><td>18.1</td><td>2.835</td><td>8.003</td><td>0.174</td><td>6.2</td><td>1.095</td><td>2</td><td>0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>372</td><td>50</td><td>263</td><td>54</td><td>hhhd</td><td>3</td><td>n41n</td><td>AAAB</td><td>0000</td><td>38</td><td>38</td><td>38</td><td>38</td><td>17</td><td>17</td><td>3</td><td>17</td><td>59.899981</td><td>246.2178</td></tr><tr><td>J095533.22+690354.7</td><td>148.8884508</td><td>69.0652157</td><td>0.0255</td><td>0.0259</td><td>-0.0048</td><td>5.742</td><td>0.038</td><td>28.6</td><td>48.73</td><td>6.472</td><td>0.019</td><td>56.9</td><td>72.04</td><td>5.092</td><td>0.014</td><td>75.9</td><td>19.27</td><td>2.957</td><td>0.021</td><td>51.4</td><td>4.403</td><td>1</td><td>0</td><td>0.104</td><td>0.031</td><td>0.0</td><td>0.0</td><td>340</td><td>24</td><td>-323</td><td>24</td><td>0000</td><td>5</td><td>3420</td><td>AAAA</td><td>0000</td><td>38</td><td>38</td><td>38</td><td>38</td><td>18</td><td>18</td><td>18</td><td>18</td><td>0.386686</td><td>126.771975</td></tr><tr><td>J095543.03+690346.4</td><td>148.9293026</td><td>69.0629078</td><td>0.0385</td><td>0.0378</td><td>-0.0073</td><td>10.755</td><td>0.023</td><td>47.7</td><td>148.1</td><td>11.05</td><td>0.021</td><td>51.4</td><td>55.8</td><td>9.592</td><td>0.049</td><td>22.0</td><td>2.835</td><td>7.764</td><td>0.15</td><td>7.2</td><td>1.258</td><td>1</td><td>0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>640</td><td>39</td><td>-275</td><td>41</td><td>hhh0</td><td>3</td><td>n30n</td><td>AAAB</td><td>0000</td><td>38</td><td>38</td><td>38</td><td>38</td><td>17</td><td>17</td><td>5</td><td>17</td><td>53.545446</td><td>99.158058</td></tr></table>
+<table id="table4479826192"><thead><tr><th>designation</th><th>ra</th><th>dec</th><th>sigra</th><th>sigdec</th><th>sigradec</th><th>w1mpro</th><th>w1sigmpro</th><th>w1snr</th><th>w1rchi2</th><th>w2mpro</th><th>w2sigmpro</th><th>w2snr</th><th>w2rchi2</th><th>w3mpro</th><th>w3sigmpro</th><th>w3snr</th><th>w3rchi2</th><th>w4mpro</th><th>w4sigmpro</th><th>w4snr</th><th>w4rchi2</th><th>nb</th><th>na</th><th>w1sat</th><th>w2sat</th><th>w3sat</th><th>w4sat</th><th>pmra</th><th>sigpmra</th><th>pmdec</th><th>sigpmdec</th><th>cc_flags</th><th>ext_flg</th><th>var_flg</th><th>ph_qual</th><th>moon_lev</th><th>w1nm</th><th>w1m</th><th>w2nm</th><th>w2m</th><th>w3nm</th><th>w3m</th><th>w4nm</th><th>w4m</th><th>dist</th><th>angle</th></tr></thead><thead><tr><th></th><th>deg</th><th>deg</th><th>arcsec</th><th>arcsec</th><th>arcsec</th><th>mag</th><th>mag</th><th></th><th></th><th>mag</th><th>mag</th><th></th><th></th><th>mag</th><th>mag</th><th></th><th></th><th>mag</th><th>mag</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>maspyr</th><th>maspyr</th><th>maspyr</th><th>maspyr</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>arcsec</th><th>deg</th></tr></thead><tr><td>J095542.55+690421.2</td><td>148.9273263</td><td>69.0725621</td><td>0.0401</td><td>0.039</td><td>-0.0079</td><td>11.006</td><td>0.023</td><td>47.3</td><td>124.2</td><td>11.31</td><td>0.022</td><td>49.3</td><td>42.3</td><td>10.069</td><td>0.069</td><td>15.7</td><td>1.585</td><td>8.399</td><td>0.313</td><td>3.5</td><td>0.9217</td><td>1</td><td>0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.001</td><td>937</td><td>40</td><td>-42</td><td>41</td><td>dhhd</td><td>3</td><td>n20n</td><td>AAAB</td><td>0000</td><td>38</td><td>38</td><td>38</td><td>38</td><td>17</td><td>17</td><td>0</td><td>17</td><td>56.727613</td><td>62.457064</td></tr><tr><td>J095540.45+690439.1</td><td>148.9185759</td><td>69.0775361</td><td>0.0519</td><td>0.0494</td><td>0.011</td><td>11.233</td><td>0.029</td><td>37.3</td><td>83.99</td><td>11.51</td><td>0.026</td><td>42.5</td><td>33.49</td><td>10.53</td><td>0.097</td><td>11.1</td><td>1.346</td><td>8.212</td><td>0.31</td><td>1.9</td><td>0.8811</td><td>2</td><td>0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.001</td><td>-586</td><td>54</td><td>570</td><td>59</td><td>hhd0</td><td>3</td><td>441n</td><td>AAAU</td><td>0000</td><td>38</td><td>38</td><td>38</td><td>38</td><td>16</td><td>18</td><td>1</td><td>18</td><td>58.91976</td><td>41.495112</td></tr><tr><td>J095522.94+690330.8</td><td>148.8456095</td><td>69.0585649</td><td>0.0412</td><td>0.0405</td><td>0.0044</td><td>11.353</td><td>0.022</td><td>49.7</td><td>155.8</td><td>11.693</td><td>0.022</td><td>48.6</td><td>36.42</td><td>9.816</td><td>0.06</td><td>18.1</td><td>2.835</td><td>8.003</td><td>0.174</td><td>6.2</td><td>1.095</td><td>2</td><td>0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>372</td><td>50</td><td>263</td><td>54</td><td>hhhd</td><td>3</td><td>n41n</td><td>AAAB</td><td>0000</td><td>38</td><td>38</td><td>38</td><td>38</td><td>17</td><td>17</td><td>3</td><td>17</td><td>59.899981</td><td>246.2178</td></tr><tr><td>J095533.22+690354.7</td><td>148.8884508</td><td>69.0652157</td><td>0.0255</td><td>0.0259</td><td>-0.0048</td><td>5.742</td><td>0.038</td><td>28.6</td><td>48.73</td><td>6.472</td><td>0.019</td><td>56.9</td><td>72.04</td><td>5.092</td><td>0.014</td><td>75.9</td><td>19.27</td><td>2.957</td><td>0.021</td><td>51.4</td><td>4.403</td><td>1</td><td>0</td><td>0.104</td><td>0.031</td><td>0.0</td><td>0.0</td><td>340</td><td>24</td><td>-323</td><td>24</td><td>0000</td><td>5</td><td>3420</td><td>AAAA</td><td>0000</td><td>38</td><td>38</td><td>38</td><td>38</td><td>18</td><td>18</td><td>18</td><td>18</td><td>0.386686</td><td>126.771975</td></tr><tr><td>J095543.03+690346.4</td><td>148.9293026</td><td>69.0629078</td><td>0.0385</td><td>0.0378</td><td>-0.0073</td><td>10.755</td><td>0.023</td><td>47.7</td><td>148.1</td><td>11.05</td><td>0.021</td><td>51.4</td><td>55.8</td><td>9.592</td><td>0.049</td><td>22.0</td><td>2.835</td><td>7.764</td><td>0.15</td><td>7.2</td><td>1.258</td><td>1</td><td>0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>640</td><td>39</td><td>-275</td><td>41</td><td>hhh0</td><td>3</td><td>n30n</td><td>AAAB</td><td>0000</td><td>38</td><td>38</td><td>38</td><td>38</td><td>17</td><td>17</td><td>5</td><td>17</td><td>53.545446</td><td>99.158058</td></tr></table>
 </div>
 
 </div>
@@ -1835,7 +1832,7 @@ In&nbsp;[4]:
     Out[4]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table4396844048"><thead><tr><th>ID</th><th>XCENTER</th><th>YCENTER</th><th>MAG</th><th>MERR</th><th>MSKY</th><th>NITER</th><th>SHARPNESS</th><th>CHI</th><th>PIER</th><th>PERROR</th></tr></thead><thead><tr><th></th><th>pixels</th><th>pixels</th><th>magnitudes</th><th>magnitudes</th><th>counts</th><th></th><th></th><th></th><th></th><th>perrors</th></tr></thead><tr><td>14</td><td>138.538</td><td>256.405</td><td>15.461</td><td>0.003</td><td>34.85955</td><td>4</td><td>-0.032</td><td>0.802</td><td>0</td><td>No_error</td></tr><tr><td>18</td><td>18.114</td><td>280.170</td><td>22.329</td><td>0.206</td><td>30.12784</td><td>4</td><td>-2.544</td><td>1.104</td><td>0</td><td>No_error</td></tr></table>
+<table id="table4534392912"><thead><tr><th>ID</th><th>XCENTER</th><th>YCENTER</th><th>MAG</th><th>MERR</th><th>MSKY</th><th>NITER</th><th>SHARPNESS</th><th>CHI</th><th>PIER</th><th>PERROR</th></tr></thead><thead><tr><th></th><th>pixels</th><th>pixels</th><th>magnitudes</th><th>magnitudes</th><th>counts</th><th></th><th></th><th></th><th></th><th>perrors</th></tr></thead><tr><td>14</td><td>138.538</td><td>256.405</td><td>15.461</td><td>0.003</td><td>34.85955</td><td>4</td><td>-0.032</td><td>0.802</td><td>0</td><td>No_error</td></tr><tr><td>18</td><td>18.114</td><td>280.170</td><td>22.329</td><td>0.206</td><td>30.12784</td><td>4</td><td>-2.544</td><td>1.104</td><td>0</td><td>No_error</td></tr></table>
 </div>
 
 </div>
@@ -1866,7 +1863,7 @@ In&nbsp;[5]:
     Out[5]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table4396555856"><thead><tr><th>Lambda</th><th>Fnu</th></tr></thead><thead><tr><th>0.1 nm</th><th>mJy</th></tr></thead><tr><td>6476.09</td><td>0.383329</td></tr><tr><td>6476.28</td><td>0.515559</td></tr><tr><td>6476.47</td><td>0.288042</td></tr><tr><td>6476.66</td><td>0.373343</td></tr></table>
+<table id="table4541147472"><thead><tr><th>Lambda</th><th>Fnu</th></tr></thead><thead><tr><th>0.1 nm</th><th>mJy</th></tr></thead><tr><td>6476.09</td><td>0.383329</td></tr><tr><td>6476.28</td><td>0.515559</td></tr><tr><td>6476.47</td><td>0.288042</td></tr><tr><td>6476.66</td><td>0.373343</td></tr></table>
 </div>
 
 </div>
@@ -1898,7 +1895,7 @@ In&nbsp;[6]:
     Out[6]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table4401889040"><thead><tr><th>obsid</th><th>redshift</th><th>X</th><th>Y</th><th>object</th><th>radius</th></tr></thead><tr><td>877</td><td>0.22</td><td>4378</td><td>3892</td><td>Source 82</td><td>12.5</td></tr><tr><td>3102</td><td>0.32</td><td>4167</td><td>4085</td><td>Q1250+568-A</td><td>9.0</td></tr></table>
+<table id="table4541593680"><thead><tr><th>obsid</th><th>redshift</th><th>X</th><th>Y</th><th>object</th><th>radius</th></tr></thead><tr><td>877</td><td>0.22</td><td>4378</td><td>3892</td><td>Source 82</td><td>12.5</td></tr><tr><td>3102</td><td>0.32</td><td>4167</td><td>4085</td><td>Q1250+568-A</td><td>9.0</td></tr></table>
 </div>
 
 </div>
@@ -2116,7 +2113,7 @@ In&nbsp;[10]:
     Out[10]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table4396842896"><thead><tr><th>objID</th><th>osrcid</th><th>xsrcid</th><th>SpecObjID</th><th>ra</th><th>dec</th><th>obsid</th><th>ccdid</th><th>z</th><th>modelMag_i</th><th>modelMagErr_i</th><th>modelMag_r</th><th>modelMagErr_r</th><th>expo</th><th>theta</th><th>rad_ecf_39</th><th>detlim90</th><th>fBlim90</th></tr></thead><tr><td>277955213</td><td>S000.7044P00.7513</td><td>XS04861B6_005</td><td>10943136</td><td>0.704453</td><td>0.751336</td><td>4861</td><td>6</td><td>0.08655</td><td>15.46206</td><td>0.00384</td><td>16.06365</td><td>0.003888</td><td>5104.621261</td><td>0.105533</td><td>3.022382</td><td>15.117712</td><td>0.311318</td></tr><tr><td>889974380</td><td>S002.9051P14.7003</td><td>XS03957B7_004</td><td>21189832</td><td>2.905195</td><td>14.700391</td><td>3957</td><td>7</td><td>0.13182</td><td>16.46605</td><td>0.004807</td><td>16.99269</td><td>0.004917</td><td>1479.207035</td><td>0.11855</td><td>3.016342</td><td>17.36428</td><td>0.880407</td></tr></table>
+<table id="table4511313296"><thead><tr><th>objID</th><th>osrcid</th><th>xsrcid</th><th>SpecObjID</th><th>ra</th><th>dec</th><th>obsid</th><th>ccdid</th><th>z</th><th>modelMag_i</th><th>modelMagErr_i</th><th>modelMag_r</th><th>modelMagErr_r</th><th>expo</th><th>theta</th><th>rad_ecf_39</th><th>detlim90</th><th>fBlim90</th></tr></thead><tr><td>277955213</td><td>S000.7044P00.7513</td><td>XS04861B6_005</td><td>10943136</td><td>0.704453</td><td>0.751336</td><td>4861</td><td>6</td><td>0.08655</td><td>15.46206</td><td>0.00384</td><td>16.06365</td><td>0.003888</td><td>5104.621261</td><td>0.105533</td><td>3.022382</td><td>15.117712</td><td>0.311318</td></tr><tr><td>889974380</td><td>S002.9051P14.7003</td><td>XS03957B7_004</td><td>21189832</td><td>2.905195</td><td>14.700391</td><td>3957</td><td>7</td><td>0.13182</td><td>16.46605</td><td>0.004807</td><td>16.99269</td><td>0.004917</td><td>1479.207035</td><td>0.11855</td><td>3.016342</td><td>17.36428</td><td>0.880407</td></tr></table>
 </div>
 
 </div>
@@ -2148,7 +2145,7 @@ In&nbsp;[11]:
     Out[11]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<table id="table4402001488"><thead><tr><th>year</th><th>peas</th><th>beans</th><th>carrots</th></tr></thead><tr><td>1992</td><td>2</td><td>3</td><td>4</td></tr><tr><td>1993</td><td>10</td><td>12</td><td>14</td></tr><tr><td>1994</td><td>--</td><td>0</td><td>5</td></tr><tr><td>1995</td><td>7</td><td>6</td><td>5</td></tr></table>
+<table id="table4541934800"><thead><tr><th>year</th><th>peas</th><th>beans</th><th>carrots</th></tr></thead><tr><td>1992</td><td>2</td><td>3</td><td>4</td></tr><tr><td>1993</td><td>10</td><td>12</td><td>14</td></tr><tr><td>1994</td><td>--</td><td>0</td><td>5</td></tr><tr><td>1995</td><td>7</td><td>6</td><td>5</td></tr></table>
 </div>
 
 </div>

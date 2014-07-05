@@ -28,6 +28,13 @@ To run the notebooks in from the git repository using IPython notebook, do::
 
 This should fire up an index page in your default web browser.
 
+Downloading notebooks and associated data
+-----------------------------------------
+
+The notebook files and data can be downloaded in a zip file:
+
+http://bit.ly/1kpUq1w
+
 Getting help
 ------------
 

@@ -1277,6 +1277,7 @@ a .icon-rotate-90:before,a .icon-rotate-180:before,a .icon-rotate-270:before,a .
 .icon-weibo:before{content:"\f18a"}
 .icon-renren:before{content:"\f18b"}
 code{color:#000}
+pre{font-size:inherit;line-height:inherit}
 .border-box-sizing{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
 .corner-all{border-radius:4px}
 .hbox{display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
@@ -1340,6 +1341,8 @@ input.nbname_input,input.engine_num_input{padding-top:3px;padding-bottom:3px;hei
 input.engine_num_input{width:60px}
 .highlight_text{color:#00f}
 #project_name>.breadcrumb{padding:0;margin-bottom:0;background-color:transparent;font-weight:bold}
+.folder_icon:before{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;*margin-right:.3em;content:"\f114"}
+.notebook_icon:before{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;*margin-right:.3em;content:"\f02d"}
 .ansibold{font-weight:bold}
 .ansiblack{color:#000}
 .ansired{color:#8b0000}
@@ -1362,15 +1365,15 @@ div.cell.edit_mode{border-radius:4px;border:thin #008000 solid}
 div.cell{width:100%;padding:5px 5px 5px 0;margin:0;outline:none}
 div.prompt{min-width:11ex;padding:.4em;margin:0;font-family:monospace;text-align:right;line-height:1.21429em}
 @media (max-width:480px){div.prompt{text-align:left}}div.inner_cell{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
-div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7}
+div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7;line-height:1.21429em}
 div.prompt:empty{padding-top:0;padding-bottom:0}
 div.input{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
 @media (max-width:480px){div.input{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.input_prompt{color:#000080;border-top:1px solid transparent}
 div.input_area>div.highlight{margin:.4em;border:none;padding:0;background-color:transparent}
-div.input_area>div.highlight>pre{margin:0;border:0;padding:0;background-color:transparent;font-size:14px;line-height:1.21429em}
+div.input_area>div.highlight>pre{margin:0;border:none;padding:0;background-color:transparent}
 .CodeMirror{line-height:1.21429em;height:auto;background:none;}
 .CodeMirror-scroll{overflow-y:hidden;overflow-x:auto}
-@-moz-document url-prefix(){.CodeMirror-scroll{overflow-x:hidden}}.CodeMirror-lines{padding:.4em}
+.CodeMirror-lines{padding:.4em}
 .CodeMirror-linenumber{padding:0 8px 0 4px}
 .CodeMirror-gutters{border-bottom-left-radius:4px;border-top-left-radius:4px}
 .CodeMirror pre{padding:0;border:0;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
@@ -1405,7 +1408,7 @@ div.output_area{padding:0;page-break-inside:avoid;display:-webkit-box;-webkit-bo
 div.output_area .rendered_html table{margin-left:0;margin-right:0}
 div.output_area .rendered_html img{margin-left:0;margin-right:0}
 .output{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}
-@media (max-width:480px){div.output_area{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;color:#000;background-color:transparent;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;line-height:inherit}
+@media (max-width:480px){div.output_area{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;vertical-align:baseline;color:#000;background-color:transparent;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
 div.output_subarea{padding:.4em .4em 0 .4em;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
 div.output_text{text-align:left;color:#000;line-height:1.21429em}
 div.output_stderr{background:#fdd;}
@@ -1526,7 +1529,7 @@ ul#help_menu li a{overflow:hidden;padding-right:2.2em}ul#help_menu li a i{margin
 .notification_widget{color:#777;padding:1px 12px;margin:2px 4px;z-index:10;border:1px solid #ccc;border-radius:4px;background:rgba(240,240,240,0.5)}.notification_widget.span{padding-right:2px}
 div#pager_splitter{height:8px}
 #pager-container{position:relative;padding:15px 0}
-div#pager{font-size:14px;line-height:20px;overflow:auto;display:none}div#pager pre{font-size:13px;line-height:1.21429em;color:#000;background-color:#f7f7f7;padding:.4em}
+div#pager{font-size:14px;line-height:20px;overflow:auto;display:none}div#pager pre{line-height:1.21429em;color:#000;background-color:#f7f7f7;padding:.4em}
 .quickhelp{display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
 .shortcut_key{display:inline-block;width:20ex;text-align:right;font-family:monospace}
 .shortcut_descr{display:inline-block;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
@@ -1720,16 +1723,20 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Started about 4 years ago</li>
-<li>Goal to standardize on core set of astronomical libraries
-<ul>
+<li>Started about 4 years ago<ul>
+<li>Goal to standardize on core set of astronomical libraries<ul>
 <li>And to foster use of standard libraries in Python application and library packages</li>
-</ul></li>
+</ul>
+</li>
+</ul>
+</li>
 <li>STScI has migrated its standard libraries to astropy and is transitioning to use it for all its released software</li>
 <li>Very active community</li>
 <li>Much effort going into consistency and testing</li>
-<li>Some of the most active members are teaching this tutorial</li>
+<li>Some of the most active members are teaching this tutorial<ul>
 <li>Does not include me...</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -1750,15 +1757,17 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Intro to Python
-<ul>
-<li>though this still may be useful if you know no Python</li>
+<li>Intro to Python<ul>
+<li>though this still may be useful if you know no Python<ul>
 <li>i.e., you can see what is possible</li>
-</ul></li>
-<li>comprehensive coverage of all of Astropy
-<ul>
+</ul>
+</li>
+</ul>
+</li>
+<li>comprehensive coverage of all of Astropy<ul>
 <li>Just too much in astropy to cover</li>
-</ul></li>
+</ul>
+</li>
 <li>covering other major astronomical tools in Python</li>
 </ul>
 </div>
@@ -1786,9 +1795,11 @@ div#notebook {
 </ul>
 <p>15 minute break</p>
 <ul>
-<li><strong>Data Access</strong></li>
+<li><strong>Data Access</strong><ul>
 <li><strong>FITS files</strong> (20/20): Erik Bray</li>
 <li><strong>ascii tables</strong> (20/20): Tom Aldcroft</li>
+</ul>
+</li>
 <li><strong>Coordinates (sky/time)</strong> (15/15): Tom Robitaille</li>
 <li><strong>Astropy work in progress</strong> (5): Tom Robitaille</li>
 </ul>
@@ -1817,29 +1828,23 @@ div#notebook {
 <li>ipython 2.0.0</li>
 </ul>
 <p>Easist ways to obtain are:</p>
-<p>Anaconda (2.0) http://continuum.io/downloads</p>
+<p>Anaconda (2.0) <a href="http://continuum.io/downloads">http://continuum.io/downloads</a></p>
 <p>The above includes astropy 0.3.2</p>
 <p>To update that version to 0.4rc1 (at the OS shell level):</p>
-<pre><code>conda install astropy=0.4rc1</code></pre>
-<p>IPython Notebook is the basis for tutorial material</p>
+<pre><code>conda install astropy=0.4rc1
+</code></pre><p>IPython Notebook is the basis for tutorial material</p>
 <ul>
 <li>show of hands: who has never used the IPython notebook?</li>
 <li>Tutorial notebooks are available from xxx</li>
 <li>Tutorial-related web pages are at xxx</li>
-<li>For exercises, note that '<shift>-Return' is needed to execute code cell</li>
+<li>For exercises, note that &#39;<shift>-Return&#39; is needed to execute code cell<ul>
 <li>also note that only last item repr is shown (use print for multiple outputs)</li>
 </ul>
+</li>
+</ul>
 <p>To obtain the notebooks used for this tutorial, and the associated data, download:</p>
-<p>xxx</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr />
+<p><a href="http://bit.ly/astropy-scipy2014">http://bit.ly/astropy-scipy2014</a> (~30 MB zip file)</p>
+<p>The notebook files themselves can be found under the <code>notebooks/</code> subdirectory of that zip file.  The associated data files are under <code>notebooks/data</code>.  Many of the examples references data files with relative filenames like <code>data/&lt;filename&gt;</code>, launch ipython from within the <code>notebooks/</code> directory for best results in resolving filenames.</p>
 </div>
 </div>
 </div>
@@ -1858,7 +1863,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In general, we will supply enough exercises to fill everyone's time. Depending on background and experience, some will only get the first part or two done; some will get further. The exercises generally increase in sophistication and difficulty. Few will finish all.</p>
+<p>In general, we will supply enough exercises to fill everyone&#39;s time. Depending on background and experience, some will only get the first part or two done; some will get further. The exercises generally increase in sophistication and difficulty. Few will finish all.</p>
 <p>For the introduction, the exercises are mainly to see that everything is working and installed on your computer</p>
 </div>
 </div>
@@ -1878,7 +1883,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Open the second tutorial session (Unit_Conversion.ipynb). Execute a few code cells</p>
+<p> Open the second tutorial session (Unit_Conversion.ipynb). Execute a few code cells</p>
 </div>
 </div>
 </div>
@@ -1938,8 +1943,8 @@ import astropy.wcs as wcs
 import astropy.io.ascii as ioa
 import astropy.coordinates as coord
 import astropy.time as time
-import matplotlib.pyplot as plt</code></pre>
-<p>IF any of these don't work, ask for help with checking your installation.</p>
+import matplotlib.pyplot as plt
+</code></pre><p>IF any of these don&#39;t work, ask for help with checking your installation.</p>
 </div>
 </div>
 </div>
@@ -1961,7 +1966,8 @@ import matplotlib.pyplot as plt</code></pre>
 <p>Try executing the following commands within an ipython notebook cell (requires downloading data files and unpacking. Run these commands from the directory that the files are in):</p>
 <pre><code># assumes above imports have been done
 hdus = iof.open(&#39;data/msx.fits&#39;)
-plt.imshow(hdus[0].data, vmax=0.0003, origin=&#39;lower&#39;)</code></pre>
+plt.imshow(hdus[0].data, vmax=0.0003, origin=&#39;lower&#39;)
+</code></pre>
 </div>
 </div>
 </div>

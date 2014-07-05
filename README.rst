@@ -33,7 +33,10 @@ Downloading notebooks and associated data
 
 The notebook files and data can be downloaded in a zip file:
 
-http://bit.ly/1kpUq1w
+http://bit.ly/astropy-scipy2014
+
+The notebooks themselves are under ``notebooks/`` and their associated
+data files under ``notebooks/docs/``.
 
 Getting help
 ------------
